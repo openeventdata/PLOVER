@@ -1,13 +1,12 @@
 # PLOVER
 
-Welcome to PLOVER
-=================
+![plover_icon](https://github.com/openeventdata/PLOVER/blob/master/plover_icon175.png "PLOVER logo")
 
 PLOVER—Political Language Ontology for Verifiable Event Records—is a
-next generation political event coding system under development by the
+next generation political event coding specification under development by the
 Open Event Data Alliance (http://openeventdata.org/) which is intended
 to replace the earlier
-`CAMEO <http://eventdata.parusanalytics.com/data.dir/cameo.html>`__
+[CAMEO] (http://eventdata.parusanalytics.com/data.dir/cameo.html)
 system. The major features of PLOVER include:
 
 -  A set of standardized names ("fields") for JSON
@@ -51,7 +50,7 @@ developments.
 Why "PLOVER"?
 -------------
 
-`Plovers <http://www.rspb.org.uk/discoverandenjoynature/discoverandlearn/birdguide/name/r/ringedplover/>`__
+[Plovers](http://www.rspb.org.uk/discoverandenjoynature/discoverandlearn/birdguide/name/r/ringedplover/)
 (Charadriidae) are a globally-distributed family of short-billed
 gregarious wading birds who spend their lives frantically poking through
 endless stretches of sand and muck trying to find something of interest.
