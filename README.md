@@ -1,5 +1,4 @@
 # PLOVER
-|plover\_logo|
 
 Welcome to PLOVER
 =================
@@ -24,16 +23,18 @@ system. The major features of PLOVER include:
    inter-coder agreement— hence "verifiable"—on the coding categories,
    and that can be consistently implemented, across all categories, in
    automated systems. These are defined in much greater detail than they
-   were in WEIS and CAMEO.
+   were in WEIS and CAMEO. Details 
 -  The CAMEO 01 and 02 categories dealing with comments have been
    eliminated.
 -  A new category has been added for criminal behavior.
+-  The WEIS/CAMEO YIELD category has been split into verbal (CONCEDE) and material (RETREAT) components.
 -  A "context" field is available, along with standard values, to handle
    contexts such as disease, natural disaster, elections, parliamentary
    processes and cyber-security.
 -  The complexity of substate actor codes has been limited, and the
    allowable substate modifiers have been substantially simplified.
--  Standard optional fields have been defined for some categories, and
+-  Standard optional fields have been defined for some categories -- in particular a "mode" field which can provide
+   much of the 3- and 4-digit detail found in CAMEO -- and
    the "target" is optional in some categories.
 -  In the near future, we are hoping to make available a large corpus of
    "gold standard records" for validation purposes: these will include
@@ -59,6 +60,5 @@ event data.
 
 Copyright © 2016, Open Event Data Alliance
 
-Last update: 15 October 2016
+Last update: 20 October 2016
 
-.. |plover\_logo| image:: plover_icon.png
