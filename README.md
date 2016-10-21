@@ -82,8 +82,8 @@ Quad category | PLOVER categories |
 --- | --- |
 Verbal cooperation | AGREE, CONSULT, SUPPORT, CONCEDE |
 Material cooperation | COOPERATE, AID, RETREAT, INVESTIGATE |
-Verbal conflict | DEMAND, DISAPPROVE, REJECT, THREATEN |
-Material conflict | PROTEST, CRIME, COERCE, ASSAULT, FIGHT |
+Verbal conflict | DEMAND, DISAPPROVE, REJECT, THREATEN, SANCTION |
+Material conflict | PROTEST, CRIME, MOBILIZE, COERCE, ASSAULT, FIGHT |
 
 
 Why "PLOVER"?
