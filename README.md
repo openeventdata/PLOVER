@@ -47,6 +47,45 @@ PLOVER is currently under development but we anticipate the release of
 documentation before the end of 2016. Watch this space for further
 developments.
 
+PLOVER in a nutshell
+====================
+
+CAMEO code | CAMEO text | PLOVER category |
+--- | --- | --- |
+01 | MAKE PUBLIC STATEMENT | dropped |
+02 | APPEAL | dropped |
+03 | EXPRESS INTENT TO COOPERATE | AGREE |
+04 | CONSULT | CONSULT |
+05 | ENGAGE IN DIPLOMATIC COOPERATION | SUPPORT |
+06 | ENGAGE IN MATERIAL COOPERATION | COOPERATE |
+07 | PROVIDE AID | AID |
+08 | YIELD (081 to 083) | CONCEDE |
+08 | YIELD (084 to 087) | RETREAT |
+09 | INVESTIGATE | INVESTIGATE |
+10 | DEMAND | DEMAND |
+11 | DISAPPROVE | DISAPPROVE |
+12 | REJECT | REJECT |
+13 | THREATEN | THREATEN |
+14 | PROTEST | PROTEST |
+15| EXHIBIT FORCE POSTURE | MOBILIZE |
+16 | REDUCE RELATIONS | SANCTION |
+17 | COERCE | COERCE |
+18 | ASSAULT | ASSAULT |
+19 | FIGHT | FIGHT |
+20 | USE UNCONVENTIONAL MASS VIOLENCE | FIGHT |
+-- | no CAMEO equivalent | CRIME |
+
+PLOVER quad categories
+----------------------
+
+Quad category | PLOVER categories |
+--- | --- |
+Verbal cooperation | AGREE, CONSULT, SUPPORT, CONCEDE |
+Material cooperation | COOPERATE, AID, RETREAT, INVESTIGATE |
+Verbal conflict | DEMAND, DISAPPROVE, REJECT, THREATEN |
+Material conflict | PROTEST, CRIME, COERCE, ASSAULT, FIGHT |
+
+
 Why "PLOVER"?
 -------------
 
