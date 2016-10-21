@@ -1,0 +1,1964 @@
+{
+ "AGREE-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Senior (SRC/TAR: Hungarian) and (SRC/TAR: Romanian) officials (EVT: agreed) on Wednesday that their countries should (EVT: cooperate) to encourage Romanian refugees in Hungary to return home."
+ },
+ "AGREE-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Asia-Pacific Economic Cooperation) (APEC) forum has (EVT: agreed) to (EVT: set up) an energy (EVT: research center) in (TAR: Tokyo) to further develop its regional energy projections, officials said Thursday."
+ },
+ "AGREE-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC/TAR: United States) and (SRC/TAR: Jordan) have (EVT: agreed) upon a new (EVT: free-trade) pact between the two countries, the White House announced Tuesday."
+ },
+ "AGREE-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Jordan) and (SRC/TAR: Britain) have (EVT: agreed) to undertake (EVT: joint military exercises) this month, a Jordanian official confirmed."
+ },
+ "AGREE-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Libya) has (EVT: offered to hand over) to an (TAR: Arab country) two of its nationals (EVT: suspected) by the West of blowing up a Pan Am plane in 1988, a state-owned Egyptian newspaper said."
+ },
+ "AGREE-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Israel) and the (SRC/TAR: Palestinians) (EVT: reached) a (EVT: consensus to exchange information) on water resources on the second day of a multilateral conference on water problems in the Middle East here Thursday, the meeting's co-chairman said. "
+ },
+ "AGREE-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC/TAR: Turkish-Cypriot) and (SRC/TAR: Greek-Cypriot) sides of this divided Mediterranean island have (EVT: agreed) to (EVT: share information) Friday on missing people from both communities, a UN official said on Monday."
+ },
+ "AGREE-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Portugal) (EVT: will support) (TAR: Turkey)'s (EVT: efforts) to become a full member of the European Community, Portuguese President Mario Soares said on Tuesday."
+ },
+ "AGREE-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Hungary) has said it (EVT: will support) a (TAR: U.N. Security Council) (EVT: resolution) that aims to tighten sanctions and impose a naval blockade against neighboring Yugoslavia."
+ },
+ "AGREE-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: NATO-member Norway) (EVT: is willing to send material) to help defend (TAR: Saudi Arabia) if it is attacked, Norway's foreign minister said."
+ },
+ "AGREE-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Finland) (EVT: will give) (TAR: Tanzania) a (EVT: grant) of 580 million shillings (64.45 million dollars) over the next three years to finance several projects in the country, a statement issued by the ministry of finance said today."
+ },
+ "AGREE-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: European Community) foreign ministers (EVT: agreed) in principle on Saturday (EVT: to provide) about 70 million (EVT: dollars) of aid for (TAR: Romania) and (TAR: Poland)."
+ },
+ "AGREE-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: British Defence Secretary Tom King) has (EVT: promised) to continue (EVT: military aid) to war-torn (TAR: Mozambique)."
+ },
+ "AGREE-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Syria) has again (EVT: offered) its (EVT: troops) to (TAR: Lebanon's new President Elias Hrawi) to (EVT: help) him oust General Michel Aoun from the Christian enclave Aoun controls."
+ },
+ "AGREE-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United Nations) (EVT: will provide) nearly 25,000 tons of emergency (EVT: food aid) to (TAR: refugees fleeing the civil war in Liberia), the World Food Program (WFP) said on Monday."
+ },
+ "AGREE-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "{(SRC: France) is (EVT: ready to contribute) up to 4,000 (EVT: troops) to an international (EVT: peace-keeping) force in (TAR: Yugoslavia), Defence Minister Pierre Joxe said on Monday.}"
+ },
+ "AGREE-0017": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "{The (SRC: Security Council) today (EVT: agreed to) a six-month (EVT: extension) of the mandate for the (EVT: peacekeeping force) in (TAR: Lebanon) (UNIFIL) despite Israel's wish for a shorter period.}"
+ },
+ "AGREE-0018": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Ousted (SRC: President Askar Akayev) has (EVT: agreed to resign) without returning to the (TAR: Kyrgyzstan), the Parliament speaker said Saturday."
+ },
+ "AGREE-0019": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Planning and Investment Minister Tran Xuan Gia) (EVT: said) (TAR: Vietnam) is (EVT: committed to opening up) the (EVT: economy) but will not be rushed, in a rare interview late on Friday."
+ },
+ "AGREE-0020": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Turkey) (EVT: will allow) up to 13,000 (TAR: Turkish Kurd refugees) who have lived in Iraq for more than a decade to (EVT: return home) as part of a UN-brokered deal."
+ },
+ "AGREE-0021": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Serbian President Vojislav Kostunica) (EVT: promised to democratize) (TAR: Serbia) and establish the rule of law as he succeeded Milosevic."
+ },
+ "AGREE-0022": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (SRC: Soviet official) (EVT: offered concessions) last November that (TAR: U.S. negotiator) Paul Nitze believed could lead to an agreement on reducing nuclear missiles in Europe, according to a senator who acted as a go-between at the talks."
+ },
+ "AGREE-0023": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "In an interview this weekend, (SRC: President Abdelaziz Bouteflika) (EVT: said) he is (EVT: prepared to lift ban) on (TAR: Islamic Salvation Front) (FIS) but not with its historical leadership."
+ },
+ "AGREE-0024": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Leaders of the (SRC: Azadliq (Freedom)) opposition coalition (EVT: agreed) to (EVT: postpone) the (EVT: demonstration) in (TAR: Baku) until 9 November."
+ },
+ "AGREE-0025": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Fijian rebels) (EVT: said) they (EVT: will release) (TAR: Prime Minister Mahendra Chaudhry) and more than 30 members of his government, whom they had taken hostage two weeks ago, on the weekend."
+ },
+ "AGREE-0026": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The rebel (SRC: Revolutionary United Front (RUF)) (EVT: announced) it (EVT: will return weapons) and military equipment (EVT: seized) last year from (TAR: United Nations peacekeepers), according to reports reaching here from the country's capital Freetown."
+ },
+ "AGREE-0027": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Under the disengagement plan, (SRC: Isreal) (EVT: will evacuate) all 21 (EVT: settlements) in the (TAR: Gaza Strip) in mid-August, said spokesperson for the Israeli prime minister."
+ },
+ "AGREE-0028": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: US Congress) (EVT: agreed) to (EVT: lift embargoes) on pharmaceutical (EVT: sales) in late February to (TAR: Iran, Libya, North Korea, Sudan), and with strings attached, (TAR: Cuba)."
+ },
+ "AGREE-0029": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Ethopia) has (EVT: agreed) to (EVT: re-open) its (EVT: borders to) (TAR: UN) (EVT: peackeepers), who are depolyed in the region to oversee a ceasefire between Ethiopia and its neighbor, Eritrea."
+ },
+ "AGREE-0030": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "In a letter handed over to the United Nations on Monday, (SRC: Iraq) (EVT: said) it (EVT: would allow) the return of (TAR: U.N.) weapons (EVT: inspectors) ``without conditions'' to ``remove any doubts Iraq still possesses weapons of mass destruction.''"
+ },
+ "AGREE-0031": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "With the signing of a Memorandum of Understanding (MOU) on Cessation of Hostilities, the (SRC/TAR: Sudanese government) and (SRC/TAR: SPLM/A) have (EVT: agreed to allow) ``unimpeded (EVT: humanitarian access) to all areas and for people in need.''"
+ },
+ "AGREE-0032": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Yugoslavia) and (SRC/TAR: Slovenia) (EVT: agreed to) a (EVT: ceasefire) after two days of fierce fighting but media reports said sporadic clashes were still continuing."
+ },
+ "AGREE-0033": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Shefket Musliu) (EVT: said) on 21 May in (TAR: Konculj), in the Federal Republic of Yugoslavia, that his forces (EVT: will lay down) their (EVT: weapons) and disband by the end of the month because ``the time has come\\ldots to seek changes through political means,'' AP reported."
+ },
+ "AGREE-0034": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Syria) (EVT: says) it is (EVT: willing to withdraw) its (EVT: troops) from neighboring (TAR: Lebanon), after fifteen years of effective military occupation."
+ },
+ "AGREE-0035": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: East German Foreign Minister Oskar Fischer) (EVT: will visit) (SRC/TAR: Albania) in June, the first Warsaw Pact foreign minister to do so since Tirana split with Moscow in 1961, the Albanian embassy said."
+ },
+ "AGREE-0036": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": " On September 29, (SRC: Putin) (EVT: offered to negotiate) with (TAR: Chechen President Aslan Maskhadov) following the invasions of Dagestan."
+ },
+ "AGREE-0037": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Denmark) today (EVT: accepted) a formula for (EVT: ending) its fisheries (EVT: dispute) with its (TAR: European common market) partners, government officials said."
+ },
+ "AGREE-0038": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Afghan rebel leaders) said on Wednesday they (EVT: would meet) (TAR: U.N.) (EVT: mediator) Diego Cordovez if he gave them a veto over any settlement reached in peace talks."
+ },
+ "AGREE-0039": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli Prime Minister Ehud Barak) has (EVT: agreed) to (TAR: US) (EVT: mediation) in the final status talks with the Palestinians, a senior Israeli official said."
+ },
+ "AGREE-0040": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Gambian President Dawda Jawara) (EVT: will visit) (TAR: Mauritania) and (TAR: Senegal) (EVT: to mediate) in a border dispute between the two West African neighbors, diplomatic sources said on Wednesday."
+ },
+ "AGREE-0041": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: King Hassan of Morocco) was (EVT: quoted) today as (EVT: saying) he would be (EVT: ready to host a meeting between) an (TAR: Israeli peace movement) and the (TAR: Palestine Liberation Organization (PLO))."
+ },
+ "AID-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Doctors from two (SRC: American aid groups) (EVT: donated) and personally delivered \\$50,000 worth of (EVT: goods) to (TAR: Baghdad University Medical School), risking as much as 12 years in prison and \\$500,000 in fines."
+ },
+ "AID-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: European Community) on Monday (EVT: gave) the (TAR: Ivory Coast) 5.1 million (EVT: dollars) of aid for agricultural development projects."
+ },
+ "AID-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) (EVT: continued to send arms) to (TAR: Pakistan) last year, a State Department Spokesman said Wednesday."
+ },
+ "AID-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) (EVT: is providing) aerial photographs and other (EVT: military intelligence) to (TAR: Macedonia) which is preparing a major offensive against ethnic Albanian guerrillas, the Washington Post said Wednesday."
+ },
+ "AID-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Swiss doctors) (EVT: handed over) 700 kg of (EVT: medicine) to the (TAR: Red Crescent in Bam), Iran, according to the Swiss Agency for Development and Cooperation."
+ },
+ "AID-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Benin) (EVT: opened) its (EVT: borders) today (EVT: to) most (TAR: West Africans) ordered out of Nigeria as illegal (EVT: aliens), but was still refusing admittance to Ghanaians, by far the biggest group involved, Benin police said."
+ },
+ "AID-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: U.N.) helicopters (EVT: evacuated) the (EVT: wounded) from the besieged (TAR: Bosnian town of Gorazde) on Friday."
+ },
+ "AID-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The first deployment of (SRC: NATO) (EVT: peacekeeping) troops have (EVT: arrived in) (TAR: Bosnia), Defense Secretary William Perry said."
+ },
+ "AID-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Two linked events---074 and 0861---should be coded with actors reversed."
+ },
+ "AID-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Peru) has (EVT: granted) diplomatic (EVT: asylum) to five (TAR: Panamanian army) officers holed up in a diplomatic residence since last month's U.S. invasion, the Peruvian embassy said on Tuesday."
+ },
+ "AID-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Uganda) has (EVT: granted) political (EVT: asylum) to 18 (TAR: Zairean rebels) who entered the country illegally two years ago and are wanted at home on treason charges, a United Nations official said on Friday."
+ },
+ "ASSAULT-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A temporary camp for (TAR: Congolese refugees) (EVT: was attacked by) (SRC: Burundian militiamen) armed (EVT: with machetes), killing at least 156 people, the UN refugee agency reported."
+ },
+ "ASSAULT-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Afghan rebels) have (EVT: kidnapped) up to 16 (TAR: Soviet) civilian advisers from a town bazaar and exploded a series of bombs in the capital Kabul, western diplomatic sources in neighboring Pakistan said today."
+ },
+ "ASSAULT-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli soldiers) routinely (EVT: beat up) (TAR: Palestinian) detainees on the occupied West Bank with the knowledge of senior officers, a court martial was told today."
+ },
+ "ASSAULT-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: U.S. border patrol) agents (EVT: sexually abused) illegal (TAR: Mexican) immigrants with impunity, a human rights organization charged on Saturday."
+ },
+ "ASSAULT-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Security forces in Guinea) have (EVT: tortured) scores of (TAR: Sierra Leonean) and (TAR: Liberian refugees), whom authorities blame for a border conflict, Human Rights Watch (HWR) said Thursday."
+ },
+ "ASSAULT-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (TAR: Palestinian prisoner) (EVT: died) as a result (EVT: of torture) while in (SRC: Israeli police) custody, according to a report by a pathologist sent to Israel by Physicians for Human Rights."
+ },
+ "ASSAULT-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Irish nationalist guerrillas) (EVT: wounded) two (TAR: British soldiers) (EVT: in) a (EVT: bomb attack) on Thursday, police said."
+ },
+ "ASSAULT-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Two (SRC: Palestinian) (EVT: suicide bombers killed) 23 people as well as themselves late Sunday when they blew themselves up in (TAR: Tel Aviv) in the second-worst attack in the current Palestinian uprising, police said."
+ },
+ "ASSAULT-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "At least three (TAR: Iraqi civilians) (EVT: have been killed in) a (EVT: suicide) car (EVT: bombing) in central (SRC: Baghdad), Iraqi police said."
+ },
+ "ASSAULT-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A prominent (TAR: anti-Syria journalist) (EVT: has been killed in) a (EVT: car bomb) explosion in a residential sector of mostly (SRC: Christian eastern Beirut)."
+ },
+ "ASSAULT-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (EVT: roadside bombing) near the town of (SRC: Samarra) on Sunday (EVT: killed) one (TAR: U.S. soldier) and wounded two others, the military said."
+ },
+ "ASSAULT-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Three (TAR: US servicemen) were (EVT: killed) by an (EVT: improvised explosive device) outside of the (SRC: Iraqi) city of Basra."
+ },
+ "ASSAULT-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Sri Lankan army) has been (EVT: holding) thousands of (TAR: Tamil civilian refugees) (EVT: as human shields) in the battle zones of the southern sector of the Jaffna peninsula, according to a press release by the Liberation Tigers."
+ },
+ "ASSAULT-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "An (EVT: attempt to assassinate) (TAR: deputy governor of the Tyumen) region, Oleg Chemezov, was (EVT: thwarted in) (SRC: Khanty-Mansiysk) (Siberia), the city's police reported."
+ },
+ "ASSAULT-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Militants loyal to Iraq's Al-Qaeda frontman Abu Musab al-Zarqawi) (EVT: said) they (EVT: attempted to assassinate) outgoing (TAR: Prime Minister Iyad Allawi), in a statement posted on the internet."
+ },
+ "ASSAULT-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Hezbollah) guerrillas (EVT: killed) the (EVT: deputy chief) of (TAR: Israel's militia ally in southern Lebanon) Sunday sources on both sides said."
+ },
+ "COERCE-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Turkish police) (EVT: prevented) the (EVT: demonstration) staged by (TAR: students at Cumhuriyet University) near AKP offices in Sivas on 15 October to protest the decision of sending troops to Iraq."
+ },
+ "COERCE-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Croatian authorities) are (EVT: failing) to (EVT: uphold) the (EVT: property rights) of (TAR: Croatian Serb refugees), a human rights group protested here Wednesday."
+ },
+ "COERCE-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "In an unprecedented move, (SRC: Palestinian police in Jericho) (EVT: confiscated) weapons and explosives from (TAR: Palestinian armed groups), the Israeli army said Friday."
+ },
+ "COERCE-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Afghan guerillas) (EVT: blew up) three main electric (EVT: power lines) leading into (TAR: Kabul) last month and nearly one third of the city's power supply is still down, the Czechoslovak news agency Ceteka reported from Kabul today."
+ },
+ "COERCE-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Jewish settlers in the West Bank city of Hebron) (EVT: set fire) to the (EVT: offices) of the (TAR: Palestinian administrators) of Muslim property overnight following the killing of an Israeli man, Palestinian residents said Sunday."
+ },
+ "COERCE-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli army) bulldozers (EVT: demolished) (TAR: Palestinian) homes and civilian buildings in southern Gaza on Sunday, Palestinian officials and US witnesses said."
+ },
+ "COERCE-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: British) government on Monday (EVT: outlawed) the largest (TAR: Protestant extremist organization in Northern Ireland) because of what it called its direct involvement in killing in the strife-torn province."
+ },
+ "COERCE-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Nicaragua's Sandinista government) today (EVT: ordered) the opposition newspaper (TAR: La Prensa) to (EVT: suspend publication) indefinitely, a spokesman for the paper said."
+ },
+ "COERCE-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Yoweri Museveni) has (EVT: banned) (TAR: Ugandan opposition) (EVT: candidates) from participating in the upcoming elections."
+ },
+ "COERCE-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Turkish authorities) have (EVT: imposed) a (EVT: curfew) in the town of (TAR: Cizre) in southeastern Turkey after a demonstration over fraud allegations in Sunday's local elections, security sources said here Tuesday."
+ },
+ "COERCE-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The military government of (SRC: President Prosper Avril) (EVT: declared) a 30-day (EVT: state of siege) in (TAR: Haiti) on Saturday, suspending parts of the constitution and arresting political opponents, a spokeswoman for the U.S. embassy said."
+ },
+ "COERCE-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli soldiers) (EVT: arrested) more than 100 (TAR: Palestinians) on Saturday in a security sweep of the Hebron area of the occupied West Bank, military sources said."
+ },
+ "COERCE-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Ghanaian authorities) have (EVT: deported) 168 (TAR: Liberians) for traveling without proper documents on a Swedish-registered vessel, a port official said Monday."
+ },
+ "COERCE-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Liberian riot police) (EVT: used tear gas) to (EVT: disperse demonstrators) protesting election results in (TAR: Monrovia)."
+ },
+ "COERCE-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: North Korea) has tried to (EVT: hack into) the computers of (TAR: South Korean army) officers, officials said Tuesday."
+ },
+ "COERCE-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Muslim hackers) angered by the publication of cartoons of the Prophet Mohammed have (EVT: defaced) nearly 3,000 (TAR: Danish Web sites) over the past month in the biggest politically motivated cyber attack long-time observers have ever seen."
+ },
+ "CONCEDE-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Uganda) said on Sunday it had (EVT: paid compensation) to 67 elderly (TAR: British nationals), most of the Asians, for assets they lost when former dictator Idi Amin expelled them 18 years ago."
+ },
+ "CONCEDE-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Omar Hassan al-Bashir), following the partial peace deal, has (EVT: taken) several tentative (EVT: steps) to (EVT: enhance political freedoms) and promote an image of openness and tolerance in (TAR: Sudan)."
+ },
+ "CONCEDE-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Latvian Constitutional Court) (EVT: cancelled restrictions) on the use of the (TAR: Russian) (EVT: language) on national radio and television."
+ },
+ "CONCEDE-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Ivory Coast's Supreme Court) (EVT: decided to allow) candidate (TAR: Alassane Ouattara) to (EVT: participate) in the country's upcoming (EVT: elections)."
+ },
+ "CONCEDE-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Yugoslavia) (EVT: lifted) a night (EVT: curfew) in (TAR: Kosovo) where 28 people have been killed in ethnic riots this year and the province was reported quiet on Sunday."
+ },
+ "CONCEDE-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Omar El Bashir) on Thursday (EVT: shortened) by one hour the nightly (EVT: curfew) imposed in (TAR: Sudan) after a June 30 coup toppled the civilian government."
+ },
+ "CONCEDE-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Yugoslavia) (EVT: eased emergency measures) on Wednesday in (TAR: Kosovo) province, the scene of ethnic violence last March, as authorities in Croatia cracked down on Serbian nationalists."
+ },
+ "CONCEDE-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Sudan's government) on Sunday (EVT: lifted) a state of (EVT: emergency) in (TAR: West Darfur State) that was imposed six months ago after bloody tribal clashes there, Omdurman radio reported Sunday."
+ },
+ "CONCEDE-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Nigerian Union of Teachers) (NUT), the umbrella union for primary school teachers, (EVT: announced) Thursday that it has (EVT: called off) a four-day (EVT: strike) after deliberations with the (TAR: Nigerian government)."
+ },
+ "CONCEDE-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Rwandan government) on Thursday (EVT: accepted demands) from (TAR: Hutu rebels) that it (EVT: initiate political reforms)."
+ },
+ "CONCEDE-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Tuesday the (SRC: Serbian parliament) (EVT: approved) a ``special law'' (EVT: recognizing victories) by (TAR: Zoran Djindjic's opposition coalition) in November 17 municipal (EVT: elections) in 14 of the 18 most important Serbian cities, including Belgrade."
+ },
+ "CONCEDE-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Georgian President Eduard Shevardnadze) (EVT: resigned) Sunday as the opposition threatened to storm his residence in (TAR: Tbilisi)."
+ },
+ "CONCEDE-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "As part of its fight to eradicate poverty, the governing (SRC: Labour Party) has (EVT: introduced) a legally-binding (EVT: minimum) rate of (EVT: pay) in (TAR: Britain) for the first time."
+ },
+ "CONCEDE-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Federal Minister for Interior Aftab Ahmad Khan Sherpao) (EVT: allowed) opposition leader (TAR: Maulana Fazl-ur-Rehman) to bring out `Shan-e-Mustafa (SAW)' (EVT: Rally) after an agreement on carrying out a violence free protest demonstration, according to the Pakistani Federal Secretary Interior."
+ },
+ "CONCEDE-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Dos Sontas) has reportedly (EVT: conceded) at last to demands from (TAR: National Union for the Total Independence of Angola) (UNITA) to (EVT: overhaul) the (EVT: judiciary)."
+ },
+ "CONCEDE-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Lt. Gen. Prosper Avril) (EVT: resigned) yesterday to (EVT: allow) (TAR: Haiti's) (EVT: first democratic elections) to take place."
+ },
+ "CONSULT-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A group of (SRC: African diplomats) (EVT: held) their first (EVT: meeting with) (TAR: President Parvanov) at a lunch hosted by the Ambassador of Kingdom of Morocco."
+ },
+ "CONSULT-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: U.S. Secretary of State Warren Christopher) (EVT: telephoned) (SRC/TAR: Russian Foreign Minister Andrei Kozyrev) on Tuesday to discuss efforts to forge a peace settlement in former Yugoslavia, Itar-Tass news agency said."
+ },
+ "CONSULT-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Taiwan's Vice Foreign Minister) (EVT: visited) (TAR: Russia) today, becoming the island's highest ranking government official to go there."
+ },
+ "CONSULT-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Iraqi President Saddam Hussein) (EVT: arrived) in (TAR: Amman) on a previously unannounced visit on Wednesday."
+ },
+ "CONSULT-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Russian President Boris Yeltsin) on Saturday (EVT: hosted) (TAR: Japanese Prime Minister Ryutaro Hashimoto) in this Siberian city for an informal meeting aimed at establishing close personal relations between the two leaders."
+ },
+ "CONSULT-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Francois Mitterand) (EVT: gave) a warm (EVT: welcome) on Thursday to (TAR: South African leader F.W. de Klerk) who is attempting to break his country's international isolation."
+ },
+ "CONSULT-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: U.S.) and (SRC: Soviet negotiators) (EVT: return to) (TAR: Geneva) this week for talk on limiting the number of European-based nuclear missiles, an issue likely to dominate East-West relations this year."
+ },
+ "CONSULT-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Arab League Secretary General Chadli Klibi) (EVT: undertook mediation) mission between (TAR: Syria) and (TAR: Palestinian leader Yasser Arafat)."
+ },
+ "CONSULT-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Quatar's emir), Sheikh Hamad bin Khalifa al-Thani (EVT: launched) a (EVT: mediation) effort on Saturday (EVT: between) the (TAR: Emirates) and (TAR: Saudi Arabia) whose ties have been strained by Riyadh's new friendship with Tehran."
+ },
+ "CONSULT-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Israel) and (SRC/TAR: Lebanon) (EVT: renewed negotiations) today on an Israeli troop pullback from Lebanon and their future relations."
+ },
+ "CONSULT-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: French National Assembly president Laurent Fabius) and a group of deputies (EVT: held talks) with leaders of (SRC/TAR: Romania's) new government on Tuesday, the first high level Western delegation to visit Bucharest since last month's revolution."
+ },
+ "COOPERATE-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Taliban ruled Afghanistan) (EVT: has been sharing expertise) with the (SRC/TAR: Liberation Tigers of Tamil Eelam) according to a special report submitted to the Canadian Security Intelligence Service."
+ },
+ "COOPERATE-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: European) (EVT: foreign direct investment) flows in (TAR: Latin America) and the (TAR: Caribbean) (EVT: rose) more than eightfold during the second half of the 1990s compared with the first half of that decade, according to a study presented in Paris by the Inter-American Development Bank."
+ },
+ "COOPERATE-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: French) and (SRC/TAR: Egyptian) warships on Monday (EVT: launched) 10 days of (EVT: war games) in the Mediterranean Sea, expected to be joined later by Italian and German vessels, the French embassy said Monday."
+ },
+ "COOPERATE-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Zambia) (EVT: extradited) suspected British militant Haroon Rashid Aswad (EVT: to) (TAR: Britain) on Sunday, a senior Zambian government official said."
+ },
+ "COOPERATE-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli intelligence) officials have (EVT: shared evidence with) the (TAR: U.S.) about contacts between al Qaeda and senior members of Saddam Hussein's Ba'ath Party, according to governmental officials."
+ },
+ "DEMAND-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Poland's parliament) has (EVT: demanded) an immediate admission by (TAR: Moscow) that Soviet NKVD security forces murdered more than 15,000 captive Polish officers during World War Two."
+ },
+ "DEMAND-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: French President Jacques Chirac) (EVT: issued) a stern reminder Saturday to (TAR: Iraq) that it (EVT: must cooperate) fully (EVT: with) UN (EVT: inspectors) probing suspect sites for weapons of mass destruction."
+ },
+ "DEMAND-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "An (SRC: Argentine judge) has (EVT: ordered) former president (TAR: Carlos Menem) to appear October 16 for (EVT: questioning) in an investigation of illegal arms sales to Croatia and Ecuador in the 1990s, court sources said Wednesday."
+ },
+ "DEMAND-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Bush administration) (EVT: declared) Tuesday that (TAR: China) (EVT: must drop barriers) to U.S. (EVT: exports) or face tariff penalties for maintaining unfair trade practices."
+ },
+ "DEMAND-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: PRC) on Tuesday (EVT: demanded) that the (TAR: US) (EVT: cancel) plans to (EVT: sell) air-to-surface anti-tank (EVT: weapons) to Taiwan to avoid ``new damage'' to US-PRC relations."
+ },
+ "DEMAND-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A senior (SRC: British minister) (EVT: reiterated) that (TAR: Libya) (EVT: must hand over alleged) bombers of the U.S. airliner as he embarked on a trip to North Africa to seek Arab support for the demand."
+ },
+ "DEMAND-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The rebel (SRC: Kurdistan Workers' Party) (EVT: issued) a declaration (EVT: demanding) that the (TAR: Turkish government) provide (EVT: information) on the safety of its leader Abdullah Ocalan."
+ },
+ "DEMAND-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Kosovo Municipality Association) (AKK) officials (EVT: demanded support from) the (TAR: Kosovo Assembly) in regaining control over the properties that belonged to them before."
+ },
+ "DEMAND-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Greece) bluntly (EVT: demanded) that its (TAR: European Community) partners (EVT: refuse to recognize) the Former Yugoslav Republic of Macedonia, on Greece's northern border, as long as it keeps that name."
+ },
+ "DEMAND-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinian officials) (EVT: demanded) Friday that the (TAR: United States) match the European Union's (EVT: support) for Palestinian (EVT: statehood)."
+ },
+ "DEMAND-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Third World Water Forum) (EVT: concluded) on Saturday that the (TAR: US) and other developed nations (EVT: must allocate) greater financial (EVT: resources to help) with the battle against the global water and sanitation crisis."
+ },
+ "DEMAND-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "According to reports the (SRC: UK) is (EVT: pushing hard) for the (TAR: US) (EVT: support) its (EVT: debt relief) plan to tackle poverty in Africa."
+ },
+ "DEMAND-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Some 800,000 (SRC: Iraqi Kurds) (EVT: sought refuge) in (TAR: Germany) last month."
+ },
+ "DEMAND-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Ethnic Albanians in south Serbia) are (EVT: demanding) a (TAR: U.N.) military presence to (EVT: protect) them against a heavily armed ruling Serb minority and prevent a Bosnia-style civil war, but some foreign monitors are skeptical."
+ },
+ "DEMAND-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Red Cross operating in Iraq) (EVT: said) (TAR: US) and (TAR: British forces) (EVT: must ensure security) to allow emergency water, food, and medical supplies to reach the needy."
+ },
+ "DEMAND-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "At the end of a seminar on reform, around 100 (SRC: Arab intellectuals and activists) (EVT: published) a declaration (EVT: demanding) wide-ranging (EVT: political changes) in the (TAR: Arab world)."
+ },
+ "DEMAND-0017": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Sunnis) have (EVT: demanded) that (EVT: control of) the Interior (EVT: Ministry) be taken away from (TAR: Shiite religious parties) in the next government."
+ },
+ "DEMAND-0018": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Rwandan rebels) (EVT: demanded) the (EVT: removal of President) (TAR: Juvenal Habyariman) and his ruling party at the fourth round of talks aimed at ending a 23-month civil war."
+ },
+ "DEMAND-0019": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Former Socialist prime minister (SRC: Andreas Papandreou) (EVT: demanded) immediate (EVT: elections) after a special court cleared him of all charges in (TAR: Greece)'s biggest corruption trial this century."
+ },
+ "DEMAND-0020": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Opposition groups in Zimbabwe) are (EVT: demanding) that (TAR: President Mugabe) (EVT: abandon) his controversial (EVT: policy) of land confiscations."
+ },
+ "DEMAND-0021": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The main (SRC: Hutu rebel group), Forces for Defence of Democracy (FDD), insisted on its (EVT: demands) that (TAR: Burundi's government grant) the Hutu majority more (EVT: rights)."
+ },
+ "DEMAND-0022": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Rwandan rebels) (EVT: announced) that (TAR: President Kagame) and his (TAR: Rwandan Patriotic Front) (EVT: must agree) to major (EVT: constitutional changes) before they demobilize."
+ },
+ "DEMAND-0023": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Albanians of southern Serbia) are (EVT: demanding) political and territorial (EVT: autonomy) from (TAR: Serbian authorities)."
+ },
+ "DEMAND-0024": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) on Thursday (EVT: demanded) that the (TAR: Democratic People's Republic of Korea) (DPRK) (EVT: forsake) its nuclear (EVT: program)."
+ },
+ "DEMAND-0025": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Human rights organization (SRC: Amnesty International) (EVT: demanded) that the (TAR: Sudanese government) (EVT: end curbs) on (EVT: press freedom)."
+ },
+ "DEMAND-0026": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: International Labor Office) (ILO) (EVT: reiterated) its (EVT: demand) today that (TAR: Israel) (EVT: ease restrictions) on the (EVT: movement) of Palestinian workers."
+ },
+ "DEMAND-0027": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Iranian authorities) have been (EVT: pressuring) (TAR: workers of the United Bus Company of Tehran) (Sharekat-e Vahed) (EVT: to cancel) the (EVT: strike) they have been planning for better pay and working conditions."
+ },
+ "DEMAND-0028": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Russia) (EVT: said) on Tuesday that (TAR: Sudan) (EVT: must return) a Mi-26 (EVT: helicopter) that was captured by the Sudanese authorities last week."
+ },
+ "DEMAND-0029": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The 106th (SRC: Inter-Parliamentary Union Conference) (EVT: stressed) the (EVT: obligation) of the (TAR: international community) to take immediate action to (EVT: lift embargoes) and other sanctions which have negatively affected children in different parts of the world."
+ },
+ "DEMAND-0030": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Kenzo Oshima), the United Nations Emergency Relief Coordinator, (EVT: demanded) parties to the conflict in (TAR: Iraq) to (EVT: allow humanitarian) workers the freedom of movement necessary for discharging their mandate."
+ },
+ "DEMAND-0031": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Washington) along with its allies (EVT: demanded) that (TAR: Hamas) (EVT: renounce) its (EVT: armed struggle) against Israel."
+ },
+ "DEMAND-0032": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: European Community) foreign ministers (EVT: demanded) the (EVT: withdrawal) of (TAR: Yugoslav) federal forces from Bosnia-Herzogovina on Monday calling them an occupying army, diplomats quoted an EC declaration as saying."
+ },
+ "DEMAND-0033": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Bosnian Serbs) (EVT: demanded) a truce with (TAR: Moslem) forces (TAR: in) east (TAR: Bosnia) before allowing U.N. aid conveys to feed starving Moslem civilians in the region."
+ },
+ "DEMAND-0034": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Yugoslavia) on Tuesday (EVT: demanded) a (EVT: meeting) of the (TAR: U.N. Security Council) to discuss Croatia's military advance into the Serb-held Krajina region, describing it as ``a serious challenge to the world community.''"
+ },
+ "DEMAND-0035": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Jack Straw) (EVT: said) on Friday that the (TAR: Sudanese government) and the (TAR: rebels in Darfur) (EVT: must reach) an (EVT: agreement) that stops the conflict for good before developmental assistance to the region is released."
+ },
+ "DEMAND-0036": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Egyptian President Hosni Mubarak) (EVT: said) here Wednesday that the (TAR: US) (EVT: must be ready to mediate) between Israelis and Palestinians as soon as the Israeli elections of January 28 are finalized."
+ },
+ "DIPLOMACY-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Czechoslovakia) and (SRC/TAR: Albania) have (EVT: upgraded) their (EVT: diplomatic ties) back up to ambassadorial level after an 18-year break, the official CTK news agency said on Wednesday."
+ },
+ "DIPLOMACY-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A top (SRC: U.S. official) today (EVT: praised) (TAR: Haiti's) efforts to improve its record on human rights and said it was an important partner for the United States."
+ },
+ "DIPLOMACY-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: West German government) today (EVT: welcomed) (TAR: President Reagan's) latest policy (EVT: statement) as proof of Washington's earnest wish for a settlement to be reached in U.S.-Soviet nuclear talks."
+ },
+ "DIPLOMACY-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) on Thursday (EVT: defended) the (EVT: right of) (TAR: Soviet troops) to fire protectively on militants in Azerbaijan and insisted unrest there reflected age-old ethnic tensions, not a fight for political independence."
+ },
+ "DIPLOMACY-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinian leader Yasser Arafat) (EVT: defended) (TAR: Iraq) and (TAR: Libya) on Friday (EVT: against) Western (EVT: criticism) of their arms industries and said the West was applying double standards on human rights."
+ },
+ "DIPLOMACY-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Arab League Secretary-General Chedli Klibi) today (EVT: urged) the European Community to (EVT: support) the (TAR: Palestinian Liberation Organization) (PLO), which he said would create a favorable climate for peace talks."
+ },
+ "DIPLOMACY-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Saudi Arabia) has (EVT: mobilized) pressure groups in the United States to help (EVT: support) the rights of (TAR: Palestinians) in their struggle against Israel, a top minister said in comments published Thursday."
+ },
+ "DIPLOMACY-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Sri Lanka) has (EVT: established diplomatic ties) with and opened an embassy in (TAR: Tehran), the foreign ministry said on Wednesday."
+ },
+ "DIPLOMACY-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Argentina) has (EVT: apologized) to (TAR: Brazil) for one of its gunboats intercepting a Brazilian ship in the Beagle Channel, disputed by Argentina and Chile."
+ },
+ "DIPLOMACY-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A group of (SRC: Yoruba) leaders (EVT: announced) yesterday that they are willing to (EVT: forgive) (TAR: President Olusegun Obasanjo) and queue behind him for a second term."
+ },
+ "DIPLOMACY-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Libyan leader Muammar Gaddafi) and (SRC/TAR: Bulgarian President Todor Zhivkov) today (EVT: signed) a (EVT: treaty) of friendship and cooperation, the BTA reported."
+ },
+ "DIPLOMACY-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Czechoslovakia) and (SRC/TAR: China) (EVT: signed) an (EVT: agreement) today to increase trade in 1983 by 50 percent compared with last year, the official Czechoslovak news agency Ceteka said today."
+ },
+ "DISAPPROVE-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "On Tuesday, (SRC: Nigerian junior foreign minister Dubem Oniya) (EVT: summoned) (TAR: Niger's ambassador Brah Mohamane) (EVT: to complain) of inaction over the gangs."
+ },
+ "DISAPPROVE-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Albania) on Friday (EVT: denounced) as an ugly crime (TAR: Yugoslavia)'s suppression of ethnic Albanian unrest in the southern Yugoslav province of Kosovo."
+ },
+ "DISAPPROVE-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Zimbabwean Prime Minister Robert Mugabe) today (EVT: accused) the (TAR: United States) of restoring the blackmail in the negotiations on independence for Namibia."
+ },
+ "DISAPPROVE-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Ousted president (TAR: Jean-Bertrand Aristide) (EVT: has been accused) of (EVT: misusing) up to US \\$50 million (\\$73 million) in (EVT: public funds), much of it believed to have been embezzled, by current (SRC: Haitian government) officials."
+ },
+ "DISAPPROVE-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Human rights watchdog (SRC: Amnesty International) (EVT: accused)  the (TAR: United States) of (EVT: violating human rights), ignoring international law and sending a ``permissive signal to abusive governments''."
+ },
+ "DISAPPROVE-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Sudanese government) has (EVT: accused) (TAR: Darfur rebels) of (EVT: violating) a month-old (EVT: ceasefire), a member of the Chadian team trying to broker a peace pact has said."
+ },
+ "DISAPPROVE-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinians) (EVT: blamed) (TAR: Israel) (EVT: for) the (EVT: bombing) of Raed Karmi in the West Bank City of Tulkarm, which has set off a renewed wave of violence."
+ },
+ "DISAPPROVE-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(TAR: Kosovo's prime minister) (EVT: has been indicted by) the (SRC: U.N. war crimes court) for his alleged part in (EVT: atrocities during) the (EVT: fight) against Serb forces and will resign."
+ },
+ "DISAPPROVE-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (TAR: Christian missionary from Calgary) (EVT: was arrested in) (SRC: Lebanon) for (EVT: collaborating) with Israel, according to the Canadian Press. "
+ },
+ "DISAPPROVE-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Nigerian authorities) (EVT: jailed) 52 members of the banned (TAR: Movement for the Actualization of the Sovereign State of Biafra) (MASSOB) on (EVT: allegations) of (EVT: treason) for playing in a youth football tournament in Lagos."
+ },
+ "DISAPPROVE-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "An (SRC: official Syrian newspaper) (EVT: called) Thursday on Arabs to (EVT: unite) and ``mobilize'' (EVT: against) (TAR: Israeli right-winger Ariel Sharon), who has vowed not to return the Golan Heights to Syria if he is elected prime minister February 4."
+ },
+ "DISAPPROVE-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Archbishop Desmond Tutu) on Sunday (EVT: called for sanctions against) (TAR: Nigeria) in the wake of the execution of Ken Saro-Wiwa."
+ },
+ "DISAPPROVE-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Yugoslavia) (EVT: lodged) an (EVT: official protest) with (TAR: Albania) today, charging its neighbor with supporting dissidents here in what is said was tantamount to inciting revolution."
+ },
+ "DISAPPROVE-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Lebanon) (EVT: complained to the United Nations) on Tuesday over two (TAR: Israeli) air raids last Friday in which it said 20 people were killed or wounded."
+ },
+ "DISAPPROVE-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (SRC: Saudi businessman) (EVT: is suing) the (TAR: United States) for damages to his pharmaceutical plant which were caused by a missile attack in August, his American lawyer said."
+ },
+ "DISAPPROVE-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (EVT: European court) (EVT: convicted) (TAR: Turkey) of \"inhuman acts\" Thursday for destroying the home of a Kurdish citizen in the country's southeast."
+ },
+ "FIGHT-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Israeli army) (EVT: forced out) on Wednesday more than 1,000 (TAR: Palestinian refugees) (EVT: from) their (EVT: homes) in a West Bank refugee camp during a 48-hour search for militants, residents said."
+ },
+ "FIGHT-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Sudan's government) (EVT: is responsible for mass killings) and other atrocities in the (TAR: Darfur) region, according to a United Nations report."
+ },
+ "FIGHT-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Serb forces) were (EVT: engaged in ethnic cleansing) in Kosovo (EVT: against) the majority (TAR: Albanian population) of the province, according to the US government."
+ },
+ "FIGHT-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israel) Friday (EVT: reimposed blockades) in the (TAR: West Bank) following the shooting deaths of two Israelis a day earlier, a military spokesman announced."
+ },
+ "FIGHT-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Soviet Union) (EVT: closed) its southern (EVT: borders) with (TAR: Iran) and (TAR: Turkey) because of fighting between Azerbaijanis and Armenians, an editor at the official Armenian news agency said."
+ },
+ "FIGHT-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Vietnamese-led forces) have (EVT: retaken) a strategic (EVT: village) in (TAR: Western Kampuchea) after fierce fighting with guerrillas who overran it late last month, Thai military sources said today."
+ },
+ "FIGHT-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Burmese troops) have (EVT: captured) part of a (TAR: Karen guerrilla) (EVT: stronghold) on the Thai border after five days of fighting, Thai police here said on Monday."
+ },
+ "FIGHT-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israel) today (EVT: mounted) its long-threatened (EVT: invasion) of (TAR: South Lebanon), ploughing through the United Nations lines on the coast of south of Tyre and thrusting forward in at least to inland areas."
+ },
+ "FIGHT-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Sudanese rebels) (EVT: shelled) the southern regional capital (TAR: Juba) for the first time in a year on Sunday and Monday, killing about 20 people, relief officials in Nairobi said."
+ },
+ "FIGHT-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Egyptian police) (EVT: opened fire) to disperse (TAR: Moslem fundamentalist) demonstrators on Monday night, killing one person and arresting 12, security sources said."
+ },
+ "FIGHT-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Serb forces) (EVT: killed) three (TAR: ethnic Albanians) (EVT: in) a (EVT: gunbattle) in southeastern Serbia Friday, a political council representing ethnic Albanians in the region said in remarks published here Sunday."
+ },
+ "FIGHT-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (EVT: minefield explosion) near the town of (SRC: Samarra) (EVT: killed) two (TAR: Iraqi youths) and (EVT: wounded) five others on Sunday."
+ },
+ "FIGHT-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Vietnamese-led forces) (EVT: launched artillery), (EVT: mortar), and (EVT: rocket) fire against (TAR: Kampuchean guerrilla) camps near the eastern Thai border today, killing or wounding 50, Thai military sources said."
+ },
+ "FIGHT-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli) (EVT: tanks fired) four shell bombs at targets in (TAR: Jericho), witnesses said, in a rare incident in the West Bank city."
+ },
+ "FIGHT-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Soviet) (EVT: aircraft) including helicopter gunships (EVT: killed) 46 (TAR: Afghan) civilians in an attack on a village in the western province of Heart."
+ },
+ "FIGHT-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli) (EVT: helicopters) and tanks (EVT: shelled) positions of the (TAR: Palestinian) security forces and residential areas near the town of Rafah."
+ },
+ "FIGHT-0017": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: British) (EVT: aircraft using precision guided missiles killed) 4 (TAR: Iraqis) in an attack on a suspected weapons supply in Basra."
+ },
+ "FIGHT-0018": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Recent (SRC: US) (EVT: Predator) attacks, occurring about once every three days, have (EVT: killed) at least eight top (TAR: al-Qaeda) leaders since last July, according to Pentagon sources."
+ },
+ "FIGHT-0019": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Both the (SRC/TAR: Phillippines military) and the (SRC/TAR: Moro Islamic Liberation Front) are (EVT: guilty) of (EVT: violating) the (EVT: ceasefire) agreement signed in March 2001, according to a group that conducted simultaneous fact-finding missions in Lanao, Maguindanao, and Cotabato provinces last week."
+ },
+ "MOBILIZE-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Macedonian army) (EVT: prepared) to (EVT: resume shelling) (TAR: Albanian rebel)-held territory as attempts to resolve the crisis on the political front were deadlocked."
+ },
+ "MOBILIZE-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "NEED EXAMPLE."
+ },
+ "MOBILIZE-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli troops) (EVT: remained on alert) in the occupied (TAR: West Bank) today to forestall more violence after a week of unprecedented Palestinian civil unrest."
+ },
+ "MOBILIZE-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: government of Sindh province) has (EVT: ordered patrols) by (EVT: police) and paramilitary soldiers after violent protests by (TAR: Muslim) groups."
+ },
+ "MOBILIZE-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israel) has (EVT: strengthened) its (EVT: forces) in (TAR: Lebanon) following the discovery of Soviet-made Katyusha rockets in the area last week, military sources said today."
+ },
+ "MOBILIZE-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Britain) (EVT: mobilized army) reservists for a possible war (EVT: against) (TAR: Iraq) on Tuesday while UN arms inspectors said they needed more time."
+ },
+ "MOBILIZE-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: North Korea) has (EVT: trained) more than 500 computer (EVT: hackers) capable of launching cyber warfare against the (TAR: United States), South Korea's defense ministry said Monday."
+ },
+ "PROTEST-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Homeland Union) (Conservatives) (EVT: began collecting signatures) in part of a drive to convince the (TAR: Lithuanian Parliament) to (EVT: amend) the (EVT: constitution) so that same-sex marriages are banned."
+ },
+ "PROTEST-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Up to 100 (SRC: ethnic Albanians) (EVT: demonstrated) on Tuesday in the (TAR: Yugoslav province of Kosovo), where 24 people were killed in nationalist riots last March, Belgrade radio said."
+ },
+ "PROTEST-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Angry activists from the defeated (SRC: Fatah Party) have (EVT: staged rallies) in the Gaza Strip (EVT: against) the party's leader (TAR: Mahmoud Abbas), saying he must resign."
+ },
+ "PROTEST-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Tens of thousands of university (SRC: students throughout Indonesia) (EVT: staged) mass (EVT: demonstrations) Saturday to (EVT: demand political reforms) by (TAR: President Suharto)'s government."
+ },
+ "PROTEST-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Thousands of (SRC: Nigerians) from throughout the country (EVT: were converging) Thursday for a (EVT: rally) in Lagos to (EVT: protest) the (EVT: rights violations) under the recently imposed Sharia law by (TAR: Islamic fundamentalists) in the northern districts."
+ },
+ "PROTEST-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Thousands of (SRC: Iraqi Kurds) (EVT: demonstrated) in the northern city of Kirkuk on Sunday (EVT: calling for independence) from (TAR: Iraq), witnesses said."
+ },
+ "PROTEST-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Up to 1,000 (SRC: ethnic Turks) (EVT: began) a (EVT: hunger strike) on Monday to protest against (TAR: Sweden)'s decision to send them back to Bulgaria, where they say they face imprisonment, homelessness and persecution."
+ },
+ "PROTEST-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Islamic fundamentalists) (EVT: continued) their (EVT: hunger strike) to (EVT: demand) the (EVT: resignation) of (TAR: Algerian President Ahmed Ben Bella)."
+ },
+ "PROTEST-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A member of the (SRC: Syrian parliament), Mohammed Mamoun, (EVT: started) a (EVT: hunger strike) yesterday to (EVT: protest) (TAR: President Assad)'s (EVT: failure) to usher in meaningful political (EVT: reforms)."
+ },
+ "PROTEST-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Algerian landowners) (EVT: began) a (EVT: hunger strike) outside Parliament to (EVT: demand) the (EVT: return of property) seized by (TAR: Algerian government forces) in the 1970s, APS news agency said."
+ },
+ "PROTEST-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Salaheddine Sidhoum), Algeria's leading human rights activist, (EVT: staged) a 24-hour (EVT: hunger strike) in prison on Sunday in (EVT: protest) against the widespread (EVT: human rights violations) by (TAR: Algerian security forces), his lawyer said on Tuesday."
+ },
+ "PROTEST-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A group of (SRC: Chenchen refugees) are (EVT: continuing) a (EVT: hunger strike) in protest of the (TAR: Russian government)'s refusal to (EVT: accept) the (EVT: independence) of Chechnya."
+ },
+ "PROTEST-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinians of the Israeli-occupied West Bank) (EVT: shunned work) on Monday (EVT: to protest) at settlement of (TAR: Soviet Jewish immigrants) on Arab land."
+ },
+ "PROTEST-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: fundamentalist Umma (Nation) party) has (EVT: said) it (EVT: will boycott) (TAR: Algeria)'s first multi-party elections (EVT: unless) the president agrees to (EVT: step down)."
+ },
+ "PROTEST-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Some 500,000 workers affiliated with the (SRC: Serbian Workers' Union) (SSS) (EVT: stopped work) on the first day of an open-ended (EVT: strike) on Monday over a controversial (EVT: employment bill) signed in by (TAR: Serbian Labour Minister Dragan Milovanovic)."
+ },
+ "PROTEST-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Seven (SRC: opposition parties in Nepal) have (EVT: organized) a general (EVT: strike) that shut down (TAR: Khatmandu) in (EVT: protest) of last week's (EVT: arrest) of a number of activists."
+ },
+ "PROTEST-0017": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Angry (SRC: French paper workers) (EVT: blocked) the (TAR: Europe Bridge) spanning the Rhine from France to West Germany for more than three hours by dumping sawdust on the (EVT: roadway), French border police said."
+ },
+ "PROTEST-0018": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "About 200 (SRC: supporters of former President Ahmed Ben Bella) (EVT: blocked roads) in the capital city of (TAR: Algiers) (EVT: demanding) that he be (EVT: reinstated as leader) of the Algerian government."
+ },
+ "PROTEST-0019": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Rebels in the Ivory Coast) on Tuesday (EVT: blocked transport) into Abidjan as they continued their effort (EVT: to overthrow) the (EVT: government) of (TAR: President Laurent Gbagbo)."
+ },
+ "PROTEST-0020": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Demonstrators in (SRC: Baghdad) (EVT: blocked) a (EVT: road) to show their (EVT: disapproval) for the (TAR: United States)' military (EVT: policies), a newspaper reported Tuesday."
+ },
+ "PROTEST-0021": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Young (SRC: Algerians) (EVT: blocked roads) leading to the city centre on Sunday to press their (EVT: demands) for greater (EVT: freedom) and opportunities from (TAR: President Bouteflika)'s government."
+ },
+ "PROTEST-0022": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Hundreds of thousands of people (EVT: blocked streets) in (SRC: Hong Kong) in defiance of (TAR: Chinese authorities) to (EVT: demand democratic reforms)."
+ },
+ "PROTEST-0023": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinian prisoners) (EVT: rioted) Monday at this jail in northern (TAR: Israel), setting fire to their mattresses and smashing furniture, police sources said."
+ },
+ "PROTEST-0024": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Egyptian) demonstrators (EVT: rioted) following a peaceful demonstration (EVT: calling for) the immediate (EVT: removal) of (TAR: President Hosni Mubarak) (EVT: from office)."
+ },
+ "PROTEST-0025": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinian) (EVT: riots against) (TAR: Israeli military) (EVT: policies) are still continuing with no end in sight."
+ },
+ "PROTEST-0026": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinian) youths (EVT: resorted) to (EVT: throwing stones) during (EVT: demonstrations) against the alleged human (EVT: rights violations) by the (TAR: Israeli military), officials said on Thursday."
+ },
+ "PROTEST-0027": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Prisoners (EVT: rioted) at a jail in (SRC: East Timor's capital Dili) on Monday joining thousands of demonstrators in (EVT: demanding) a referendum on (EVT: independence) from (TAR: Indonesian) rule, locals said."
+ },
+ "REJECT-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Palestinians) (EVT: reject proposed) (TAR: Israeli) (EVT: changes) to the Wye River land-for-security deal, chief Palestinian negotiator Saeb Erakat said."
+ },
+ "REJECT-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Yemen) has (EVT: rejected) a (TAR: U.S.) (EVT: request) to (EVT: interrogate) detainees held after the escape of 23 al-Qaida prisoners, a security official said Tuesday."
+ },
+ "REJECT-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Bangladesh) has once again outright (EVT: rejected) an (TAR: Indian) (EVT: proposal) for signing (EVT: Free Trade) Agreement (FTA) with her, urging the counterpart to sign the proposed South Asia Free Trade Agreement (SAFTA) instead."
+ },
+ "REJECT-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: South Korea) has (EVT: rejected) (TAR: North Korea)'s consistent (EVT: demand) to (EVT: sever) a decades-long (EVT: military alliance) with Washington, which keeps troops here under a mutual defense pact."
+ },
+ "REJECT-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Yugoslavia) on Thursday flatly (EVT: rejected) an (TAR: Australian) ultimatum to (EVT: handover) a (EVT: guard) involved in a shooting in front of the Yugoslav consulate in Sydney."
+ },
+ "REJECT-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: UN) on Tuesday (EVT: imposed) a de facto (EVT: information blackout) on the withdrawal, collection and monitoring of heavy weapons around (TAR: Sarajevo)."
+ },
+ "REJECT-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Bonn) (EVT: rejected) recent (EVT: calls) by (TAR: East Germany's Communist rulers) for immediate (EVT: economic aid), saying it was withholding it until a democratically-elected government takes over."
+ },
+ "REJECT-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Turkish government) has (EVT: refused) to commit to any direct (EVT: assistance) to the (TAR: US)-led (EVT: war) against Iraq, citing domestic opposition."
+ },
+ "REJECT-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Syria) (EVT: says) it (EVT: will not accept) any more (EVT: refugees) if war starts in Iraq."
+ },
+ "REJECT-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United Nations) on Tuesday (EVT: rejected) a call for its (EVT: peacekeeping forces to be deployed) in (TAR: East Timor)."
+ },
+ "REJECT-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Pakistan), a key U.S. ally in the war against terrorism, has (EVT: refused) to (EVT: deploy peacekeepers) in (TAR: Iraq) and has urged its citizens to avoid coming here."
+ },
+ "REJECT-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: US) on Thursday (EVT: rejected calls) by (TAR: Kofi Annan), UN secretary-general, to (EVT: adopt) far-reaching United Nations (EVT: reforms) as a comprehensive package."
+ },
+ "REJECT-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Vice-President Moody Awori) has (EVT: declined to resign) despite growing pressure by the (TAR: Kenya Anti-Corruption Commision) after he was implicated in a major scandal."
+ },
+ "REJECT-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Ankara's \\c Cankaya district administration) has (EVT: denied land allocation) for the construction of an (TAR: Alevite) temple, Cemevi, in the district."
+ },
+ "REJECT-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "In what has been described as a policy u-turn, (SRC: President Levy Mwanawasa) has (EVT: reneged) on his (EVT: commitment) to the (TAR: Zambian people) for holding elections under a (EVT: new constitution)."
+ },
+ "REJECT-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Despite warnings of starvation by humanitarian agencies, the (SRC: Israeli government) is (EVT: refusing) to (EVT: lift) the (EVT: curfew) on (TAR: Palestinians living in the West Bank and Gaza)."
+ },
+ "REJECT-0017": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Around 1,800 of 2,200 (SRC: Serbian teachers) (EVT: will not end) their (EVT: strike) unless their demands for wage increases are met by textcolor{blue}{Belgrade}, a union official announced after three weeks of striking."
+ },
+ "REJECT-0018": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: U.S.) (EVT: said) it would (EVT: not meet) hostage-takers (EVT: demands) to (EVT: release) prisoners in (TAR: Iraq), including a number of females."
+ },
+ "REJECT-0019": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: US authorities) (EVT: said) yesterday that (EVT: removing) the (EVT: sanctions) on (TAR: Burma) is currently (EVT: out of the question) as that would reward the regime for doing nothing."
+ },
+ "REJECT-0020": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: UNITA militarist wing) (EVT: refused) to (EVT: allow) (TAR: United Nations) planes to land and (EVT: evacuate) 15 of its observers who were taken hostage, the United Nations Observer Mission in Angola (MONUA) said."
+ },
+ "REJECT-0021": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Beirut) again (EVT: rejected) Thursday a (TAR: United Nations) (EVT: appeal) for (EVT: deploying) army (EVT: troops) along its borders with Israel."
+ },
+ "REJECT-0022": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Iran's religious leader Ayatollah Ruhollah Khomeini) today (EVT: rejected) (TAR: Iraqi President Saddam Hussein)'s (EVT: proposal) for a (EVT: cease-fire) during the Moslem holy month of Ramadan."
+ },
+ "REJECT-0023": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Rebels in the Ivory Coast) on Wednesday (EVT: dismissed) an (EVT: appeal) from (TAR: President Laurent Gbago) to (EVT: lay down) their (EVT: arms), saying they had lost all trust in the government they rose up against on September 19."
+ },
+ "REJECT-0024": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israeli President Moshe Katsav) has (EVT: refused to meet) (TAR: Jordan's) visiting (TAR: King Abdullah II) in Tel Aviv, saying he would only welcome him in Jerusalem, his office said Tuesday."
+ },
+ "REJECT-0025": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The radical (SRC: Palestinian Islamic Jihad) movement (EVT: rejected) an invitation to attend a (EVT: meeting) next week of (TAR: Palestinian) factions to debate plans for independence from Israel, the group said Wednesday."
+ },
+ "REJECT-0026": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Pakistan President Mohammad Zia-Ul-Haq) today (EVT: rejected) a fresh (EVT: offer) from (TAR: Afganistan) for direct (EVT: talks) between the two neighbors."
+ },
+ "REJECT-0027": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinian leader Yasser Arafat) Wednesday (EVT: rejected) a (TAR: US) (EVT: offer) to (EVT: host) a (EVT: summit) in mid-July to hammer out a framework agreement for peace between the Israelis and the Palestinians."
+ },
+ "REJECT-0028": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israel) is (EVT: opposed) to (TAR: French) (EVT: mediation) in peace negotiations with Syria, a close aide to Prime Minister Ehud Barak said Wednesday."
+ },
+ "REJECT-0029": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Ivory Coast rebels) on Friday again (EVT: rejected) a (TAR: west African) (EVT: peace plan), and said they also opposed the deployment of a regional peacekeeping force until their political demands are met."
+ },
+ "REJECT-0030": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Newly appointed (SRC: Palestinian Prime Minister Ismail Haniyeh) has (EVT: refused) to respond to a (EVT: demand) from the US President to adhere to interim (EVT: peace deals) reached with (TAR: Israel)."
+ },
+ "REJECT-0031": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The republic of (SRC: Slovenia) (EVT: defied) (TAR: Yugoslav) federal (EVT: authority) on Wednesday and was set to declare its right to secede from the country."
+ },
+ "REJECT-0032": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (SRC: newspaper based in Christian east Beirut) has (EVT: violated) a (EVT: ban) by (TAR: General Michel Aoun) and described his rival Elias Hrawi as president."
+ },
+ "REJECT-0033": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) on Wednesday (EVT: vetoed) a (TAR: Security Council) resolution censuring as a violation of international law its military sweep of the Nicaraguan ambassador's home in Panama on December 29."
+ },
+ "RETREAT-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United Nations) (EVT: has sent) 21 military and civilian personnel to (TAR: Yugoslavia) on Wednesday to (EVT: investigate) the feasibility of a 10,000-member peacekeeping force, a U.N. spokesman said on Monday."
+ },
+ "RETREAT-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Judge Alejandro Rivera) (EVT: opened fraud investigations) against 28 (TAR: Chilean government officials) suspected of taking kickbacks, the court said Friday."
+ },
+ "RETREAT-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (TAR: US national) (EVT: has been put under investigation) in (SRC: Italy) (EVT: for) her possible role in (EVT: rioting) during a G8 summit in Genoa last month, Ansa news agency reported."
+ },
+ "RETREAT-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Members of the (SRC: Association of African Jurists), a body linked to the Organization of African Unity, (EVT: investigated) (EVT: welfare) of nearly 2,000 (TAR: Libyans), some of whom have been held as long as seven years."
+ },
+ "RETREAT-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israel)'s high court (EVT: opened) a landmark (EVT: hearing) Wednesday into the legality of secret (EVT: interrogation techniques) used against (TAR: Palestinian) detainees."
+ },
+ "RETREAT-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Ceasefire Violations Committee) (CFVC) has (EVT: completed) its (EVT: investigation) into an allegation by the Liberian Peace Council (LPC) (EVT: that) the (TAR: NPFL) had (EVT: taken over) the city of Greenville."
+ },
+ "RETREAT-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Croatia) is (EVT: investigating) alleged (EVT: war crimes) by (TAR: Croatian extremists) against Serb civilians and prisoners and will bring suspects to trial, a Croatian official said."
+ },
+ "RETREAT-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Serbian military police) have (EVT: launched) an (EVT: investigation) into alleged (EVT: crimes) committed by (TAR: Croat forces) against ethnic Serb civilians and Montenegrin prisoners of war (EVT: during) the 1991-1995 Serbo-Croatian (EVT: conflict), the newspaper Jutarnji list reported Thursday."
+ },
+ "RETREAT-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Kyrgyz Prime Minister Nikolai Tanaev) (EVT: received) a mission of (EVT: observers) from the (TAR: OSCE), informing them in detail on the economic situation of the country."
+ },
+ "RETREAT-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A first patch of (TAR: Bangladeshi) (EVT: peacekeeping) troops (EVT: arrived) in (SRC: Sierra Leone) Tuesday, joining 12 unarmed military observers as the first element of an 800-strong Bangladeshi contingent due here, U.N. officials said."
+ },
+ "RETREAT-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (TAR: IAEA) has (EVT: dispatched inspectors to) Esfahan Uranium Conversion Facilities (UCF) in central (SRC: Iran) to monitor resumption of peaceful nuclear work at the plant."
+ },
+ "RETREAT-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(EVT: Humanitarian access) for the (TAR: Darfur) region has (EVT: improved) significantly since September as the (SRC: Khartoum government) tried to secure international favor."
+ },
+ "RETREAT-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Uzbekistan) finally (EVT: opened) the Friendship Bridge after four years (EVT: to allow) the delivery of 1,000 tons of (EVT: grain and flour to) (TAR: Afghanistan), where millions of people are at risk of starvation as winter sets in, reports aid agencies."
+ },
+ "RETREAT-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: pro-Iranian Hizbollah) (Party of God) group (EVT: declared) a unilateral (EVT: ceasefire) on Wednesday in (TAR: south Lebanon) after 12 days of battles with the Syrian-backed Amal militia."
+ },
+ "RETREAT-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Israeli army) (EVT: lifted) Friday a day-old (EVT: blockade) on (TAR: Palestinian) lorries passing through this crossing point between the Gaza Strip and the Jewish state, officials told AFP."
+ },
+ "RETREAT-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "One third of (SRC: ethnic Albanian guerrillas) operating in (TAR: Macedonia) have been (EVT: demobilized) since the August 13 peace accord between Macedonian and ethnic Albanian political parties, two rebel commanders told AFP by phone Sunday."
+ },
+ "RETREAT-0017": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Five hundred (SRC: Ugandan rebels) (EVT: surrendered) last week in the eastern (EVT: town) in (TAR: Soroti) followin a government offensive in the area, a local official said."
+ },
+ "RETREAT-0018": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) (EVT: speeded) up the (EVT: withdrawal) of some (EVT: invasion) forces from (TAR: Panama) on Wednesday, but defence officials cautioned that no deadline had been set for complete removal of the troops."
+ },
+ "RETREAT-0019": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Bosnian Serbs) said on Tuesday their forces had (EVT: completed) their (EVT: withdrawal) from the beseiged (TAR: Bosnian town of Gorazde)."
+ },
+ "SANCTION-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Italy) (EVT: announced) a (EVT: suspension) of air (EVT: links) with (TAR: Yugoslavia) on Wednesday, one day after a Yugoslav army jet shot down a helicopter carrying EC truce monitors."
+ },
+ "SANCTION-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (SRC: French minister) has (EVT: cancelled) a planned (EVT: visit) to (TAR: Haiti) after a state of siege was declared in the one-time French colony, the Foreign Affairs Ministry said on Sunday."
+ },
+ "SANCTION-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Switzerland) said today it had (EVT: expelled) two (TAR: Soviet) (EVT: diplomats) based in Geneva for spying, adding to a long series of espionage scares."
+ },
+ "SANCTION-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) (EVT: announced) Wednesday it (EVT: would prohibit) all (EVT: aid) to (TAR: Albanian rebels) in Macedonia and would deny entry to the United States to all individuals undermining stability there."
+ },
+ "SANCTION-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Red Cross) officials (EVT: suspended aid) deliveries in (TAR: Baghdad) on Wednesday after two of their vehicles were hit by gunfire and a staff member went missing."
+ },
+ "SANCTION-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Japan) said on Tuesday it had (EVT: halted economic aid) to (TAR: Yugoslavia) in line with Western efforts to end the fighting there."
+ },
+ "SANCTION-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United States) (EVT: suspended) part of a (EVT: military aid) program for (TAR: Bosnia) aimed at bringing Bosnian Croat and Moslem armed forces together as a unified identity, the New York Times reported on Friday."
+ },
+ "SANCTION-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: United Nations) on Tuesday (EVT: reduced food supplies) to the biggest (TAR: Cambodian refugee camp) in Thailand because rice was being diverted to outside users, relief officials said."
+ },
+ "SANCTION-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Bill Clinton) has (EVT: imposed sanctions) on the (TAR: Taliban) religious faction that controls Afghanistan for its support of suspected terrorist Osama bin Laden, the White House said Tuesday."
+ },
+ "SANCTION-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC/TAR: Palestinians) and (SRC/TAR: Israelis) (EVT: failed) to (EVT: reach agreement) on the fate of Palestinian offices in east Jerusalem Sunday, despite hours of tense negotiations, sources on both sides reported."
+ },
+ "SANCTION-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Syrian officers) today (EVT: ended mediation) efforts between rival (TAR: militias in Tripoli) as shells continued crashing into the north Lebanese port and the death toll rose to more than 200."
+ },
+ "SANCTION-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Eighty (SRC: UN) (EVT: peacekeepers) were (EVT: shipped out) of the eastern (TAR: Bosnian) enclave of Gorazde Friday, leaving just 100 UN troops to follow them out later this month."
+ },
+ "SANCTION-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: North Korea) (EVT: expelled inspectors of) the (TAR: International Atomic Energy Agency), or IAEA, from frozen nuclear facilities at Yongbyon after U.S. officials alleged that the North admitted it had a uranium-based program in late 2002."
+ },
+ "SANCTION-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Jakarta) (EVT: forced) the (TAR: UN refugee agency), UNHCR, (EVT: out) of the country following the relief operation, although it had more than \\pounds12m of unspent donations."
+ },
+ "THREATEN-0001": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Reagan) has (EVT: threatened) further action against the (TAR: Soviet Union) in an international television program beamed by satellite to more than 50 countries."
+ },
+ "THREATEN-0002": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Iran) on Tuesday (EVT: threatened) to (EVT: cut off electricity) to the autonomous (TAR: Azerbaijani republic of Nakhichevan) over non-payment of bills, the official IRNA news agency reported."
+ },
+ "THREATEN-0003": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: African states) today (EVT: announced) that they (EVT: will withdraw) their (EVT: peacekeeping) force from (TAR: Chad) unless President Goukouni Oueddei arranged a ceasefire with rebels fighting to topple his government and held elections within four months."
+ },
+ "THREATEN-0004": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (SRC: French minister) (EVT: threatened) today to impose (EVT: import restrictions) against (TAR: West German) goods today as the leaders of the two countries sought to ease tensions in Franco-German relations."
+ },
+ "THREATEN-0005": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Azerbaijani parliament) (EVT: threatened) on Monday to (EVT: secede) from the (TAR: Soviet Union) unless the Kremlin withdrew its troops from the republic."
+ },
+ "THREATEN-0006": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Pakistan) today (EVT: threatened) to (EVT: break) off diplomatic (EVT: relations) with (TAR: Zaire) and (TAR: Costa Rica) over their ties with Israel on the eve of a visit here by Palestine Liberation Organization (PLO) Chairman Yasser Arafat."
+ },
+ "THREATEN-0007": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Palestinian leaders) (EVT: said) they (EVT: would boycott all) official (EVT: contact) with the (TAR: United States)."
+ },
+ "THREATEN-0008": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Greece), like most other existing members, (EVT: plans) to (EVT: impose restrictions) on its (EVT: labour) market for (TAR: new EU members) for at least two years from 1 May."
+ },
+ "THREATEN-0009": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israel) (EVT: threatened) to (EVT: ban voting) in (TAR: East Jerusalem) if Hamas, which advocates Israel's destruction, ran in the election."
+ },
+ "THREATEN-0010": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Israel's Cabinet) (EVT: met) Sunday and (EVT: decided) to approve a plan that will (EVT: not allow candidates from) the militant group (TAR: Hamas) on the ballots there."
+ },
+ "THREATEN-0011": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Yoweri Museveni) has (EVT: threatened) to (EVT: ban) (TAR: Ugandan) (EVT: opposition candidates) from participating in the upcoming elections."
+ },
+ "THREATEN-0012": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Laurent Gbagbo) (EVT: announced) on Sunday that he (EVT: will extend) the night-time (EVT: curfew) in (TAR: Algiers) in response to recent unrest within the city."
+ },
+ "THREATEN-0013": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: President Abdelaziz Bouteflicka) (EVT: threatened) to (EVT: institute) a (EVT: curfew) in (TAR: Algiers) in response to recent unrest within the city."
+ },
+ "THREATEN-0014": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Iraq's interim government) (EVT: announced) that it is (EVT: prepared) to (EVT: impose martial law) as street battles raged in central (TAR: Baghdad) between insurgents and security forces."
+ },
+ "THREATEN-0015": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "Radical (SRC: French farmers) said on Friday they (EVT: would blockade) (TAR: Paris) from Monday night to demand an end to the European Community's drastic farm reform."
+ },
+ "THREATEN-0016": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Druze inhabitants of the Syrian Golan Heights) (EVT: threatened) today to hold a (EVT: general strike) unless (TAR: Israel) rescinded its annexation of the region within 10 days."
+ },
+ "THREATEN-0017": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Soviet Union) has (EVT: threatened) to (EVT: stop negotiations) to reduce long-range nuclear weapons if the (TAR: United States) goes ahead with the planned deployment of new medium-range nuclear missiles in Europe, the Washington Post reported today."
+ },
+ "THREATEN-0018": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: European Community) (EVT: may halt mediation) efforts among (TAR: Yugoslavia)'s feuding republics (EVT: if) cooperation by all parties founders, Dutch Foreign Minister Hans Van den Broek said on Tuesday."
+ },
+ "THREATEN-0019": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: U.N. Secretary-General Kofi Annan) (EVT: announced) on Monday that he (EVT: will withdraw) weapons (EVT: inspectors) and (EVT: humanitarian) workers from (TAR: Iraq)."
+ },
+ "THREATEN-0020": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Cairo's security chief) has (EVT: warned) that police (EVT: will no longer tolerate rallies) by the (TAR: Kifaya) (``Enough'') group."
+ },
+ "THREATEN-0021": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Osama bin Laden's al-Qaeda) terror network has (EVT: threatened) to deliver devastating (EVT: blows) to the (TAR: United States) and (TAR: Israel), a Saudi-owned weekly reports."
+ },
+ "THREATEN-0022": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: NATO) (EVT: confirmed) on Wednesday it (EVT: would) tighten the (EVT: naval blockade) of the rump (TAR: Yugoslav) state in the Adriatic with Albania's help."
+ },
+ "THREATEN-0023": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Ethnic Albanians) (EVT: have sworn to) fight until they (EVT: gain control) of villages near (TAR: Macedonia)'s border with Kosovo, Macedonian officials said Wednesday."
+ },
+ "THREATEN-0024": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "The (SRC: Hamas) (EVT: threatened) Monday to resume (EVT: terrorist activities) in (TAR: Israel) in an escalation of the intifada (uprising)."
+ },
+ "THREATEN-0025": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Iran) today (EVT: threatened) to launch a new (EVT: military offensive) in its Gulf war with (TAR: Iraq) unless Baghdad accepted its conditions for ending the 28-month-old conflict."
+ },
+ "THREATEN-0026": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Iran) (EVT: threatened) to (EVT: shell) (TAR: Iraqi) towns today in retaliation for an air raid on the southern city of Susangerd where, it said, 100 people were killed."
+ },
+ "THREATEN-0027": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "A (SRC: terror group based in Trinidad) (EVT: claims) to be manufacturing (EVT: chemical) and (EVT: biological weapons) to use (EVT: against) the (TAR: United States) and (TAR: Britain), according to a media report Sunday."
+ },
+ "THREATEN-0028": {
+  "dateCoded": "2016-10-21",
+  "language": "en",
+  "publication": "OEDA team from CAMEO 1.1b3 manual",
+  "text": "(SRC: Peru) has (EVT: issued) an (EVT: ultimatum) to (TAR: Ecuador) to halt attacks across their disputed jungle border."
+ }
+}
