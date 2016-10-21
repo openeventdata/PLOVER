@@ -87,7 +87,7 @@ Material conflict | PROTEST, CRIME, MOBILIZE, COERCE, ASSAULT, FIGHT |
 
 
 Why "PLOVER"?
--------------
+=============
 
 [Plovers](http://www.rspb.org.uk/discoverandenjoynature/discoverandlearn/birdguide/name/r/ringedplover/)
 (Charadriidae) are a globally-distributed family of short-billed
@@ -96,7 +96,16 @@ endless stretches of sand and muck trying to find something of interest.
 It is difficult to imagine a better analogy to the process of coding
 event data.
 
+Description of files in repository
+==================================
+
+* PLOVER_GSR_CAMEO.txt
+
+   This is a JSON file of the example sentences from the CAMEO 1.1b3 manual classified by PLOVER categories. The CAMEO LaTeX markup indicating source, target and event texts has been converted to a simple in-line markup. This initial post does not have markup for sectors, modes or contexts: we expect to add this at a later date.
+
+
+
 Copyright © 2016, Open Event Data Alliance
 
-Last update: 20 October 2016
+Last update: 21 October 2016
 
