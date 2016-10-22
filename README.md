@@ -99,13 +99,30 @@ event data.
 Description of files in repository
 ==================================
 
-* PLOVER_GSR_CAMEO.txt
+* **PLOVER_GSR_CAMEO.txt**
 
    This is a JSON file of the example sentences from the CAMEO 1.1b3 manual classified by PLOVER categories. The CAMEO LaTeX markup indicating source, target and event texts has been converted to a simple in-line markup. This initial post does not have markup for sectors, modes or contexts: we expect to add this at a later date.
+   
+* **CAMEO.RCS.pdf**
+
+   CAMEO Religious Coding system (Mattias Heilke), pdf format
+      
+* **CAMEO.RCS.tex**
+
+   CAMEO Religious Coding system, LaTeX source. This is formatted with sufficient consistency that it can easily be used as a sector dictionary.
+   
+   
+* **CAMEO.ECS.pdf**
+
+   CAMEO Ethnicity Coding system (Benjamin Bagozzi and Jay Yonamine), pdf format
+      
+* **CAMEO.ECS.tex**
+
+   CAMEO Ethnicity Coding system, LaTeX source. This is formatted with sufficient consistency that it can easily be used as a sector dictionary.
 
 
 
 Copyright © 2016, Open Event Data Alliance
 
-Last update: 21 October 2016
+Last update: 22 October 2016
 
