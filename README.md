@@ -101,7 +101,7 @@ Description of files in repository
 
 * **PLOVER_GSR_CAMEO.txt**
 
-   This is a JSON file of the example sentences from the CAMEO 1.1b3 manual classified by PLOVER categories. The CAMEO LaTeX markup indicating source, target and event texts has been converted to a simple in-line markup. This initial post does not have markup for sectors, modes or contexts: we expect to add this at a later date.
+   This is a JSON file of the example sentences from the CAMEO 1.1b3 manual classified by PLOVER categories. The CAMEO LaTeX markup indicating source, target and event texts has been converted to a simple in-line markup; some locations have been added manually. This initial post does not have markup for modes or contexts: we expect to add this at a later date. The details of the coding are found in the files *PLOVER_GSR_CAMEO_readme.tex/pdf*
    
 * **CAMEO.RCS.pdf**
 
