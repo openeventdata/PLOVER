@@ -1,0 +1,85 @@
+  \documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex
+								
+\newcommand{\field}[1]{\textsf{\textbf{#1}}}
+\newcommand{\code}[1]{\texttt{#1}}
+		
+\begin{document}
+%\section{}
+%\subsection{}
+\begin{center}
+\Large{Documentation for the PLOVER gold standard file \texttt{PLOVER\_GSR\_CAMEO\_readme.pdf}}
+\end{center}
+This collection of records  is the first attempt to develop gold-standard records for the PLOVER event ontology. It is based on examples extracted 
+    from the CAMEO manual\footnote{\texttt{http://eventdata.parusanalytics.com/data.dir/cameo.html}} with considerable editing, since CAMEO 
+    coded only actors and events. The records are coded with the version of PLOVER specification that was current as of the \field{dateCoded}
+    field: PLOVER is still under development and some of these may change in the future. The file conforms to JSON standards
+    and should be readable with any JSON utility.
+
+    It is important to note that the examples in the manual were originally human coded, and from the standpoint of automated 
+    coding, they are ideal codings and no known system would be likely to get all of them. There are \field{comment}s are some of
+    the more problematic cases. 
+
+    The sentences used in the CAMEO manual were based on actual news stories around the turn of the century, but many have 
+    been edited, sometimes multiple times, and do not necessarily refer to actual historical events. The original CAMEO examples have been 
+    further edited so that all of the nation-states correspond to entities with names and codes in the current ISO-3166-alpha-3 
+    entry in Wikipedia.\footnote{\texttt{https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-3}} Ethnicity codes correspond to ISO-639-2.
+    
+    Funding for PLOVER has been provided in part by the U. S. National Science Foundation award SBE-1539302, ``RIDIR: Modernizing 
+    Political Event Data for Big Data Social Science Research."
+    
+
+\subsection*{Additional comments on the coding}
+\begin{enumerate}
+\item  Only non-null JSON fields are included. All \field{date} fields are set to `2000-01-01.' The current version does not include
+       any \field{mode} or \field{context} fields but these are retained as placeholders.
+    
+\item City names are resolved as follows:
+	\begin{itemize}
+	\item Cities in general go to \field{sector} \code{CVL}
+	\item  Capital cities go to  \field{sector} \code{GOV} if they are the subject or direct object, otherwise  \field{sector} \code{CVL}
+	\end{itemize}
+       
+\item Some \field{eventLoc} fields have been filled in, usually on the basis of [human-identified] prepositional phrases. In 
+       some cases, the actor primary codes were inferred from these locations.
+
+\end{enumerate}
+    
+\subsection*{Text Markup}
+
+    The \field{textInfo/markup} field shows where the various text fields occur in the sentence. The following markers are 
+    used:
+      
+\begin{table}[htdp]
+\begin{center}
+\begin{tabular}{ll}
+    SRC & source actor and agent \\
+    TAR & target actor and agent\\
+    SRC/TAR: & Reciprocal source/target in the CAMEO system\\
+    EVT & event\\
+    LOC & location\\
+
+\end{tabular}
+\end{center}
+\end{table}%
+
+This markup has been done through a combination of automatic translation from the original \LaTeX ~highlighting in the CAMEO manual
+and additional manual editing. It sometimes gets a bit dodgy when there are multiple words in the phrases, but probably is close enough to be useful
+
+\subsection*{Provenance}
+
+Location for this file and the data: \texttt{https://github.com/openeventdata/PLOVER}
+
+The GSR file (and documentation) is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+
+For further information contact: \texttt{schrodt735@gmail.com}
+
+Last update: \today
+
+Copyright \copyright 2016 by the Open Event Data Alliance
+
+\end{document}  
