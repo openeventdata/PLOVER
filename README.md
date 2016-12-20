@@ -22,23 +22,29 @@ system. The major features of PLOVER include:
    inter-coder agreement— hence "verifiable"—on the coding categories,
    and that can be consistently implemented, across all categories, in
    automated systems. These are defined in much greater detail than they
-   were in WEIS and CAMEO. Details 
+   were in WEIS and CAMEO.
+-  Much of the detail previously incorporated in the 3- and 4-digit CAMEO categories is
+   now reflected in category-specific "mode" fields and a general "context"
+   field: in effect, this "category-mode-context" scheme covers the "what-how-why" of
+   the event. We anticipate these will be much easier to systematically code
+   than the 250 or so hierarchically-arranged numerical codes of CAMEO. The "context" field also to handles
+   issues such as refugees, disease, natural disaster, elections, parliamentary
+   processes and cyber-security.
 -  The CAMEO 01 and 02 categories dealing with comments have been
    eliminated.
 -  A new category has been added for criminal behavior.
 -  The WEIS/CAMEO YIELD category has been split into verbal (CONCEDE) and material (RETREAT) components.
--  A "context" field is available, along with standard values, to handle
-   contexts such as disease, natural disaster, elections, parliamentary
-   processes and cyber-security.
 -  The complexity of substate actor codes has been limited, and the
    allowable substate modifiers have been substantially simplified.
--  Standard optional fields have been defined for some categories -- in particular a "mode" field which can provide
-   much of the 3- and 4-digit detail found in CAMEO -- and
-   the "target" is optional in some categories.
+-  The "target" is optional in some categories.
+-  Both the source and target fields can have compound actors, rather than 
+   dealing with compounds by duplicating event.
+-  'dead', 'injured' and 'size' fields are available for recording information
+   on the magnitude of acts of violence and protests.
 -  In the near future, we are hoping to make available a large corpus of
    "gold standard records" for validation purposes: these will include
-   Spanish and Arabic cases as well as English. The release
-   documentation includes the English-language gold standard records
+   Spanish and Arabic cases as well as English. The current release
+   has a file of English-language gold standard records derived from
    from the CAMEO manual.
 -  The PLOVER documentation is licensed under a Creative Commons
    Attribution-ShareAlike 4.0 International License.
@@ -124,5 +130,5 @@ Description of files in repository
 
 Copyright © 2016, Open Event Data Alliance
 
-Last update: 22 October 2016
+Last update: 20 December 2016
 
