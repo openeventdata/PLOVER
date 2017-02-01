@@ -44,7 +44,7 @@
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.40\textwidth]{plover_icon}
+\includegraphics[width=0.40\textwidth]{media/plover_icon}
 \end{figure}
 
 \vspace{20pt}   
@@ -52,7 +52,7 @@
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.6\textwidth]{cc_license}
+\includegraphics[width=0.6\textwidth]{media/cc_license}
 \end{figure}
 
 
@@ -82,8 +82,52 @@
 
 \noindent Latest update: \today~(UTC)
 
-
 \chapter{Introduction}
+
+Event data in political science is a structured way of recording interactions
+between political actors described in text. For instance, a researcher
+encountering the sentence 
+
+\begin{quotation}
+A town in western Sudan's South Kordofan state has been recaptured by Sudanese
+government forces from the rebel Sudan People's Liberation Army (SPLA).
+
+(AFP\_ENG\_19970408.0772)
+\end{quotation}
+
+might want to represent it as ACTOR = ``Sudanese military", EVENT = ``capture
+territory", TARGET = ``SPLA", a process that can be applied over hundreds of
+thousands of reports to create datasets of thousands of such events for
+answering research questions.
+
+The software to extract and categorize these events exists (see OEDA's
+Petrarch2 (\url{https://github.com/openeventdata/petrarch2}), for instance), but all
+event data systems require an ontology defining what actors events will be
+recorded and how they will be defined.
+
+Ontologies face difficult tradeoffs: broader groupings of event types and
+actors are easier to define and implement, are easier to work with, and provide
+data at a useful level of aggregation, especially analyzed globally. More
+specialized and specific ontologies will sometimes be necessary for answering
+certain research questions and allow more granular and subnational study, but
+are more difficult to implement and may provide distinctions that are not
+useful to most researchers. In the example above, should the event be
+categorized as a general ``seize" event? Or a more specific "capture territory"?
+Should the target be coded as a general "Sudanese rebel" or the very specific
+``SPLA"? 
+
+The best level of detail will depend on the question and resources of the
+researcher.  PLOVER is a new event data ontology that choses to be more
+general, easier to implement (including across languages), and at the level of
+detail demanded by most existing users of event data. At the same time, PLOVER
+defines and provides guidance on making ``PLOVER-compliant extensions" that will
+fit into the ecosystem of tools for creating and analyzing PLOVER event data.
+
+\section{Overview}
+
+This manual starts with a history of PLOVER and event data for users coming from CAMEO. It then defines the top-level event types that base PLOVER defines. Along with these, it describes the ``mode'' and ``context'' fields that PLOVER uses to provide more information about the event and the circumstances in which it's occuring. Next, the manual defines codes for the actors. It then lists the standard fields in a PLOVER event record before describing ``PLOVER-complient'' extensions that researchers can use for building custom datasets.
+
+\section{History of \textsc{PLOVER}}
 \pagenumbering{arabic}
 
 During the twentieth century, two coding frameworks dominated event data research: Charles McClelland's WEIS \citep{McClelland67,McClelland76}  and the Conflict and Peace Data Bank (COPDAB) developed by Edward Azar \citep{AzarSloan75, Azar80, Azar82}. Both were created during the Cold War and assumed a ``Westphalian-Clausewitzian'' political world in which sovereign states reacted to each other primarily through official diplomacy
@@ -1141,7 +1185,7 @@ timezone & the iana timezone id  \\
 \item Geonames, alas, uses ISO-3166-alpha-2 rather than the more mnemonic alpha-3 codes used in most event data work. For purposes 
 of compatibility, we're suggesting retaining this in the ``country code'' field but adding a ``cc3'' field (not found in geonames) for
 alpha-3 codes.
-\item \color{red}{PTB: We have already had to resolve some of this in the geolocation work at UTD, so we may already have a cross-walk that deals with this over time.  Think for example of the Yugoslavia breakup case.} \color{blue}{PAS: \textit{So far} Yugoslavia is uniquely problematic, though anything but trivial. Probably wouldn't hurt to specify something for that as part of PLOVER---that has effectively been done in the CountryCodes file (I think) and/or the PETR dictionaries. Guessing we've going to get something similarily problematic with respect to an emerging Kurdistan as a state encompassing parts of both SYR and IRQ, and Russian-occupied Ukraine could also be problematic.}
+\item See https://github.com/openeventdata/PLOVER/issues/3
 \end{enumerate}
 \end{table}
 
@@ -1216,7 +1260,7 @@ Material conflict & PROTEST, CRIME, MOBILIZE, COERCE, ASSAULT & 4\\
 \end{table}
 
 \bibliographystyle{humannat}
-\bibliography{PLOVER}
+\bibliography{bib/PLOVER}
 
 \end{document}
 
@@ -1627,9 +1671,9 @@ FIJIAN_PEACEKEEPING_SOLDIER [IGOPKO].
 \end{verbatim}
 \end{quote}
 
-\item DonÕt confuse ethnicity with territory. Be careful with [PAL] vs. [PSE], and [ARB] vs. [MEA].
+\item Don't confuse ethnicity with territory. Be careful with [PAL] vs. [PSE], and [ARB] vs. [MEA].
 
-\item DonÕt be fooled when the title is not in the code.
+\item Don't be fooled when the title is not in the code.
 
 
 \begin{quote}
@@ -1694,7 +1738,7 @@ In this case, use \texttt{[134] (Threaten to halt negotiations)} instead of \tex
 \begin{quote}
 \begin{verbatim}
 RECEIV
-- + * FINANCIAL SUPPORT FROM $ [071]
+- + * FINANCIAL SUPPORT FROM \$ [071]
 \end{verbatim}
 \end{quote}
 
@@ -1744,7 +1788,7 @@ the second verb pattern will overwrite the third, but the first pattern will not
 \end {enumerate}
 
 \bibliographystyle{plain}
-\bibliography{EventData,Schrodt}
+\bibliography{bib/EventData}
 
 \end{document}
 
