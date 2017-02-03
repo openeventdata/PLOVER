@@ -102,7 +102,7 @@ answering research questions.
 
 The software to extract and categorize these events exists (see OEDA's
 Petrarch2 (\url{https://github.com/openeventdata/petrarch2}), for instance), but all
-event data systems require an ontology defining what actors events will be
+event data systems require an ontology defining what actors and events will be
 recorded and how they will be defined.
 
 Ontologies face difficult tradeoffs: broader groupings of event types and
@@ -118,7 +118,7 @@ Should the target be coded as a general "Sudanese rebel" or the very specific
 
 The best level of detail will depend on the question and resources of the
 researcher.  PLOVER is a new event data ontology that choses to be more
-general, easier to implement (including across languages), and at the level of
+general, easier to implement (including across languages), easier to use, and at the level of
 detail demanded by most existing users of event data. At the same time, PLOVER
 defines and provides guidance on making ``PLOVER-compliant extensions" that will
 fit into the ecosystem of tools for creating and analyzing PLOVER event data.
@@ -150,7 +150,8 @@ Predictably, because of these and other issues, by 2015 CAMEO was beginning to `
 To address these concerns, an informal group of academic, government and private sector producers and users of event data met and circulated drafts during the fall of 2016 to develop a new, simplified and more flexible event data specification to replace CAMEO: the end product of those deliberations is the document you are reading. The major changes are the following
 
 \begin{itemize}
-\item A set of standardized names (``fields'') for JSON (\url{http://www.json.org/}) records are specified for both the core event data fields and for extended information such as geolocation and extracted texts; most of these fields are optional and where available we use existing specifications, for example the \url{http://geonames.org} geographical location field names, ISO-3166 country identifiers and ISO-8601 date and time formats, and \textit{Social Conflict Analysis Database} (SCAD) protest contexts.
+\item CAMEO's numeric categories demanded a high degree of fluency from users (e.g. remebering that that ``09'' is ``Investigate'' and ``08'' is ``Yield''). The numeric categories also implied an ordinal scale that was not always approprate: ``assault'' is more extreme than ``coerce'', but ``investigate'' isn't a more intense than ``yield''). PLOVER does away with numeric codes to solve both of these problems and instead uses only a text name for each event type.
+\item A set of standardized names (``fields'') are specified for both the core event data fields and for extended information such as geolocation and extracted texts; most of these fields are optional and where available we use existing specifications, for example the \url{http://geonames.org} geographical location field names, ISO-3166 country identifiers and ISO-8601 date and time formats, and \textit{Social Conflict Analysis Database} (SCAD) protest contexts. To accomodate this flexibility, PLOVER defines events in a JSON document structure rather than the CSV formats that most social science datasets are available in. A PLOVER R package will make it easier for researchers to work with the PLOVER dataset and custom datasets using the PLOVER ontology.
 \item Only the 2-digit event ``cue categories'' have been retained from CAMEO: our hope is that these are sufficiently broad and distinct that one can achieve a reasonably high level of human inter-coder agreement---hence ``verifiable''---on the coding categories, and that these distinctions can be consistently implemented, across all categories, in the automated system. These are defined in greater detail than they were in WEIS and CAMEO.
 \item The CAMEO 01 and 02 categories dealing with comments have been eliminated.\fn{Ironically, this reverses a decision McClelland belatedly made---and later regretted---in the WEIS specification in the 1960s.}
 \item The CAMEO 08 ``YIELD'' category has been split into verbal (\plcat{CONCEDE}) and material (\plcat{RETREAT}) components. 
