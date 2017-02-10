@@ -57,7 +57,7 @@ fit into the ecosystem of tools for creating and analyzing PLOVER event data.
 PLOVER event categories 
 ====================
 
-PLOVER defines 18 event types, many of which are aggregations of older CAMEO
+PLOVER defines 19 event types, many of which are aggregations of older CAMEO
 codes:
 
 CAMEO code | CAMEO text | PLOVER category |
