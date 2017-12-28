@@ -57,7 +57,7 @@ fit into the ecosystem of tools for creating and analyzing PLOVER event data.
 PLOVER event categories 
 ====================
 
-PLOVER defines 19 event types, many of which are aggregations of older CAMEO
+PLOVER defines 18 event types, many of which are aggregations of older CAMEO
 codes:
 
 CAMEO code | CAMEO text | PLOVER category |
@@ -81,8 +81,8 @@ CAMEO code | CAMEO text | PLOVER category |
 16 | REDUCE RELATIONS | SANCTION |
 17 | COERCE | COERCE |
 18 | ASSAULT | ASSAULT |
-19 | FIGHT | FIGHT |
-20 | USE UNCONVENTIONAL MASS VIOLENCE | FIGHT |
+19 | FIGHT | ASSAULT |
+20 | USE UNCONVENTIONAL MASS VIOLENCE | ASSAULT |
 -- | no CAMEO equivalent | CRIME |
 
 PLOVER quad categories
@@ -97,7 +97,7 @@ Quad category | PLOVER categories |
 Verbal cooperation | AGREE, CONSULT, SUPPORT, CONCEDE |
 Material cooperation | COOPERATE, AID, RETREAT, INVESTIGATE |
 Verbal conflict | DEMAND, DISAPPROVE, REJECT, THREATEN, SANCTION |
-Material conflict | PROTEST, CRIME, MOBILIZE, COERCE, ASSAULT, FIGHT |
+Material conflict | PROTEST, CRIME, MOBILIZE, COERCE, ASSAULT |
 
 Migrating From CAMEO 
 ---------------------
@@ -163,6 +163,10 @@ Description of files in repository
 
    This is a JSON file of the example sentences from the CAMEO 1.1b3 manual classified by PLOVER categories. The CAMEO LaTeX markup indicating source, target and event texts has been converted to a simple in-line markup; some locations have been added manually. The details of the coding are found in the files *PLOVER_GSR_CAMEO_readme.tex/pdf* and the version of PLOVER being coded is in the file *plover-manual_draft.0.6b1.pdf*.
    
+* **plover_reference.html**
+
+   Basic reference for the PLOVER categories in HTML format
+      
 * **CAMEO.RCS.pdf**
 
    CAMEO Religious Coding system (Mattias Heilke), pdf format
@@ -180,4 +184,15 @@ Description of files in repository
 
    CAMEO Ethnicity Coding system, LaTeX source. This is formatted with sufficient consistency that it can easily be used as a sector dictionary.
 
+Acknowledgments
+===============
+This program was developed as part of research funded by a U.S. National Science Foundation "Resource 
+Implementations for Data Intensive Research in the Social Behavioral and Economic Sciences (RIDIR)" 
+project: Modernizing Political Event Data for Big Data Social Science Research (Award 1539302; 
+PI: Patrick Brandt, University of Texas at Dallas)
+
+
+Any opinions, findings, conclusions or recommendations in this document are [only *probably* still] those of [at least one of] the authors and do not necessarily reflect the views of the National Science Foundation, or any company or government agency employing or funding the authors or otherwise contributing to the document.
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
