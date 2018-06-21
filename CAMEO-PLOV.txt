@@ -1,0 +1,299 @@
+CAMEO    PLOV event    PLOV mode             PLOV context       Description
+
+03: AGREE
+030       AGREE             ---               diplomatic        Express intent to cooperate
+031       AGREE             ---               diplomatic        Agree to engage in material cooperation
+0311      AGREE             ---               economic          Express intent to cooperate economically
+0312      AGREE             ---               military          Express intent to cooperate militarily
+0313      AGREE             ---               legal             Express intent to cooperate on judicial matters
+0314      AGREE             ---               government        Express intent to cooperate on intelligence
+032       AGREE             ---               diplomatic        Express intent to engage in diplomatic cooperation (such as policy support)
+033       AGREE             ---               diplomatic        Express intent to provide material aid
+0331      AGREE             ---               economic          Express intent to provide economic aid
+0332      AGREE             ---               military          Express intent to provide military aid
+0333      AGREE             ---               diplomatic        Express intent to provide humanitarian aid
+0334      AGREE             ---               military          Express intent to provide military protection or peacekeeping
+034       AGREE             ---               diplomatic        Express intent to bring political reform
+0341      AGREE             ---               diplomatic        Express intent to change leadership
+0342      AGREE             ---               diplomatic        Express intent to change policy
+0343      AGREE             ---               legal             Express intent to provide rights
+0344      AGREE             ---               government        Express intent to change institutions, regime
+035       AGREE             ---               ---               Express intent to yield
+0351      AGREE             ---               government        Express intent to ease administrative sanctions
+0352      AGREE             ---               government        Express intent to ease popular dissent
+0353      AGREE             ---               legal             Express intent to release persons or property
+0354      AGREE             ---               economic          Express intent to ease economic sanctions, boycott, embargo
+0354      AGREE             ---               economic          Express intent to ease economic sanctions, boycott, or embargo
+0355      AGREE             ---               diplomatic        Express intent to allow international involvement (non-mediation)
+0356      AGREE             ---               military          Express intent to de-escalate military engagement
+036       AGREE             ---               diplomatic        Express intent to meet or negotiate
+037       AGREE             ---               diplomatic        Express intent to settle dispute
+038       AGREE             ---               diplomatic        Express intent to accept mediation
+039       AGREE             ---               diplomatic        Express intent to mediate
+
+04: CONSULT
+040       CONSULT           ---               ---               Consult
+041       CONSULT           phone             ---               Discuss by telephone
+042       CONSULT           visit             ---               Make a visit
+043       CONSULT           host              ---               Host a visit
+044       CONSULT           third-party       ---               Meet at a 'third' location
+045       CONSULT           ---               diplomatic        Engage in mediation
+046       CONSULT           ---               diplomatic        Engage in negotiation
+
+05: SUPPORT
+050       SUPPORT           ---               diplomatic        Engage in diplomatic cooperation
+051       SUPPORT           ---               diplomatic        Praise or endorse
+052       SUPPORT           ---               diplomatic        Defend verbally
+053       SUPPORT           ---               diplomatic        Rally support on behalf of
+054       SUPPORT           ---               diplomatic        Grant diplomatic recognition
+055       SUPPORT           ---               diplomatic        Apolgize
+056       SUPPORT           ---               diplomatic        Forgive
+057       SUPPORT           ---               diplomatic        Sign formal agreement
+
+06: COOPERATION
+060       COOPERATION       ---               ---               Engage in material cooperation
+061       COOPERATION       ---               economic          Cooperate economically
+062       COOPERATION       ---               military          Cooperate militarily
+063       COOPERATION       ---               legal             Engage in judicial cooperation
+064       COOPERATION       ---               government        Share intelligence or information
+
+07: AID
+070       AID               ---               ---               Provide aid
+071       AID               ---               economic          Provide economic aid
+072       AID               ---               military          Provide military aid
+073       AID               ---               humanitarian      Provide humanitarian aid
+074       AID               ---               military          Provide military protection or peacekeeping
+075       AID               ---               diplomatic        Grant asylum
+
+08: CONCEDE
+080       CONCEDE           ---               ---               Yield
+081       CONCEDE           ---               legal             Ease administrative sanctions
+0811      CONCEDE           ---               legal             Ease restrictions on political freedoms
+0812      CONCEDE           ---               legal             Ease ban on political parties or politicians
+082       CONCEDE           ---               legal             Ease political dissent
+083       CONCEDE           ---               government        Accede to requests or demands for political reform
+0831      CONCEDE           ---               government        Accede to demands for change in leadership
+0832      CONCEDE           ---               diplomatic        Accede to demands for change in policy
+0833      CONCEDE           ---               legal             Accede to demands for rights
+0834      CONCEDE           ---               government        Accede to demands for change in institutions, regime
+
+08: RETREAT
+084       RETREAT           ---               ---               Return, release
+0841      RETREAT           ---               legal             Return, release person(s)
+0842      RETREAT           ---               legal             Return, release property
+085       RETREAT           ---               economic          Ease economic sanctions, boycott, embargo
+086       RETREAT           ---               diplomatic        Allow international involvement
+0861      RETREAT           ---               diplomatic        Receive deployment of peacekeepers
+0862      RETREAT           ---               diplomatic        Receive inspectors
+0863      RETREAT           ---               humanitarian      Allow delivery of humanitarian aid
+087       RETREAT           ---               military          De-escalate military engagement
+0871      RETREAT           ---               diplomatic        Declare truce, ceasefire
+0872      RETREAT           ---               military          Ease military blockade
+0873      RETREAT           ---               military          Demobilize armed forces
+0874      RETREAT           ---               military          Retreat or surrender militarily
+0813      RETREAT           ---               legal             Ease curfew
+0814      RETREAT           ---               legal             Ease state of emergency or martial law
+
+09: INVESTIGATE
+090       INVESTIGATE       ---               ---               Investigate
+091       INVESTIGATE       ---               legal             Investigate crime, corruption
+092       INVESTIGATE       ---               legal             Investigate human rights abuses
+093       INVESTIGATE       ---               military          Investigate military action
+094       INVESTIGATE       ---               military          Investigate war crimes
+
+10: DEMAND
+100       DEMAND            ---               ---               Demand
+101       DEMAND            ---               ---               Demand material cooperation
+1011      DEMAND            ---               economic          Demand economic cooperation
+1012      DEMAND            ---               military          Demand military cooperation
+1013      DEMAND            ---               legal             Demand judicial cooperation
+1014      DEMAND            ---               government        Demand intelligence cooperation
+102       DEMAND            ---               diplomatic        Demand diplomatic cooperation (such as policy support)
+103       DEMAND            ---               ---               Demand aid
+1031      DEMAND            ---               economic          Demand economic aid
+1032      DEMAND            ---               military          Demand military aid
+1033      DEMAND            ---               humanitarian      Demand humanitarian aid
+1034      DEMAND            ---               military          Demand military protection or peacekeeping
+104       DEMAND            ---               government        Demand political reform
+1041      DEMAND            ---               government        Demand change in leadership
+1042      DEMAND            ---               diplomatic        Demand policy change
+1043      DEMAND            ---               legal             Demand rights
+1044      DEMAND            ---               government        Demand change in institutions, regime
+105       DEMAND            ---               legal             Demand that target yields
+1051      DEMAND            ---               legal             Demand easing of adminstrative sanctions
+1052      DEMAND            ---               legal             Demand easing of popular dissent
+1053      DEMAND            ---               legal             Demand release of persons or property
+1054      DEMAND            ---               economic          Demand easing of economic sanctions, boycott, or embargo
+1055      DEMAND            ---               diplomatic        Demand that target allows international involvement (non-mediation)
+1056      DEMAND            ---               military          Demand de-escalation of military engagement
+106       DEMAND            ---               diplomatic        Demand meeting, negotiation
+107       DEMAND            ---               diplomatic        Demand settling of dispute
+108       DEMAND            ---               diplomatic        Demand mediation
+
+11: DISAPPROVE
+110       DISAPPROVE        ---               ---               Disapprove
+111       DISAPPROVE        ---               ---               Criticize or denounce
+112       DISAPPROVE        ---               ---               Accuse
+1121      DISAPPROVE        ---               legal             Accuse of crime, corruption
+1122      DISAPPROVE        ---               legal             Accuse of human rights abuses
+1123      DISAPPROVE        ---               military          Accuse of aggression
+1124      DISAPPROVE        ---               military          Accuse of war crimes
+1125      DISAPPROVE        ---               legal             Accuse of espionage, treason
+113       DISAPPROVE        ---               government        Rally opposition against
+114       DISAPPROVE        ---               government        Complain officially
+115       DISAPPROVE        ---               legal             Bring lawsuit against
+116       DISAPPROVE        ---               legal             Find guilty or liable (legally)
+
+
+12: REJECT
+120       REJECT            ---               ---               Reject
+121       REJECT            ---               ---               Reject material cooperation
+1211      REJECT            ---               economic          Reject economic cooperation
+1212      REJECT            ---               military          Reject military cooperation
+1213      REJECT            ---               legal             Reject judicial cooperation
+1214      REJECT            ---               government        Reject intelligence cooperation
+122       REJECT            ---               ---               Reject request or demand for material aid
+1221      REJECT            ---               economic          Reject demand for economic aid
+1222      REJECT            ---               military          Reject demand for military aid
+1223      REJECT            ---               humanitarian      Reject demand for humanitarian aid
+1224      REJECT            ---               military          Reject demand for military protection or peacekeeping
+123       REJECT            ---               government        Reject request or demand for political reform
+1231      REJECT            ---               government        Reject demand for change in leadership
+1232      REJECT            ---               diplomatic        Reject demand for policy change
+1233      REJECT            ---               legal             Reject demand for rights
+1234      REJECT            ---               government        Reject demand for change in institutions, regime
+124       REJECT            ---               ---               Decline to yield
+1241      REJECT            ---               government        Decline to ease administrative sanctions
+1242      REJECT            ---               government        Decline to ease popular dissent
+1243      REJECT            ---               legal             Decline to release persons or property
+1244      REJECT            ---               economic          Decline to ease economic sanctions, boycott, or embargo
+1245      REJECT            ---               diplomatic        Decline to allow international involvement (non-mediation)
+1246      REJECT            ---               military          Decline to de-escalate military engagement
+125       REJECT            ---               diplomatic        Reject proposal to meet, discuss, negotiate
+126       REJECT            ---               diplomatic        Reject mediation
+127       REJECT            ---               diplomatic        Reject plan, agreement to settle dispute
+128       REJECT            ---               legal             Defy norms, law
+129       REJECT            ---               diplomatic        Veto
+
+13: THREATEN
+130       THREATEN          ---               ---               Threaten
+131       THREATEN          ---               ---               Threaten non-force
+1311      THREATEN          relations         ---               Threaten to reduce or stop aid
+1312      THREATEN          restrict          diplomatic        Threaten to boycott, embargo, or sanction
+1313      THREATEN          relations         diplomatic        Threaten to reduce or break relations
+132       THREATEN          ban               legal             Threaten with administrative sanctions
+1321      THREATEN          political         legal             Threaten to impose restrictions on freedoms of speech and expression
+1322      THREATEN          ban               legal             Threaten to ban political parties or politicians
+1323      THREATEN          restrict          legal             Threaten to impose curfew
+1324      THREATEN          restrict          legal             Threaten to impose state of emergency or martial law
+133       THREATEN          ---               government        Threaten with political dissent, protest
+134       THREATEN          relations         diplomatic        Threaten to halt negotiations
+135       THREATEN          relations         diplomatic        Threaten to halt mediation
+136       THREATEN          expel             diplomatic        Threaten to halt (expel or withdraw) international involvement (non-mediation)
+137       THREATEN          violence          legal             Threaten with violent repression
+138       THREATEN          violence          military          Threaten with military force
+1381      THREATEN          restrict          military          Threaten blockade
+1382      THREATEN          territory         military          Threaten occupation
+1383      THREATEN          violence          military          Threaten unconventional violence
+1384      THREATEN          violence          military          Threaten conventional attack
+1385      THREATEN          violence          cbrn              Threaten attack with WMD
+139       THREATEN          ---               diplomatic        Give ultimatum
+185       THREATEN          violence          ---               Attempt to assassinate
+
+14: PROTEST
+140       PROTEST           ---               ---               Engage in political dissent
+141       PROTEST           demonstrate       ---               Demonstrate or rally
+1411      PROTEST           demonstrate       political         Demonstrate for leadership change
+1412      PROTEST           demonstrate       diplomatic        Demonstrate for policy change
+1413      PROTEST           demonstrate       rights            Demonstrate for rights
+1414      PROTEST           demonstrate       political         Demonstrate for change in institutions, regime
+142       PROTEST           hunger-strike     ---               Conduct hunger strike
+1421      PROTEST           hunger-strike     political         Conduct hunger strike for leadership change
+1422      PROTEST           hunger-strike     political         Conduct hunger strike for policy change
+1423      PROTEST           hunger-strike     rights            Conduct hunger strike for rights
+1424      PROTEST           hunger-strike     political         Conduct hunger strike for change in institutions, regime
+143       PROTEST           boycott           ---               Conduct strike or boycott
+1431      PROTEST           boycott           political         Conduct strike or boycott for change in leadership
+1432      PROTEST           boycott           political         Conduct strike or boycott for policy change
+1433      PROTEST           boycott           rights            Conduct strike or boycott for rights
+1434      PROTEST           boycott           political         Conduct strike or boycott for change in institutions, regime
+144       PROTEST           obstruct          ---               Obstruct passage, block
+1441      PROTEST           obstruct          political         Obstruct passage to demand change in leadership
+1442      PROTEST           obstruct          political         Obstruct passage to demand policy change
+1443      PROTEST           obstruct          rights            Obstruct passage to demand rights
+1444      PROTEST           obstruct          political         Ostruct passage to demand change in institutions, regime
+145       PROTEST           riot              ---               Protest violently, riot
+1451      PROTEST           riot              political         Engage in violent protest for change in leadership
+1452      PROTEST           riot              political         Engage in violent protest for policy change
+1453      PROTEST           riot              rights            Engage in violent protest for rights
+1454      PROTEST           riot              political         Engage in violent protest for change in institutions, regime
+
+15: MOBILIZE
+150       MOBILIZE          ---               ---               Demonstrate military or police power
+151       MOBILIZE          police            ---               Increase police alert status
+152       MOBILIZE          troops            military          Increase military alert status
+153       MOBILIZE          police            ---               Mobilize or increase police power
+154       MOBILIZE          troops            military          Mobilize or increase armed forces
+
+16: SANCTION
+160       SANCTION          ---               ---               Reduce relations
+161       SANCTION          ---               diplomatic        Reduce or break diplomatic relations
+162       SANCTION          ---               diplomatic        Reduce or stop aid
+1621      SANCTION          ---               economic          Reduce or stop economic assistance
+1622      SANCTION          ---               military          Reduce or stop military assistance
+1623      SANCTION          ---               humanitarian      Reduce or stop humanitarian assistance
+163       SANCTION          ---               diplomatic        Impose embargo, boycott, or sanctions
+164       SANCTION          ---               diplomatic        Halt negotiations
+165       SANCTION          ---               diplomatic        Halt mediation
+166       SANCTION          expel             diplomatic        Expel or withdraw
+1661      SANCTION          expel             military          Expel or withdraw peacekeepers
+1662      SANCTION          expel             diplomatic        Expel or withdraw inspectors, observers
+1663      SANCTION          expel             diplomatic        Expel or withdraw aid agencies
+
+17: COERCE
+170       COERCE            ---               ---               Coerce
+171       COERCE            confiscate        legal             Seize or damage property
+1711      COERCE            confiscate        legal             Confiscate property
+1712      COERCE            destroy           legal             Destroy property
+172       COERCE            restrict          legal             Impose administrative sanctions
+1721      COERCE            restrict          legal             Impose restrictions on freedoms of speech and expression
+1722      COERCE            ban               legal             Ban political parties or politicians
+1723      COERCE            curfew            legal             Impose curfew
+1724      COERCE            martial-law       legal             Impose state of emergency or martial law
+173       COERCE            arrest            legal             Arrest, detain, or charge with legal action
+174       COERCE            deport            legal             Expel or deport individuals
+191       COERCE            restrict          military          Impose blockade, restrict movement
+192       COERCE            confiscate        military          Occupy territory
+
+18: ASSAULT
+180       ASSAULT           ---               ---               Use unconventional violence
+181       ASSAULT           abduct            ---               Abduct, hijack
+182       ASSAULT           beat              ---               Physically assault
+1821      ASSAULT           sexual            ---               Sexually assault
+1822      ASSAULT           torture           ---               Torture
+1823      ASSAULT           ---               ---               Kill by physical assault
+183       ASSAULT           suicide-attack    ---               Conduct suicide, car, or other non-military bombing
+1831      ASSAULT           suicide-attack    ---               Carry out suicide bombing
+1832      ASSAULT           explosives        ---               Carry out car bombing
+1833      ASSAULT           explosives        ---               Carry out roadside bombing
+184       ASSAULT           abduct            ---               Use as human shield
+186       ASSAULT           assassinate       ---               Assassinate
+175       ASSAULT           violence          military          Use violent repression
+175       ASSAULT           violence          military          Use tactics of violent repression
+201       ASSAULT           deport            legal             Engage in mass expulsion
+
+19: ASSAULT
+190       ASSAULT           ---               military          Use conventional military force
+193       ASSAULT           firearms          military          Fight with small arms and light weapons
+194       ASSAULT           heavy-weapons     military          Fight with artillery and tanks
+195       ASSAULT           heavy-weapons     military          Employ aerial weapons
+196       ASSAULT           ---               legal; military    Violate ceasefire
+
+20: ASSAULT
+200       ASSAULT           heavy-weapons     cbrn              Use unconventional mass violence
+202       ASSAULT           ---               terrorism         Engage in mass killings
+203       ASSAULT           ---               terrorism         Engage in ethnic cleansing
+204       ASSAULT           heavy-weapons     cbrn              Use weapons of mass destruction
+2041      ASSAULT           heavy-weapons     cbrn              Use chemical, biological, or radiological weapons
+2042      ASSAULT           heavy-weapons     cbrn              Detonate nuclear weapons
+~~~~~
