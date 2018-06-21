@@ -175,6 +175,10 @@ Description of files in repository
 
    This is a JSON file of the example sentences from the CAMEO 1.1b3 manual classified by PLOVER categories. The CAMEO LaTeX markup indicating source, target and event texts has been converted to a simple in-line markup; some locations have been added manually. The details of the coding are found in the files *PLOVER_GSR_CAMEO_readme.tex/pdf* and the version of PLOVER being coded is in the older file *plover-manual_draft.0.6b1.pdf*.
    
+* **CAMEO-PLOV.txt**
+
+   Translation table for CAMEO to PLOVER: this is still something of a draft but will get you started
+   
 * **CAMEO.RCS.pdf**
 
    CAMEO Religious Coding system (Mattias Heilke), pdf format
