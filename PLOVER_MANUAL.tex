@@ -41,7 +41,7 @@
             {\Large \url{http://openeventdata.org/} }\\[2ex] 
 %             {\Large \texttt{http://openeventdata.org/ploverdata/} }\\[6ex]            
             {\Large \url{http://ploverdata.org/} }\\[6ex]            
-            {\LARGE DRAFT Version: 0.7b1\\ [2EX]\monthyeardate\today}
+            {\LARGE DRAFT Version: 0.8\\ [2EX]\monthyeardate\today}
         \end{center}
 
 
@@ -77,11 +77,11 @@
 
 \noindent Funding for PLOVER has been provided in part by the U. S. National Science Foundation award SBE-1539302, ``RIDIR: Modernizing Political Event Data for Big Data Social Science Research''. Any opinions, findings, conclusions or recommendations in this document are those of [at least one of] the authors and do not necessarily reflect the views of the National Science Foundation, or any company or government agency employing or funding the authors or otherwise contributing to the document.\\
 
-\noindent \andy{This work was sponsored by
+\noindent This work was sponsored by
 the Political Instability Task Force (PITF). The PITF is
 funded by the Central Intelligence Agency. The views
 expressed in this codebook are the authors' alone and do not
-represent the views of the US Government.}
+represent the views of the US Government.
 
 
 \noindent This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\\
@@ -120,7 +120,7 @@ To address these concerns, an informal group of academic, government and private
 \item The CAMEO 08 ``YIELD'' category has been split into verbal (\plcat{CONCEDE}) and material (\plcat{RETREAT}) components. 
 \item \sout{A new category has been added for criminal behavior.}
 \item Much of the detail 3- and 4-digit details is now delegated to an optional \texttt{mode} field : see Section \ref{ssec:ecm} for further discussion of this.  
-\item \andy{The ``target actor" event component was renamed ``recipient" for clarity and to better match the terminology used in the NLP literature on event extraction \citep{halterman2020extracting}.}
+\item The ``target actor" event component was renamed ``recipient" for clarity and to better match the terminology used in the NLP literature on event extraction \citep{halterman2020extracting}.
 \item A ``context'' field is available, along with standard values, to handle contexts such as disease, natural disaster, elections, parliamentary processes and cyber-security.\fn{In contrast to the Integrated Data for Events Analysis (IDEA) \cite{BBOJT03} system which was in use in the early 2000s, we are not treating disease and disaster as events with recipients, instead they are a context within which other activity occurs. This, interestingly, echoes an approach used in COPDAB but not retained by WEIS and CAMEO.}
 \item The complexity of substate actor codes has been limited, and the allowable substate modifiers have been substantially simplified. 
 \item Standard optional fields have been defined for some categories, and the ``recipient'' is optional in some categories.
@@ -171,39 +171,41 @@ As noted above, most\fn{``most'' because some of the details coded in CAMEO, par
 \item Because the words used in differentiate \texttt{mode} and \texttt{context} are generally very basic, translations of the coding protocols into languages other than English is likely to be easier than translating the subcategory descriptions found in CAMEO. 
 \end{enumerate}
 
-While both \texttt{mode} and \texttt{context} will usually take a single value, in some instances multiple values will be appropriate and this is allowed (and preferable to generating multiple events from a single text). Both fields are optional, and unless an ``other'' category is explicitly specified---this has been provided in a couple of the event categories to provide compatibility with other coding systems---if no existing values seem appropriate, the field should be left null, though perhaps with some details provided in the $comment$ field, particularly when the record is generated using human coding.
+While both \texttt{mode} and \texttt{context} will usually take a single value, in some instances multiple values will be appropriate and this is allowed (and preferable to generating multiple events from a single text). Both fields are optional, and unless an ``other'' category is explicitly specified---this has been provided in a couple of the event categories to provide compatibility with other coding systems---if no existing values seem appropriate, the field should be left null, though perhaps with some details provided in the \texttt{comment} field, particularly when the record is generated using human coding.
 
 In general, verbal activities only have a \texttt{context} since their \texttt{mode} is just ``verbal.'' The exceptions are \plcat{CONSULT} where the \texttt{mode} indicates how the consultation was done, and \plcat{THREATEN} where the \texttt{mode} indicates what action is being threatened. 
 
-\andy{Four} important \texttt{context} categories are ``historical'', ``future'', ``hypothetical'', and ``negation": PLOVER assumes that the coding engine will be able to resolve these and put that information in the \texttt{context} list\sout{, so no such distinctions occur in the definitions of the events themselves}. \andy{Negated events can be excluded from the final event dataset. Examples:}
+Four special \texttt{context} categories are ``historical'', ``future'', ``hypothetical'', and ``negation": PLOVER assumes that the coding engine will be able to resolve these and put that information in the \texttt{context}. Negated events can be excluded from the final event dataset. Examples:
    \begin{itemize}
-   \item \andy{\textsc{historical}: ``During the decolonization struggle, Angolan forces..."}
-   \item \andy{\textsc{future}: ``Members of the G-7 will meet in Ottawa next month..."}
-   \item \andy{\textsc{hypothetical}: ``If Russian forces were to cross the border, that would represent a major..."}
-   \item \andy{\textsc{negation}: ``Thus far, fighting has not re-emerged in the tense region."	}
+   \item \textsc{historical}: ``During the decolonization struggle, Angolan forces..."
+   \item \textsc{future}: ``Members of the G-7 will meet in Ottawa next month..."
+   \item \textsc{hypothetical}: ``If Russian forces were to cross the border, that would represent a major..."
+   \item \textsc{negation}: ``Thus far, fighting has not re-emerged in the tense region."	
    \end{itemize}
+  
+Theoretically, some event types can be represented as other event types plus a special context: \plcat{AGREE} could be  \plcat{SUPPORT} + future or \plcat{THREATEN} could be \plcat{ASSAULT} + hypothetical. In situations like these, the coder should always return the single event category, not a category+context.
 
 
 We anticipate that in general---and consistent with earlier event coding schemes---it will be possible to code \texttt{mode} from the same sentence used to code the event, or possibly that sentence and one before it. \texttt{context}, in contrast, will often need to be coded at the paragraph- or document-level: this differs from earlier automated coding, though probably is similar to human-coded data such as COPDAB and BCOW where \texttt{context}-like fields were coded.
 
-\andy{PLOVER, in contrast to CAMEO, makes recipient actors optional for some event types. One outstanding question is whether the source actor should also be optional for some event types. Some event types often leave the source actor implicit, for example, ``4 people were arrested/killed in a suicide bombing/detained/etc." These have no explicit, named source actor so they will not be coded by PLOVER. Similarly, many natural disasters do not fit neatly into an actor-centric approach to coding (``mudslides destroyed dozens of houses"). We could consider relaxing this requirement to increase our recall, but at the potential cost of more false positives and greater conceptual complexity.}
+PLOVER, in contrast to CAMEO, makes recipient actors optional for some event types. One outstanding question is whether the source actor should also be optional for some event types. Some event types often leave the source actor implicit, for example, ``4 people were arrested/killed in a suicide bombing/detained/etc." These have no explicit, named source actor so they will not be coded by PLOVER. Similarly, many natural disasters do not fit neatly into an actor-centric approach to coding (``mudslides destroyed dozens of houses"). We could consider relaxing this requirement to increase our recall, but at the potential cost of more false positives and greater conceptual complexity.
 
 \subsection{A note on CRIME}
 
-\andy{A separate event category for crime has been added and removed several times as PLOVER was being drafted. While criminal activity is important to capture in event data \citep{osorio2015contagion, osorio2017supervised}, we have decided to not include a separate event category for it for several reasons:}
+A separate event category for crime has been added and removed several times as PLOVER was being drafted. While criminal activity is important to capture in event data \citep{osorio2015contagion, osorio2017supervised}, we have decided to not include a separate event category for it for several reasons:
 
 \begin{enumerate}
 
-	\item \andy{Whether activity is criminal or not often depends on on the identity of the actor: actions undertaken by rebel groups may not fit within a definition of CRIME, while the same action taken by a drug cartel might. We have generally tried to avoid relying on the identities of actors in order to define events, due in part to the implementation of past coders, which did not use actor information to code event types. }
-	\item \andy{Crime overlaps with other event categories, especially ASSAULT, which would make it difficult to train a CRIME classifier that did not pick up events that better belong in other categories.}
+	\item Whether activity is criminal or not often depends on on the identity of the actor: actions undertaken by rebel groups may not fit within a definition of CRIME, while the same action taken by a drug cartel might. We have generally tried to avoid relying on the identities of actors in order to define events, due in part to the implementation of past coders, which did not use actor information to code event types. 
+	\item Crime overlaps with other event categories, especially ASSAULT, which would make it difficult to train a CRIME classifier that did not pick up events that better belong in other categories.
 \end{enumerate}
 
 
-\andy{That said, PLOVER still includes mechanisms for crime-type events to be coded. Researchers who are interested in criminal behavior have two primary options for locating it in PLOVER events:}
+That said, PLOVER still includes mechanisms for crime-type events to be coded. Researchers who are interested in criminal behavior have two primary options for locating it in PLOVER events:
 
 \begin{enumerate}
-	\item \andy{Identify events taken by criminal actors. As coders move away from hand-constructed dictionaries to resolve actors, many more groups will be coded. Researchers will be able to subset events to those undertaken by specific criminal groups (e.g. the Sinaloa Cartel) or by using the CRM actor code.}
-	\item \andy{Use the crime contexts. PLOVER includes context codes for different kinds of crime (see Table \ref{tab:context}). Researchers will be able to select events that have these contexts applied to them.}
+	\item Identify events taken by criminal actors. As coders move away from hand-constructed dictionaries to resolve actors, many more groups will be coded. Researchers will be able to subset events to those undertaken by specific criminal groups (e.g. the Sinaloa Cartel) or by using the CRM actor code.
+	\item Use the crime contexts. PLOVER includes context codes for different kinds of crime (see Table \ref{tab:context}). Researchers will be able to select events that have these contexts applied to them.
 \end{enumerate}
 
 
@@ -222,7 +224,7 @@ As I'm going through a lot of GSRs, I'm beginning to wonder whether we should co
 
 \subsection{Potential ambiguities}
 
-\andy{There's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + a ``future'' context. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons..."}
+There's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + a ``future'' special context. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+special context.
 
 \subsection{Requires recipient: No}
 
@@ -260,7 +262,6 @@ phone & Consultation occurs via phone or some other remote medium\\
 Adapted from CAMEO.
 \end{table}%
 
-\andy{Maybe cut some of the modes in Table \ref{tab:consultmode}? Some of these seem difficult to code and may not be interesting enough to researchers to justify the cost to create the labeled training data we would need in order to code them.}
 
 \newpage
 
@@ -276,7 +277,7 @@ Initiate, resume, improve, or expand diplomatic, non-material cooperation; expre
 
 \subsection{Potential ambiguities}
 
-\andy{In general, \plcat{SUPPORT} is a somewhat ambiguous term. It seems to imply a material event, but it does not. Maybe there's a better term that captures that this is verbal?}
+In general, \plcat{SUPPORT} is a somewhat ambiguous term. It seems to imply a material event, but this category should only be used for verbal cooperation.
 
 \begin{itemize}
 \item Formal pardons and amnesties of arrested persons should be coded as \plcat{CONCEDE}; the actual release  or exchange of prisoners should be coded as \plcat{RETREAT}.
@@ -288,9 +289,8 @@ Initiate, resume, improve, or expand diplomatic, non-material cooperation; expre
 \item Military cooperation or defense should be coded as \plcat{COOPERATE} with a \txt{military} $context.$
 \end{itemize}
 
-\subsection{Supplementary fields: \andy{Maybe?}}
+\subsection{Supplementary fields: None}
 
-\andy{We proposed new modes for \plcat{AID} below. Also include the same modes here?}
 
 \newpage
 
@@ -318,7 +318,8 @@ How does this interaction with the hex codings of negative events in PETR 2?
 
 \subsection{Requires recipient: No}
 
-\subsection{Supplementary fields: Use at least a few of the CAMEO cases?}
+\subsection{Supplementary fields: None}
+% Use at least a few of the CAMEO cases?
 
 
 \bigskip
@@ -371,30 +372,7 @@ All provisions of providing material aid whose material benefits primarily accru
 
 \subsection{Requires recipient: Yes}
 
-\subsection{Supplementary fields: Modes. Capture the monetary, manpower, and magnitudes from the context?}
-
-\begin{table}[htp]
-\color{red}
-\caption{AID modes}
-\begin{center}
-\begin{tabular}{|l|p{13cm}|}
-\hline
-Name & Content \\
-\hline
-economic & Provide economic aid, such as loans, grants, etc.\\
-military & Provide military aid \\
-humanitarian & Provide humanitarian aid \\
-asylum & Specific mode for granting asylum\\
-\hline
-\end{tabular}
-\end{center}
-\label{tab:aidtmode}
-\end{table}%
-
-\andy{Should these modes be harmonized with modes for \plcat{DEMAND} and \plcat{SUPPORT}?}
-
-\bigskip  
-
+\subsection{Supplementary fields: None. Use general contexts instead.}
 
 \section{RETREAT}
 
@@ -408,7 +386,6 @@ asylum & Specific mode for granting asylum\\
 \subsection{Supplementary fields: modes}
 
 \begin{table}[htp]
-\color{red}
 \caption{RETREAT modes}
 \begin{center}
 \begin{tabular}{|l|p{13cm}|}
@@ -477,34 +454,12 @@ Examples from the CAMEO manual include:
 
 \end{itemize}
 
-\andy{From Ben: i) Per page 2 of Phil's memo, the scores on INVESTIGATE and DISAPPROVE are each -2.0. This is probably fine. But part of me wonders whether INVESTIGATE should get a -2.1 or -2.5 in this case, since it is essentially the 'material conflict' version of the 'verbal conflict' DISAPPROVE. I suppose one could also make the case for just collapsing INVESTIGATE and DISAPPROVE into a single category in PLOVER, with separate modes distinguishing allegations from formal investigations. The drawback to collapsing them in PLOVER is that this would have implications for quadcounts of the resultant PLOVER events (Table 5.2 in the PLOVER manual), and for these quad counts' comparability to ICEWS/CAMEO quad-counts. So probably best to keep INVESTIGATE and DISAPPROVE separate. }
+%From Ben: i) Per page 2 of Phil's memo, the scores on INVESTIGATE and DISAPPROVE are each -2.0. This is probably fine. But part of me wonders whether INVESTIGATE should get a -2.1 or -2.5 in this case, since it is essentially the 'material conflict' version of the 'verbal conflict' DISAPPROVE. I suppose one could also make the case for just collapsing INVESTIGATE and DISAPPROVE into a single category in PLOVER, with separate modes distinguishing allegations from formal investigations. The drawback to collapsing them in PLOVER is that this would have implications for quadcounts of the resultant PLOVER events (Table 5.2 in the PLOVER manual), and for these quad counts' comparability to ICEWS/CAMEO quad-counts. So probably best to keep INVESTIGATE and DISAPPROVE separate. 
 
 \subsection{Supplementary fields: Modes}
 
-\andy{IF WE SHARE MODES WITH AID}
 
 \begin{table}[htp]
-\color{red}
-\caption{DEMAND modes. These modes are shared with AID.}
-\begin{center}
-\begin{tabular}{|l|p{13cm}|}
-\hline
-Name & Content \\
-\hline
-economic & Provide economic aid, such as loans, grants, etc.\\
-military & Provide military aid \\
-humanitarian & Provide humanitarian aid \\
-asylum & Specific mode for granting asylum\\
-\hline
-\end{tabular}
-\end{center}
-\label{tab:demandmode}
-\end{table}%
-
-\andy{PHIL's PROPOSAL}
-
-\begin{table}[htp]
-\color{red}
 \caption{DEMAND modes. These modes are shared with REJECT.}
 \begin{center}
 \begin{tabular}{|l|p{13cm}|}
@@ -524,11 +479,11 @@ meet & meetings and negotiations\\
 \newpage  
 
 
-\section{\andy{ACCUSE}}
+\section{ACCUSE}
 
 \textsf{VERBAL CONFLICT} \vspace{8pt}
 
-\andy{Note: This section merges in the older DISAPPROVE and INVESTIGATE categories.}
+Note: This section merges in the older DISAPPROVE and INVESTIGATE categories.
 
 \begin{itemize}
 	\item Express disapprovals, objections, and complaints; condemn, decry a policy or an action; criticize, defame, denigrate responsible parties.
@@ -544,16 +499,31 @@ Examples from the CAMEO manual include:
 \item Allege, charge the recipient with, or blame for human rights violations, such as arbitrary detentions for prosecutions, torture, and slavery.
 \item Allege, charge the recipient with, or blame for initiating hostilities or engaging in questionable or unjustifiable military actions such as violations of ceasefire, or with war crimes.
 \item Allege, charge the recipient with, or blame for spying, espionage, or treason.
-\item \sout{Solicit other parties to take actions against the recipient}. \andy{This sounds like APPEAL, which we don't code any more.}
 \item Written and institutionalized protests, appeals, and all petition drives and recalls. % Do we want the word protest here?
 \item Sue, file civil or criminal lawsuit at domestic or international courts. Source must be the plaintiff or the state, and recipient must be the defendant.
-\item \sout{Find guilty or liable at a court of law. Source must be the court in question, which could be domestic or international, and recipient must be the defendant. This event form refers typically to rulings against non-individuals, where imprisonment is not an issue. When individuals are found guilty and are therefore detained, use \plcat{COERCE} instead.} \andy{(Moved to SANCTION)}
 
 \end{itemize}
 
 \subsection{Requires recipient: No}
 
-\subsection{Supplementary fields: None?}
+\subsection{Supplementary fields: modes}
+
+\begin{table}[htp]
+\caption{\plcat{ACCUSE} modes}
+\begin{center}
+\begin{tabular}{|l|p{13cm}|}
+\hline
+Name & Content \\
+\hline
+disapprove & express disapproval; condemn; complain\\
+investigate & any investigation, including commissions, grand juries, judicial or political\\
+allege & formally or informally accuse; sue, indict, or charge; bring to trial\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:accusemode}
+\end{table}%
+
 
 \newpage  
 
@@ -566,37 +536,37 @@ All rejections and refusals. Examples from the CAMEO manual include:
 
 \begin{itemize}
 
+\item Refuse to meet, discuss, or negotiate.
+\item Cancellation of meetings, withdrawal, or expulsion of diplomats and termination of other diplomatic activities 
 \item Refuse to engage in or expand material exchange. Note the difference between refusing to establish or expand material cooperation and reducing or eliminating existing ties \plcat{SANCTION}.
 \item Refuse to engage in or expand economic ties, such as trade or investment. Rejection to provide financial aid is coded as \plcat{SANCTION} instead.
-\item Refuse to engage in or expand military ties.
-\item Rejections of mutual military exchange; rejection to provide military aid is coded as \plcat{SANCTION} instead.
-\item Refuse to engage in or expand cooperation in judicial matters, including  extraditions or other matters pertaining to legal proceedings.
-\item Refuse to engage in or expand cooperation in intelligence or information sharing.
+\item Refuse to engage in or expand military ties or military exchange.
+\item Refuse to engage in or expand cooperation.
 \item Refuse to extend financial, military or humanitarian assistance. Refusals to provide shelter or refuge should also be coded here. 
 \item Refuse to provide peacekeeping forces or other form of military protection; refusals by adversaries to grant access to peacekeepers.
-\item Refuse to change leadership or relinquish power.
-\item Refuse to change a given policy.
+\item Refuse to change leadership or political system, relinquish power, change a given policy.
 \item Refuse to provide or respect social, political, economic or other rights and freedoms.
-\item Refuse to make fundamental political changes, such as moving from one type of a political system to another and reforming political institutions or key laws.
 \item Reject requests, refuse or decline to ease administrative sanctions, such as censorship, curfew, state of emergency, and martial law.
 \item Reject requests, refuse, or decline to reduce or stop political protest activities, such as demonstrations and rallies.
 \item Reject requests, refuse, or decline to release or return persons or property.
 \item Reject requests, refuse, or decline to reduce or eliminate economic sanctions, boycotts, or embargoes.
 \item Reject requests, refuse or decline to allow access to international actors such as observers, humanitarian agencies, and peacekeeping forces.
 \item Reject requests, refuse, or decline to stop fighting or take measures to ease military conflict or tension, including ceasefires, military withdrawals, and demobilization.
-\item Refuse to meet, discuss, or negotiate, including involvement of mediators or mediation initiatives.
-\item Reject a proposal or request for a final, comprehensive settlement, peace proposal, or resolution.
 \item Disobey, challenge, or resist laws or norms. This event category covers both civilian disobedience and official defiance.
 \item Refuse to assent or formally reject legislative proposal, recommendation, or resolution.
 \end{itemize}
 
 \subsection{Requires recipient: No}
 
+\subsection{Potential ambiguities}
+
+Rejection to provide military aid is coded as \plcat{SANCTION}.
+
+
 \subsection{Supplementary fields: modes}
 
 \begin{table}[htp]
-\color{red}
-\caption{REJECT modes. These modes are shared with DEMAND.}
+\caption{\plcat{REJECT} modes. These modes are shared with \plcat{DEMAND}.}
 \begin{center}
 \begin{tabular}{|l|p{13cm}|}
 \hline
@@ -623,32 +593,20 @@ All threats, coercive or forceful warnings with serious potential repercussions.
 
 \begin{itemize}
 
-\item Threats to reduce or eliminate provision of material assistance---economic, military, humanitarian, and peacekeeping.
+\item Threats to reduce or eliminate provision of assistance.
 
-\item Threaten to restrict normal economic interactions by imposing sanctions, boycotts, or embargoes.
+\item Threaten to impose sanctions, boycotts, or embargoes.
 
 \item Threaten to reduce or formally sever ties. Non-force threats to declare independence, resign, withdraw diplomats, reduce or break diplomatic ties, etc.\ are all coded here.
 
 \item Threaten to impose or expand non-force administrative restrictions and penalties not otherwise specified.
 
-\item Threaten to impose or expand restrictions on fundamental freedoms, such as freedoms of speech, expression, and assembly. 
-\item Threaten to ban political activities of particular parties or individuals.
-\item Threatened with imprisonment or other measures of repression.
+\item Threaten to impose or expand restrictions on fundamental freedoms, such as freedoms of speech, expression, and assembly, or threats to restrict rights and freedoms.
 
-\item Threaten to enforce a deadline beyond which inhabitants of an area are not permitted to be on the streets or in public places.
-
-\item Threaten with suspending certain given rights or the whole constitution by imposing state of emergency or military rule.
-
-\item Threaten to mobilize or engage in actions of political dissent such as protest demonstrations, hunger strikes, strikes or boycotts, physical obstructions into buildings or areas, and riots.
+\item Threaten to mobilize or engage in actions of political dissent.
 
 \item Threaten to break-up or withdraw from discussion, negotiation, or meeting.
 
-\item Threaten to reduce or stop international intervention by expelling or withdrawing observers, humanitarian agencies, peacekeepers, etc.
-
-\item Threats by international agencies to withdraw their involvement as well as threats by host countries to expel such actors are coded here. 
-\item Threaten dissidents with forcible subjugation.
-\item Threats to imprison as well as to use force to clamp down on opposition activities are coded here. 
-\item Threaten to prevent entry into and/or exit from a territory using military measures.
 \item Threaten to occupy, seize control of the whole or part of a territory.  This event form is typically a verbal act and is distinct from \plcat{ASSAULT}, which refers to military occupations that have been or are being carried out.
 \item Threaten to use violence, including terrorist activities
 
@@ -701,7 +659,7 @@ All civilian demonstrations and other collective actions carried out as protests
 	\item[event\_loc:] Location of event 
 \end{description}
 
-\andy{The protest contexts that were included in older versions of this manual were removed in favor of a single set of PLOVER-base context tags. See Section \ref{sec:adding_to_plover} for a discussion of how custom, event-specific context codes can be added.}
+The protest contexts that were included in older versions of this manual were removed in favor of a single set of PLOVER-base context tags. See Section \ref{sec:adding_to_plover} for a discussion of how custom, event-specific context codes can be added.
 
 
 
@@ -731,7 +689,7 @@ obstruct & Obstruct passage (from CAMEO 144x).\\
 \raggedright{Adapted from Salehyan and Hendix, \textit{Social Conflict Analysis Database} (SCAD)
 Version 3.2: \url{https://www.strausscenter.org/images/codebooks/SCAD\_32\_Codebook.pdf}}\\~
 
-\andy{An earlier version of the manual split out ``spontaneous'' and ``organized'' versions of protests. However, it was usually not possible to identify this from text, so it's been dropped in favor of consolidated categories.}
+An earlier version of the manual split out ``spontaneous'' and ``organized'' versions of protests. However, it was usually not possible to identify this from text, so it's been dropped in favor of consolidated categories.
 \end{table}%
 
 \newpage  
@@ -747,9 +705,6 @@ Examples from the CAMEO manual include:
 
 \begin{itemize}
 \item Curtail, decrease, break, or terminate diplomatic exchange.
-
-\item Cancellation of meetings, withdrawal, or expulsion of diplomats and termination of other diplomatic activities 
-
 \item Reductions or terminations of aid not otherwise specified.
 \item Decrease or terminate provision of economic, military or humanitarian aid.
 \item Stop or restrict commercial or other material exchange as a form of protest or punishment.
@@ -758,7 +713,7 @@ Examples from the CAMEO manual include:
 \item Terminate the presence of groups or organizations: this covers both expulsions by host authorities and withdrawals by guest groups or organizations, as well as diplomats are withdrawn or expelled. .   \item Terminate the deployment or presence of peacekeeping forces, inspectors or other observers.
 \item Terminate the presence of aid agencies or other non-governmental organizations helping civilians.
 \item  Impose embargo, boycott, or sanctions
-\item \andy{[MOVED FROM ``DISAPPROVE'':] Find guilty or liable at a court of law. Source must be the court in question, which could be domestic or international, and recipient must be the defendant. This event form refers typically to rulings against non-individuals, where imprisonment is not an issue. When individuals are found guilty and are therefore detained, use \plcat{COERCE} instead.}
+\item  Find guilty or liable at a court of law. Source must be the court in question, which could be domestic or international, and recipient must be the defendant. This event form refers typically to rulings against non-individuals, where imprisonment is not an issue. When individuals are found guilty and are therefore detained, use \plcat{COERCE} instead.
 \end{itemize}
 
 \subsection{Requires recipient: Yes}
@@ -768,6 +723,7 @@ Examples from the CAMEO manual include:
 \begin{itemize}
 \item Expulsions or deportations of individuals---typically a legal matter---are coded as \plcat{COERCE} 
 \item Withdrawal of hostile military forces constitutes a form of yielding and is thus coded as \plcat{YIELD}.
+\item Cancellation of meetings are \plcat{REJECT} and therefore verbal conflict.
 \end{itemize}
 
 \subsection{Supplementary fields:}
@@ -775,7 +731,6 @@ Examples from the CAMEO manual include:
 \sout{None?---for the time being we're going to see whether everything can be done with \texttt{context} rather than setting up \texttt{mode} categories.}
 
 \begin{table}[htp]
-\color{red}
 \caption{SANCTION modes}
 \begin{center}
 \begin{tabular}{|l|p{13cm}|}
@@ -807,7 +762,7 @@ This category is different from \plcat{ASSAULT} and \plcat{FIGHT}, as they refer
 
 \subsection{Potential ambiguities}
 
-\andy{Joint military operations are coded as \plcat{COOPERATE} but single-country exercises should be coded as \plcat{MOBILIZE}.}
+Joint military operations are coded as \plcat{COOPERATE} but single-country exercises should be coded as \plcat{MOBILIZE}.
 
 \subsection{Requires recipient: No}
 
@@ -838,7 +793,8 @@ Adapted from CAMEO category 15x
 
 \textsf{MATERIAL CONFLICT} \vspace{8pt}
 
-\andy{Repression or restrictions on rights.}
+Repression or restrictions on rights.
+
 \subsection{Requires recipient: No}
 
 \subsection{Supplementary fields: }
@@ -851,7 +807,6 @@ Adapted from CAMEO category 15x
 Name & Content \\
 \hline
 confiscate & confiscate property \\
-\sout{destroy} & \sout{destroy property} \andy{move to ASSAULT} \\
 restrict & impose restrictions on political freedoms or movement \\
 ban & ban individuals or organizations \\
 censor & censor, ban or restrict access to publications  \\
@@ -859,7 +814,7 @@ curfew & impose curfew \\
 martial-law & impose state of emergency or martial law \\
 arrest & arrest, detain, or charge with legal action \\
 deport & expel or deport individuals \\
-\andy{withhold} & \andy{withhold public goods/services, e.g. shut off power/internet/water/utilities} \\&\andy{or withhold food/medical supplies} \\
+withhold & withhold public goods/services, e.g. shut off power/internet/water/utilities \\&or withhold food/medical supplies \\
 \hline
 \end{tabular}
 \end{center}
@@ -897,17 +852,19 @@ torture & torture \\
 execute & judicially-sanctioned execution\\
 sexual & sexual violence\\
 assassinate & targeted assassinations with any weapon \\
-\andy{destroy} & \andy{destroy property} \\
+destroy & destroy property \\
 primitive & primitive weapons: fire, edged weapons, rocks, farm implements \\
 firearms & rifles, pistols, light machine guns\\
 explosives & any explosive not incorporated in a heavy weapon: mines, IEDS, car bombs \\
 suicide-attack & individual and vehicular suicide attacks \\
 heavy-weapons & crew-served weapons  \\
+cleansing & mass expulsions or deportations, ethnic cleansing  \\
+massacre & instances of mass killing or massacres  \\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:violmode}
-\raggedright{Adapted from Political Instability Task Force Atrocities Database: \url{http://eventdata.parusanalytics.com/data.dir/atrocities.html}}
+\raggedright{Adapted from Political Instability Task Force Atrocities Database: \url{http://eventdata.parusanalytics.com/data.dir/atrocities.html}. Note that the last two modes can be reported as single events or can comprise multiple events. Not all instances of cleansing or mass killing will appear as single \plcat{ASSAULT} events with these modes.}
 \end{table}%
 
 \begin{description}
@@ -930,77 +887,79 @@ heavy-weapons & crew-served weapons  \\
 \hline
 Name & Content \\
 \hline
-political & political contexts not covered by any of the more specific \\
-& \hspace{6pt}categories below\\
 military & military, including military assistance \\
-\andy{intelligence} & \andy{intelligence or information} \\
-\andy{peacekeeping} & \andy{peacekeeping–typically multilateral operations} \\
+intelligence & intelligence or information \\
+peacekeeping & peacekeeping–typically multilateral operations \\
 economic & trade, finance and economic development \\
 diplomatic & diplomacy \\
 resource & territory and natural resources \\
-culture & cultural and educational exchange \\
 disease & disease outbreaks and epidemics \\
-\sout{disaster} & \andy{merged with environment} \\
 enviro\_disaster & environment, climate change; disasters including both ``natural" and \\&\hspace{6pt} accidents/spills etc.\\
-\andy{migration} \sout{refugee} & migration, refugees, and displaced people \\
+migration  & migration, refugees, and displaced people \\
 humanitarian & humanitarian assistance generally \\
-legal & national and international law, \andy{not} including human rights \\ 
-human\_rights & explicit mentions of human rights \\ 
-\andy{rights\_freedoms} & \andy{discussions of political rights and freedoms} \\
+asylum & discussions of seeking or granting asylum \\
+legal & courts and judiciary; national and international law, \emph{not} including human rights \\ 
+human\_rights & explicit mentions of the term human rights \\ 
+rights\_freedoms & discussions of political rights and freedoms , restrictions on civil rights, movement, gathering etc.\\
 gender & mentions of gender, women's issues, gender equality, etc. \\
 lgbt & LGBTQ \\
 terrorism & terrorism \\
-\andy{human\_security} & \andy{access to water, food, housing, energy, land tenure, etc.} \\
-\andy{religion\_ethnicity} & \andy{mentions of specific religions or ethnic groups,}  \\&\hspace{6pt} \andy{or religion and ethnicity more broadly} \\
-government & governmental issues other than elections and legislative \\
+human\_security & access to water, food, housing, energy, land tenure, etc. \\
+religion\_ethnicity & mentions of specific religions or ethnic groups,  \\&\hspace{6pt} or religion and ethnicity more broadly \\
+executive & executive agencies and bureaucracies; governmental issues other than elections and legislative \\
 election & elections and campaigns \\
 legislative & legislative debate, parliamentary coalition formation \\
-cbrn & chemical, biological, radiation, and nuclear \andy{weapons or} attacks  \\
+cbrn & chemical, biological, radiation, and nuclear weapons or attacks  \\
 cyber & cyber attacks and crime\\
-\andy{political\_institutions} & \andy{Mentions of norms, political institutions, democratic backsliding, etc.} \\
-\andy{corruption} & \andy{anything relating to mentions of corruption, i.e. illegally using public office} \\
-&\hspace{6pt} \andy{for private gain} \\
-\andy{crime} & \andy{Any discussion of crimes or criminals} \\
-\andy{crime\_murder} & \andy{a death is reported as a murder or criminal homicide} \\
-\andy{crime\_theft} & \andy{theft, burglary, larceny, stealing, etc.} \\
-\andy{crime\_drugs} & \andy{criminal possession, distribution, sale, or manufacturing of illegal drugs} \\
-\andy{crime\_sexual} & \andy{sexual assault or sexual harassment} \\
------------------- & -------------------- \\
-future & event is projected to occur in the future\\
-historical & event occurred in the past\\
-hypothetical & event is hypothetical\\
+political\_institutions & Mentions of norms, political institutions, democratic backsliding, political parties, etc. \\
+corruption & anything relating to mentions of corruption, i.e. illegally using public office \\
+&\hspace{6pt} for private gain \\
+crime & Any discussion of crimes or criminals \\
+illegal\_drugs & criminal possession, distribution, sale, or manufacturing of illegal drugs \\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:context}
 \end{table}
 
-\andy{Something to keep in mind with contexts is that analysts could mis-interpret the meaning of contexts if they are applied using document-level classifiers, which is what we've been discussing. Ben Bagozzi raised the example of a violence event with an ``elections'' context does not necessarily imply electoral violence. It could be an article about, for instance, violence in Afghanistan in the context of an article on US election politics. Thus, the interpretation of ``context'' may depend on how it's implemented in practice.}
+\begin{table}[htp]
+\caption{Special contexts: these are used to mark the tense and polarity of an event }
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Name & Content \\
+\hline
+negation & the event is reported to have \emph{not} happened \\
+future & event is projected to occur in the future\\
+historical & event occurred in the past\\
+hypothetical & event is hypothetical\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:specialcontext}
+\end{table}
 
-\andy{I really like the idea of including past/future/hypothetical information. I think we might want to pull it out as a separate field since it's more about the grammar of the sentence than document-level context. We need to think about exactly how to define each of these categories. Isn't threaten just violence + hypothetical? And how far back is historical?}
+How these contexts are used in practice will depend on how a coder implements them. If they are applied using document-level classifiers, researchers/analysts could mis-interpret the meaning of contexts. For example, an \plcat{ASSAULT} event with an ``elections'' context does not necessarily imply electoral violence. It could be an article about, for instance, violence in Afghanistan in the context of an article on US election politics. Thus, the interpretation of ``context'' may depend on how it's implemented in practice.
 
-\andy{To do: each of these will need more details and ideally 2-3 positive and negative examples of each}
-
-\andy{As I'm putting this together, I'm thinking about just how much work this is going to take. Each of these is going to need at least a hundred positive and negative examples, and probably more. Some of these are going to be quite broad (``economic''), some potentially pretty rare (``cbrn''), and others might need keywords instead of a classifier, specifically ``religion\_ethnicity''.}
 
 \clearpage
 
-\section{\andy{Numeric conflict/cooperation scores}}
+\section{Numeric conflict/cooperation scores}
 
-\andy{Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these scores were were Goldstein scores that mapped lower-level CAMEO codes to a $-$10 to $+$10 scale (though in fact the most cooperative action had score of only $+$8.5. The ``Schrodt scores'' given in Table \ref{tab:schrodtscores} provide numeric conflict/cooperation scores for PLOVER. They were created by first, taking a weighted average of the CAMEO/Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample of events. Second, two changes were made based on our knowledge of the categories: COERCE and MOBILIZE were flipped, so COERCE was increased in magnitude from -5.3 to -7.2 and MOBILIZE moved from -7.2 to -5.3.}
+Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these scores were Goldstein scores that mapped specific CAMEO codes to a $-$10 to $+$10 scale (though in fact the most cooperative action had score of only $+$8.5. The ``PLOVER numeric scores'' given in Table \ref{tab:schrodtscores} provide numeric conflict/cooperation scores for PLOVER. They were created by taking a weighted average of the CAMEO/Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample of events. Two changes were made based on our knowledge of the categories: COERCE and MOBILIZE were flipped, so COERCE was increased in magnitude from -5.3 to -7.2 and MOBILIZE moved from -7.2 to -5.3.
 
 \begin{table}[htp]
 \begin{center}
 \begin{tabular}{ll}
 \hline
-\textbf{PLOVER category} & \textbf{``Schrodt score''} \\
+\textbf{PLOVER category} & \textbf{PLOVER numeric scores} \\
 \hline
-ASSAULT  & -9.3\\COERCE & -7.2\\PROTEST & -6.6\\MOBILIZE & -5.3\\SANCTION & -5.2\\THREATEN & -5.1\\DEMAND & -5.0\\REJECT & -4.2\\\sout{INVESTIGATE} & \sout{-2.0}\\ACCUSE &  -2.0\\CONSULT &  +2.1\\AGREE & +4.2\\SUPPORT & +4.6\\CONCEDE & +5.0\\COOPERATION & +6.8\\AID & +7.4\\RETREAT & +7.6 \\
+ASSAULT  & -9.3\\COERCE & -7.2\\PROTEST & -6.6\\MOBILIZE & -5.3\\SANCTION & -5.2\\THREATEN & -5.1\\DEMAND & -5.0\\REJECT & -4.2\\ACCUSE &  -2.0\\CONSULT &  +2.1\\AGREE & +4.2\\SUPPORT & +4.6\\CONCEDE & +5.0\\COOPERATION & +6.8\\AID & +7.4\\RETREAT & +7.6 \\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:schrodtscores}
-\caption{Numeric conflict--cooperation ``Schrodt scores" for each PLOVER event category.}
+\caption{Numeric conflict--cooperation scores for each PLOVER event category.}
 \end{table}
 
 
@@ -1014,19 +973,33 @@ CAMEO employed a hierarchical actor coding structure based on 3-character coding
 As with the events, the PLOVER specification seeks to pare this down to the most commonly used actors and agent/sectors, while retaining the possibility of more specific information. In place of the pages of actor and agent specification found in the CAMEO manual, PLOVER has four rules:
 
 \begin{enumerate}
-\item The actor code---\texttt{source/recipient}---is either an ISO-3166-alpha-3 code or one of a small number of non-state codes \andy{such as IGO; see Table \ref{tab:nonstate} below}.
+\item The actor code---\texttt{source/recipient}---is either an ISO 3 letter country code or one of a small number of non-state codes such as IGO; see Table \ref{tab:nonstate} below.
 \item The sector code is a 3-character primary code with one optional secondary code
-\item Identifiers for individual persons or organizations are coded in the \texttt{Identifer} and/or \texttt{Text} fields. \andy{Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular actor or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia (e.g. who might like to make a new sector category for right-wing populist parties and politicians.}
-\item \andy{Proposal: the record should also include the raw, extracted actor text from the story, in addition to the canonical actor name that it gets resolved to.}
-\item The \texttt{Info} JSON object is used for additional information beyond what can be coded in the sector secondary modifer\fn{In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of.} such as religion, ethnicity, official position, etc.
+\item Identifiers for individual persons or organizations are coded in the \texttt{Identifier} and/or \texttt{Text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular actor or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia (e.g. who might like to make a new sector category for right-wing populist parties and politicians.
+\item The \texttt{Info} JSON object is used for additional information beyond what can be coded in the sector secondary modifier\fn{In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of.} such as religion, ethnicity, official position, etc.
 \end{enumerate}
 
-\begin{quote}
-\textbf{2-element sector codes?? You're going  to regret that, right?}
+An example actor block is below:
 
-Yeah, probably. The primary motivation for this is differentiating multiple sub-state militarized groups (REB) which in the current environment are typically distinguished by either religion (Central African Republic), ethnicity (Somalia, South Sudan, Myanmar) or a combination (Iraq, Syria). Allowing a second element in the sector codes allows one to do this without using the more elaborate \texttt{Info} object. But we're not allowing sector codes to handle something of the complexity of ``Iranian-backed Bosnian Serb militia.''\fn{Such a group existed in the former Yugoslavia in the early 1990s: we're guessing it was rather small.}
-\andy{Including the canonical Wikidata name/ID of the actor will hopefully reduce the need for some of this: two rebel groups in the same country with the same ethnic/religious identity can now be distinguished by canonical name as well as by actor code.}
-\end{quote}
+\begin{verbatim}
+	{
+	 "raw_text": "Steinmeier",
+	 "entity_name": "Frank-Walter Steinmeier",
+	 "wikidata_id": "Q76658",
+	 "wiki_description": "Minister of Foreign Affairs",
+	 "country_code": "DEU",
+	 "sector_code": "GOV"
+	 }
+\end{verbatim}
+
+While the process of generating this block will depend on the specific nature of the coder, in general, the coder will (1) identify a source actor or recipient in text, in this case, "Steinmeier". (2) Using the context of the article, resolve the actor mention to its Wikipedia page and ID and report the Wikipedia role or description. (3) Using the information on the page, determine that Frank-Walter Steinmeier was the German Minister of Foreign Affairs and thus DEUGOV.
+
+%\begin{quote}
+%\textbf{2-element sector codes?? You're going  to regret that, right?}
+
+%Yeah, probably. The primary motivation for this is differentiating multiple sub-state militarized groups (REB) which in the current environment are typically distinguished by either religion (Central African Republic), ethnicity (Somalia, South Sudan, Myanmar) or a combination (Iraq, Syria). Allowing a second element in the sector codes allows one to do this without using the more elaborate \texttt{Info} object. But we're not allowing sector codes to handle something of the complexity of ``Iranian-backed Bosnian Serb militia.''\fn{Such a group existed in the former Yugoslavia in the early 1990s: we're guessing it was rather small.}
+% Including the canonical Wikidata name/ID of the actor will hopefully reduce the need for some of this: two rebel groups in the same country with the same ethnic/religious identity can now be distinguished by canonical name as well as by actor code.
+%\end{quote}
 
 \section{Actor codes}
 
@@ -1041,7 +1014,7 @@ Code & Content \\
 \hline
 IGO   &   international governmental organization\\
 NGO &   non-governmental organization\\
-ISM           &   international social movement (See note 1)\\
+ISM           &   international social movement\\
 IMG            &   transnational militarized group\\
 MNC            &   multi-national corporation\\
 \hline
@@ -1049,9 +1022,6 @@ MNC            &   multi-national corporation\\
 \end{center}
 \label{tab:nonstate}
 \noindent \textbf{Notes:}
-\begin{enumerate}
-\item This also includes ``international persons'' such as Jimmy Carter, Bono, and Angelina Jolie  
-\end{enumerate}
 \end{table}%
 
 \section{Sector Primary Code}
@@ -1098,33 +1068,15 @@ MNC            &   multi-national corporation\\
 \end{enumerate}
 \end{center}
 
-\andy{Notes for discussion:
-\begin{itemize}
-	\item UAF has been used inconsistently: is it un\emph{identified} or un\emph{aligned} armed forces? I've seen it both ways in practice. If the latter, it gets very close to to the PRM (paramilitary) code.
-	\item OPP: We need to clarify whether this category includes opposition parties as well as opposition groups/individuals. It's a bit weird to code the Labour Party as GBR OPP when it's not in power, giving it the same status as pre-2016 Aung San Suu Kyi or the Russia of the Future Party.
-	\item CVL vs. ELI: we should be clear when people fall under CVL and when they're ELI. Is a prominent lawyer in a country CVL or ELI?
-	\item BUS vs. MNC: how much do people care about distinguishing business from multinational corporations? Can we just use BUS for both?
-	\item I think we need a little more guidance on how to stack these codes. For example, does the Russian GRU get the code RUS GOV SPY? Or RUS MIL SPY? Or just RUS SPY, which is presumably what the SVR would get? 
-	\item Arguing about these distinctions can devolve into medieval theology pretty quickly, which is why I think it's better to err on the side of simplicity for the actor codes and allow researchers to make their own actor distinctions by using the canonical Wikidata IDs discussed at the beginning of the section.
-	\end{itemize}
-}
+%\begin{itemize}
+%	\item UAF has been used inconsistently: is it un\emph{identified} or un\emph{aligned} armed forces? I've seen it both ways in practice. If the latter, it gets very close to to the PRM (paramilitary) code.
+%	\item OPP: We need to clarify whether this category includes opposition parties as well as opposition groups/individuals. It's a bit weird to code the Labour Party as GBR OPP when it's not in power, giving it the same status as pre-2016 Aung San Suu Kyi or the Russia of the Future Party.
+%	\item CVL vs. ELI: we should be clear when people fall under CVL and when they're ELI. Is a prominent lawyer in a country CVL or ELI?
+%	\item BUS vs. MNC: how much do people care about distinguishing business from multinational corporations? Can we just use BUS for both?
+%	\item I think we need a little more guidance on how to stack these codes. For example, does the Russian GRU get the code RUS GOV SPY? Or RUS MIL SPY? Or just RUS SPY, which is presumably what the SVR would get? 
+%\end{itemize}
 
 
-\subsection{Sector Secondary Code}
-
-We are leaving this open, but for purposes of standardizing, would point the user to the following resources we have found useful
-
-\begin{description}
-\item[CAMEO Religious Codes:] This is a very large hierarchically-organized scheme for coding virtually all religions and religious-movements that could be identified ca. 2010. \LaTeX~and PDF versions of this are available at \url{https://github.com/openeventdata/PLOVER}
-\item[CAMEO Ethnic Codes:] This was CAMEO's effort to provide a uniform set of ethnicity codes based on  two primary sources: (1) the International Organization for Standardization's (ISO) Codes for the Representation of Names of Languages\\ (\url{ISO-639.2; http://www.loc.gov/standards/iso639-2/}) and (2) the Ethnic Power Relations (EPR) dataset 3.1 (\url{http://www.epr.ucla.edu/}). \LaTeX and PDF versions of this are available at \url{https://github.com/openeventdata/PLOVER.}
-
-%\item[XXX Religious Codes:] This is a stub for another, shorter religious codes framework I'm still trying to track down
-
-\item[ICEWS Sectors:] The file \txt{icews.sectors.20140112.csv} provides three-level hierarchy of sectors which could be used as an alternative to the specification here; \txt{	
-icews.agents.20140112.csv} associates these with common names or noun-phrases found in news reports:\\ \url{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/28118}
-
-\item[PETRARCH Agents:] PETRARCH project agents file, which was assembled from earlier KEDS project TABARI files, WordNet (\url{https://wordnet.princeton.edu/}), CIA World Leaders and an assortment of other sources.\\ \url{https://github.com/openeventdata/petrarch2/blob/master/petrarch2/data/dictionaries/Phoenix.agents.txt}
-\end{description}
 
 \subsection{Compound and Reciprocal Actors}\label{sec:recip}
 
@@ -1146,7 +1098,11 @@ where 042 and 043 are the CAMEO codes for "visit" and "host" respectively.\footn
 
 In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided violence---is handled in a similar fashion, with both parties as \texttt{source} actors: this applies in any event where both sides are using force, even if one side ``started it''\footnote{An assessment often as not contested anyway.} One-sided violence, such as assassinations or police firing on demonstrators, will have the perpetrator as the \texttt{source} and the victims as \texttt{recipient}.
 
-\chapter{JSON Data Fields}
+
+
+\chapter{Data Fields}
+
+\textbf{This section is still under development and is not likely to be of interest to most readers.}
 
 In keeping with OEDA's founding aversion to any efforts at creating ``one data set to rule them all,'' almost all of the fields listed below are optional: the objective of this part of the specification is mostly to provide a standard set of field names to simplify the merging and reuse of datasets. Despite the apparent complexity here, note that the only required field we have added to ``event data classic'' is the \texttt{id} identifier, so the simplest form of an event record would look like
 \begin{verbatim}
@@ -1159,18 +1115,16 @@ In keeping with OEDA's founding aversion to any efforts at creating ``one data s
 }
 \end{verbatim}
 
-\noindent \andy{For ease of parsing and use, we suggest formatting PLOVER in newline-delimited JSON (JSONL) format, with each event formatted as one valid JSON entry, each on a seperate row.}\sout{As in the above example, the specification is indifferent to whether data are provide in strict $json$---each record is on a single line---or the more human-readable $jsonl$ format, where there is typically one field per line, and lists and dictionaries are on multiple lines, as in the Python commands of the form\\ \indent \texttt{outfile.write(json.dumps(pldict, indent=2, sort\_keys=True ) + "\textbackslash n")}.}
+\noindent For ease of parsing and use, we suggest formatting PLOVER in newline-delimited JSON (JSONL) format, with each event formatted as one valid JSON entry, each on a separate row.
 
-Except in the small number of cases where a standard format is specified, the content of the field is left open, and in particular ``number'' should be interpreted as ``number or code'': for example instead of providing the number of individuals killed, a dataset might use a set of categories giving ranges. Similarly, categories such as \texttt{context} can take multiple values: typically your end users would probably be happiest if these were formatted using a JSON ``array'' structure---comma-delimited in square brackets---but this is not assumed. Responsibility for handling these details is left to the data provider and users. \andy{I think we should take a firmer stance on all of this, producing a fully built out ``PLOVER-base" with all of the fields we discuss above. Other researchers can then certainly make their own variants of PLOVER (PLOVER-ICEWS, PLOVER-ACE, PLOVER-Andy's dissertation, etc) as needed, making it clear how they differ from PLOVER-base.}
+Except in the small number of cases where a standard format is specified, the content of the field is left open, and in particular ``number'' should be interpreted as ``number or code'': for example instead of providing the number of individuals killed, a dataset might use a set of categories giving ranges. Similarly, categories such as \texttt{context} can take multiple values: typically your end users would probably be happiest if these were formatted using a JSON ``array'' structure---comma-delimited in square brackets---but this is not assumed. Responsibility for handling these details is left to the data provider and users. \emph{I think we should take a firmer stance on all of this, producing a fully built out ``PLOVER-base" with all of the fields we discuss above. Other researchers can then certainly make their own variants of PLOVER (PLOVER-ICEWS, PLOVER-ACE, PLOVER-Andy's dissertation, etc) as needed, making it clear how they differ from PLOVER-base.}
 
 Providers should feel free to include named fields beyond those provided hence---hence the absence of any generic field names like \texttt{extra1}, \texttt{extra2} in the standard---but if you are coding or extracting information that corresponds to one of the existing fields, please use that name.
 
 This format is designed to be sufficiently general that it should be useable as input to a coding system: note in particular
 \begin{itemize}
 \item \texttt{has\_event} can be set to False prior to full event coding 
-\item \texttt{is\_story} field in the \texttt{text\_info} object indicates that the text has not been segmented into sentences, which will be appropriate in pipelines that use the full story for filtering and \texttt{context} coding
-\item \texttt{connlu\_parse} and \texttt{treebank\_parse} in the \texttt{text\_info} object provide the external parses used, for example, by PETRARCH-2 and UD-PETRARCH. Users should feel free to create fields for other parsers as these become available. Citation information for parsers can be provided in the \texttt{parser} field in the \texttt{cite\_info} object.
-\item \color{red}{Open issue 20.02.29 PAS}: \color{black}If a data set is going to retain a record of the cases rejected, perhaps a separate \texttt{not\_coded} field, perhaps holding a list of reasons for this, would be useful.
+% \item \color{red}{Open issue 20.02.29 PAS}: \color{black}If a data set is going to retain a record of the cases rejected, perhaps a separate \texttt{not\_coded} field, perhaps holding a list of reasons for this, would be useful.
 \end{itemize}
 
 \newpage 
@@ -1223,11 +1177,11 @@ comment &  any text & & N \\
 \end{enumerate}
 
 
-\section{\andy{Adding to PLOVER: protest example}} \label{sec:adding_to_plover}
+\section{Adding to PLOVER: protest example}\label{sec:adding_to_plover}
 
 
 
-A protest-specific coder could add more fields to the event record for things like the participant size (a numeric amount or size category), the number of people who were injured, the number of people arrested, etc.
+A protest-specific coder could add more fields to the event record for things like the participant size (a numeric amount or size category), the number of people who were injured, the number of people arrested, etc. This section briefly outlines how PLOVER could be extended to code specific event types in greater detail.
 
 For example, a protest-optimized coder could also include protest-specific contexts like the ones in Table \ref{tab:protestcontext}.
 
@@ -1250,10 +1204,7 @@ foreign            &   foreign affairs/relations\\
 war            &   domestic war, violence, terrorism\\
 rights             &   human rights, democracy\\
 pro-govt             &   pro-government\\
-assets             &   economic resources/assets \andy{(not sure what this means)}\\
-\sout{other}             &   \sout{other} \\
 independence & independence or separatist movements\\
-\sout{unknown}             &   \sout{unknown, not-specified}\\	
 \hline
 \end{tabular}
 \end{center}
@@ -1276,11 +1227,11 @@ Version 3.2: \url{https://www.strausscenter.org/images/codebooks/SCAD\_32\_Codeb
 \hline
 Name & Content \\
 \hline
-code & 3-char \andy{top-level} actor code \andy{(e.g., country)}\\
-sector & 3- or 6-char sector \andy{(GOV, MIL, etc)}\\
+code & 3-char top-level actor code (e.g., country)\\
+sector & 3- or 6-char sector (GOV, MIL, etc)\\
 actor\_text & extracted text for source \\
-identifer\andy{\_id} & unique identifier ID for source [see Note 1]\\
-identifer\andy{\_text} & unique identifier name for source [see Note 1]\\
+identifier\_id & unique identifier ID for source [see Note 1]\\
+identifier\_text & unique identifier name for source [see Note 1]\\
 actor\_loc & location object\\
 religion & religion (code or text) \\
 ethnicity & ethnicity (code or text) \\
@@ -1293,7 +1244,7 @@ age & integer \\
 \label{tab:actorinfo}
 \noindent \textbf{Notes:}
 \begin{enumerate}
-\item These fields would be used to resolve the name of an actor that occurs in multiple forms---for example ``Islamic State'', ``IS'', ``ISIS'', ``Daesh''---into a single form or code. \sout{(for example the organization number in the TORG typology:  \texttt{http://www.start.umd.edu/using-baad}).} \andy{This should be the Wikidata ID for the actor. For example, the Islamic State's is https://www.wikidata.org/wiki/Q2429253 and it's canonical Wikidata name is ``Islamic State of Iraq and the Levant''.}
+\item These fields would be used to resolve the name of an actor that occurs in multiple forms---for example ``Islamic State'', ``IS'', ``ISIS'', ``Daesh''---into a single form or code. This should be the Wikidata ID for the actor. For example, the Islamic State's is https://www.wikidata.org/wiki/Q2429253 and its canonical Wikidata name is ``Islamic State of Iraq and the Levant''.
 \end{enumerate}
 \end{table}%
 
@@ -1308,16 +1259,10 @@ sequence & sequence number of sentence \\
 start & character offset for start of text  \\
 end &  character offset for end of text   \\
 text\_story & list of sentences from full story text \\
-connlu\_parse & dependency parse in CONNLU format \\
-treebank\_parse & constituency parse in Treebank format \\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:textinfo}
-\noindent \textbf{Notes:}
-\begin{enumerate}
-\item \texttt{connlu\_parse} and \texttt{treebank\_parse} are included as standard names because these are widely used systems, but users should feel free to fields for other markup, parsing, and other markup. The FJOLTYNG system, for example, adds the field \texttt{fjmlParse} for its internal parse.
-\end{enumerate}
 \end{table}%
 
 
@@ -1400,7 +1345,7 @@ timezone & the iana timezone id  \\
 \item Geonames, alas, uses ISO-3166-alpha-2 rather than the more mnemonic alpha-3 codes used in most event data work. For purposes 
 of compatibility, we're suggesting retaining this in the ``country code'' field but adding a ``cc3'' field (not found in geonames) for
 alpha-3 codes.
-\item \color{red}{PTB: We have already had to resolve some of this in the geolocation work at UTD, so we may already have a cross-walk that deals with this over time.  Think for example of the Yugoslavia breakup case.} \color{blue}{PAS: \textit{So far} Yugoslavia is uniquely problematic, though anything but trivial. Probably wouldn't hurt to specify something for that as part of PLOVER---that has effectively been done in the CountryCodes file (I think) and/or the PETR dictionaries. Guessing we've going to get something similarly problematic with respect to an emerging Kurdistan as a state encompassing parts of both SYR and IRQ, and Russian-occupied Ukraine could also be problematic.}
+%\item \color{red}{PTB: We have already had to resolve some of this in the geolocation work at UTD, so we may already have a cross-walk that deals with this over time.  Think for example of the Yugoslavia breakup case.} \color{blue}{PAS: \textit{So far} Yugoslavia is uniquely problematic, though anything but trivial. Probably wouldn't hurt to specify something for that as part of PLOVER---that has effectively been done in the CountryCodes file (I think) and/or the PETR dictionaries. Guessing we've going to get something similarly problematic with respect to an emerging Kurdistan as a state encompassing parts of both SYR and IRQ, and Russian-occupied Ukraine could also be problematic.}
 \end{enumerate}
 \end{table}
 
