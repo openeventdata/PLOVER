@@ -2,7 +2,7 @@
 
 ![plover_icon](https://github.com/openeventdata/PLOVER/blob/master/media/plover_icon175.png "PLOVER logo")
 
-PLOVER--Political Language Ontology for Verifiable Event Records--is a
+PLOVER–Political Language Ontology for Verifiable Event Records–is a
 next generation political event coding specification under development by the
 Open Event Data Alliance (http://openeventdata.org/) which is intended
 to replace the earlier
@@ -26,7 +26,7 @@ encountering the sentence
 might want to represent it as ACTOR = "Sudanese military", EVENT = "capture
 territory", TARGET = "SPLA", a process that can be applied over hundreds of
 thousands of reports to create datasets of thousands of such events for
-answering research questions. Users also probably care what the 
+answering research questions. 
 
 The software to extract and categorize these events exists (see OEDA's
 [Petrarch2](https://github.com/openeventdata/petrarch2), for instance), but all
@@ -200,11 +200,12 @@ Acknowledgments
 ===============
 This program was developed as part of research funded by a U.S. National Science Foundation "Resource 
 Implementations for Data Intensive Research in the Social Behavioral and Economic Sciences (RIDIR)" 
-project: Modernizing Political Event Data for Big Data Social Science Research (Award 1539302; 
-PI: Patrick Brandt, University of Texas at Dallas)
+project: Modernizing Political Event Data for Big Data Social Science Research (Award 1539302)
 
 
 Any opinions, findings, conclusions or recommendations in this document are [only *probably* still] those of [at least one of] the authors and do not necessarily reflect the views of the National Science Foundation, or any company or government agency employing or funding the authors or otherwise contributing to the document.
+
+This work was sponsored by the Political Instability Task Force (PITF). The PITF is funded by the Central Intelligence Agency. The views expressed in this codebook are the authors' alone and do not represent the views of the US Government.
 
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
