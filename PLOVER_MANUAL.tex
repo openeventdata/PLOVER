@@ -89,18 +89,18 @@ represent the views of the US Government.\\
 \chapter{Introduction}
 \pagenumbering{arabic}
 
-During the twentieth century, two coding frameworks dominated event data research: Charles McClelland's WEIS \citep{McClelland67,McClelland76}  and the Conflict and Peace Data Bank (COPDAB) developed by Edward Azar \citep{AzarSloan75, Azar80, Azar82}. Both were created during the Cold War and assumed a ``Westphalian-Clausewitzian'' political world in which sovereign states reacted to each other primarily through official diplomacy
-and military threats. While innovative when first created, these coding systems were less than optimal for dealing with contemporary issues such as ethnic conflict, low-intensity violence, internal conflict and repression, and multilateral intervention. 
+The concept of political event data originated in the academic quantitative international relations community in the mid-1960s. While a number of projects produced some event data, often for specialized applications, eventually two coding frameworks dominated the production of general-purpose event data sets: Charles McClelland's WEIS \citep{McClelland67,McClelland76}  and the Conflict and Peace Data Bank (COPDAB) developed by Edward Azar \citep{AzarSloan75, Azar80, Azar82}. Both were created during the Cold War and assumed a ``Westphalian-Clausewitzian'' political world in which sovereign states reacted to each other primarily through official diplomacy
+and military threats. Consequently these coding systems proved less than optimal for dealing with post-Cold-War issues such as ethnic conflict, low-intensity violence, internal conflict and repression, and multilateral intervention. 
 
-During the early 2000s, the CAMEO framework---Conflict and Mediation Event Observations---was developed \citep{SGY09} to support an NSF-funded project on the study of inter-state conflict mediation, not as a general-purpose event ontology. Nonetheless, it was gradually adopted as a ``next generation'' coding scheme, notably for the DARPA-funded Integrated Conflict Early Warning System (ICEWS) project \citep{OBrien10} because it corrected some of the long-recognized ambiguities in WEIS and COPDAB, and was explicitly designed both for automated coding and for the detailed coding of sub-state actors. It was continued in the widely-used public ICEWS data (\txt{https://dataverse.harvard.edu/dataverse/icews}) coded using the BBN SERIF/ACCENT coder, with BBN doing considerable additional work on various details of the system.
+During the early 2000s, the CAMEO framework---Conflict and Mediation Event Observations---was developed \citep{SGY09} to support an NSF-funded project at the University of Kansas on the study of inter-state conflict mediation, not as a general-purpose event ontology. Nonetheless, it was gradually adopted as a ``next generation'' coding scheme, notably for the DARPA-funded Integrated Conflict Early Warning System (ICEWS) project \citep{OBrien10} because it corrected some of the long-recognized ambiguities in WEIS and COPDAB, and was explicitly designed both for automated coding and for the detailed coding of sub-state actors. It was continued in the widely-used public ICEWS data (\txt{https://dataverse.harvard.edu/dataverse/icews}) coded using the BBN SERIF/ACCENT coder, with BBN doing considerable additional work on various details of the system.
 
 As event data came into wider use in the 2010s, several problems with CAMEO became apparent, largely dealing with the complexity of the system, the absence of a standard formats beyond the original  date-source-target-event fields (for example, representing geographical location), and continuing interest on coding substate activities not present in the earlier systems. 
 
-To address these concerns, an informal group of academic, government and private sector producers and users of event data met and circulated drafts during the fall of 2016 to develop a new, simplified and more flexible event data specification to replace CAMEO, which became PLOVER and the basis of this document: Section \ref{ssec:ctp} summarizes the major changes. This version incorporates additional extensive work in 2021 as PLOVER was adopted as the coding system for the Political Instability Task Force event data coding. 
+To address these concerns, an informal group of academic, government and private sector producers and users of event data met and circulated drafts during the fall of 2016 to develop a new, simplified and more flexible event data specification to replace CAMEO, which became PLOVER and the basis of this document: Section \ref{ssec:ctp} summarizes the major changes. Additional extensive work in 2021 as PLOVER was adopted as the coding system for the Political Instability Task Force event data coding. 
 
-Because PLOVER is generally a simplification of CAMEO our expectation is that it will be relatively easy to splice existing CAMEO data sets to PLOVER equivalents by simply collapsing the two- and three-digit categories. The scaled ``PLOVER scores'' are also designed for splicing with time series generated from the CAMEO ``Goldstein scores.'' The standardization of the JSON field names---as well as adoption of JSON as the data interchange format---will allow the development of general-purpose utilities that can work with all formats, in contrast with the current proliferation of incompatible and error-prone CSV and tab-delimited formats.
+Because the PLOVER event categories are generally a simplification of CAMEO our expectation is that it will be relatively easy to splice existing CAMEO data sets to PLOVER equivalents by simply collapsing the two- and three-digit categories. The scaled ``PLOVER scores'' are also designed for splicing with time series generated from the CAMEO ``Goldstein scores.'' The standardization of the JSON field names---as well as adoption of JSON as the data interchange format---will allow the development of general-purpose utilities that can work with all formats, in contrast with the current proliferation of incompatible and error-prone CSV and tab-delimited formats.
 
-Compared to the Kansas and BBN CAMEO manuals---though curiously, consistent with the public documentation for WEIS and COPAB in the ICPSR archive---at this point we have provided only general guidance on the content of the various categories, modes, and contexts. With the current state of automated natural language processing, any coding system will almost certainly be implemented using machine learning systems trained on a labeled set of news texts and those training cases effectively are the detailed examples. This differs from the older systems which classified events using dictionaries which were abstracted, by human developers, from the texts. We eventually hope to provide a set of training cases, possibly synthetic, that will be free of intellectual property constraints; a small set of cases extracted from the Kansas CAMEO manual is available on the PLOVER GitHub site \txt{https://github.com/openeventdata/PLOVER} but it is not sufficient for training a system, at least with 2021 technologies.
+Compared to the Kansas and BBN CAMEO manuals---though curiously, consistent with the public documentation for WEIS and COPAB in the ICPSR archive---at this point we have provided only general guidance on the content of the various categories, modes, and contexts. With the current state of automated natural language processing, any 2020s automated coding system will almost certainly be implemented using machine learning systems trained on a labeled set of news texts and those training cases effectively are the detailed examples. This differs from the older systems which classified events using dictionaries which were abstracted, by human developers, from the texts. We eventually hope to provide a set of training cases, possibly synthetic, that will be free of intellectual property constraints; at present a small set of cases extracted from the Kansas CAMEO manual is available on the PLOVER GitHub site \txt{https://github.com/openeventdata/PLOVER} but it is not sufficient for training a system, at least with 2021 technologies.
 
 
 \section{Why ``PLOVER''?}
@@ -113,28 +113,29 @@ Plovers (\textit{Charadriidae}) are a globally-distributed family of short-bille
 
 \section{Overview}\label{ssec:ecm}
 
-A major difference between PLOVER and the earlier widely-used event coding systems is moving the information in detailed, hierarchical in the 3- and 4-digit categories of CAMEO into three components: ``$event-mode-context$'' generally corresponding to ``$what-how-why$.'' We anticipate at least five advantages to this
+A major difference between PLOVER and the earlier widely-used event coding systems is moving the information in the hierarchical 3- and 4-digit categories of CAMEO into three components: \txt{event-mode-context} generally corresponding to ``\texttt{what-how-why}.'' We anticipate at least five advantages to this approach:
 
 \begin{enumerate}
 
-\item The three ``$what-how-why$''components are now distinct, whereas various CAMEO subcategories inconsistently used the $how$ and $why$ to distinguish between subcategories.
+\item The three \texttt{what-how-why} components are now distinct, whereas various CAMEO subcategories inconsistently used the $how$ and $why$ to distinguish between subcategories.
 
-\item Because \texttt{contexts} can be applied to any event category and, where relevant, any \texttt{mode}, PLOVER has far more combinations of codes for describing events than the fixed hierarchy of CAMEO.
+\item Because a \txt{context} can be applied to any event category and, where relevant, any \txt{mode}, PLOVER has far more combinations of codes for describing events than the fixed hierarchy of CAMEO.
 
-\item We are probably increasing the ability of general machine-learning classifiers---as distinct from the older customized parser/coders---to assign \texttt{mode} and \texttt{context} compared to their ability to assign subcategories.
+\item We are probably increasing the ability of general machine-learning classifiers---as distinct from the older customized dictionary-based parser/coders---to assign \txt{mode} and \txt{context} compared to their ability to assign subcategories.
 
-\item In initial experiments, it appears that the  approach \textit{much} is easier for humans to code than the hierarchical structure of CAMEO because a human coder can hold most of the relevant categories in working memory. More generally,  $event-mode-context$ coding uses words, not numerical codes, so coders will probably be using the parts of the brain (Broca's area) which are specialized for processing words. No known specialized cognitive facility exists for handling some 250 2-to-4-digit codes.
+\item In initial experiments, it appears this  approach is \textit{much} easier for humans to code than the hierarchical structure of CAMEO because a human coder can hold most of the relevant categories in working memory. More generally,  \txt{event-mode-context}  coding uses words, not numerical codes, so coders will probably be using the parts of the brain (Broca's area) which are specialized for processing words. No known specialized cognitive facility exists for handling some 250 2-to-4-digit codes.
 
-\item Because the words used in differentiate \ti{mode} and \ti{context} are generally very basic, translations of the coding protocols into languages other than English is likely to be easier than translating the subcategory descriptions found in CAMEO. 
+\item Because the words used in differentiate \txt{mode} and \txt{context} are generally very basic, translations of the coding protocols into languages other than English is likely to be easier than translating the subcategory descriptions found in CAMEO. 
 \end{enumerate}
 
-While both \ti{mode} and \ti{context} will usually take a single value, in some instances multiple values will be appropriate and this is allowed. Both fields are optional, and unless an ``other'' category is explicitly specified---this has been provided in a couple of the event categories to provide compatibility with other coding systems---if no existing values seem appropriate, the field should be left null, though perhaps with some details provided in the \texttt{comment} field, particularly when the record is generated using human coding.
+While both \txt{mode} and \txt{context} will usually take a single value, in some instances multiple values will be appropriate and this is allowed. Both fields are optional, and if no existing values seem appropriate, the field should be left null, though perhaps with some details provided in the JSON \texttt{comment} field, particularly when the record is generated using human coding.
 
-In general, verbal activities only have a \ti{context} since their \ti{mode} is just ``verbal.'' The exceptions are \plcat{CONSULT} where the \texttt{mode} indicates how the consultation was done, and \plcat{THREATEN} where the \texttt{mode} indicates what action is being threatened. 
+In general, verbal activities only have a \txt{context} since their \txt{mode} is just ``verbal.'' The exceptions are \plcat{CONSULT} where the \texttt{mode} indicates how the consultation was done, and \plcat{THREATEN} where the \texttt{mode} indicates what type of action is being threatened. 
 
 
 \section{Context codes that can be used with any category}
 
+The \txt{context} field re-introduces, albeit in a greatly extended form, a concept found in the original COPDAB data (but absent from WEIS and hence CAMEO) which allows, for example, a distinction in the event record between a meeting dealing with military issues and a meeting dealing with economic issues. Human analysts naturally incorporate this information in their reading of an article. Based on some initial experiments, we believe that with contemporary text classification algorithms this should be relatively easy to implement
 
 \begin{table}[htp]
 \caption{General contexts }
@@ -182,13 +183,13 @@ illegal\_drugs & criminal possession, distribution, sale, or manufacturing of il
 
 How these contexts are used in practice will depend on how a coder implements them. If they are applied using document-level classifiers, researchers/analysts could mis-interpret the meaning of contexts. For example, an \plcat{ASSAULT} event with an ``elections'' context does not necessarily imply electoral violence. It could be an article about, for instance, violence in Afghanistan in the context of an article on US election politics. Thus, the interpretation of ``context'' may depend on how it's implemented in practice. Certain types of events, particularly general protests and meetings, will also have multiple contexts: this is a feature, not a bug.
 
-Based on our past experience developing event-oriented data sets, we are almost certain to find some additional contexts as we start coding data, so this list is likely to change somewhat. 
+Based on our past experience developing event-oriented data sets, we are almost certain to find some additional contexts as we start coding data, so this list is likely to change somewhat.  In many cases, it may be possible to extract the information needed for specialized applications by simply modifying the \txt{context} coding---which should be relatively easy---rather than modifying the event category coding, which is more difficult but was the only option in the older hierarchical systems.
 
 \newpage
 
-\section{Special contexts}
+\section{Special contexts}\label{ssec:special}
 
-Four special \ti{context} categories are \plcon{historical}, \plcon{future}, \plcon{hypothetical}, and \plcon{negation}: PLOVER assumes that the coding engine will be able to resolve these and put that information in the \ti{context}. Negated events can be excluded from the final event dataset. Examples:
+Four special \txt{context} categories are \plcon{historical}, \plcon{future}, \plcon{hypothetical}, and \plcon{negation}: PLOVER assumes that the coding engine will be able to resolve these and put that information in the \txt{context}. Negated events can be excluded from the final event dataset. Examples:
    \begin{itemize}
    \item \plcon{historical}: ``During the decolonization struggle, Angolan forces..."
    \item \plcon{future}: ``Members of the G-7 will meet in Ottawa next month..."
@@ -198,13 +199,13 @@ Four special \ti{context} categories are \plcon{historical}, \plcon{future}, \pl
   
 Theoretically, some event types can be represented as other event types plus a special context: \plcat{AGREE} could be  \plcat{SUPPORT} + \plcon{future} or \plcat{THREATEN} could be \plcat{ASSAULT} + \plcon{hypothetical}. In situations like these, the coder should always return the single event category, not a category+context.
 
-We anticipate that in general---and consistent with earlier event coding schemes---it will be possible to code \ti{mode} from the same sentence used to code the event, or possibly that sentence and one before it. \ti{context}, in contrast, will often need to be coded at the paragraph- or document-level: this differs from earlier automated coding, though probably is similar to human-coded data such as COPDAB and BCOW where \ti{context}-like fields were coded.
+We anticipate that in general---and consistent with earlier event coding schemes---it will be possible to code \txt{mode} from the same sentence used to code the event, or possibly that sentence and one before it. \txt{context}, in contrast, will often need to be coded at the paragraph- or document-level: this differs from earlier automated coding, though probably is similar to human-coded data such as COPDAB and BCOW \citep{Leng87} where \txt{context}-like fields were coded.
 
 \clearpage
 
 \section{Numeric conflict/cooperation scores}
 
-Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these scores were Goldstein scores that mapped specific CAMEO codes to a $-$10 to $+$10 scale (though in fact the most cooperative action had score of only $+$8.5. The ``PLOVER numeric scores'' given in Table \ref{tab:ploverscores} provide numeric conflict/cooperation scores for PLOVER. They were created by taking a weighted average of the CAMEO/Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample of events. Two changes were made based on our knowledge of the categories: COERCE and MOBILIZE were flipped, so COERCE was increased in magnitude from -5.3 to -7.2 and MOBILIZE moved from -7.2 to -5.3.
+Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these were called ``Goldstein scores'' since they were an extension of the WEIS scores in \cite{Goldstein92} which mapped the CAMEO codes to a $-$10 to $+$10 scale (though in fact the most cooperative action had score of only $+$8.5). The ``PLOVER scores'' given in Table \ref{tab:ploverscores} provide comparable scaled conflict/cooperation scores for PLOVER. They were created by taking a weighted average of the CAMEO/Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample (October-2017 to March-2019). Two additional changes were made based on our knowledge of the categories: COERCE and MOBILIZE were flipped, so COERCE was increased in magnitude from -5.3 to -7.2 and MOBILIZE moved from -7.2 to -5.3.
 
 \begin{table}[htp]
 \begin{center}
@@ -245,7 +246,7 @@ Agree to, offer, promise, or otherwise indicate willingness or commitment to coo
 
 \subsection{Potential ambiguities}
 
-There's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + a ``future'' special context. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+special context.
+As noted in Section \ref{ssec:special}, there's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + \plcon{future}. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+special context.
 
 \subsection{Requires recipient: No}
 
@@ -257,7 +258,7 @@ There's the potential for some events to fit both the definition of \plcat{AGREE
 
 \section{CONSULT}
 
-All consultations and meetings: this includes visiting and hosting visits, as well as meeting at a neutral location, and consultation by phone or other media. Other useful keywords: ``Holding talks'' and ``discussions'', ``negotiations, bargaining, or discussions''. See the discussion in Section \ref{sec:recip} on the treatment of actors in \plcat{CONSULT} events.
+All consultations and meetings: this includes visiting and hosting visits, as well as meeting at a neutral location, and consultation by phone or other media. Because this type of political event is both frequent and easily (and safely\ldots) covered in the international press, it is the most category in most event data sets.  Additional useful keywords for identifying \plcat{CONSULT}: ``Holding talks'' and ``discussions'', ``negotiations, bargaining, or discussions''. See the discussion in Section \ref{sec:recip} on the treatment of actors in \plcat{CONSULT} events.
 
 \subsection{Requires recipient: No}
 
@@ -292,7 +293,7 @@ Adapted from CAMEO.
 
 Initiate, resume, improve, or expand diplomatic, non-material cooperation; express support for, commend, approve policy, action, or actor, or ratify, sign, or finalize an agreement or treaty. Use this code only for political, diplomatic, and non-material support, including recognition of newly independent states, new governments that might have come to power through unconventional means, and initiation of diplomatic ties with an entity for the first time. 
 
-\plcat{SUPPORT} is distinct from the CAMEO \plcat{APPEAL} category, where the actor simply \textit{requested} support from the recipient: these events, like comments generally, are not coded in PLOVER.
+\plcat{SUPPORT} is distinct from the CAMEO \plcat{APPEAL} category, where the actor simply \textit{requested} support from the recipient.
  
 \subsection{Requires recipient: No}
 
@@ -322,7 +323,7 @@ In general, \plcat{SUPPORT} is a somewhat ambiguous term. It seems to imply a ma
 
 This covers verbal concessions which have no immediate material consequences, including promised of future concessions, including easing of administrative or legal restrictions on persons and organizations, remove curfews, suspending protests, declarations (but not implementations) of ceasefires and withdrawals from territory.
 
-\plcat{CONCEDE}, like the verbal components CAMEO/WEIS predecessor \plcat{YIELD}, is inherently problematic since many concessions deal with promises that certain things will \ti{not} happen, or will happen in the distant future (e.g. many policy changes). So, for example, the lifting of a curfew is, effectively, a promise that people will not be arrested for violating the curfew, which itself is not an event. We're treating such concessions as verbal rather than material even though sometimes they have material consequences, e.g. people coming out in the streets after a curfew is lifted. But only if they believe the government. As noted in Section \ref{sec:nothing}, PLOVER isn't really set up to deal with these levels of event dependence. 
+\plcat{CONCEDE}, like the verbal components CAMEO/WEIS predecessor \plcat{YIELD}, is inherently problematic since many concessions deal with promises that certain things will \ti{not} happen, or will happen in the distant future (e.g. many policy changes). So, for example, the lifting of a curfew is, effectively, a promise that people will not be arrested for violating the curfew, which itself is not an event. We're treating such concessions as verbal rather than material even though sometimes they have material consequences, e.g. people coming out in the streets after a curfew is lifted, provide they believe the entity lifting the curfew actually has done so.  
 
 \subsection{Requires recipient: No}
 
@@ -505,7 +506,7 @@ All rejections and refusals.
 
 \subsection{Potential ambiguities}
 
-Rejection to provide military aid is coded as \plcat{SANCTION}.
+Withdrawal of military aid or other assistance is coded as \plcat{SANCTION}.
 
 
 \subsection{Supplementary fields: modes}
@@ -534,8 +535,6 @@ meet & meetings and negotiations\\
 
 
 \section{THREATEN}
-
-\textsf{VERBAL CONFLICT} \vspace{8pt}
 
 All threats, coercive or forceful warnings with serious potential repercussions. Threats are generally verbal acts except for purely symbolic material actions such as having an unarmed group place a flag on some territory. 
 \subsection{Requires recipient: No}
@@ -572,8 +571,6 @@ violence & threaten violence \\
 
 \section{PROTEST}
 
-\textsf{MATERIAL CONFLICT} \vspace{8pt}
-
 All civilian demonstrations and other collective actions carried out as protests against the recipient: Dissent collectively, publicly show negative feelings or opinions; rally, gather to protest a policy, action, or actor(s).
 
 \subsection{Requires recipient: No}
@@ -582,7 +579,7 @@ All civilian demonstrations and other collective actions carried out as protests
 
 \begin{description}
 	\item[mode:] Mode of protest: see Table \ref{tab:protestmode} 
-	\item[event\_loc:] Location of event 
+	\item[event\_loc:] Location[s] of event 
 \end{description}
 
 %The protest contexts that were included in older versions of this manual were removed in favor of a single set of PLOVER-base context tags. See Section \ref{sec:adding_to_plover} for a discussion of how custom, event-specific context codes can be added.
@@ -621,7 +618,7 @@ Version 3.2: \url{https://www.strausscenter.org/images/codebooks/SCAD\_32\_Codeb
 
 \section{SANCTION}
 
-All reductions in normal, routine, or cooperative relations not otherwise specified. Note that this is not confined to formal ``sanctions''---\plcat{SANCTION} was just the best word we could find for WEIS and CAMEO's ``REDUCE RELATIONS''
+All reductions in existing, routine, or cooperative relations. Note that this is not confined to formal ``sanctions''---\plcat{SANCTION} was just the best word we could find for WEIS and CAMEO's ``REDUCE RELATIONS''
 
 
 \subsection{Requires recipient: Yes}
@@ -646,7 +643,7 @@ convict & find guilty or liable in a court of law\\
 cancel & cancel meetings, summits, dialogues  \\
 expel & expel an actor from a group, organization or country; excluding individual deportations \\
 withdraw & withdraw oneself or one's non-military resources (e.g., aid, observers, diplomats, peacekeepers) from a group, mediation activity, organization, or country\\
-sever & curtail, decrease, break, or terminate diplomatic, commercial, or material exchanges in manners not specified above \\
+discontinue & curtail, decrease, break, or terminate diplomatic, commercial, or material exchanges in manners not specified above \\
 \hline
 \end{tabular}
 \end{center}
@@ -661,7 +658,7 @@ sever & curtail, decrease, break, or terminate diplomatic, commercial, or materi
 
 All military or police moves that fall short of the actual use of force. 
 
-This category is different from \plcat{ASSAULT} and \plcat{FIGHT}, as they refer to uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power. Source actors  are not necessarily militaries affiliated with states but any organized armed groups. Recipients are actors against whom the source mobilizes its military capabilities in a threatening manner if that is clear, but a group may mobilize with no specific recipient stated.
+This category is different from \plcat{ASSAULT}, as that refers to uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power. Source actors  are not necessarily militaries affiliated with states: they can be any organized armed groups (for example militias, either independent or aligned with political parties). Recipients are actors against whom the source mobilizes its military capabilities in a threatening manner if that is clear, but a group may mobilize with no specific recipient stated.
 
 \subsection{Potential ambiguities}
 
@@ -681,11 +678,12 @@ Name & Content \\
 troops & Mobilize armed personnel or units\\
 weapons & Increase readiness of weapons systems (can occur with a \plcon{cyber} context) \\
 police & Mobilize or increase readiness of police or security units\\
+militia & Mobilize or increase readiness of any non-state entity with significant military capability\\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:mobilizemode}
-Adapted from CAMEO category 15x
+Adapted from CAMEO cue category 15
 \end{table}
 
  
@@ -699,6 +697,8 @@ Repression or restrictions on rights.
 
 \subsection{Requires recipient: No}
 
+Most cases of \plcat{COERCE} have a clear intended target/recipient, but occasionally, for example in shutting off internet access, the recipient is so broad as to be unclear. 
+
 \subsection{Supplementary fields: }
 
 \begin{table}[htp]
@@ -711,7 +711,7 @@ Name & Content \\
 confiscate & confiscate property \\
 restrict & impose restrictions on political freedoms or movement \\
 ban & ban individuals or organizations \\
-censor & censor, ban or restrict access to publications  \\
+censor & censor, ban or restrict access to publications or other information  \\
 curfew & impose curfew \\
 martial-law & impose state of emergency or martial law \\
 arrest & arrest, detain, or charge with legal action \\
@@ -721,7 +721,7 @@ withhold & withhold public goods/services, e.g. shut off power/internet/water/ut
 \end{tabular}
 \end{center}
 \label{tab:coerce}
-Adapted from CAMEO category 17x
+Adapted from CAMEO cue category 17
 \end{table}%
 
  
@@ -793,11 +793,11 @@ As with the events, the PLOVER specification seeks to pare this down to the most
 \begin{enumerate}
 \item The actor code---\texttt{source/recipient}---is either an ISO 3 letter country code or one of a small number of non-state codes such as IGO; see Table \ref{tab:nonstate} below.
 \item The sector code is a 3-character primary code with one optional secondary code
-\item Identifiers for individual persons or organizations are coded in the \texttt{Identifier} and/or \texttt{Text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular actor or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia (e.g. who might like to make a new sector category for right-wing populist parties and politicians.
-\item The \texttt{Info} JSON object is used for additional information beyond what can be coded in the sector secondary modifier\fn{In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of.} such as religion, ethnicity, official position, etc.
+\item Identifiers for individual persons or organizations are coded in the \texttt{identifier\_id} and/or \texttt{identifier\_text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular actor or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia, for example a new sector category for right-wing populist parties and politicians.
+\item The remaining named fields in the \texttt{source/recipient} JSON object is used for additional information beyond what can be coded in the sector secondary modifier. In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of such as religion, ethnicity, official position, etc.
 \end{enumerate}
 
-By effectively crowdsourcing details to Wikipedia, which is generally updated very quickly, often within minutes in the case of a death of a well-known figure, we deal with a major weak point in the CAMEO dictionary approach, which was the need to maintain coding teams to regularly update actor dictionaries, and in the absence of this, having information sometimes years out of date. Wikipedia also has a fairly standardized format for biographical information which contains far more detail than a CAMEO entry, but can be parsed with relatively simple programs.
+By effectively crowdsourcing details to Wikipedia/Wikidata, the latter which is generally updated very quickly, often within minutes in the case of a death of a well-known figure, we deal with a major weak point in the CAMEO dictionary approach,  the need to maintain coding teams to regularly update actor dictionaries, and in the absence of this, having information sometimes years out of date. Wikipedia/Wikidata also has a fairly standardized format for biographical information which contains far more detail than a CAMEO entry, but can be parsed with relatively simple programs.
 
 An example actor block is below:
 
@@ -887,7 +887,7 @@ MNC            &   multi-national corporation\\
 
 \subsection{Compound and Reciprocal Actors}\label{sec:recip}
 
-Most CAMEO-based coders dealt with compound actors---``The United States and France accused Russia\ldots''---by generating multiple events: this example would generate two events of the form
+Following the dyadic approach which originated in WEIS and COPDAB,  most CAMEO-based coders dealt with compound actors---``The United States and France accused Russia\ldots''---by generating multiple events: this example would generate two events of the form
 \begin{verbatim}
 	USA  RUS  112
 	FRA  RUS  112
@@ -909,11 +909,13 @@ In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided viol
 
 \chapter{Data Fields}
 
+\begin{quote}
 \textbf{Note: This section is still under development and is not likely to be of interest to most readers.}
 
+\end{quote}
 \bigskip
 
-In addition to providing a coding ontology, PLOVER is also intended to provide a standardized data exchange format using \ti{named} data fields instead of the current system where the content of data fields is usually determined by \ti{location} in some delimited format such as \txt{.csv}. Standardizing these field names will simplify the merging and reuse of datasets, and the data are far easier for a human to read. 
+In addition to providing a coding ontology, PLOVER is also intended to provide a standardized data exchange format using \ti{named} data fields instead of the current system where the content of data fields is usually determined by \ti{location} in some delimited format such as \txt{.csv}. Standardizing these field names will simplify the merging and reuse of datasets, and such data are far easier for a human to read. 
 
 Despite the apparent complexity of the formats discussed here, note that the only required field we have added to ``event data classic'' is the \texttt{id} identifier, so the simplest form of an event record would look like
 \begin{verbatim}
@@ -928,7 +930,7 @@ Despite the apparent complexity of the formats discussed here, note that the onl
 
 \noindent For ease of parsing and use, we suggest formatting PLOVER in newline-delimited JSON (JSONL) format, with each event formatted as one valid JSON entry, each on a separate row.
 
-Except in the small number of cases where a standard format is specified, the content of the field is left open, and in particular ``number'' should be interpreted as ``number or code'': for example instead of providing the number of individuals killed, a dataset might use a set of categories giving ranges. Similarly, fields such as \texttt{context} can take multiple values: typically these would be formatted using a JSON ``array'' structure but responsibility for handling these details is left to the data provider and users.  Providers should feel free to include named fields beyond those provided here but if a data set codes or extracts information  corresponding to one of the existing fields, please use that name.
+Except in the small number of cases where a standard format is specified, the content of the field is left open, and in particular ``number'' should be interpreted as ``number or code'': for example instead of providing the number of individuals killed, a dataset might use a set of categories giving ranges. Similarly, fields such as \texttt{context} can take multiple values: typically these would be formatted using a JSON ``array'' structure---which is to say, a list---but responsibility for handling these details is left to the data provider and users.  Providers should feel free to include named fields beyond those provided here but if a data set codes or extracts information  corresponding to one of the existing fields, please use that name.
 
 %\emph{I think we should take a firmer stance on all of this, producing a fully built out ``PLOVER-base" with all of the fields we discuss above. Other researchers can then certainly make their own variants of PLOVER (PLOVER-ICEWS, PLOVER-ACE, PLOVER-Andy's dissertation, etc) as needed, making it clear how they differ from PLOVER-base.}
 
@@ -1158,9 +1160,9 @@ Version 3.2: \url{https://www.strausscenter.org/images/codebooks/SCAD\_32\_Codeb
 
 \chapter{CAMEO vs. PLOVER}
 
-The canonical citation for CAMEO is \cite{SGY09}, and the most recent version of the manual is found at \texttt{http://eventdata.parusanalytics.com/data.dir/cameo.html}.  The original event framework was very much the work of Deborah Gerner and \"Om\"ur Yilmaz, with contributions by various coders in the Kansas Event Data System project. The CAMEO manual contains an extended discussion of the issues considered in transitioning from WEIS to CAMEO. Additional details on the development of the automated coding underlying CAMEO can be found in \cite{Schrodt06TPM} or \texttt{http://eventdata.parusanalytics.com/utilities.dir/KEDS.History.0611.pdf}.  
+As noted in the introduction, CAMEO was originally developed for academic research under U.S. National Science Foundation funding in the early 2000s, and was based on the WEIS system. The canonical citation for CAMEO is \cite{SGY09}, and the detailed manual, ca. 2012, is found at \texttt{\footnotesize http://eventdata.parusanalytics.com/data.dir/cameo.html}.  The CAMEO event framework was very much the work of Deborah Gerner and \"Om\"ur Yilmaz, with contributions by various coders in the Kansas Event Data System project; the actor framework was strongly influenced by the VRA ``IDEA'' coding system developed in the late 1990s \citep{BBOJT03}. The CAMEO manual contains an extended discussion of the issues considered in transitioning from WEIS to CAMEO. Additional details on the development of the automated coding underlying CAMEO can be found in \cite{Schrodt06TPM} or {\texttt{\footnotesize http://eventdata.parusanalytics.com/utilities.dir/KEDS.History.0611.pdf}.  
 
-As noted in the introduction, considerable additional work on CAMEO was done in the early 2010s first in the context of the DARPA ICEWS research program, then later in the operational deployment of ICEWS by teams at BBN and Lockheed which was eventually incorporated into the Dataverse public data: details of this work on found in the internal documentation of that data.
+Considerable additional work on CAMEO was done in the early 2010s first in the context of the DARPA ICEWS research program, then later in the operational deployment of ICEWS by teams at BBN and Lockheed which was eventually incorporated into the Dataverse public data: details of this work on found in the internal documentation of that data.
 
 \section{Summary of changes}
 
@@ -1168,11 +1170,11 @@ As noted in the introduction, considerable additional work on CAMEO was done in 
 
 \item A set of standardized names (``fields'') for JSON (\url{http://www.json.org/}) records are specified for both the core event data fields and for extended information such as geolocation and extracted texts; most of these fields are optional and where available we use existing specifications, for example the \url{http://geonames.org} geographical location field names, ISO-3166 country identifiers and ISO-8601 date and time formats.
 
-\item Only the 2-digit event ``cue categories'' have been retained from CAMEO; these are defined in greater detail than they were in WEIS and CAMEO.
+\item Only the 2-digit event ``cue categories'' have been retained from CAMEO.
 
 \item The details in the 3- and 4-digit categories are now delegated to the optional \texttt{mode} and \texttt{context} fields: see Section \ref{ssec:ecm} for further discussion of this.  
 
-\item A set of scaled ``PLOVER scores'' has been systematically derived from the Goldstein-Reising scores found in the ICEWS data set.
+\item A set of scaled ``PLOVER scores'' has been systematically derived from the ``Goldstein scores'' found in the ICEWS data set.
 
 \item The CAMEO 01 and 02 categories dealing with comments have been eliminated.\fn{Ironically, this reverses a decision McClelland belatedly made---and later regretted---in the WEIS specification in the 1960s.}
 
@@ -1230,7 +1232,7 @@ CAMEO code & CAMEO text & PLOVER category \\
 \noindent \textbf{Notes:}
 
 \begin{enumerate}
-\item For unconventional weapons, the  \ti{mode} in the \plcat{FIGHT} record would be set to \plmod{unconventional}. \item Generally, everything at the 3- and 4-digit level should simply be reduced to the 2-digit cue category and converted accordingly. Depending on your specific application, you might want to make some exceptions to this---for example a CAMEO  ``015: Acknowledge or claim responsibility'' might be considered \plcat{AGREE} and a CAMEO ``016: Deny responsibility'' might be considered REJECT---but we are not making general recommendations on this. Except to suggest that for the benefit of those trying to replicate your work, you carefully document any such decisions.
+\item For unconventional weapons, the  \txt{mode} in the \plcat{FIGHT} record would be set to \plmod{unconventional}. \item Generally, everything at the 3- and 4-digit level should simply be reduced to the 2-digit cue category and converted accordingly. Depending on your specific application, you might want to make some exceptions to this---for example a CAMEO  ``015: Acknowledge or claim responsibility'' might be considered \plcat{AGREE} and a CAMEO ``016: Deny responsibility'' might be considered REJECT---but we are not making general recommendations on this. Except to suggest that for the benefit of those trying to replicate your work, you carefully document any such decisions.
 \end{enumerate}
 
 
@@ -1273,7 +1275,7 @@ A separate event category for crime has been added and removed several times as 
 \begin{enumerate}
 	\item Identify events taken by criminal actors. As coders move away from hand-constructed dictionaries to resolve actors, many more groups will be coded. Researchers will be able to subset events to those undertaken by specific criminal groups (e.g. the Sinaloa Cartel) or by using the CRM actor code.
 	
-	\item Use the \plcon{crime} and \plcon{illegal\_drugs} contexts: see Table \ref{tab:context}). 
+	\item Use the \plcon{crime} and \plcon{illegal\_drugs} contexts: see Table \ref{tab:context}. 
 \end{enumerate}
 
 \newpage
@@ -1286,7 +1288,7 @@ In the discussions leading to the development of PLOVER, several additional open
 
 \item[Temporal markup:] This is emerging as a major issue in event extraction, particular among users who are interested in the long-standing objective of automated chronology generators. While there are some significant efforts on this in the NLP community---\url{http://www.timeml.org/}---we don't feel we currently have the experience required to make recommendations.
 
-\item[De-duplication:] There is no consensus on this beyond noting that the widely-used ``one-a-day filtering'' is probably not a good idea,\fn{See \texttt{http://eventdata.parusanalytics.com/papers.dir/Schrodt.TAD-NYU.EventData.pdf}} and it is a topic where there is currently active research and experimentation, so we're leaving it alone.
+\item[De-duplication:] There is no consensus on this beyond noting that the widely-used ``one-a-day filtering'' is controversial, and it is a topic where there is currently active research and experimentation, so we're leaving it alone.
 
 \item[Required actors:]PLOVER, in contrast to CAMEO, makes recipient actors optional for some event types. One outstanding question is whether the \ti{source actor} should also be optional for some event types. Some event types often leave the source actor implicit, for example, ``4 people were arrested/killed in a suicide bombing/detained/etc." These have no explicit, named source actor so they will not be coded by PLOVER. Similarly, many natural disasters do not fit neatly into an actor-centric approach to coding (``mudslides destroyed dozens of houses"). We could consider relaxing this requirement to increase our recall, but at the potential cost of more false positives and greater conceptual complexity.
 
