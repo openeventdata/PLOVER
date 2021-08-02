@@ -7,8 +7,9 @@
 \usepackage[usenames]{color}
 \definecolor{purple}{rgb}{.5, 0, .5}
 \usepackage{longtable}
-\usepackage{multirow} % we're not actually using these...
+\usepackage{multirow} 
 \usepackage{multicol}
+\usepackage{booktabs}
 \usepackage{verbatim} % for comment blocks
 \usepackage{natbib}
 \usepackage{datetime} % To set the document dates automagically
@@ -65,7 +66,7 @@
 
 \chapter*{Acknowledgments}
 
-\noindent Contributors to the development of PLOVER include, in alphabetical order, Benjamin Bagozzi, John Beieler, Liz Boschee, Patrick T.~Brandt, Andrew Halterman, Jill Irvine, Jennifer S.~Holmes, Javier Osorio, Grace Scarborough, and Philip Schrodt.\\
+\noindent Contributors to the development of PLOVER include, in alphabetical order, Benjamin Bagozzi, Andreas Beger, John Beieler, Liz Boschee, Patrick Brandt, Andrew Halterman, Jill Irvine, Jennifer Holmes, Javier Osorio, Grace Scarborough, and Philip Schrodt.\\
 
 \noindent The Open Event Data Alliance is an educational and open research corporation chartered in the Commonwealth of Virginia, United States.\\
 
@@ -640,7 +641,6 @@ All reductions in existing, routine, or cooperative relations. Note that this is
 Name & Content \\
 \hline
 convict & find guilty or liable in a court of law\\
-cancel & cancel meetings, summits, dialogues  \\
 expel & expel an actor from a group, organization or country; excluding individual deportations \\
 withdraw & withdraw oneself or one's non-military resources (e.g., aid, observers, diplomats, peacekeepers) from a group, mediation activity, organization, or country\\
 discontinue & curtail, decrease, break, or terminate diplomatic, commercial, or material exchanges in manners not specified above \\
@@ -736,7 +736,7 @@ Adapted from CAMEO cue category 17
 
 \subsection{Requires recipient: No}
 
-In \plcat{ASSAULT} events where the violence is two-sided, all participants are coded as source actors. In one-sided violence, the perpetrator is coded as the \texttt{source} and the victim as the \texttt{recipient}.
+In \plcat{ASSAULT} events where the violence is two-sided, all participants are coded as source actors except when a ``Side A/Side B'' can be distinguished per the conventions of the Correlates of War project, in which case the \plmod{sideAB} mode is added to any other relevant modes. In one-sided violence, the perpetrator is coded as the \texttt{source} and the victim as the \texttt{recipient}.
 
 \subsection{Supplementary fields:}
 
@@ -763,6 +763,7 @@ heavy-weapons & crew-served weapons  \\
 cleansing & mass expulsions or deportations, ethnic cleansing  \\
 massacre & instances of mass killing or massacres  \\
 unconventional & chemical, biological, radiation, and nuclear weapons  \\
+sideAB & two-sided violence: source and recipient are ``Side A'' and ``Side B'' \\
 \hline
 \end{tabular}
 \end{center}
@@ -1238,7 +1239,33 @@ CAMEO code & CAMEO text & PLOVER category \\
 
 %\newpage 
 
-\section{PLOVER quad categories}
+\section{Summary of event categories }
+
+\begin{tabular}{lccp{1.5in}p{1.2in}}
+\toprule
+Event Type & Quad & Modes & Requires Recipient & Other Fields \\
+\midrule 
+AGREE & \multirow{4}{*}{V-Coop.} \\
+CONSULT &  & Yes \\
+SUPPORT & \\
+CONCEDE  & \\
+\midrule
+COOPERATE & \multirow{3}{*}{M-Coop.} & 	& Yes \\
+AID & & Yes \\
+RETREAT & & Yes \\
+\midrule
+DEMAND & \multirow{4}{*}{V-Conf.} & Yes  \\
+ACCUSE & & Yes \\
+REJECT & & Yes\\
+THREATEN & & Yes \\
+\midrule
+PROTEST & \multirow{5}{*}{M-Conf.} & Yes 	& Yes & event\_loc \\
+SANCTION & & Yes 			& Yes \\
+MOBILIZE & & Yes \\
+COERCE && Yes \\
+ASSAULT && Yes & Only if one-sided or SideAB, otherwise all participants in source & event\_loc, dead, injured, size \\
+\bottomrule
+\end{tabular}
 
 \begin{table}[htp]
 \caption{Quad categories in PLOVER}
@@ -1248,7 +1275,7 @@ CAMEO code & CAMEO text & PLOVER category \\
 Quad category & PLOVER categories & Numeric\\
 \hline
 Verbal cooperation & AGREE, CONSULT, SUPPORT, CONCEDE &  1 \\
-Material cooperation & COOPERATE, AID, RETREAT, INVESTIGATE & 2 \\
+Material cooperation & COOPERATE, AID, RETREAT & 2 \\
 Verbal conflict & DEMAND, ACCUSE, REJECT, SANCTION, THREATEN & 3\\
 Material conflict & PROTEST,  MOBILIZE, COERCE, ASSAULT & 4\\
 \hline
