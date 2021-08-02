@@ -71,7 +71,6 @@ CAMEO code | CAMEO text | PLOVER category |
 07 | PROVIDE AID | AID |
 08 | YIELD (081 to 083) | CONCEDE |
 08 | YIELD (084 to 087) | RETREAT |
-09 | INVESTIGATE | INVESTIGATE |
 10 | DEMAND | DEMAND |
 11 | DISAPPROVE | DISAPPROVE |
 12 | REJECT | REJECT |
@@ -80,10 +79,7 @@ CAMEO code | CAMEO text | PLOVER category |
 15| EXHIBIT FORCE POSTURE | MOBILIZE |
 16 | REDUCE RELATIONS | SANCTION |
 17 | COERCE | COERCE |
-18 | ASSAULT | ASSAULT |
-19 | FIGHT | ASSAULT |
-20 | USE UNCONVENTIONAL MASS VIOLENCE | ASSAULT |
--- | no CAMEO equivalent | CRIME |
+18,19,20 | ASSAULT, FIGHT | ASSAULT |
 
 PLOVER quad categories
 ----------------------
@@ -159,13 +155,13 @@ event data.
 Description of files in repository
 ==================================
 
-* **PLOVER_Manual.pdf**
+* **PLOVER_Manual.pdf/.tex**
 
-   The PLOVER manual is currently being developed on an *overleaf.com* site; this is intended to be reasonably current versions of that file
+   Version 0.8 draft which is being implemented by the Political Instability Task Force
       
-* **PLOVER_Manual_tex.zip**
+* **PLOVER.bib**
 
-   *overleaf.com* version of the source code for the PLOVER manual
+   BibTex entries for the manual
 
 * **plover_reference.html**
 
@@ -178,23 +174,6 @@ Description of files in repository
 * **CAMEO-PLOV.txt**
 
    Translation table for CAMEO to PLOVER: this is still something of a draft but will get you started
-   
-* **CAMEO.RCS.pdf**
-
-   CAMEO Religious Coding system (Mattias Heilke), pdf format
-      
-* **CAMEO.RCS.tex**
-
-   CAMEO Religious Coding system, LaTeX source. This is formatted with sufficient consistency that it can easily be used as a sector dictionary.
-   
-   
-* **CAMEO.ECS.pdf**
-
-   CAMEO Ethnicity Coding system (Benjamin Bagozzi and Jay Yonamine), pdf format
-      
-* **CAMEO.ECS.tex**
-
-   CAMEO Ethnicity Coding system, LaTeX source. This is formatted with sufficient consistency that it can easily be used as a sector dictionary.
 
 Acknowledgments
 ===============
@@ -205,7 +184,7 @@ project: Modernizing Political Event Data for Big Data Social Science Research (
 
 Any opinions, findings, conclusions or recommendations in this document are [only *probably* still] those of [at least one of] the authors and do not necessarily reflect the views of the National Science Foundation, or any company or government agency employing or funding the authors or otherwise contributing to the document.
 
-This work was sponsored by the Political Instability Task Force (PITF). The PITF is funded by the Central Intelligence Agency. The views expressed in this codebook are the authors' alone and do not represent the views of the US Government.
+This work was partially supported by the Political Instability Task Force (PITF). The PITF is funded by the Central Intelligence Agency. The views expressed in this codebook are the authors' alone and do not represent the views of the US Government.
 
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 
