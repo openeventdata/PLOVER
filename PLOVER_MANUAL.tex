@@ -95,9 +95,11 @@ and military threats. Consequently these coding systems proved less than optimal
 
 During the early 2000s, the CAMEO framework---Conflict and Mediation Event Observations---was developed \citep{SGY09} to support an NSF-funded project at the University of Kansas on the study of inter-state conflict mediation, not as a general-purpose event ontology. Nonetheless, it was gradually adopted as a ``next generation'' coding scheme, notably for the DARPA-funded Integrated Conflict Early Warning System (ICEWS) project \citep{OBrien10} because it corrected some of the long-recognized ambiguities in WEIS and COPDAB, and was explicitly designed both for automated coding and for the detailed coding of sub-state actors. It was continued in the widely-used public ICEWS data (\txt{https://dataverse.harvard.edu/dataverse/icews}) coded using the BBN SERIF/ACCENT coder, with BBN doing considerable additional work on various details of the system.
 
-As event data came into wider use in the 2010s, several problems with CAMEO became apparent, largely dealing with the complexity of the system, the absence of a standard formats beyond the original  date-source-target-event fields (for example, representing geographical location), and continuing interest on coding substate activities not present in the earlier systems. 
+As event data came into wider use in the 2010s, several problems with CAMEO became apparent, largely dealing with the complexity of the system, the absence of a standard format beyond the original  date-source-target-event fields (for example, representing geographical location), and continuing interest on coding substate activities not present in the earlier systems. 
 
-To address these concerns, an informal group of academic, government and private sector producers and users of event data met and circulated drafts during the fall of 2016 to develop a new, simplified and more flexible event data specification to replace CAMEO, which became PLOVER and the basis of this document: Section \ref{ssec:ctp} summarizes the major changes. Additional extensive work in 2021 as PLOVER was adopted as the coding system for the Political Instability Task Force event data coding. 
+To address these concerns, an informal group of academic, government and private sector producers and users of event data met and circulated drafts during the fall of 2016 to develop a new, simplified and more flexible event data specification to replace CAMEO, which became PLOVER and the basis of this document: Section \ref{ssec:ctp} summarizes the major changes. Additional extensive
+work was done in 2021 as PLOVER was adopted by the Political Instability Task Force to replace
+CAMEO in its new coder for iDATA (the next generation ICEWS).
 
 Because the PLOVER event categories are generally a simplification of CAMEO our expectation is that it will be relatively easy to splice existing CAMEO data sets to PLOVER equivalents by simply collapsing the two- and three-digit categories. The scaled ``PLOVER scores'' are also designed for splicing with time series generated from the CAMEO ``Goldstein scores.'' The standardization of the JSON field names---as well as adoption of JSON as the data interchange format---will allow the development of general-purpose utilities that can work with all formats, in contrast with the current proliferation of incompatible and error-prone CSV and tab-delimited formats.
 
@@ -126,7 +128,7 @@ A major difference between PLOVER and the earlier widely-used event coding syste
 
 \item In initial experiments, it appears this  approach is \textit{much} easier for humans to code than the hierarchical structure of CAMEO because a human coder can hold most of the relevant categories in working memory. More generally,  \txt{event-mode-context}  coding uses words, not numerical codes, so coders will probably be using the parts of the brain (Broca's area) which are specialized for processing words. No known specialized cognitive facility exists for handling some 250 2-to-4-digit codes.
 
-\item Because the words used in differentiate \txt{mode} and \txt{context} are generally very basic, translations of the coding protocols into languages other than English is likely to be easier than translating the subcategory descriptions found in CAMEO. 
+\item Because the words used to differentiate \txt{mode} and \txt{context} are generally very basic, translations of the coding protocols into languages other than English is likely to be easier than translating the subcategory descriptions found in CAMEO. 
 \end{enumerate}
 
 While both \txt{mode} and \txt{context} will usually take a single value, in some instances multiple values will be appropriate and this is allowed. Both fields are optional, and if no existing values seem appropriate, the field should be left null, though perhaps with some details provided in the JSON \texttt{comment} field, particularly when the record is generated using human coding.
@@ -147,7 +149,7 @@ Name & Content \\
 \hline
 military & military, including military assistance \\
 intelligence & intelligence or information \\
-peacekeeping & peacekeeping–typically multilateral operations \\
+peacekeeping & peacekeeping, typically multilateral operations \\
 economic & trade, finance and economic development \\
 diplomatic & diplomacy \\
 resource & territory and natural resources \\
@@ -182,7 +184,7 @@ illegal\_drugs & criminal possession, distribution, sale, or manufacturing of il
 \label{tab:context}
 \end{table}
 
-How these contexts are used in practice will depend on how a coder implements them. If they are applied using document-level classifiers, researchers/analysts could mis-interpret the meaning of contexts. For example, an \plcat{ASSAULT} event with an ``elections'' context does not necessarily imply electoral violence. It could be an article about, for instance, violence in Afghanistan in the context of an article on US election politics. Thus, the interpretation of ``context'' may depend on how it's implemented in practice. Certain types of events, particularly general protests and meetings, will also have multiple contexts: this is a feature, not a bug.
+How these contexts are used in practice will depend on how a coder implements them. If they are applied using document-level classifiers, researchers/analysts could misinterpret the meaning of contexts. For example, an \plcat{ASSAULT} event with an ``elections'' context does not necessarily imply electoral violence. It could be an article about, for instance, violence in Afghanistan in the context of an article on US election politics. Thus, the interpretation of ``context'' may depend on how it's implemented in practice. Certain types of events, particularly general protests and meetings, will also have multiple contexts: this is a feature, not a bug.
 
 Based on our past experience developing event-oriented data sets, we are almost certain to find some additional contexts as we start coding data, so this list is likely to change somewhat.  In many cases, it may be possible to extract the information needed for specialized applications by simply modifying the \txt{context} coding---which should be relatively easy---rather than modifying the event category coding, which is more difficult but was the only option in the older hierarchical systems.
 
@@ -228,7 +230,7 @@ CONSULT &  +2.1\\
 AGREE & +4.2\\
 SUPPORT & +4.6\\
 CONCEDE & +5.0\\
-COOPERATION & +6.8\\
+COOPERATE & +6.8\\
 AID & +7.4\\
 RETREAT & +7.6 \\
 \hline
@@ -259,7 +261,7 @@ As noted in Section \ref{ssec:special}, there's the potential for some events to
 
 \section{CONSULT}
 
-All consultations and meetings: this includes visiting and hosting visits, as well as meeting at a neutral location, and consultation by phone or other media. Because this type of political event is both frequent and easily (and safely\ldots) covered in the international press, it is the most category in most event data sets.  Additional useful keywords for identifying \plcat{CONSULT}: ``Holding talks'' and ``discussions'', ``negotiations, bargaining, or discussions''. See the discussion in Section \ref{sec:recip} on the treatment of actors in \plcat{CONSULT} events.
+All consultations and meetings: this includes visiting and hosting visits, as well as meeting at a neutral location, and consultation by phone or other media. Because this type of political event is both frequent and easily (and safely\ldots) covered in the international press, it is the largest category in most event data sets.  Additional useful keywords for identifying \plcat{CONSULT}: ``Holding talks'' and ``discussions'', ``negotiations, bargaining, or discussions''. See the discussion in Section \ref{sec:recip} on the treatment of actors in \plcat{CONSULT} events.
 
 \subsection{Requires recipient: No}
 
@@ -322,7 +324,7 @@ In general, \plcat{SUPPORT} is a somewhat ambiguous term. It seems to imply a ma
 
 \section{CONCEDE}
 
-This covers verbal concessions which have no immediate material consequences, including promised of future concessions, including easing of administrative or legal restrictions on persons and organizations, remove curfews, suspending protests, declarations (but not implementations) of ceasefires and withdrawals from territory.
+This covers verbal concessions which have no immediate material consequences, including the promise of future concessions such easing of administrative or legal restrictions on persons and organizations, removing curfews, suspending protests, and declarations (but not implementations) of ceasefires and withdrawals from territory.
 
 \plcat{CONCEDE}, like the verbal components CAMEO/WEIS predecessor \plcat{YIELD}, is inherently problematic since many concessions deal with promises that certain things will \ti{not} happen, or will happen in the distant future (e.g. many policy changes). So, for example, the lifting of a curfew is, effectively, a promise that people will not be arrested for violating the curfew, which itself is not an event. We're treating such concessions as verbal rather than material even though sometimes they have material consequences, e.g. people coming out in the streets after a curfew is lifted, provide they believe the entity lifting the curfew actually has done so.  
 
@@ -470,7 +472,7 @@ meet & meetings and negotiations\\
 	\item Express disapprovals, objections, and complaints; condemn, decry a policy or an action; criticize, defame, denigrate responsible parties.
 	\item Accuse, allege, or charge, both judicially and informally
 	\item Sue or bring to court
-	\item All investigations, including those of historical cases. Examples include investigations of  criminal activity (theft, killing, etc) and corruption, human rights abuses, war crime, and violations of basic freedoms, military activities such as violations of ceasefire, seizures, and invasions.
+	\item All investigations, including those of historical cases. Examples include investigations of  criminal activity (theft, killing, etc.) and corruption, human rights abuses, war crime, and violations of basic freedoms, military activities such as violations of ceasefire, seizures, and invasions.
 \end{itemize}
 
 
