@@ -202,9 +202,39 @@ Four special \txt{context} categories are \plcon{historical}, \plcon{future}, \p
   
 Theoretically, some event types can be represented as other event types plus a special context: \plcat{AGREE} could be  \plcat{SUPPORT} + \plcon{future} or \plcat{THREATEN} could be \plcat{ASSAULT} + \plcon{hypothetical}. In situations like these, the coder should always return the single event category, not a category+context.
 
-We anticipate that in general---and consistent with earlier event coding schemes---it will be possible to code \txt{mode} from the same sentence used to code the event, or possibly that sentence and one before it. \txt{context}, in contrast, will often need to be coded at the paragraph- or document-level: this differs from earlier automated coding, though probably is similar to human-coded data such as COPDAB and BCOW \citep{Leng87} where \txt{context}-like fields were coded.
+We anticipate that in general---and consistent with earlier event coding schemes---it will be possible to code \txt{mode} from the same sentence used to code the event, or possibly that sentence and one before it. \txt{context}, in contrast, will usually be coded at the paragraph- or document-level: this differs from earlier automated coding, though probably is similar to human-coded data such as COPDAB and BCOW \citep{Leng87} where \txt{context}-like fields were coded.
 
-\clearpage
+
+\section{Changes in treatment of political entities}\label{ssec:change}
+
+\subsection{``actor'' and ``recipient'' replace ``source'' and ``target''}
+
+In order to reduce overlap with how the policy community uses the terms  ``source'' and ``target'', we are using the word \txt{actor} to refer to the entity or entities who initiated the event, and \txt{recipient} to refer to the 
+ the entity or entities to whom the event is directed, if this is clear. \txt{recipient} is optional for many events. We are using the term ``entity'' to refer to the class of potential actors and recipients.
+
+\subsection{Compound and Reciprocal Actors}\label{sec:recip}
+
+Following the dyadic approach which originated in WEIS and COPDAB,  most CAMEO-based coders dealt with compound entities---``The United States and France accused Russia\ldots''---by generating multiple events: this example would generate two events of the form
+\begin{verbatim}
+	USA  RUS  112
+	FRA  RUS  112
+\end{verbatim}
+This approach, however, gets very problematic in the not-uncommon situation where an alliance is involved and is expanded to all of its constituent members: a single reference to the G20 expands to at least twenty events, and a \textit{meeting} of the G20, generating reciprocal events, expands to 380 events, which is one of the reasons ``consult'' events are so frequent in CAMEO-coded data.
+
+In PLOVER, compound entities generate a single actor or recipient, but with multiple members: the actor and recipient are a list of entities rather than a single entities. Depending on the application, a user might expand this in a post-processing phase to multiple events with single entity codes following the earlier conventions, but the initial coding of the event uses the list.
+
+PLOVER also uses actor lists to deal with reciprocal events. In CAMEO, a meeting ``President Obama met with Japanese Prime Minister Abe at the White House"" generated two events
+\begin{verbatim}
+	JAP  USA  042
+	USA  JAP  043
+\end{verbatim}
+where 042 and 043 are the CAMEO codes for "visit" and "host" respectively.\footnote{This example optimistically assumes the coding system was clever enough to recognize the significance of the phrase ``at the White House.''} While the PLOVER \plcat{CONSULT} mode provides for a host/visit distinction, this is not required. In such instances, all of the entities are considered as the actor and no recipient is included.
+
+In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided violence---is handled in a similar fashion, with both entities as \texttt{actor}: this applies in any event where both sides are using force, even if one side ``started it'', an assessment often as not contested anyway. One-sided violence, such as assassinations or police firing on demonstrators, will have the perpetrator as the \texttt{actor} and the victims as \texttt{recipient}. The \plmod{sideAB} mode in  \plcat{ASSAULT} is used in conjunction with the \texttt{recipient} field when there are two clear ``sides'' in the conflict.
+
+
+
+%\clearpage
 
 \section{Numeric conflict/cooperation scores}
 
@@ -265,7 +295,7 @@ All consultations and meetings: this includes visiting and hosting visits, as we
 
 \subsection{Requires recipient: No}
 
-In \plcat{CONSULT} events where there is no clear distinction between whether an actor is hosting or visiting, all participants are coded as source actors. In events where one side is hosting and one is visiting, the visitor will always be coded as the source actor and the host will be the recipient.
+In \plcat{CONSULT} events where there is no clear distinction between whether an entity is hosting or visiting, all participants are coded in the \txt{actor} field. In events where one side is hosting and one is visiting, the visitor will always be coded as the \txt{actor} and the host will be the \txt{recipient}.
 
 \subsection{Supplementary fields: modes}
 
@@ -276,7 +306,7 @@ In \plcat{CONSULT} events where there is no clear distinction between whether an
 \hline
 Name & Content \\
 \hline
-visit & Source actor is visiting, recipient is hosting.\\
+visit & \txt{actor} is visiting, \txt{recipient} is hosting.\\
 third-party & Meeting is hosted by a third party\\
 multilateral & Meeting occurs in a multilateral context, typically an alliance or IGO\\
 phone & Consultation occurs via phone or some other remote medium\\
@@ -423,9 +453,6 @@ resign & official resignation \\
 
 \section{DEMAND}
 
-\textsf{VERBAL CONFLICT} \vspace{8pt}
-
-
 All demands and orders. Demands are stronger or more forceful than a request and potentially carry more serious repercussions, although not as much as threats. Coding will need to rely primarily on the language used by reporters to make this distinction.  All demands are verbal acts. 
 
 \subsection{Requires recipient: No}
@@ -435,7 +462,7 @@ All demands and orders. Demands are stronger or more forceful than a request and
 
 \begin{itemize}
 \item This category only applies to verbal demands: demands that take the form of demonstrations, protests, etc. are coded as \plcat{PROTEST}.
-\item When one or more parties to a conflict call for ending the conflict, that is taken to be an expression of intent on the part of that source actor and is thus coded as \plcat{AGREE}.
+\item When one or more parties to a conflict call for ending the conflict, that is taken to be an expression of intent on the part of the \txt{actor} and is thus coded as \plcat{AGREE}.
 
 \end{itemize}
 
@@ -643,7 +670,7 @@ All reductions in existing, routine, or cooperative relations. Note that this is
 Name & Content \\
 \hline
 convict & find guilty or liable in a court of law\\
-expel & expel an actor from a group, organization or country; excluding individual deportations \\
+expel & expel an entity from a group, organization or country; excluding individual deportations \\
 withdraw & withdraw oneself or one's non-military resources (e.g., aid, observers, diplomats, peacekeepers) from a group, mediation activity, organization, or country\\
 discontinue & curtail, decrease, break, or terminate diplomatic, commercial, or material exchanges in manners not specified above \\
 \hline
@@ -660,7 +687,7 @@ discontinue & curtail, decrease, break, or terminate diplomatic, commercial, or 
 
 All military or police moves that fall short of the actual use of force. 
 
-This category is different from \plcat{ASSAULT}, as that refers to uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power. Source actors  are not necessarily militaries affiliated with states: they can be any organized armed groups (for example militias, either independent or aligned with political parties). Recipients are actors against whom the source mobilizes its military capabilities in a threatening manner if that is clear, but a group may mobilize with no specific recipient stated.
+This category is different from \plcat{ASSAULT}, which refers to actual uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power. \txt{actor} entities  are not necessarily militaries affiliated with states: they can be any organized armed groups (for example militias, either independent or aligned with political parties). The \txt{recipient} are entities against whom the \txt{actor} mobilizes its military capabilities in a threatening manner if that is clear, but a group may mobilize with no specific entity stated.
 
 \subsection{Potential ambiguities}
 
@@ -699,7 +726,7 @@ Repression or restrictions on rights.
 
 \subsection{Requires recipient: No}
 
-Most cases of \plcat{COERCE} have a clear intended target/recipient, but occasionally, for example in shutting off internet access, the recipient is so broad as to be unclear. 
+Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasionally, for example in shutting off internet access, the entities intended to be affected by the action are so broad as to be unclear. 
 
 \subsection{Supplementary fields: }
 
@@ -738,7 +765,7 @@ Adapted from CAMEO cue category 17
 
 \subsection{Requires recipient: No}
 
-In \plcat{ASSAULT} events where the violence is two-sided, all participants are coded as source actors except when a ``Side A/Side B'' can be distinguished per the conventions of the Correlates of War project, in which case the \plmod{sideAB} mode is added to any other relevant modes. In one-sided violence, the perpetrator is coded as the \texttt{source} and the victim as the \texttt{recipient}.
+In \plcat{ASSAULT} events where the violence is two-sided, all participants are coded in the \txt{actor} field except when a ``Side A/Side B'' can be distinguished per the conventions of the Correlates of War project, in which case the \plmod{sideAB} mode is added to any other relevant modes. In one-sided violence, the perpetrator is coded as the \txt{actor} and the victim as the \txt{recipient}.
 
 \subsection{Supplementary fields:}
 
@@ -765,7 +792,7 @@ heavy-weapons & crew-served weapons  \\
 cleansing & mass expulsions or deportations, ethnic cleansing  \\
 massacre & instances of mass killing or massacres  \\
 unconventional & chemical, biological, radiation, and nuclear weapons  \\
-sideAB & two-sided violence: source and recipient are ``Side A'' and ``Side B'' \\
+sideAB & two-sided violence: \txt{actor} and \txt{recipient} are ``Side A'' and ``Side B'' \\
 \hline
 \end{tabular}
 \end{center}
@@ -787,22 +814,22 @@ sideAB & two-sided violence: source and recipient are ``Side A'' and ``Side B'' 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Actor and Sector Codes}
+\chapter{Entity and Sector Codes}
 
-CAMEO employed a hierarchical actor coding structure based on 3-character coding elements which allowed nearly unlimited complexity and, depending on the exact coding system, could be resolved down to the identity of individual groups or individuals. As with the event codes, typically only the first two or three of these elements were used. ICEWS modified this somewhat, while preserving most of the sub-state differentiations as ``sectors''---the terminology we've adopted here over the CAMEO/IDEA ``agents''---but also provided a very substantial amount of complexity at the sub-sector level.
+CAMEO employed a hierarchical entity coding structure based on 3-character coding elements which allowed nearly unlimited complexity and, depending on the exact coding system, could be resolved down to the identity of individual groups or individuals. As with the event codes, typically only the first two or three of these elements were used. ICEWS modified this somewhat, while preserving most of the sub-state differentiations as ``sectors''---the terminology we've adopted here over the CAMEO/IDEA ``agents''---but also provided a very substantial amount of complexity at the sub-sector level.
 
-As with the events, the PLOVER specification seeks to pare this down to the most commonly used actors and agent/sectors, while retaining the possibility of more specific information. In place of the pages of actor and agent specification found in the CAMEO manual, PLOVER has four rules:
+As with the events, the PLOVER specification seeks to pare this down to the most commonly used entities and agent/sectors, while retaining the possibility of more specific information. In place of the pages of entity and agent specification found in the CAMEO manual, PLOVER has four rules:
 
 \begin{enumerate}
-\item The actor code---\texttt{source/recipient}---is either an ISO 3 letter country code or one of a small number of non-state codes such as IGO; see Table \ref{tab:nonstate} below.
+\item The entity code---\texttt{actor/recipient}---is either an ISO 3 letter country code or one of a small number of non-state codes such as IGO; see Table \ref{tab:nonstate} below.
 \item The sector code is a 3-character primary code with one optional secondary code
-\item Identifiers for individual persons or organizations are coded in the \texttt{identifier\_id} and/or \texttt{identifier\_text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular actor or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia, for example a new sector category for right-wing populist parties and politicians.
-\item The remaining named fields in the \texttt{source/recipient} JSON object is used for additional information beyond what can be coded in the sector secondary modifier. In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of such as religion, ethnicity, official position, etc.
+\item Identifiers for individual persons or organizations are coded in the \texttt{identifier\_id} and/or \texttt{identifier\_text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular organization or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia, for example a new sector category for right-wing populist parties and politicians.
+\item The remaining named fields in the \txt{actor/recipient} JSON object is used for additional information beyond what can be coded in the sector secondary modifier. In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of such as religion, ethnicity, official position, etc.
 \end{enumerate}
 
-By effectively crowdsourcing details to Wikipedia/Wikidata, the latter which is generally updated very quickly, often within minutes in the case of a death of a well-known figure, we deal with a major weak point in the CAMEO dictionary approach,  the need to maintain coding teams to regularly update actor dictionaries, and in the absence of this, having information sometimes years out of date. Wikipedia/Wikidata also has a fairly standardized format for biographical information which contains far more detail than a CAMEO entry, but can be parsed with relatively simple programs.
+By effectively crowdsourcing details to Wikipedia/Wikidata, the latter which is generally updated very quickly, often within minutes in the case of a death of a well-known figure, we deal with a major weak point in the CAMEO dictionary approach,  the need to maintain coding teams to regularly update dictionaries, and in the absence of this, having information sometimes years out of date. Wikipedia/Wikidata also has a fairly standardized format for biographical information which contains far more detail than a CAMEO entry, but can be parsed with relatively simple programs.
 
-An example actor block is below:
+An example \txt{actor} block is below:
 
 \begin{verbatim}
 	{
@@ -815,12 +842,12 @@ An example actor block is below:
 	 }
 \end{verbatim}
 
-While the process of generating this block will depend on the specific nature of the coder, in general, the coder will (1) identify a source actor or recipient in text, in this case, "Steinmeier". (2) Using the context of the article, resolve the actor mention to its Wikipedia page and ID and report the Wikipedia role or description. (3) Using the information on the page, determine that Frank-Walter Steinmeier was the German Minister of Foreign Affairs and thus DEUGOV.
+While the process of generating this block will depend on the specific nature of the coder, in general, the coder will (1) identify a  \txt{actor} or \txt{recipient} in the text, in this case, "Steinmeier". (2) Using the context of the article, resolve the mention to its Wikipedia page and ID and report the Wikipedia role or description. (3) Using the information on the page, determine that Frank-Walter Steinmeier was the German Minister of Foreign Affairs and thus DEUGOV.
 
 
-\section{Actor codes}
+\section{Entity codes}
 
-For nation-states and other entities for whom an ISO-3166 code exists.\fn{\txt{https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-3} ISO codes are also available for dependencies such as the \AA land Islands, and the list is updated fairly regularly to accommodate new states such as South Sudan.}, use the alpha-3 code. Use the codes in Table \ref{tab:nonstate} for non-state actors:
+For nation-states and other entities for whom an ISO-3166 code exists.\fn{\txt{https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-3} ISO codes are also available for dependencies such as the \AA land Islands, and the list is updated fairly regularly to accommodate new states such as South Sudan.}, use the alpha-3 code. Use the codes in Table \ref{tab:nonstate} for non-state entities:
 
 \begin{table}[htp]
 \caption{Non-state actor codes}
@@ -886,29 +913,6 @@ MNC            &   multi-national corporation\\
 \end{enumerate}
 \end{center}
 
-\newpage
-
-\subsection{Compound and Reciprocal Actors}\label{sec:recip}
-
-Following the dyadic approach which originated in WEIS and COPDAB,  most CAMEO-based coders dealt with compound actors---``The United States and France accused Russia\ldots''---by generating multiple events: this example would generate two events of the form
-\begin{verbatim}
-	USA  RUS  112
-	FRA  RUS  112
-\end{verbatim}
-This approach, however, gets very problematic in the not-uncommon situation where an alliance is involved and is expanded to all of its constituent members: a single reference to the G20 expands to at least twenty events, and a \textit{meeting} of the G20, generating reciprocal events, expands to 380 events, which is one of the reasons ``consult'' events are so frequent in CAMEO-coded data.
-
-In PLOVER, compound actors generate a single source or recipient, but with multiple members: the source and recipient are a list of actors rather than a single actor. Depending on the application, a user might expand this to multiple events with single actor codes following the earlier conventions, but the initial coding uses the list.
-
-PLOVER also uses actor lists to deal with reciprocal events. In CAMEO, a meeting ``President Obama met with Japanese Prime Minister Abe at the White House"" generated two events
-\begin{verbatim}
-	JAP  USA  042
-	USA  JAP  043
-\end{verbatim}
-where 042 and 043 are the CAMEO codes for "visit" and "host" respectively.\footnote{This example optimistically assumes the coding system was clever enough to recognize the significance of the phrase ``at the White House.''} While the PLOVER \plcat{CONSULT} mode provides for a host/visit distinction, this is not required. In such instances, all of the actors are considered as the source and no recipient is included.
-
-In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided violence---is handled in a similar fashion, with both parties as \texttt{source} actors: this applies in any event where both sides are using force, even if one side ``started it'', an assessment often as not contested anyway. One-sided violence, such as assassinations or police firing on demonstrators, will have the perpetrator as the \texttt{source} and the victims as \texttt{recipient}.
-
-
 
 \chapter{Data Fields}
 
@@ -925,7 +929,7 @@ Despite the apparent complexity of the formats discussed here, note that the onl
 {
 	"id" : "PHOXv1-20160724-0042",
 	"date" : 2016-07-24,
-	"source" : [{"code":"USA"}],
+	"actor" : [{"code":"USA"}],
 	"recipient" : [{"code":"CAN"}],
 	"event" : ["CONSULT"]
 }
@@ -954,8 +958,8 @@ date & date in YYYY-MM-DD format &  & Y\\
 time & ISO 8601-formatted time & 2 & N\\
 enddate & date in YYYY-MM-DD format &  & N\\
 endtime & ISO 8601-formatted time & 2 & N\\
-source & list of actor objects & & Y \\
-recipient & list of actor objects & & N \\
+actor & list of entity objects & & Y \\
+recipient & list of entity objects & & N \\
 event & list of event categories & & Y \\
 event\_loc & location object for event & & N \\
 event\_text & list of texts of event & & N \\
@@ -995,15 +999,15 @@ comment &  any text & & N \\
 \clearpage
 
 \begin{table}[htp]
-\caption{Information object for actors }
+\caption{Information object for entities }
 \begin{center}
 \begin{tabular}{|l|l|}
 \hline
 Name & Content \\
 \hline
-code & 3-char top-level actor code (e.g., country)\\
+code & 3-char top-level entity code (e.g., country)\\
 sector & 3- or 6-char sector (GOV, MIL, etc)\\
-actor\_text & extracted text for source \\
+entity\_text & extracted text for source \\
 identifier\_id & unique identifier ID for source [see Note 1]\\
 identifier\_text & unique identifier name for source [see Note 1]\\
 actor\_loc & location object\\
@@ -1018,7 +1022,7 @@ age & integer \\
 \label{tab:actorinfo}
 \noindent \textbf{Notes:}
 \begin{enumerate}
-\item These fields would be used to resolve the name of an actor that occurs in multiple forms---for example ``Islamic State'', ``IS'', ``ISIS'', ``Daesh''---into a single form or code. This should be the Wikidata ID for the actor. For example, the Islamic State's is https://www.wikidata.org/wiki/Q2429253 and its canonical Wikidata name is ``Islamic State of Iraq and the Levant''.
+\item These fields would be used to resolve the name of an entity that occurs in multiple forms---for example ``Islamic State'', ``IS'', ``ISIS'', ``Daesh''---into a single form or code. This should be the Wikidata ID for the entity. For example, the Islamic State's is https://www.wikidata.org/wiki/Q2429253 and its canonical Wikidata name is ``Islamic State of Iraq and the Levant''.
 \end{enumerate}
 \end{table}%
 
@@ -1163,7 +1167,7 @@ Version 3.2: \url{https://www.strausscenter.org/images/codebooks/SCAD\_32\_Codeb
 
 \chapter{CAMEO vs. PLOVER}
 
-As noted in the introduction, CAMEO was originally developed for academic research under U.S. National Science Foundation funding in the early 2000s, and was based on the WEIS system. The canonical citation for CAMEO is \cite{SGY09}, and the detailed manual, ca. 2012, is found at \texttt{\footnotesize http://eventdata.parusanalytics.com/data.dir/cameo.html}.  The CAMEO event framework was very much the work of Deborah Gerner and \"Om\"ur Yilmaz, with contributions by various coders in the Kansas Event Data System project; the actor framework was strongly influenced by the VRA ``IDEA'' coding system developed in the late 1990s \citep{BBOJT03}. The CAMEO manual contains an extended discussion of the issues considered in transitioning from WEIS to CAMEO. Additional details on the development of the automated coding underlying CAMEO can be found in \cite{Schrodt06TPM} or {\texttt{\footnotesize http://eventdata.parusanalytics.com/utilities.dir/KEDS.History.0611.pdf}.  
+As noted in the introduction, CAMEO was originally developed for academic research under U.S. National Science Foundation funding in the early 2000s, and was based on the WEIS system. The canonical citation for CAMEO is \cite{SGY09}, and the detailed manual, ca. 2012, is found at \texttt{\footnotesize http://eventdata.parusanalytics.com/data.dir/cameo.html}.  The CAMEO event framework was very much the work of Deborah Gerner and \"Om\"ur Yilmaz, with contributions by various coders in the Kansas Event Data System project; the enitity framework was strongly influenced by the VRA ``IDEA'' coding system developed in the late 1990s \citep{BBOJT03}. The CAMEO manual contains an extended discussion of the issues considered in transitioning from WEIS to CAMEO. Additional details on the development of the automated coding underlying CAMEO can be found in \cite{Schrodt06TPM} or {\texttt{\footnotesize http://eventdata.parusanalytics.com/utilities.dir/KEDS.History.0611.pdf}.  
 
 Considerable additional work on CAMEO was done in the early 2010s first in the context of the DARPA ICEWS research program, then later in the operational deployment of ICEWS by teams at BBN and Lockheed which was eventually incorporated into the Dataverse public data: details of this work on found in the internal documentation of that data.
 
@@ -1183,13 +1187,13 @@ Considerable additional work on CAMEO was done in the early 2010s first in the c
 
 \item The CAMEO 08 ``YIELD'' category has been split into verbal (\plcat{CONCEDE}) and material (\plcat{RETREAT}) components. 
 
-\item The ``target actor" event component was renamed ``recipient" for clarity and to better match the terminology used in the NLP literature on event extraction \citep{halterman2020extracting}.
+\item The ``target actor" event component was renamed \txt{recipient} for clarity and to better match the terminology used in the NLP literature on event extraction \citep{halterman2020extracting}. ``Source actor'' was renamed \txt{actor} to reduce confusion with the textual source of the event. 
 
 \item Actor entries are now standardized using references to Wikipedia  
 
-\item The complexity of substate actor codes has been limited, and the allowable substate modifiers have been substantially simplified.
+\item The complexity of substate codes has been limited, and the allowable substate modifiers have been substantially simplified.
 
-\item Standard optional fields have been defined for some categories, and the ``recipient'' is optional in some categories.
+\item Standard optional fields have been defined for some categories, and \txt{recipient} is optional in some categories.
 
 \end{itemize}
 
@@ -1307,7 +1311,6 @@ A separate event category for crime has been added and removed several times as 
 	\item Use the \plcon{crime} and \plcon{illegal\_drugs} contexts: see Table \ref{tab:context}. 
 \end{enumerate}
 
-\newpage
 
 \section{Some residual issues}\label{sec:nothing}
 
@@ -1319,7 +1322,7 @@ In the discussions leading to the development of PLOVER, several additional open
 
 \item[De-duplication:] There is no consensus on this beyond noting that the widely-used ``one-a-day filtering'' is controversial, and it is a topic where there is currently active research and experimentation, so we're leaving it alone.
 
-\item[Required actors:]PLOVER, in contrast to CAMEO, makes recipient actors optional for some event types. One outstanding question is whether the \ti{source actor} should also be optional for some event types. Some event types often leave the source actor implicit, for example, ``4 people were arrested/killed in a suicide bombing/detained/etc." These have no explicit, named source actor so they will not be coded by PLOVER. Similarly, many natural disasters do not fit neatly into an actor-centric approach to coding (``mudslides destroyed dozens of houses"). We could consider relaxing this requirement to increase our recall, but at the potential cost of more false positives and greater conceptual complexity.
+\item[Required entities:]PLOVER, in contrast to CAMEO, makes the \txt{recipient} optional for some event types. One outstanding question is whether the \txt{actor} should also be optional for some event types. Some event types often leave the \txt{actor} implicit, for example, ``4 people were arrested/killed in a suicide bombing etc." These have no explicit, named \txt{actor} so they will not be coded by PLOVER. Similarly, many natural disasters do not fit neatly into an entity-centric approach to coding (``mudslides destroyed dozens of houses"). We could consider relaxing this requirement to increase our recall, but at the potential cost of more false positives and greater conceptual complexity.
 
 \end{description}
 
