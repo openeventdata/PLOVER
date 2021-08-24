@@ -1012,7 +1012,6 @@ sector & 3- or 6-char sector (GOV, MIL, etc)\\
 entity\_text & extracted text for source \\
 identifier\_id & unique identifier ID for source [see Note 1]\\
 identifier\_text & unique identifier name for source [see Note 1]\\
-actor\_loc & location object\\
 religion & religion (code or text) \\
 ethnicity & ethnicity (code or text) \\
 office & office or official position (code or text) \\
@@ -1090,43 +1089,33 @@ version &  version of data set\\
 \end{center}
 \label{tab:citeinfo}
 \end{table}%
+
+
 \begin{table}[htp]
-\caption{Location object: identical to http://download.geonames.org/export/dump/readme.txt}
+\caption{Location object: location information returned by Mordecai3, drawing from the Geonames database. }
 \begin{center}
 \begin{tabular}{|l|p{10cm}|}
 \hline
 Name & Content  \\
 \hline
+extracted\_place & original place name extracted from the text \\
+resolved\_place & name of geographical location the event was resolved to (unicode). The rest of the fields provide more information on the returned location\\
 geonameid & integer id of record in geonames database \\
-name & name of geographical point (utf8)\\
-asciiname & name of geographical point in plain ascii characters \\
-alternatenames & alternatenames, comma separated, ascii names automatically transliterated \\
-latitude & latitude in decimal degrees\\
-longitude & longitude in decimal degrees \\
-feature class & see http://www.geonames.org/export/codes.html\\
-feature code & see http://www.geonames.org/export/codes.html \\
-country code & ISO-3166 2-letter country code, 2 characters [see Note 1] \\
-cc3 & ISO-3166 3-letter country code [see Note 1] \\
-cc2 & alternate country codes, comma separated, ISO-3166 2-letter country code,  \\
-admin1 code & fipscode (subject to change to iso code)\\
-admin2 code & code for the second administrative division, a county in the US \\
-admin3 code & code for third level administrative division \\
-admin4 code & code for fourth level administrative division \\
-population & bigint (8 byte int)  \\
-elevation & in meters, integer \\
-dem & digital elevation model: see geonames documentation for details/ciat. \\
-timezone & the iana timezone id  \\
+lat & latitude in decimal degrees\\
+lon & longitude in decimal degrees \\
+city & name of the city \\
+district & name of the admin 2 (district/county) level \\
+province & name of the admin 1 (province/governorate/state) level \\
+country & name of the country \\
+country\_code & country code (3 character ISO code, to match the actor/recipient countries \\
+feature\_class & high-level code, such as A for area or P for populated place. see http://www.geonames.org/export/codes.html\\
+feature\_code & detailed feature type, such as PPLX for neighborhood, ADM2 for district, etc. See http://www.geonames.org/export/codes.html \\
+resolution & code indicating the level of resolution. 5=sub-city, 4=city, 3=district, 2=province, 1=country \\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:locations}
 
-\noindent \textbf{Notes:}
-\begin{enumerate}
-\item Geonames, alas, uses ISO-3166-alpha-2 rather than the more mnemonic alpha-3 codes used in most event data work. For purposes 
-of compatibility, we're suggesting retaining this in the ``country code'' field but adding a ``cc3'' field (not found in geonames) for
-alpha-3 codes.
-\end{enumerate}
 \end{table}
 
 \clearpage
