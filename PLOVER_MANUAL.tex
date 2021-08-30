@@ -150,16 +150,16 @@ Name & Content \\
 military & military, including military assistance \\
 intelligence & intelligence or information \\
 peacekeeping & peacekeeping, typically multilateral operations \\
-economic & trade, finance and economic development \\
+economic & economic news, trade, finance, economic development, inflation/GDP/recessions,\\&\hspace{6pt} monetary police. \emph{Exclude} news solely about individual companies \\
 diplomatic & diplomacy \\
 resource & territory and natural resources \\
-disease & disease outbreaks and epidemics \\
+health & public health, disease outbreaks and epidemics, disease in general \\
 enviro\_disaster & environment, climate change; disasters including both ``natural" and \\&\hspace{6pt} accidents/spills etc.\\
 migration  & migration, refugees, and displaced people \\
 humanitarian & humanitarian assistance generally \\
 asylum & discussions of seeking or granting asylum \\
 legal & courts and judiciary; national and international law, \emph{not} including human rights \\ 
-democracy & actions taken to promote democracy \\
+democracy & actions taken to promote democracy,  both external and internal \\
 human\_rights & explicit mentions of the term human rights not included in the democracy context\\ 
 rights\_freedoms & discussions of political rights and freedoms , restrictions on civil rights, movement, \\
 &\hspace{6pt} gathering etc.\\
@@ -174,9 +174,9 @@ election & elections and campaigns \\
 legislative & legislative debate, parliamentary coalition formation \\
 cbrn & chemical, biological, radiation, and nuclear weapons or attacks  \\
 cyber & cyber attacks and crime\\
+technology & discussions of technological development, new technology, high-tech industry\\
 political\_institutions & Mentions of norms, political institutions, democratic backsliding, political parties, etc. \\
-corruption & anything relating to mentions of corruption, i.e. illegally using public office \\
-&\hspace{6pt} for private gain \\
+corruption &  misuse/abuse of public office, including corruption, bribery, cronyism, nepotism,\\&\hspace{6pt} or abuse of public office for private gain  \\
 crime & Any discussion of crimes or criminals \\
 illegal\_drugs & criminal possession, distribution, sale, or manufacturing of illegal drugs \\
 \hline
@@ -191,9 +191,9 @@ Based on our past experience developing event-oriented data sets, we are almost 
 
 \newpage
 
-\section{Special contexts}\label{ssec:special}
+\section{Auxiliary modes}\label{ssec:special}
 
-Four special \txt{context} categories are \plcon{historical}, \plcon{future}, \plcon{hypothetical}, and \plcon{negation}: PLOVER assumes that the coding engine will be able to resolve these and put that information in the \txt{context}. Negated events can be excluded from the final event dataset. Examples:
+PLOVER also includes four \emph{auxiliary modes}, which provide information about whether a reported event is \plcon{historical}, \plcon{future}, \plcon{hypothetical}, or has a \plcon{negation}. PLOVER assumes that the coding engine will be able to resolve these and put that information in the \txt{context}. Negated events can be excluded from the final event dataset. Examples:
    \begin{itemize}
    \item \plcon{historical}: ``During the decolonization struggle, Angolan forces..."
    \item \plcon{future}: ``Members of the G-7 will meet in Ottawa next month..."
@@ -201,7 +201,7 @@ Four special \txt{context} categories are \plcon{historical}, \plcon{future}, \p
    \item \plcon{negation}: ``Thus far, fighting has not re-emerged in the tense region."	
    \end{itemize}
   
-Theoretically, some event types can be represented as other event types plus a special context: \plcat{AGREE} could be  \plcat{SUPPORT} + \plcon{future} or \plcat{THREATEN} could be \plcat{ASSAULT} + \plcon{hypothetical}. In situations like these, the coder should always return the single event category, not a category+context.
+Theoretically, some event types can be represented as other event types plus an auxiliary mode: \plcat{AGREE} could be  \plcat{SUPPORT} + \plcon{future} or \plcat{THREATEN} could be \plcat{ASSAULT} + \plcon{hypothetical}. In situations like these, the coder should always return the single event category, not a category+auxiliary.
 
 We anticipate that in general---and consistent with earlier event coding schemes---it will be possible to code \txt{mode} from the same sentence used to code the event, or possibly that sentence and one before it. \txt{context}, in contrast, will usually be coded at the paragraph- or document-level: this differs from earlier automated coding, though probably is similar to human-coded data such as COPDAB and BCOW \citep{Leng87} where \txt{context}-like fields were coded.
 
@@ -280,7 +280,7 @@ Agree to, offer, promise, or otherwise indicate willingness or commitment to coo
 
 \subsection{Potential ambiguities}
 
-As noted in Section \ref{ssec:special}, there's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + \plcon{future}. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+special context.
+As noted in Section \ref{ssec:special}, there's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + \plcon{future}. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+auxiliary mode.
 
 \subsection{Requires recipient: No}
 
@@ -333,7 +333,7 @@ Initiate, resume, improve, or expand diplomatic, non-material cooperation; expre
 
 \subsection{Potential ambiguities}
 
-In general, \plcat{SUPPORT} is a somewhat ambiguous term. It seems to imply a material event, but this category should only be used for verbal cooperation.
+The term used for this category, \plcat{SUPPORT}, is a somewhat ambiguous. Although it may imply a material event, but this category should only be used for verbal cooperation.
 
 \begin{itemize}
 \item Formal pardons and amnesties of arrested persons should be coded as \plcat{CONCEDE}; the actual release  or exchange of prisoners should be coded as \plcat{RETREAT}.
@@ -400,7 +400,7 @@ All provisions of providing material aid whose material benefits primarily accru
 
 \begin{itemize}
 
-\item Monetary aid and financial guarantees, grants, gifts and credit.
+\item Monetary aid and financial guarantees, grants, gifts and credit, including reparations.
 
 \item Military and police assistance including arms and personnel.
 
@@ -411,6 +411,11 @@ All provisions of providing material aid whose material benefits primarily accru
 \end{itemize}
 
 \subsection{Requires recipient: Yes}
+
+\subsection{Potential ambiguities}
+
+While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should not be coded at all.
+% NOTE: There's some debate about whether settlements should be COOPERATE
 
 \subsection{Supplementary fields: None}
 
@@ -423,6 +428,10 @@ All provisions of providing material aid whose material benefits primarily accru
 \plcat{RETREAT} covers any events---not just military ``retreat'' from territory---which have an immediate (not simply promised) material consequences, such as the release of prisoners and hostages, repatriation of refugees, the return of  confiscated property, allowing the entry of observers, peacekeepers, or humanitarian workers, disarming, observing a ceasefire or otherwise ending active conflicts, and, of course, a military retreat from, or ceding, territory. \plcat{RETREAT} also covers resignations of government officials.
 
 \subsection{Requires recipient: No}
+
+\subsection{Potential ambiguities}
+
+Announcements of future retreats should be coded as \plcat{CONCEDE}. E.g., ``announced...would withdraw troops" is \plcat{RETREAT} + \plcat{FUTURE} and should be coded as \plcat{CONCEDE}.
 
 \subsection{Supplementary fields: modes}
 
@@ -464,6 +473,7 @@ All demands and orders. Demands are stronger or more forceful than a request and
 \begin{itemize}
 \item This category only applies to verbal demands: demands that take the form of demonstrations, protests, etc. are coded as \plcat{PROTEST}.
 \item When one or more parties to a conflict call for ending the conflict, that is taken to be an expression of intent on the part of the \txt{actor} and is thus coded as \plcat{AGREE}.
+\item Withdrawing a demand should be coded as \plcat{CONCEDE}.
 
 \end{itemize}
 
@@ -688,11 +698,21 @@ discontinue & curtail, decrease, break, or terminate diplomatic, commercial, or 
 
 All military or police moves that fall short of the actual use of force. 
 
-This category is different from \plcat{ASSAULT}, which refers to actual uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power. \txt{actor} entities  are not necessarily militaries affiliated with states: they can be any organized armed groups (for example militias, either independent or aligned with political parties). The \txt{recipient} are entities against whom the \txt{actor} mobilizes its military capabilities in a threatening manner if that is clear, but a group may mobilize with no specific entity stated.
+This category is different from \plcat{ASSAULT}, which refers to actual uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power. 
+
+\txt{actor} entities  are not necessarily militaries affiliated with states: they can be any organized armed groups (for example militias or gangs). 
+
+The \txt{recipient} are entities against whom the \txt{actor} mobilizes its military capabilities in a threatening manner if that is clear, but a group may mobilize with no specific entity stated.
 
 \subsection{Potential ambiguities}
 
 Joint military operations are coded as \plcat{COOPERATE} but single-country exercises should be coded as \plcat{MOBILIZE}.
+
+Events that involved ``mobilizing supporters to demonstrate" should be coded as \plcat{PROTEST}.
+
+If a document reports a \plcat{MOBILIZE} event in the context of an \plcat{ASSAULT}, only the \plcat{ASSAULT} should be coded. For example: ``military units in the area were activated and returned fire on the rebels" should not report a separate \plcat{MOBILIZE} event.
+
+Mobilizing police or military forces for disaster relief should be coded as \plcat{AID}.
 
 \subsection{Requires recipient: No}
 
@@ -723,7 +743,7 @@ Adapted from CAMEO cue category 15
 
 \section{COERCE}
 
-Repression or restrictions on rights.
+Repression, restrictions on rights, or coercive uses of power falling short of violence.
 
 \subsection{Requires recipient: No}
 
@@ -738,13 +758,13 @@ Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasion
 \hline
 Name & Content \\
 \hline
-confiscate & confiscate property \\
-restrict & impose restrictions on political freedoms or movement \\
+seize & execute search, confiscate property, raid \\
+restrict & impose restrictions on political freedoms or movement, including cordoning off areas \\
 ban & ban individuals or organizations \\
 censor & censor, ban or restrict access to publications or other information  \\
 curfew & impose curfew \\
 martial-law & impose state of emergency or martial law \\
-arrest & arrest, detain, or charge with legal action \\
+arrest & arrest, detain, or charge with legal action.  \\
 deport & expel or deport individuals \\
 withhold & withhold public goods/services, e.g. shut off power/internet/water/utilities \\&or withhold food/medical supplies \\
 deception & deception/manipulation/misinformation \\
@@ -769,6 +789,8 @@ Adapted from CAMEO cue category 17
 
 In \plcat{ASSAULT} events where the violence is two-sided, all participants are coded in the \txt{actor} field except when a ``Side A/Side B'' can be distinguished per the conventions of the Correlates of War project, in which case the \plmod{sideAB} mode is added to any other relevant modes. In one-sided violence, the perpetrator is coded as the \txt{actor} and the victim as the \txt{recipient}.
 
+% AH: I think the sideAB thing is confusing. I'm not sure how it's different from the distinction we get from two actors vs. actor and recipient.
+
 \subsection{Supplementary fields:}
 
 
@@ -782,7 +804,7 @@ Name & Content \\
 abduct & abduct, kidnap, hijack \\
 beat & physically assault \\
 torture & torture \\
-execute & judicially-sanctioned execution\\
+execute & judicially-sanctioned execution \\
 sexual & sexual violence\\
 assassinate & targeted assassinations with any weapon \\
 destroy & destroy property \\
@@ -791,6 +813,7 @@ firearms & rifles, pistols, light machine guns\\
 explosives & any explosive not incorporated in a heavy weapon: mines, IEDS, car bombs \\
 suicide-attack & individual and vehicular suicide attacks \\
 heavy-weapons & crew-served weapons  \\
+crowd-control & weapons and tactics intended to be less lethal crowd control, including tear gas, water cannons, firing weapons in the air, lathi charges, etc. \\
 cleansing & mass expulsions or deportations, ethnic cleansing  \\
 massacre & instances of mass killing or massacres  \\
 unconventional & chemical, biological, radiation, and nuclear weapons  \\
