@@ -1,4 +1,12 @@
 .DS_Store
 .texpadtmp/
 media/.DS_Store
+# Ignore pdflatexmk secondary files
 *.bbl
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.blg
