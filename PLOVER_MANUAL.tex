@@ -16,6 +16,10 @@
 \usepackage[hidelinks]{hyperref} % for real url support in the pdf
 \usepackage[normalem]{ulem} % for \sout{} strikethrough
 
+% Define a new column type with fixed width (like p{{}), but which doesn't justify text 
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
 \newcommand{\plcat}[1]{\textsf{#1}}
 \newcommand{\plcon}[1]{\textbf{#1}}
 \newcommand{\plmod}[1]{\texttt{#1}}
@@ -143,7 +147,7 @@ The \txt{context} field re-introduces, albeit in a greatly extended form, a conc
 \begin{table}[htp]
 \caption{General contexts }
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabular}{|p{.21\textwidth}|L{.73\textwidth}|}
 \hline
 Name & Content \\
 \hline
@@ -754,7 +758,7 @@ Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasion
 \begin{table}[htp]
 \caption{COERCE modes}
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabular}{|p{.21\textwidth}|L{.73\textwidth}|}
 \hline
 Name & Content \\
 \hline
@@ -766,7 +770,7 @@ curfew & impose curfew \\
 martial-law & impose state of emergency or martial law \\
 arrest & arrest, detain, or charge with legal action.  \\
 deport & expel or deport individuals \\
-withhold & withhold public goods/services, e.g. shut off power/internet/water/utilities \\&or withhold food/medical supplies \\
+withhold & withhold public goods/services, e.g. shut off power/internet/water/ utilities or withhold food/medical supplies \\
 deception & deception/manipulation/misinformation \\
 \hline
 \end{tabular}
@@ -797,7 +801,7 @@ In \plcat{ASSAULT} events where the violence is two-sided, all participants are 
 \begin{table}[htp]
 \caption{ASSAULT modes}
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabular}{|p{.18\textwidth}|p{.76\textwidth}|}
 \hline
 Name & Content \\
 \hline
