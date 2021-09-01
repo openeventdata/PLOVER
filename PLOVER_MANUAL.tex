@@ -146,13 +146,20 @@ The \txt{context} field re-introduces, albeit in a greatly extended form, a conc
 
 Additional details and clarifications for some of the more ambiguous or complicated general contexts listed in \autoref{tab:general-contexts} can be found in \autoref{chapter:contexts}.
 
-\begin{table}[htp]
-\caption{General contexts }\label{tab:general-contexts}
-\begin{center}
-\begin{tabular}{|p{.21\textwidth}|L{.73\textwidth}|}
+\begin{longtable}{|p{.21\textwidth}|L{.73\textwidth}|}
+\caption{General contexts }
+\label{tab:general-contexts} \\
 \hline
 Name & Content \\
+\hline 
+\endhead
+
+\hline \multicolumn{2}{|l|}{{Continued on next page}} \\ \hline
+\endfoot
+
 \hline
+\endlastfoot
+
 military & military, including military assistance \\
 intelligence & intelligence or information \\
 peacekeeping & peacekeeping, typically multilateral operations \\
@@ -165,6 +172,7 @@ migration  & migration, refugees, and displaced people \\
 humanitarian & humanitarian assistance generally \\
 asylum & discussions of seeking or granting asylum \\
 legal & courts and judiciary; national and international law, \emph{not} including human rights \\ 
+reparations & reparations, i.e. payments to compensate for past harm inflicted; can include promises or agreements of reparations \\
 human\_rights & explicit mentions of the term human rights not included in the democracy context\\ 
 rights\_freedoms & discussions of political rights and freedoms , restrictions on civil rights, movement, \\
 &\hspace{6pt} gathering etc.\\
@@ -179,18 +187,16 @@ election & elections and campaigns \\
 legislative & legislative debate, parliamentary coalition formation \\
 cbrn & chemical, biological, radiation, and nuclear weapons or attacks  \\
 cyber & cyber attacks and crime\\
+misinformation & misinformation, influence ops, fake news; events with this context are not necessarily misinformation themselves, e.g. could be allegations of influence ops \\
 technology & discussions of technological development, new technology, high-tech industry\\
 \hyperref[context:political-institutions]{political\_institutions} & non-routine interactions between formal political bodies, including parties \\
 pro\_democracy & actions taken to promote democracy,  both external and internal \\
 pro\_autocracy & actions taken to promote more autocratic governance, both external and internal \\
+crime & Any discussion of crimes or criminals, \textit{excluding} events that have one of the more specific crime contexts like trafficking \\
 corruption &  misuse/abuse of public office, including corruption, bribery, cronyism, nepotism,\\&\hspace{6pt} or abuse of public office for private gain  \\
-crime & Any discussion of crimes or criminals \\
 illegal\_drugs & criminal possession, distribution, sale, or manufacturing of illegal drugs \\
-\hline
-\end{tabular}
-\end{center}
-\label{tab:context}
-\end{table}
+trafficking & human trafficking, arms trafficking \\
+\end{longtable}
 
 How these contexts are used in practice will depend on how a coder implements them. If they are applied using document-level classifiers, researchers/analysts could misinterpret the meaning of contexts. For example, an \plcat{ASSAULT} event with an ``elections'' context does not necessarily imply electoral violence. It could be an article about, for instance, violence in Afghanistan in the context of an article on US election politics. Thus, the interpretation of ``context'' may depend on how it's implemented in practice. Certain types of events, particularly general protests and meetings, will also have multiple contexts: this is a feature, not a bug.
 
@@ -421,8 +427,7 @@ All provisions of providing material aid whose material benefits primarily accru
 
 \subsection{Potential ambiguities}
 
-While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should not be coded at all.
-% NOTE: There's some debate about whether settlements should be COOPERATE
+While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient. 
 
 \subsection{Supplementary fields: None}
 
@@ -522,6 +527,10 @@ meet & meetings and negotiations\\
 
 
 \subsection{Requires recipient: No}
+
+\subsection{Potential ambiguities}
+
+Candidates for \plcat{ACCUSE}-allege + context:"misinformation" events could also be \plcat{COERCE}-misinformation, depending on the wording of the relevant text.
 
 \subsection{Supplementary fields: modes}
 
@@ -676,6 +685,7 @@ All reductions in existing, routine, or cooperative relations. Note that this is
 \begin{itemize}
 \item Expulsions or deportations of individuals---typically a legal matter---are coded as \plcat{COERCE} 
 \item Cancellation of meetings are \plcat{REJECT} and therefore verbal conflict.
+\item While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient. 
 \end{itemize}
 
 \subsection{Supplementary fields: mode}
@@ -756,6 +766,10 @@ Repression, restrictions on rights, or coercive uses of power falling short of v
 
 Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasionally, for example in shutting off internet access, the entities intended to be affected by the action are so broad as to be unclear. 
 
+\subsection{Potential ambiguities}
+
+Candidates for COERCE-misinformation could also be ACCUSE-allege + context:``misinformation'' events, depending on the wording of the relevant text. 
+
 \subsection{Supplementary fields: }
 
 \begin{table}[htp]
@@ -774,7 +788,7 @@ martial-law & impose state of emergency or martial law \\
 arrest & arrest, detain, or charge with legal action.  \\
 deport & expel or deport individuals \\
 withhold & withhold public goods/services, e.g. shut off power/internet/water/ utilities or withhold food/medical supplies \\
-deception & deception/manipulation/misinformation \\
+misinformation & deception/manipulation/misinformation (will also automatically add ``misinformation'' context) \\
 \hline
 \end{tabular}
 \end{center}
@@ -871,6 +885,11 @@ Actions taken to promote democracy or reflecting changes towards more democratic
 
 Actions taken to promote autocracy or reflecting changes towards more authoritarian governance. 
 
+\section{Reparations}
+
+Payments or other restitution for past harms inflicted by one group or state on another. The specific event type that is coded depends on how reparations came about. If court-ordered, these will be \plcat{SANCTION} events; voluntary agreements might be either \plcat{AID} or \plcat{AGREEMENT}, depending on whether payments/asset transfers have actually occurred or not. 
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -950,6 +969,7 @@ MNC            &   multi-national corporation\\
 	  PRM & Paramilitary organizations not in opposition to government\\ 
 	  SPY & State intelligence services \\ 
 	  UAF & Unidentified armed forces (``unknown gunmen'') \\ 
+	  UNK & Generic unidentified actors (e.g. actor for ``two civilians were killed by a bomb'') \\
   \hline
 ~   & \textbf{Less frequently used codes}\\
  \hline
