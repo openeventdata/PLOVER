@@ -7,7 +7,7 @@
 \usepackage[usenames]{color}
 \definecolor{purple}{rgb}{.5, 0, .5}
 \usepackage{longtable}
-\usepackage{multirow} 
+\usepackage{multirow}
 \usepackage{multicol}
 \usepackage{booktabs}
 \usepackage{verbatim} % for comment blocks
@@ -16,7 +16,7 @@
 \usepackage[hidelinks]{hyperref} % for real url support in the pdf
 \usepackage[normalem]{ulem} % for \sout{} strikethrough
 
-% Define a new column type with fixed width (like p{{}), but which doesn't justify text 
+% Define a new column type with fixed width (like p{{}), but which doesn't justify text
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
@@ -25,7 +25,7 @@
 \newcommand{\plmod}[1]{\texttt{#1}}
 \newcommand{\ti}[1]{\textit{#1}}
 \newcommand{\txt}[1]{\texttt{#1}}
-\newcommand{\fn}[1]{\footnote{#1}} 
+\newcommand{\fn}[1]{\footnote{#1}}
 \newdateformat{monthyeardate}{%
  \THEDAY~\monthname[\THEMONTH] \THEYEAR}
 
@@ -38,10 +38,10 @@
 \vspace{-10pt}	
 
       \begin{center}
-            {\Huge \bfseries PLOVER\ }\\[2ex] 
-            {\LARGE Political Language Ontology for Verifiable Event Records\\ [2ex]Event, Actor and Data Interchange Specification}\\[10ex] 
-            {\LARGE Open Event Data Alliance} \\[2ex] 
-            {\Large \url{http://openeventdata.org/} }\\[2ex] 
+            {\Huge \bfseries PLOVER\ }\\[2ex]
+            {\LARGE Political Language Ontology for Verifiable Event Records\\ [2ex]Event, Actor and Data Interchange Specification}\\[10ex]
+            {\LARGE Open Event Data Alliance} \\[2ex]
+            {\Large \url{http://openeventdata.org/} }\\[2ex]
             {\LARGE DRAFT Version: 0.8\\ [2EX]\monthyeardate\today}
         \end{center}
 
@@ -70,13 +70,13 @@
 
 \chapter*{Acknowledgments}
 
-\noindent Contributors to the development of PLOVER include, in alphabetical order, Benjamin Bagozzi, Andreas Beger, John Beieler, Liz Boschee, Patrick Brandt, Andrew Halterman, Jill Irvine, Jennifer Holmes, Javier Osorio, Grace Scarborough, and Philip Schrodt.\\
+\noindent Contributors to the development of PLOVER include, in alphabetical order, Benjamin Bagozzi, Andreas Beger, John Beieler, Liz Boschee, Patrick Brandt, Andrew Halterman, Jill Irvine, Jennifer Holmes, Javier Osorio, Tom Parris, Grace Scarborough, and Philip Schrodt.\\
 
 \noindent The Open Event Data Alliance is an educational and open research corporation chartered in the Commonwealth of Virginia, United States.\\
 
-\noindent The PLOVER logo is based on a drawing found at\\ \url{http://www.rspb.org.uk/discoverandenjoynature/discoverandlearn/birdguide/name/r/ringedplover/}\\
+\noindent The PLOVER logo is based on a drawing found at\\ {\footnotesize \url{http://www.rspb.org.uk/discoverandenjoynature/discoverandlearn/birdguide/name/r/ringedplover/}}\\
 
-\noindent Funding for PLOVER was initially provided in part by the U. S. National Science Foundation award SBE-1539302, ``RIDIR: Modernizing Political Event Data for Big Data Social Science Research''. Any opinions, findings, conclusions or recommendations in this document are those of [at least one of] the authors and do not necessarily reflect the views of the National Science Foundation, or any company or government agency employing or funding the authors or otherwise contributing to the document.\\
+\noindent Funding for PLOVER was initially provided in part by the U.S. National Science Foundation award SBE-1539302, ``RIDIR: Modernizing Political Event Data for Big Data Social Science Research''. Any opinions, findings, conclusions or recommendations in this document are those of [at least one of] the authors and do not necessarily reflect the views of the National Science Foundation, or any company or government agency employing or funding the authors or otherwise contributing to the document.\\
 
 \noindent Additional work was sponsored by the Political Instability Task Force (PITF). The PITF is funded by the Central Intelligence Agency. The views expressed in this codebook are the authors' alone and do not
 represent the views of the US Government.\\
@@ -95,11 +95,11 @@ represent the views of the US Government.\\
 \pagenumbering{arabic}
 
 The concept of political event data originated in the academic quantitative international relations community in the mid-1960s. While a number of projects produced some event data, often for specialized applications, eventually two coding frameworks dominated the production of general-purpose event data sets: Charles McClelland's WEIS \citep{McClelland67,McClelland76}  and the Conflict and Peace Data Bank (COPDAB) developed by Edward Azar \citep{AzarSloan75, Azar80, Azar82}. Both were created during the Cold War and assumed a ``Westphalian-Clausewitzian'' political world in which sovereign states reacted to each other primarily through official diplomacy
-and military threats. Consequently these coding systems proved less than optimal for dealing with post-Cold-War issues such as ethnic conflict, low-intensity violence, internal conflict and repression, and multilateral intervention. 
+and military threats. Consequently these coding systems proved less than optimal for dealing with post-Cold-War issues such as ethnic conflict, low-intensity violence, internal conflict and repression, and multilateral intervention.
 
 During the early 2000s, the CAMEO framework---Conflict and Mediation Event Observations---was developed \citep{SGY09} to support an NSF-funded project at the University of Kansas on the study of inter-state conflict mediation, not as a general-purpose event ontology. Nonetheless, it was gradually adopted as a ``next generation'' coding scheme, notably for the DARPA-funded Integrated Conflict Early Warning System (ICEWS) project \citep{OBrien10} because it corrected some of the long-recognized ambiguities in WEIS and COPDAB, and was explicitly designed both for automated coding and for the detailed coding of sub-state actors. It was continued in the widely-used public ICEWS data (\txt{https://dataverse.harvard.edu/dataverse/icews}) coded using the BBN SERIF/ACCENT coder, with BBN doing considerable additional work on various details of the system.
 
-As event data came into wider use in the 2010s, several problems with CAMEO became apparent, largely dealing with the complexity of the system, the absence of a standard format beyond the original  date-source-target-event fields (for example, representing geographical location), and continuing interest on coding substate activities not present in the earlier systems. 
+As event data came into wider use in the 2010s, several problems with CAMEO became apparent, largely dealing with the complexity of the system, the absence of a standard format beyond the original  date-source-target-event fields (for example, representing geographical location), and continuing interest on coding substate activities not present in the earlier systems.
 
 To address these concerns, an informal group of academic, government and private sector producers and users of event data met and circulated drafts during the fall of 2016 to develop a new, simplified and more flexible event data specification to replace CAMEO, which became PLOVER and the basis of this document: Section \ref{ssec:ctp} summarizes the major changes. Additional extensive
 work was done in 2021 as PLOVER was adopted by the Political Instability Task Force to replace
@@ -132,12 +132,12 @@ A major difference between PLOVER and the earlier widely-used event coding syste
 
 \item In initial experiments, it appears this  approach is \textit{much} easier for humans to code than the hierarchical structure of CAMEO because a human coder can hold most of the relevant categories in working memory. More generally,  \txt{event-mode-context}  coding uses words, not numerical codes, so coders will probably be using the parts of the brain (Broca's area) which are specialized for processing words. No known specialized cognitive facility exists for handling some 250 2-to-4-digit codes.
 
-\item Because the words used to differentiate \txt{mode} and \txt{context} are generally very basic, translations of the coding protocols into languages other than English is likely to be easier than translating the subcategory descriptions found in CAMEO. 
+\item Because the words used to differentiate \txt{mode} and \txt{context} are generally very basic, translations of the coding protocols into languages other than English is likely to be easier than translating the subcategory descriptions found in CAMEO.
 \end{enumerate}
 
 While both \txt{mode} and \txt{context} will usually take a single value, in some instances multiple values will be appropriate and this is allowed. Both fields are optional, and if no existing values seem appropriate, the field should be left null, though perhaps with some details provided in the JSON \texttt{comment} field, particularly when the record is generated using human coding.
 
-In general, verbal activities only have a \txt{context} since their \txt{mode} is just ``verbal.'' The exceptions are \plcat{CONSULT} where the \texttt{mode} indicates how the consultation was done, and \plcat{THREATEN} where the \texttt{mode} indicates what type of action is being threatened. 
+In general, verbal activities only have a \txt{context} since their \txt{mode} is just ``verbal.'' The exceptions are \plcat{CONSULT} where the \texttt{mode} indicates how the consultation was done, and \plcat{THREATEN} where the \texttt{mode} indicates what type of action is being threatened.
 
 
 \section{Context codes that can be used with any category}
@@ -149,11 +149,11 @@ Additional details and clarifications for some of the more ambiguous or complica
 %%%%%%%%%%%% START CONTEXTS TABLE %%%%%%
 
 \begin{longtable}{|p{.21\textwidth}|L{.73\textwidth}|}
-\caption{General contexts (\textit{italicized contexts} have additional details in \autoref{chapter:contexts})}
+\caption{General contexts\\ (Each context has additional details in \autoref{chapter:contexts})}
 \label{tab:general-contexts} \\
 \hline
 Name & Content \\
-\hline 
+\hline
 \endhead
 
 \hline \multicolumn{2}{|l|}{{Continued on next page}} \\ \hline
@@ -161,43 +161,42 @@ Name & Content \\
 
 \hline
 \endlastfoot
-
-military & military, including military assistance; only covers official state military bodies, not paramilitary or militia organization, law enforcement, or non-state armed actors \\
-\hyperref[context:intelligence]{\textit{intelligence}} & gathering of information by state intelligence organizations, including more general discussions of those agencies \\
+\hyperref[context:military]{military} & military, including military assistance; only covers official state military bodies, \textit{excluding} paramilitary or militia organizations, law enforcement, or non-state armed actors \\
+\hyperref[context:intelligence]{intelligence} & gathering of information by state intelligence organizations, including more general discussions of those agencies \\
+\hyperref[context:executive]{executive} & executive agencies and bureaucracies, executives and their families, as well as personal and political issues involving non-elected heads of state \\
+\hyperref[context:legislative]{legislative} & legislative debate, parliamentary coalition formation \\
+\hyperref[context:election]{election} & elections and campaigns \\
+\hyperref[context:political-institutions]{political\_institutions} & changes to---as well as non-routine interactions between and within---formal political bodies, including political parties \\
+\hyperref[context:pro-democracy]{pro\_democracy} & processes and initiatives associated with democratization \\
+\hyperref[context:pro-autocracy]{pro\_autocracy} & processes and initiatives associated with autocratization \\
+\hyperref[context:economic]{economic} & economic news, trade, finance, economic development, inflation/GDP/recessions, or monetary policy. \emph{Exclude} news solely about individual companies \\
+\hyperref[context:legal]{legal} & courts and judiciary; national and international law\\
+reparations & reparations, i.e., monetary or non-monetary compensation for past harm inflicted \\
+\hyperref[context:hr]{human\_rights} & unspecified human rights in a general sense, often but not always literally including the term ``human rights'' \\
+\hyperref[context:rightsfree]{rights\_freedoms} & political rights and freedoms, civil liberties, press/media freedom, restrictions on civil rights, gatherings, etc.\\
+\hyperref[context:human-sec]{human\_security} & access to water, food, housing, energy, land/property tenure (e.g. seizure of crops), etc. \\
+gender & mentions of gender, women's issues, gender equality, etc., including abortion and issues of reproductive rights\\
+\hyperref[context:lgbt]{lgbt} & LGBTQ issues such as related laws, discrimination, and protests\\
+\hyperref[context:religethno]{religion\_ethnicity} & religious, ethnic, or linguistic issues, including discrimination, violence, but also cooperation, or more broadly important mentions \\
+\hyperref[context:diplomatic]{diplomatic} & diplomacy, which can be both international and domestic \\
+\hyperref[context:territory]{territory} & international and domestic territorial disputes, protests and rebellions over territory, and forced displacements\\
 peacekeeping & peacekeeping, typically multilateral operations \\
-economic & economic news, trade, finance, economic development, inflation/GDP/recessions,\\&\hspace{6pt} monetary police. \emph{Exclude} news solely about individual companies \\
-diplomatic & diplomacy, both international and domestic, e.g. government-rebel negotations \\
-natural\_resource & natural resources \\
-health & public health, disease outbreaks and epidemics, disease in general \\
-natural\_disasters & disasters including both ``natural" and \\&\hspace{6pt} accidents/spills etc., includes climate change \\
-migration  & migration, refugees, and displaced people \\
-\hyperref[context:humanitarian]{\textit{humanitarian}} & humanitarian assistance generally \\
-asylum & discussions of seeking or granting asylum \\
-legal & courts and judiciary; national and international law, \emph{not} including human rights \\ 
-reparations & reparations, i.e. monetary or non-monetary compensation for past harm inflicted \\
-human\_rights & unspecified human rights in a general sense, often but not always literally including the term ``human rights'' \\ 
-\hyperref[context:rights-freedoms]{\textit{rights\_freedoms}} & political rights and freedoms, civil liberties, press/media freedom, restrictions on civil rights\\
-&\hspace{6pt} gathering etc.\\
-\hyperref[context:terrorism]{\textit{terrorism}} & events related to terrorist groups and related anti-terrorism actions and policies \\
-human\_security & access to water, food, housing, energy, land/property tenure (e.g. seizure of crops), etc. \\
-gender & mentions of gender, women's issues, gender equality, etc., including abortion \\
-\hyperref[context:lgbt]{\textit{lgbt}} & LGBTQ \\
-religion\_ethnicity & religious, ethnic, or linguistic issues, including discrimination, violence, but also cooperation, or more broadly important mentions \\
-executive & executive agencies and bureaucracies; governmental issues other than elections \\
-&\hspace{6pt} and legislative \\
-election & elections and campaigns \\
-legislative & legislative debate, parliamentary coalition formation \\
-cbrn & chemical, biological, radiation, and nuclear weapons or attacks  \\
-cyber & cyber attacks and crime\\
-misinformation & misinformation, influence ops, fake news; events with this context are not necessarily misinformation themselves, e.g. could be allegations of influence ops \\
-technology & discussions of technological development, new technology, high-tech industry\\
-\hyperref[context:political-institutions]{\textit{political\_institutions}} & non-routine interactions between formal political bodies, including parties \\
-\hyperref[context:pro-democracy]{\textit{pro\_democracy}} & processes and initiatives associated with democratization \\
-\hyperref[context:pro-autocracy]{\textit{pro\_autocracy}} & processes and initiatives associated with autocratization \\
-crime & Any discussion of crimes or criminals, \textit{excluding} events that have one of the more specific crime contexts like trafficking \\
-corruption &  misuse/abuse of public office, including corruption, bribery, cronyism, nepotism, abuse of public office  \\
-illegal\_drugs & criminal possession, distribution, sale, or manufacturing of illegal drugs \\
-trafficking & trafficking or smuggling of humans, drugs, animals, or other goods; both domestic and international \\
+\hyperref[context:humanitarian]{humanitarian} & humanitarian assistance generally \\
+\hyperref[context:health]{health} & public health, disease outbreaks and epidemics, disease in general \\
+\hyperref[context:asylum]{asylum} & discussions of seeking or granting asylum \\
+\hyperref[context:migration]{migration}  & migration, refugees, and displaced people \\
+\hyperref[context:disasters]{disasters} & disasters including both ``natural" and accidents/spills etc. \\
+\hyperref[context:natural-resource]{natural\_resource} & natural resource extraction, trade, dependence, and pollution \\
+\hyperref[context:environment]{environment} & pollution and related environmental problems; environmental policy, environmental cooperation, and environmental protest \\
+\hyperref[context:tech]{technology} & technological development, new technology, high-tech industry\\
+\hyperref[context:terrorism]{terrorism} & events related to terrorist groups; anti-terrorism actions and policies \\
+\hyperref[context:cbrn]{cbrn} & chemical, biological, radiation, and nuclear weapons or attacks  \\
+\hyperref[context:cyber]{cyber} & cyber attacks and crime\\
+\hyperref[context:misinfo]{misinformation} & misinformation, influence operations, fake news; events with this context are not necessarily misinformation themselves\\
+\hyperref[context:crime]{crime} & Any discussion of crimes or criminals, \textit{excluding} events that have one of the more specific crime contexts like trafficking \\
+\hyperref[context:corruption]{corruption} &  misuse/abuse of public office, including corruption, bribery, cronyism, nepotism, abuse of public office  \\
+\hyperref[context:drugs]{illegal\_drugs} & criminal possession, distribution, sale, or manufacturing of illegal drugs \\
+\hyperref[context:trafficking]{trafficking} & trafficking or smuggling of humans, drugs, animals, or other goods; both domestic and international \\
 \end{longtable}
 
 %%%%%%%%%%%% END CONTEXTS TABLE %%%%%%
@@ -217,7 +216,7 @@ PLOVER also includes four \emph{auxiliary modes}, which provide information abou
    \item \plcon{hypothetical}: ``If Russian forces were to cross the border, that would represent a major..."
    \item \plcon{negation}: ``Thus far, fighting has not re-emerged in the tense region."	
    \end{itemize}
-  
+
 Theoretically, some event types can be represented as other event types plus an auxiliary mode: \plcat{AGREE} could be  \plcat{SUPPORT} + \plcon{future} or \plcat{THREATEN} could be \plcat{ASSAULT} + \plcon{hypothetical}. In situations like these, the coder should always return the single event category, not a category+auxiliary.
 
 We anticipate that in general---and consistent with earlier event coding schemes---it will be possible to code \txt{mode} from the same sentence used to code the event, or possibly that sentence and one before it. \txt{context}, in contrast, will usually be coded at the paragraph- or document-level: this differs from earlier automated coding, though probably is similar to human-coded data such as COPDAB and BCOW \citep{Leng87} where \txt{context}-like fields were coded.
@@ -227,7 +226,7 @@ We anticipate that in general---and consistent with earlier event coding schemes
 
 \subsection{``actor'' and ``recipient'' replace ``source'' and ``target''}
 
-In order to reduce overlap with how the policy community uses the terms  ``source'' and ``target'', we are using the word \txt{actor} to refer to the entity or entities who initiated the event, and \txt{recipient} to refer to the 
+In order to reduce overlap with how the policy community uses the terms  ``source'' and ``target'', we are using the word \txt{actor} to refer to the entity or entities who initiated the event, and \txt{recipient} to refer to the
  the entity or entities to whom the event is directed, if this is clear. \txt{recipient} is optional for many events. We are using the term ``entity'' to refer to the class of potential actors and recipients.
 
 \subsection{Compound and Reciprocal Actors}\label{sec:recip}
@@ -292,7 +291,7 @@ RETREAT & +7.6 \\
 \section{AGREE}
 
 
-Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  All cooperative actions reported in future tense are also taken to imply intentions. 
+Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  All cooperative actions reported in future tense are also taken to imply intentions.
 
 
 \subsection{Potential ambiguities}
@@ -342,10 +341,10 @@ Adapted from CAMEO.
 
 \section{SUPPORT}
 
-Initiate, resume, improve, or expand diplomatic, non-material cooperation; express support for, commend, approve policy, action, or actor, or ratify, sign, or finalize an agreement or treaty. Use this code only for political, diplomatic, and non-material support, including recognition of newly independent states, new governments that might have come to power through unconventional means, and initiation of diplomatic ties with an entity for the first time. 
+Initiate, resume, improve, or expand diplomatic, non-material cooperation; express support for, commend, approve policy, action, or actor, or ratify, sign, or finalize an agreement or treaty. Use this code only for political, diplomatic, and non-material support, including recognition of newly independent states, new governments that might have come to power through unconventional means, and initiation of diplomatic ties with an entity for the first time.
 
 \plcat{SUPPORT} is distinct from the CAMEO \plcat{APPEAL} category, where the actor simply \textit{requested} support from the recipient.
- 
+
 \subsection{Requires recipient: No}
 
 \subsection{Potential ambiguities}
@@ -374,16 +373,16 @@ The term used for this category, \plcat{SUPPORT}, is a somewhat ambiguous. Altho
 
 This covers verbal concessions which have no immediate material consequences, including the promise of future concessions such easing of administrative or legal restrictions on persons and organizations, removing curfews, suspending protests, and declarations (but not implementations) of ceasefires and withdrawals from territory.
 
-\plcat{CONCEDE}, like the verbal components CAMEO/WEIS predecessor \plcat{YIELD}, is inherently problematic since many concessions deal with promises that certain things will \ti{not} happen, or will happen in the distant future (e.g. many policy changes). So, for example, the lifting of a curfew is, effectively, a promise that people will not be arrested for violating the curfew, which itself is not an event. We're treating such concessions as verbal rather than material even though sometimes they have material consequences, e.g. people coming out in the streets after a curfew is lifted, provide they believe the entity lifting the curfew actually has done so.  
+\plcat{CONCEDE}, like the verbal components CAMEO/WEIS predecessor \plcat{YIELD}, is inherently problematic since many concessions deal with promises that certain things will \ti{not} happen, or will happen in the distant future (e.g. many policy changes). So, for example, the lifting of a curfew is, effectively, a promise that people will not be arrested for violating the curfew, which itself is not an event. We're treating such concessions as verbal rather than material even though sometimes they have material consequences, e.g. people coming out in the streets after a curfew is lifted, provide they believe the entity lifting the curfew actually has done so.
 
 \subsection{Requires recipient: No}
 
 \subsection{Supplementary fields: None}
- 
+
 \subsection{Quad category: VERBAL COOPERATION}
 
 
-\newpage  
+\newpage
 
 \section{COOPERATE}
 
@@ -400,7 +399,7 @@ Initiate, resume, improve, or expand \ti{mutual} material cooperation or exchang
 
 \end{itemize}
 
-\noindent \plcat{COOPERATE} is distinguished from \plcat{AID} because the activity is generally understood to directly benefit both parties, whereas  \plcat{AID} is understood to primarily benefit only the recipient. 
+\noindent \plcat{COOPERATE} is distinguished from \plcat{AID} because the activity is generally understood to directly benefit both parties, whereas  \plcat{AID} is understood to primarily benefit only the recipient.
 
 \subsection{Requires recipient: Yes}
 
@@ -413,7 +412,7 @@ Initiate, resume, improve, or expand \ti{mutual} material cooperation or exchang
 
 \section{AID}
 
-All provisions of providing material aid whose material benefits primarily accrue to the recipient. Examples include: 
+All provisions of providing material aid whose material benefits primarily accrue to the recipient. Examples include:
 
 \begin{itemize}
 
@@ -431,7 +430,7 @@ All provisions of providing material aid whose material benefits primarily accru
 
 \subsection{Potential ambiguities}
 
-While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient. 
+While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient.
 
 \subsection{Supplementary fields: None}
 
@@ -461,7 +460,7 @@ Name & Content \\
 withdraw & retreat from territory or withdraw forces from an area\\
 release & release captives \\
 return & return property \\
-disarm & disarm militarily or give up weapons\\ 
+disarm & disarm militarily or give up weapons\\
 ceasefire & implement ceasefire\\
 access & allow third party (e.g., observers, peacekeepers, humanitarian workers) access \\
 resign & official resignation \\
@@ -475,11 +474,11 @@ resign & official resignation \\
 
 
 
-\newpage  
+\newpage
 
 \section{REQUEST}
 
-All requests, demands, and orders. Requests, demands, and orders are less forceful than threats and potentially carry less serious repercussions. Coding will need to rely primarily on the language used by reporters to make this distinction. All requests are verbal acts. 
+All requests, demands, and orders. Requests, demands, and orders are less forceful than threats and potentially carry less serious repercussions. Coding will need to rely primarily on the language used by reporters to make this distinction. All requests are verbal acts.
 
 \subsection{Requires recipient: No}
 
@@ -514,10 +513,10 @@ meet & meetings and negotiations\\
 \label{tab:requestmode2}
 \end{table}%
 
- 
+
 \subsection{Quad category: VERBAL CONFLICT}
 
-\newpage  
+\newpage
 
 
 \section{ACCUSE}
@@ -556,12 +555,12 @@ allege & formally or informally accuse; sue, indict, or charge; bring to trial\\
 
 \subsection{Quad category: VERBAL CONFLICT}
 
-\newpage  
+\newpage
 
 
 \section{REJECT}
 
-All rejections and refusals. 
+All rejections and refusals.
 
 \subsection{Requires recipient: No}
 
@@ -589,15 +588,15 @@ meet & meetings and negotiations\\
 \label{tab:rejectmode}
 \end{table}%
 
- 
+
 \subsection{Quad category: VERBAL CONFLICT}
 
-\newpage  
+\newpage
 
 
 \section{THREATEN}
 
-All threats, coercive or forceful warnings with serious potential repercussions. Threats are generally verbal acts except for purely symbolic material actions such as having an unarmed group place a flag on some territory. 
+All threats, coercive or forceful warnings with serious potential repercussions. Threats are generally verbal acts except for purely symbolic material actions such as having an unarmed group place a flag on some territory.
 \subsection{Requires recipient: No}
 
 \subsection{Supplementary fields: mode}
@@ -625,10 +624,10 @@ violence & threaten violence \\
 \end{center}
 \label{tab:threatmode}
 \end{table}%
- 
+
 \subsection{Quad category: VERBAL CONFLICT}
 
-\newpage  
+\newpage
 
 \section{PROTEST}
 
@@ -639,8 +638,8 @@ All civilian demonstrations and other collective actions carried out as protests
 \subsection{Supplementary fields:}
 
 \begin{description}
-	\item[mode:] Mode of protest: see Table \ref{tab:protestmode} 
-	\item[event\_loc:] Location[s] of event 
+	\item[mode:] Mode of protest: see Table \ref{tab:protestmode}
+	\item[event\_loc:] Location[s] of event
 \end{description}
 
 %The protest contexts that were included in older versions of this manual were removed in favor of a single set of PLOVER-base context tags. See Section \ref{sec:adding_to_plover} for a discussion of how custom, event-specific context codes can be added.
@@ -672,10 +671,10 @@ obstruct & Obstruct passage \\
 Version 3.2: \url{https://www.strausscenter.org/images/codebooks/SCAD\_32\_Codebook.pdf}}\\~
 
 \end{table}%
- 
+
 \subsection{Quad category: MATERIAL CONFLICT}
 
-\newpage  
+\newpage
 
 \section{SANCTION}
 
@@ -687,9 +686,9 @@ All reductions in existing, routine, or cooperative relations. Note that this is
 \subsection{Potential ambiguities}
 
 \begin{itemize}
-\item Expulsions or deportations of individuals---typically a legal matter---are coded as \plcat{COERCE} 
+\item Expulsions or deportations of individuals---typically a legal matter---are coded as \plcat{COERCE}
 \item Cancellation of meetings are \plcat{REJECT} and therefore verbal conflict.
-\item While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient. 
+\item While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient.
 \end{itemize}
 
 \subsection{Supplementary fields: mode}
@@ -713,15 +712,15 @@ discontinue & curtail, decrease, break, or terminate diplomatic, commercial, or 
 
 \subsection{Quad category: MATERIAL CONFLICT}
 
-\newpage  
+\newpage
 
 \section{MOBILIZE}
 
-All military or police moves that fall short of the actual use of force. 
+All military or police moves that fall short of the actual use of force.
 
-This category is different from \plcat{ASSAULT}, which refers to actual uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power. 
+This category is different from \plcat{ASSAULT}, which refers to actual uses of force, while military posturing falls short of actual use of force and is typically a demonstration of military capabilities and readiness. \plcat{MOBILIZE} is also distinct from \plcat{THREAT} in that the latter is typically verbal, and does not involve any activity that is undertaken to demonstrate military power.
 
-\txt{actor} entities  are not necessarily militaries affiliated with states: they can be any organized armed groups (for example militias or gangs). 
+\txt{actor} entities  are not necessarily militaries affiliated with states: they can be any organized armed groups (for example militias or gangs).
 
 The \txt{recipient} are entities against whom the \txt{actor} mobilizes its military capabilities in a threatening manner if that is clear, but a group may mobilize with no specific entity stated.
 
@@ -757,10 +756,10 @@ militia & Mobilize or increase readiness of any non-state entity with significan
 Adapted from CAMEO cue category 15
 \end{table}
 
- 
+
 \subsection{Quad category: MATERIAL CONFLICT}
 
-\newpage  
+\newpage
 
 \section{COERCE}
 
@@ -768,11 +767,11 @@ Repression, restrictions on rights, or coercive uses of power falling short of v
 
 \subsection{Requires recipient: No}
 
-Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasionally, for example in shutting off internet access, the entities intended to be affected by the action are so broad as to be unclear. 
+Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasionally, for example in shutting off internet access, the entities intended to be affected by the action are so broad as to be unclear.
 
 \subsection{Potential ambiguities}
 
-Candidates for COERCE-misinformation could also be ACCUSE-allege + context:``misinformation'' events, depending on the wording of the relevant text. 
+Candidates for COERCE-misinformation could also be ACCUSE-allege + context:``misinformation'' events, depending on the wording of the relevant text.
 
 \subsection{Supplementary fields: }
 
@@ -800,10 +799,10 @@ misinformation & deception/manipulation/misinformation (will also automatically 
 Adapted from CAMEO cue category 17
 \end{table}%
 
- 
+
 \subsection{Quad category: MATERIAL CONFLICT}
 
-\newpage  
+\newpage
 
 
 \section{ASSAULT}
@@ -847,62 +846,58 @@ sideAB & two-sided violence: \txt{actor} and \txt{recipient} are ``Side A'' and 
 \end{tabular}
 \end{center}
 \label{tab:violmode}
-\raggedright{Adapted from Political Instability Task Force Atrocities Database: \url{http://eventdata.parusanalytics.com/data.dir/atrocities.html}}. 
+\raggedright{Adapted from Political Instability Task Force Atrocities Database: \url{http://eventdata.parusanalytics.com/data.dir/atrocities.html}}.
 \end{table}%
 
 \begin{description}
-	\item[mode:] Mode of violence: see Table \ref{tab:violmode} 
-	\item[dead:]  number killed (integer or code) 
-	\item[injured:] number injured (integer or code) 
-	\item[size:] used when total casualties are reported, combining dead and wounded 
-	\item[event\_loc:] Location of event 
+	\item[mode:] Mode of violence: see Table \ref{tab:violmode}
+	\item[dead:]  number killed (integer or code)
+	\item[injured:] number injured (integer or code)
+	\item[size:] used when total casualties are reported, combining dead and wounded
+	\item[event\_loc:] Location of event
 \end{description}
 
- 
+
 \subsection{Quad category: MATERIAL CONFLICT}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Contexts}\label{chapter:contexts}
 
-Additional details for the general context tags. 
+Additional details for the general context tags.
+
+\section{Military}\label{context:military}
+
+Discussions of the military or armed forces, including navy, army, marines, air force, and similar military branches. This includes not only discussions of active military operations, but also broader discussions of civil-military relations, military assistance, military culture, and military expenditures. However, this context field only pertains to state militaries. As such, discussions of government-aligned militias, domestic law enforcement, and armed non-state actors (e.g., rebel groups) should not be coded in this context category.
+
 
 \section{Intelligence}\label{context:intelligence}
 
-The covert gathering of information by state intelligence organizations, including through tactics of espionage, overhead reconnaissance, and communications interception. Accusations and suspicions of covert intelligence gathering, as well as more general discussions of state intelligence organizations, should also be coded. However, this context field excludes (1) discussions of the use of clandestine methods to spread misinformation or influence ops, which should be coded under the 'misinformation' context category and (2) discussions of artificial intelligence that are unrelated to state intelligence organizations' intelligence gathering activities.
+The covert gathering of information by state intelligence organizations, including through tactics of espionage, overhead reconnaissance, and communications interception. Accusations and suspicions of covert intelligence gathering, as well as more general discussions of state intelligence organizations, should also be coded. However, this context field excludes (1) discussions of the use of clandestine methods to spread misinformation or influence operations, which should be coded under the `misinformation' context category and (2) discussions of artificial intelligence that are unrelated to state intelligence organizations' intelligence gathering activities.
 
-\section{Terrorism}\label{context:terrorism}
+\section{Executive}\label{context:executive}
 
-Includes events related to terrorist groups, terrorist actions, terrorist funding, or terrorist sponsors; as well as anti-terrorism activities and policies. Terrorism is defined as any activity that aims to harm, kill, or kidnap civilians or unarmed government employees in an effort to intimidate, coerce, and/or provoke fear in societies, governments, or groups therein.
+Politics and interactions involving the executive branch, the prime minister, or the non-elected executive of a country. This can include discussions of background context on (e.g.,) an executive's legal challenges, corruption concerns, family, or lifestyle. This context field should also code discussions of executive-branch rivalries or interactions, including instances where an executive or dictator chooses to appoint, demote, or remove a representative from their cabinet, inner circle, or a bureaucratic agency under their purview. Executive relations with other institutions (e.g., foreign heads of state, legislatures, judiciaries, or the military) should generally be coded as `executive', but will also often receive additional context tags.
 
-\section{Humanitarian}\label{context:humanitarian}
+\section{Legislative}\label{context:legislative}
 
-Includes discussions related to the provision of aid or assistance for humanitarian crises by domestic or international governments, international organizations, corporations, or NGOs. It also includes discussions of cooperation among humanitarian agencies or discussions of humanitarian organizations themselves when references are made to these organizations' humanitarian activities. Examples of humanitarian assistance include 1) provision of aid, support, or assistance for disaster mitigation, prevention, preparedness, or response, 2) aid or assistance for refugees or children, 3) food aid or agricultural support, or 4) support or assistance for health emergencies and disease outbreaks.
+All regular and irregular legislative (or parliamentary) politics and interactions. This includes discussions of individual legislative representatives, legislative debates, legislative lawmaking, parliamentary coalition formation, corruption in the legislature, legislative oversight, legislative campaigns and elections. Legislative relations with other institutions (e.g., foreign heads of state, executives, judiciaries, or the military) should generally be coded as `legislative', but will also often receive additional context tags. Discussions of legislatures or parliaments within authoritarian countries should still be coded under `legislative'.
 
-\section{rights\_freedoms}\label{context:rights-freedoms}
+\section{Election}\label{context:election}
+Discussions of elections and political campaigns. This context field includes not only details on specific elections, campaigns, and electoral candidates, but also discussions of domestic and international election monitors. Discussions of concerns over whether elections are free and fair should also be coded as `elections', in addition (depending on the context) to `rights\_freedoms' and either `pro\_democracy' or `pro\_autocracy'. Campaign fundraising, election debates, charges of electoral fraud, and discussions of voting in (or polling for) an upcoming election should also be coded as 'election'.
 
-\subsection{Common interactions}
+\section{Political Institutions}\label{context:political-institutions}
 
-"pro\_democracy", "pro\_autocracy"
+Changes in the functioning of formal political institutions and parties in a country, including non-routine interactions between different bodies of government, or with political parties. This context should capture all significant changes, regardless of the direction the changes produce, i.e., whether they move the nature of government towards more democratic or more authoritarian. Instead, the latter should be reflected with additional `pro\_democracy' or `pro\_autocracy' contexts.
 
-\section{lgbt}\label{context:lgbt}
-
-\subsection{Common interactions}
-
-"rights\_freedoms"
-
-\section{Political institutions}\label{context:political-institutions}
-
-Changes in the functioning of formal political institutions and parties in a country, including non-routine interactions between different bodies of government, or with political parties. This context should capture all significant changes, regardless of the direction the changes produce, i.e. whether they move the nature of government towards more democratic or more authoritarian. Instead, the latter should be reflected with additional "pro\_democracy" or "pro\_autocracy" contexts.
-
-The "political\_institutions" context works together with the "pro\_democracy" and "pro\_autocracy" contexts to capture the broader concepts of democratic backsliding, autocratization, as well as democratization. 
+The `political\_institutions' context works together with the  `pro\_democracy' and    `pro\_autocracy' contexts to capture the broader concepts of democratic backsliding, autocratization, as well as democratization.
 
 \begin{itemize}
 \item Includes substantive (legal or illegal) constitutional changes that a clearly motivated to either improve or harm political competition or checks on executive authority, e.g. voting rights strengthening or weakening.
-\item Can include pseudo-democratic bodies that function under constraints, e.g. in Russia or Iran, not only very democratic countries.  
-\item Excludes routine interactions without broader implications for the state of democracy or functioning of major formal institutions in a country. 
-\item Can include events that describe extra-systemic steps by major actors (institutions), e.g. autocoups or declarations of states of emergency as a means to resolve political or institutional conflict (Tunisia 2021). 
-\item Includes violations of norms regarding appointments, dismissals, pardons, interactions or relationships between parts of government (Boris Johnson UK family appointments to House of Lords in 2021). 
+\item Can include pseudo-democratic bodies that function under constraints, e.g. in Russia or Iran, not only very democratic countries.
+\item Excludes routine interactions without broader implications for the state of democracy or functioning of major formal institutions in a country.
+\item Can include events that describe extra-systemic steps by major actors (institutions), e.g. autocoups or declarations of states of emergency as a means to resolve political or institutional conflict (Tunisia 2021).
+\item Includes violations of norms regarding appointments, dismissals, pardons, interactions or relationships between parts of government (Boris Johnson UK family appointments to House of Lords in 2021).
 \end{itemize}
 
 \section{Pro-democracy}\label{context:pro-democracy}
@@ -913,12 +908,129 @@ Includes processes and initiatives associated with democratization, including ac
 
 Includes processes and initiatives associated with authoritarian consolidation, autocratization, de-democratization, or democratic backsliding, including actions taken to undermine democracy by domestic or international actors. These processes, actions, and initiatives can be gradual or abrupt, and can include, for example, 1) efforts to dissolve or undermine democratic institutions or norms by government officials, 2) the cancellation or suspension of elections, 3) coups, or 4) refusals to step down from power when mandated to do so by existing democratic institutions.
 
-\section{Reparations}
 
-Payments or other restitution for past harms inflicted by one group or state on another. The specific event type that is coded depends on how reparations came about. If court-ordered, these will be \plcat{SANCTION} events; voluntary agreements might be either \plcat{AID} or \plcat{AGREEMENT}, depending on whether payments/asset transfers have actually occurred or not. 
+\section{Economic}\label{context:economic}
+
+Coverage of international and domestic economic issues, including but not limited to trade, finance, economic development, economic stability, economic crises, inflation, unemployment, GDP, and business-government relations in areas of political or economic concern (e.g., a government accusing a company of monopolistic practices, or a government expropriating a company's assets). Political interactions that focus on economic outcomes (such as diplomatic negotiations over a future trade agreement) should also be coded as `economic' (in addition to other context fields, depending on the specific context). Business news coverage should not be coded as having an `economic' context unless that business news is discussed in light of a broader economic issue or concern. This means that news reports that solely discuss company annual reports, acquisitions, and similarly mundane business activities should not automatically be coded as `economic.'
+
+
+\section{Legal}\label{context:legal}
+
+Discussions of activities and responsibilities associated with domestic or international courts and judiciaries; discussions of national and international laws; or discussions of associated professions (e.g., lawyers). Negotiations over international law should be coded under this context field. Common international legal activities that should be coded under this category would be International Criminal Court investigations, international tribunals, maritime law, the Geneva Convention, the World Trade Organization, and similar conventions on the use of chemical and biological weapons. Domestically, this context field should code discussions of (e.g.) legal proceedings against politicians, the role of the courts in society or politics, or judicial oversight. However, discussions of domestic or international crime events should not automatically be coded as `legal' unless detailed discussion of associated laws or court processes is included.
+
+\section{Reparations}\label{context:reparations}
+
+Monetary or non-monetary payments to compensate victims, groups, or family members for past harms inflicted---typically by a national or foreign government. Discussions where such reparations are simply promised or demanded should also be coded under this context field. Reparations may be made in the contexts of post-conflict justice, but not all post-conflict justice activities should be coded as reparations. Examples of non-monetary reparations include verbal or formal acknowledgments or apologies of past government transgressions or formal pardons of previously convicted persons that are made with explicit reference to reparations.
 
 
 
+\section{Human Rights}\label{context:hr}
+
+General discussions of human rights and human rights violations. This context field is intended to capture human rights contexts that may lack details concerning specific human rights violations. As such, this field will apply in most instances where the term human rights appears, and especially so when human rights is discussed in an unspecified manner. Examples of such discussions would be articles outlining 1) the global human rights regime, 2) human rights organizations and their activities (e.g., Amnesty International), 3) international meetings/treaties/negotiations over human rights, or 4) an international organization or actor's efforts to combat human rights abuse in a general sense.
+
+\section{Rights Freedoms}\label{context:rightsfree}
+
+Discussions of specific political rights and freedoms or their violation. This can include actual discussions of such freedoms or violations, as well as discussions of specific laws, monitoring organizations, or protests associated with these freedoms/violations. Included here should be freedom of (foreign and domestic) movement, freedom of speech, freedom of assembly, civil liberties, electoral self-determination, freedom of the press, freedom of religion, worker's rights, and women's rights. Note that this field will often receive joint codings with `human\_rights', `gender', `lbgt', `asylum', `migration', `pro\_democracy' and/or `pro\_autocracy' depending on the specific `rights\_freedoms' context.
+
+\section{Human Security}\label{context:human-sec}
+
+The protection of individual, group, and societal access to water, food, housing, energy, and land/property tenure. Discussions of `human\_security' along each of these dimensions should generally make a linkage to access; whereas (e.g.,) discussions of a drought without any mention of its human/social implications should generally only be coded as `disaster'. Mentions of ``food (in)security'' or ``water (in)security'' should generally be coded as `human\_security'. Likewise, the `human\_security' context field should include not only instances where a direct threat to human security arises, but also discussions of (potential) vulnerabilities to such insecurities, and domestic or international efforts to address such vulnerabilities (e.g., the United Nations Development Programme).
+
+\section{Gender}\label{context:gender}
+
+Discussions of gender, women's issues, gender equality, women's rights, reproductive rights, and women in politics. Discussions of gender-based discrimination (or femicide), as well as laws developed both for and against gender-based discrimination, should also be coded. Discussions of gender-oriented organizations, groups, or protests should likewise be coded as `gender.'
+
+\section{LGBT}\label{context:lgbt}
+
+Discussions of lesbian, gay, bisexual, transgender, queer, intersex or asexual groups, movements, or individuals. LGBTQIA discrimination and associated laws should be coded under `lgbt'. Discussions of LGBTQIA-oriented organizations, advocacy, or protests should also be coded as `lgbt.'
+
+\section{Religion Ethnicity}\label{context:religethno}
+General or specific discussions of religions, ethnicities, or linguistic groups. In addition to general discussions of religion, ethnicity, or language, this can include discussions of discrimination (or violence) against particular ethnic, religious, or linguistic groups; or instances of discrimination (or violence) perpetrated by particular ethnic, religious, or linguistic groups. In addition, this context fields should also code more cooperative interactions among ethnic, religious, or linguistic groups, as well as instances where such groups play a major role in politics, advocacy, reparations, or protest.
+
+
+\section{Diplomatic}\label{context:diplomatic}
+
+Formal diplomatic relations, negotiations, and interactions between nation-states or between actors within particular nation-states. This includes bilateral diplomatic institutions and actors such as embassies, consulates, charge d'affaires and ambassadors, and the services that they provide. This context field also includes formal diplomatic negotiations between diplomatic representatives of nation-states and non-state actors (e.g., rebel organizations) over topics such as treaties, agreements, or alliances. Discussions of countries' ministries of foreign affairs (e.g., the State Department in the U.S.) or their ministers/secretaries should also be coded under this context field.
+
+
+\section{Territory}\label{context:territory}
+
+Discussions of territory in a political context. This can pertain to protests or rebellions over territorial autonomy, independence, or succession. This context field should also include discussions of territorial disputes (including border disputes) between nation-states as well as international treaties and/or mediation developed to address these disputes. Discussions of territorial displacement of certain groups by government and non-governmental actors should also be coded as `territory', as should discussions of territorial sovereignty. However, general mentions of land or geography should not be coded as `territory' if those mentions do not include a clear political dimension.
+
+\section{Peacekeeping}\label{context:peacekeeping}
+
+Activities involving the monitoring or maintaining of ongoing peace-processes, typically in the aftermath of an international or domestic armed conflict. Such activities most commonly involve international observers drawn from multilateral operations directed by (e.g.,) the United Nations, NATO, or European Union; but may at times also be drawn from individual nation-states. Peacekeeping can include the active stationing of international forces in a post-conflict area, such as is commonly the case with UN Peacekeepers (i.e., Blue Helmets), as well as multilateral non-military assistance for activities such as peace agreement implementation, post-conflict power-sharing, and confidence building measures.
+
+
+\section{Humanitarian}\label{context:humanitarian}
+
+Includes discussions related to the provision of aid or assistance for humanitarian crises by domestic or international governments, international organizations, corporations, or NGOs. It also includes discussions of cooperation among humanitarian agencies or discussions of humanitarian organizations themselves when references are made to these organizations' humanitarian activities. Examples of humanitarian assistance include 1) provision of aid, support, or assistance for disaster mitigation, prevention, preparedness, or response, 2) aid or assistance for refugees or children, 3) food aid or agricultural support, or 4) support or assistance for health emergencies and disease outbreaks.
+
+\section{Health}\label{context:health}
+
+Issues and institutions related to public health, disease outbreaks and epidemics, disease in general. This context field should include both actual instances of health crises and disease outbreaks and efforts to improve public health and disease preparedness. Discussions of healthcare systems or key domestic and international public health institutions (e.g., the WHO) should be coded as `health'. However, this context field should not be used for reports of individual accidents and accidental deaths, such as those arising from (e.g.) traffic accidents or skiing accidents.
+
+\section{Asylum}\label{context:asylum}
+
+The granting or pursuit of national or political asylum. Such asylum is often pursued by, and provided to, political refugees. Discussions of asylum seekers, as well as national or international national asylum treaties or institutions, should also be coded under this context field. However, general discussions of refugees should not automatically be coded as `asylum' unless some reference to asylum is made.
+
+
+\section{Migration}\label{context:migration}
+
+Discussions of international or domestic migration, as well as discussions of the direct drivers or consequences of migration. This context field accordingly includes discussions of immigration and emigration, forced displacement, internally-displaced persons, international organizations seeking to manage migration, and refugees. Discussions of migrant activities or challenges should also be coded under `migration', and would include themes such as discrimination against migrant communities, migrant remittances, and policies or laws focusing upon (e.g.) migrant pathways to citizenship or immigration.
+
+\section{Disasters}\label{context:disasters}
+
+Discussions of slow and rapid onset natural disasters such as droughts, hurricanes, cyclones, earthquakes, flooding, landslides, and heat waves. This context field should code news stories related not only to the disasters themselves, but also their effects on social outcomes such as migration. Accidents (e.g., chemical plant explosions) and oil or chemical spills should also be coded under this context field.
+
+
+
+\section{Natural Resource}\label{context:natural-resource}
+
+Discussions of natural resource extraction, management, disputes, depletion, consumption, pricing, and trade. Environmental concerns over natural resources should also be coded as `natural\_resource', in addition to as `environment'. Common types of natural resources are minerals, rare-earth metals, fossil fuels (e.g., oil, gas, and coal), agriculture, forests/lumber, diamonds, sand, and water.
+
+
+
+\section{Environment}\label{context:environment}
+
+Environmental problems \& solutions, environmental politics, and environmental activism. Regarding environmental problems, this context field should code environmental disasters as well as broader environmental problems or concerns such as general mentions of pollution, climate change, water stress, deforestation, or soil degradation. Environmental solutions encompass policies and technologies designed to address environmental problems, such as renewable energies or the UN Framework Convention on Climate Change. Environmental politics encompasses any (ir)regular political processes associated with environmental policymaking, lobbying, negotiation, regulation, or cooperation at the international or domestic levels. Environmental activism includes not only environmental protest and direct actions, but also broader efforts towards the conservation or preservation of particular lands or animal species, as well as discussions of specific domestic and transnational environmental advocacy organizations.
+
+
+
+\section{Technology}\label{context:tech}
+Discussions of technological development, technological innovation, new technologies, or high-tech industry. Examples of high-tech industries include those based in aerospace, semiconductors, nuclear energy, electronics, and quantum computing. Note that this context field can thereby include military technologies, cyber security technologies, and misinformation technologies, meaning that many articles with this context will likely receive multiple other context tags. National policies and international agreements designed to harmonize or foster technologies (or their future development) should also be coded as 'technology'.
+
+
+
+\section{Terrorism}\label{context:terrorism}
+
+Events related to terrorist groups, terrorist actions, terrorist funding, or terrorist sponsors; as well as anti-terrorism activities and policies. Terrorism is defined as any activity that aims to harm, kill, or kidnap civilians or unarmed government employees in an effort to intimidate, coerce, and/or provoke fear in societies, governments, or groups therein.
+
+\section{CBRN}\label{context:cbrn}
+
+Discussions of chemical, biological, radiological and nuclear security defense. This context field should code all discussions related to chemical, biological, radiological, or nuclear weapons or attacks, as well as discussions of security or preparedness for such attacks. Discussions of the development of such weapons or capabilities, or suspicions of such development, should be coded. International organizations or treaties designed to oversee or prevent such weapons or attacks should also be coded under this context field. However, general discussions of (e.g.,) nuclear energy or nuclear disasters should not be coded under this context field, and should instead be coded under the `environment' and/or `disaster' context fields depending on the circumstances.
+
+\section{Cyber}\label{context:cyber}
+Discussions of cyber attacks, cyber security, cyber warfare and cyber crime. This context field should include any discussions of actual cyber crime/warfare events, as well as suspicions or allegations of those events. Discussions of laws, organizations, or initiatives designed to combat these threats (via cyber security or otherwise) should also be coded as `cyber'. Cyber terrorism should be coded as `cyber', but will also typically receive a 'terrorism' context coding. Electronic or information warfare will often receive a `cyber' context tag, as well as a 'misinformation' context tag.
+
+
+\section{Misinformation}\label{context:misinfo}
+Discussions of misinformation, disinformation influence operations, or fake news; as well as national and international efforts to combat these tactics. Allegations or suspicions of misinformation and related forms of information operations/warfare should be coded as `misinformation.' Note however that this context field pertains to news stories that discuss the use of (or activities related to) misinformation-type tactics, as opposed to whether or not the news story being coded is itself likely to be misinformation.
+
+
+
+\section{Crime}\label{context:crime} 
+
+Discussions of (international or domestic) criminal activities, as well as discussions of the perpetration of specific crimes, criminal convictions, or criminals themselves. General discussions of transnational or domestic criminal organizations (e.g., the mafia) or high profile criminal fugitives should also be coded under    `crime.' International coordination and cooperation to craft, enact, or enforce laws against criminal actions should also be coded under this context field. Note that several additional context fields---such as  `trafficking,'  `corruption,' and `illegal\_drugs'---code more specific criminal actions. War crimes should generally be excluded from this context field, and coded instead under `human\_rights' or `rights\_freedoms' depending on the specific context.
+
+\section{Corruption}\label{context:corruption}
+Instances of political, legal, and business corruption. This can include allegations or suspicions of such corruption. Coded forms of corruption for this context field include (e.g.) misuse/abuse of public office for personal (private) gain, extortion, embezzlement, bribery, cronyism, nepotism, and insider trading. The passage, enforcement, or development of international or domestic anti-corruption laws should also be coded as `corruption'. However, the abuse of government power via tactics of repression or police brutality should not be coded as 'corruption', and should instead be coded as `human\_rights' `pro\_autocracy,'   `rights\_freedoms,' and/or `elections' depending on the specific context.
+
+\section{Illegal Drugs}\label{context:drugs}
+The criminal possession, distribution, sale, or manufacturing of illegal drugs. International meetings and treaties concerning efforts to combat illegal drug use, production, or transport should also be coded as `illegal\_drugs.' Discussions of criminal organizations with mention of their involvement in the drug trade or drug cartels should also be coded. Discussions or implementations of the legalization of illegal drugs by governments should also be coded as `illegal\_drugs' as should discussions of the use of drug profits for funding by rebel or terrorist organizations.
+
+\section{Trafficking}\label{context:trafficking}
+The domestic or international trafficking or smuggling of illicit goods. This includes international trafficking in (e.g.,) illegal drugs, diamonds and gemstones, gasoline, cigarettes, antiquities, lumber, humans, weapons, or wildlife; as well as the smuggling or sale of such goods across subnational political boundaries to evade specific taxes or regulations. In addition to active discussions of trafficking itself, any discussions of law enforcement efforts to disrupt trafficking should be coded as `trafficking.' Similarly, discussions of any international laws, meetings, or organizations designed to combat trafficking should be coded as  `trafficking.' Finally, discussions of negative outcomes that are directly tied to trafficking within sending and receiving states (e.g., deforestation or increases in prostitution) should likewise be coded under this context field.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -975,7 +1087,7 @@ MNC            &   multi-national corporation\\
 \label{tab:nonstate}
 \end{table}%
 
-\newpage 
+\newpage
 
 \section{Sector Primary Code}
 
@@ -986,37 +1098,37 @@ MNC            &   multi-national corporation\\
  \\ \cline{1-2}
   \textbf{Code} & \textbf{Frequently used codes}\\
   \hline
-	  GOV & Government: the executive, governing parties, coalitions partners, executive divisions \\ 
-	  JUD & Judiciary: judges, courts \\ 
+	  GOV & Government: the executive, governing parties, coalitions partners, executive divisions \\
+	  JUD & Judiciary: judges, courts \\
 	  LEG & Legislature: parliaments, assemblies, lawmakers \\
-	  MIL & Military: troops, soldiers, all state-military personnel/equipment\\ 
-	  COP & Police forces, officers, criminal investigative units, protective agencies \\ 
+	  MIL & Military: troops, soldiers, all state-military personnel/equipment\\
+	  COP & Police forces, officers, criminal investigative units, protective agencies \\
 	  OPP & Political opposition: opposition parties, individuals, anti-government activists \\
 	  PTY & Political parties not identified with government or opposition \\
-	  REB & Rebels: armed opposition groups or individuals (see Note 1)\\ 
-	  PRM & Paramilitary organizations not in opposition to government\\ 
-	  SPY & State intelligence services \\ 
-	  UAF & Unidentified armed forces (``unknown gunmen'') \\ 
+	  REB & Rebels: armed opposition groups or individuals (see Note 1)\\
+	  PRM & Paramilitary organizations not in opposition to government\\
+	  SPY & State intelligence services \\
+	  UAF & Unidentified armed forces (``unknown gunmen'') \\
 	  UNK & Generic unidentified actors (e.g. actor for ``two civilians were killed by a bomb'') \\
   \hline
 ~   & \textbf{Less frequently used codes}\\
  \hline
 	  CVL & civilians: sometimes used as catch-all for individuals.  \\
-	  BUS & business: individuals companies, and enterprises, not including MNCs \\  
-	  EDU & educators, schools, students, or organizations dealing with education \\ 
+	  BUS & business: individuals companies, and enterprises, not including MNCs \\
+	  EDU & educators, schools, students, or organizations dealing with education \\
 	  MED & individuals and organizations dealing with health (see Note 3) \\
 	  LAB & formally or informally organized labor in services or manufacturing \\
 	  AGR & formally or informally organized agricultural labor; peasants \\
-	  JRN & journalists, newspapers, radio, television, web sites (see Note 3)  \\ 
+	  JRN & journalists, newspapers, radio, television, web sites (see Note 3)  \\
 	  REF & refugees and internally displaced persons \\
-	  REL & religious organizations and institutions \\ 
+	  REL & religious organizations and institutions \\
 	  SOC & any organization or movement that is considered part of ``civil society''  not otherwise covered here\\
 	  CRM & individual criminals and criminal gangs \\
   \hline
 \end{longtable}
 \noindent \raggedright{\textbf{Notes:}}
 \begin{enumerate}
-\item For militarized groups, we are dropping the INS (insurgent) and SEP (separatist) distinctions incorporated into CAMEO during the research phase of ICEWS: these can be resolved on the basis of the group identity and group objectives are frequently ambiguous in any case. 
+\item For militarized groups, we are dropping the INS (insurgent) and SEP (separatist) distinctions incorporated into CAMEO during the research phase of ICEWS: these can be resolved on the basis of the group identity and group objectives are frequently ambiguous in any case.
 \item The CAMEO ``ELI'' code for elites such as former government officials has been discontinued because it was ambiguous: these individuals are now CVL
 \item Two modifications of CAMEO sector codes: in CAMEO `MED' was ``media'' and `HLH' was ``medical'' but no one could remember those.
 \end{enumerate}
@@ -1031,7 +1143,7 @@ MNC            &   multi-national corporation\\
 \end{quote}
 \bigskip
 
-In addition to providing a coding ontology, PLOVER is also intended to provide a standardized data exchange format using \ti{named} data fields instead of the current system where the content of data fields is usually determined by \ti{location} in some delimited format such as \txt{.csv}. Standardizing these field names will simplify the merging and reuse of datasets, and such data are far easier for a human to read. 
+In addition to providing a coding ontology, PLOVER is also intended to provide a standardized data exchange format using \ti{named} data fields instead of the current system where the content of data fields is usually determined by \ti{location} in some delimited format such as \txt{.csv}. Standardizing these field names will simplify the merging and reuse of datasets, and such data are far easier for a human to read.
 
 Despite the apparent complexity of the formats discussed here, note that the only required field we have added to ``event data classic'' is the \texttt{id} identifier, so the simplest form of an event record would look like
 \begin{verbatim}
@@ -1052,7 +1164,7 @@ Except in the small number of cases where a standard format is specified, the co
 
 
 
-\newpage 
+\newpage
 
 \begin{table}[htp]
 \caption{PLOVER JSON }
@@ -1266,7 +1378,7 @@ Version 3.2: \url{https://www.strausscenter.org/images/codebooks/SCAD\_32\_Codeb
 
 \chapter{CAMEO vs. PLOVER}
 
-As noted in the introduction, CAMEO was originally developed for academic research under U.S. National Science Foundation funding in the early 2000s, and was based on the WEIS system. The canonical citation for CAMEO is \cite{SGY09}, and the detailed manual, ca. 2012, is found at \texttt{\footnotesize http://eventdata.parusanalytics.com/data.dir/cameo.html}.  The CAMEO event framework was very much the work of Deborah Gerner and \"Om\"ur Yilmaz, with contributions by various coders in the Kansas Event Data System project; the enitity framework was strongly influenced by the VRA ``IDEA'' coding system developed in the late 1990s \citep{BBOJT03}. The CAMEO manual contains an extended discussion of the issues considered in transitioning from WEIS to CAMEO. Additional details on the development of the automated coding underlying CAMEO can be found in \cite{Schrodt06TPM} or {\texttt{\footnotesize http://eventdata.parusanalytics.com/utilities.dir/KEDS.History.0611.pdf}.  
+As noted in the introduction, CAMEO was originally developed for academic research under U.S. National Science Foundation funding in the early 2000s, and was based on the WEIS system. The canonical citation for CAMEO is \cite{SGY09}, and the detailed manual, ca. 2012, is found at \texttt{\footnotesize http://eventdata.parusanalytics.com/data.dir/cameo.html}.  The CAMEO event framework was very much the work of Deborah Gerner and \"Om\"ur Yilmaz, with contributions by various coders in the Kansas Event Data System project; the enitity framework was strongly influenced by the VRA ``IDEA'' coding system developed in the late 1990s \citep{BBOJT03}. The CAMEO manual contains an extended discussion of the issues considered in transitioning from WEIS to CAMEO. Additional details on the development of the automated coding underlying CAMEO can be found in \cite{Schrodt06TPM} or {\texttt{\footnotesize http://eventdata.parusanalytics.com/utilities.dir/KEDS.History.0611.pdf}.
 
 Considerable additional work on CAMEO was done in the early 2010s first in the context of the DARPA ICEWS research program, then later in the operational deployment of ICEWS by teams at BBN and Lockheed which was eventually incorporated into the Dataverse public data: details of this work on found in the internal documentation of that data.
 
@@ -1278,17 +1390,17 @@ Considerable additional work on CAMEO was done in the early 2010s first in the c
 
 \item Only the 2-digit event ``cue categories'' have been retained from CAMEO.
 
-\item The details in the 3- and 4-digit categories are now delegated to the optional \texttt{mode} and \texttt{context} fields: see Section \ref{ssec:ecm} for further discussion of this.  
+\item The details in the 3- and 4-digit categories are now delegated to the optional \texttt{mode} and \texttt{context} fields: see Section \ref{ssec:ecm} for further discussion of this.
 
 \item A set of scaled ``PLOVER scores'' has been systematically derived from the ``Goldstein scores'' found in the ICEWS data set.
 
 \item The CAMEO 01 and 02 categories dealing with comments have been eliminated.\fn{Ironically, this reverses a decision McClelland belatedly made---and later regretted---in the WEIS specification in the 1960s.}
 
-\item The CAMEO 08 ``YIELD'' category has been split into verbal (\plcat{CONCEDE}) and material (\plcat{RETREAT}) components. 
+\item The CAMEO 08 ``YIELD'' category has been split into verbal (\plcat{CONCEDE}) and material (\plcat{RETREAT}) components.
 
-\item The ``target actor" event component was renamed \txt{recipient} for clarity and to better match the terminology used in the NLP literature on event extraction \citep{halterman2020extracting}. ``Source actor'' was renamed \txt{actor} to reduce confusion with the textual source of the event. 
+\item The ``target actor" event component was renamed \txt{recipient} for clarity and to better match the terminology used in the NLP literature on event extraction \citep{halterman2020extracting}. ``Source actor'' was renamed \txt{actor} to reduce confusion with the textual source of the event.
 
-\item Actor entries are now standardized using references to Wikipedia  
+\item Actor entries are now standardized using references to Wikipedia
 
 \item The complexity of substate codes has been limited, and the allowable substate modifiers have been substantially simplified.
 
@@ -1296,7 +1408,7 @@ Considerable additional work on CAMEO was done in the early 2010s first in the c
 
 \end{itemize}
 
-%\newpage 
+%\newpage
 
 \section{CAMEO to PLOVER translation}\label{ssec:ctp}
 
@@ -1342,14 +1454,14 @@ CAMEO code & CAMEO text & PLOVER category \\
 \end{enumerate}
 
 
-%\newpage 
+%\newpage
 
 \section{Summary of event categories }
 
 \begin{tabular}{lccp{1.5in}p{1.2in}}
 \toprule
 Event Type & Quad & Modes & Requires Recipient & Other Fields \\
-\midrule 
+\midrule
 AGREE & \multirow{4}{*}{V-Coop.} \\
 CONSULT &  & Yes \\
 SUPPORT & \\
@@ -1396,7 +1508,7 @@ A separate event category for crime has been added and removed several times as 
 
 \begin{enumerate}
 
-	\item Whether activity is criminal or not often depends on on the identity of the actor: actions undertaken by rebel groups may not fit within a definition of \plcat{CRIME}, while the same action taken by a drug cartel might. We have generally tried to avoid relying on the identities of actors in order to define events, due in part to the implementation of past coders, which did not use actor information to code event types. 
+	\item Whether activity is criminal or not often depends on on the identity of the actor: actions undertaken by rebel groups may not fit within a definition of \plcat{CRIME}, while the same action taken by a drug cartel might. We have generally tried to avoid relying on the identities of actors in order to define events, due in part to the implementation of past coders, which did not use actor information to code event types.
 
 	\item Crime overlaps with other event categories, especially \plcat{ASSAULT}, which would make it difficult to train a \plcat{CRIME} classifier that did not pick up events that better belong in other categories.
 \end{enumerate}
@@ -1407,7 +1519,7 @@ A separate event category for crime has been added and removed several times as 
 \begin{enumerate}
 	\item Identify events taken by criminal actors. As coders move away from hand-constructed dictionaries to resolve actors, many more groups will be coded. Researchers will be able to subset events to those undertaken by specific criminal groups (e.g. the Sinaloa Cartel) or by using the CRM actor code.
 	
-	\item Use the \plcon{crime} and \plcon{illegal\_drugs} contexts: see Table \ref{tab:context}. 
+	\item Use the \plcon{crime} and \plcon{illegal\_drugs} contexts: see Table \ref{tab:context}.
 \end{enumerate}
 
 
