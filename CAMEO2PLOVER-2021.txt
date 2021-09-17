@@ -1,3 +1,7 @@
+# CAMEO to PLOVER conversion table
+# PLOVER manual version Draft 0.8, 17-September-2021
+# Last update: 17-September-2021
+# Edited by: Philip Schrodt (schrodt735@gmail.com)
 
 03: AGREE
 030: AGREE,  , diplomatic # Express intent to cooperate
@@ -10,7 +14,7 @@
 033: AGREE,  , diplomatic # Express intent to provide material aid
 0331: AGREE,  ,   economic # Express intent to provide economic aid
 0332: AGREE,  ,   military # Express intent to provide military aid
-0333: AGREE,  , diplomatic # Express intent to provide humanitarian aid
+0333: AGREE,  , humanitarian # Express intent to provide humanitarian aid
 0334: AGREE,  ,   peacekeeping # Express intent to provide military protection or peacekeeping
 034: AGREE,  , political_institutions # Express intent to bring political reform
 0341: AGREE,  , political_institutions # Express intent to change leadership
@@ -33,7 +37,7 @@
 040: CONSULT, ,  # Consult
 041: CONSULT, phone,   # Discuss by telephone
 042: CONSULT, visit,   # Make a visit
-043: CONSULT, host,   # Host a visit
+043: CONSULT, visit,   # Host a visit
 044: CONSULT, third-party,   # Meet at a 'third' location
 045: CONSULT,   , diplomatic    # Engage in mediation
 046: CONSULT,   , diplomatic    # Engage in negotiation
@@ -89,8 +93,8 @@
 0872: RETREAT, withdraw,   military # Ease military blockade
 0873: RETREAT, disarm,   military # Demobilize armed forces
 0874: RETREAT, disarm,   military # Retreat or surrender militarily
-0813: RETREAT, ease,   legal # Ease curfew
-0814: RETREAT, ease,   legal # Ease state of emergency or martial law
+0813: RETREAT, ,   legal # Ease curfew  21.09.17: "ease" is no longer a mode
+0814: RETREAT, ,   legal # Ease state of emergency or martial law
 
 09: ACCUSE
 090: ACCUSE, investigate,  # Investigate
@@ -99,47 +103,47 @@
 093: ACCUSE, investigate, military # Investigate military action
 094: ACCUSE, investigate, military; legal # Investigate war crimes
 
-10: DEMAND
-100: DEMAND,  ,  # Demand
-101: DEMAND, assist,  # Demand material cooperation
-1011: DEMAND, assist, economic # Demand economic cooperation
-1012: DEMAND, assist, military # Demand military cooperation
-1013: DEMAND, assist, legal # Demand judicial cooperation
-1014: DEMAND, assist, intelligence # Demand intelligence cooperation
-102: DEMAND, assist, diplomatic # Demand diplomatic cooperation (such as policy support)
-103: DEMAND, assist,  # Demand aid
-1031: DEMAND, assist, economic # Demand economic aid
-1032: DEMAND, assist, military # Demand military aid
-1033: DEMAND, assist, humanitarian # Demand humanitarian aid
-1034: DEMAND, assist, peacekeeping # Demand military protection or peacekeeping
-104: DEMAND, change, political_institutions # Demand political reform
-1041: DEMAND, change, executive # Demand change in leadership
-1042: DEMAND, change, executive # Demand policy change
-1043: DEMAND, change, rights_freedoms # Demand rights
-1044: DEMAND, change, political_institutions # Demand change in institutions, regime
-105: DEMAND, change, legal # Demand that target yields
-1051: DEMAND, yield, legal # Demand easing of adminstrative sanctions
-1052: DEMAND, yield, legal # Demand easing of popular dissent
-1053: DEMAND, yield, legal # Demand release of persons or property
-1054: DEMAND, yield, economic # Demand easing of economic sanctions, boycott, or embargo
-1055: DEMAND, yield, diplomatic # Demand that target allows international involvement (non-mediation)
-1056: DEMAND, yield, military # Demand de-escalation of military engagement
-106: DEMAND, meet, diplomatic # Demand meeting, negotiation
-107: DEMAND, meet, diplomatic # Demand settling of dispute
-108: DEMAND, meet, diplomatic # Demand mediation
+10: REQUEST
+100: REQUEST,  ,  # REQUEST
+101: REQUEST, assist,  # Demand material cooperation
+1011: REQUEST, assist, economic # Demand economic cooperation
+1012: REQUEST, assist, military # Demand military cooperation
+1013: REQUEST, assist, legal # Demand judicial cooperation
+1014: REQUEST, assist, intelligence # Demand intelligence cooperation
+102: REQUEST, assist, diplomatic # Demand diplomatic cooperation (such as policy support)
+103: REQUEST, assist,  # Demand aid
+1031: REQUEST, assist, economic # Demand economic aid
+1032: REQUEST, assist, military # Demand military aid
+1033: REQUEST, assist, humanitarian # Demand humanitarian aid
+1034: REQUEST, assist, peacekeeping # Demand military protection or peacekeeping
+104: REQUEST, change, political_institutions # Demand political reform
+1041: REQUEST, change, executive # Demand change in leadership
+1042: REQUEST, change, executive # Demand policy change
+1043: REQUEST, change, rights_freedoms # Demand rights
+1044: REQUEST, change, political_institutions # Demand change in institutions, regime
+105: REQUEST, change, legal # Demand that target yields
+1051: REQUEST, yield, legal # Demand easing of adminstrative sanctions
+1052: REQUEST, yield, legal # Demand easing of popular dissent
+1053: REQUEST, yield, legal # Demand release of persons or property
+1054: REQUEST, yield, economic # Demand easing of economic sanctions, boycott, or embargo
+1055: REQUEST, yield, diplomatic # Demand that target allows international involvement (non-mediation)
+1056: REQUEST, yield, military # Demand de-escalation of military engagement
+106: REQUEST, meet, diplomatic # Demand meeting, negotiation
+107: REQUEST, meet, diplomatic # Demand settling of dispute
+108: REQUEST, meet, diplomatic # Demand mediation
 
 11: ACCUSE
 110: ACCUSE, disapprove,    # Disapprove
 111: ACCUSE, disapprove,    # Criticize or denounce
 112: ACCUSE, disapprove,    # Accuse
-1121: ACCUSE, disapprove, crime; corruption # Accuse of crime, corruption
-1122: ACCUSE, disapprove, human_rights # Accuse of human rights abuses
-1123: ACCUSE, disapprove, military # Accuse of aggression
-1124: ACCUSE, disapprove, military; legal # Accuse of war crimes
-1125: ACCUSE, disapprove, legal # Accuse of espionage, treason
+1121: ACCUSE, allege, crime; corruption # Accuse of crime, corruption
+1122: ACCUSE, allege, human_rights # Accuse of human rights abuses
+1123: ACCUSE, allege, military # Accuse of aggression
+1124: ACCUSE, allege, military; legal # Accuse of war crimes
+1125: ACCUSE, allege, legal # Accuse of espionage, treason
 113: ACCUSE, disapprove,  # Rally opposition against
-114: ACCUSE, disapprove,  # Complain officially
-115: ACCUSE, disapprove, legal # Bring lawsuit against
+114: ACCUSE, allege, diplomatic # Complain officially
+115: ACCUSE, allege, legal # Bring lawsuit against
 116: ACCUSE, disapprove, legal # Find guilty or liable (legally)
 
 
@@ -161,7 +165,7 @@
 1233: REJECT, change, rights_freedoms # Reject demand for rights
 1234: REJECT, change, political_institutions # Reject demand for change in institutions, regime
 124: REJECT, change,    # Decline to yield
-1241: REJECT, change, legal # Decline to ease administrative sanctions
+1241: REJECT, change, executive # Decline to ease administrative sanctions
 1242: REJECT, change,  # Decline to ease popular dissent
 1243: REJECT, yield, legal # Decline to release persons or property
 1244: REJECT, yield, economic # Decline to ease economic sanctions, boycott, or embargo
@@ -177,18 +181,18 @@
 130: THREATEN,   ,  # Threaten
 131: THREATEN,   ,  # Threaten non-force
 1311: THREATEN, relations,    # Threaten to reduce or stop aid
-1312: THREATEN, restrict, diplomatic # Threaten to boycott, embargo, or sanction
+1312: THREATEN, restrict, economic # Threaten to boycott, embargo, or sanction
 1313: THREATEN, relations, diplomatic # Threaten to reduce or break relations
-132: THREATEN, ban, legal # Threaten with administrative sanctions
-1321: THREATEN, political, legal # Threaten to impose restrictions on freedoms of speech and expression
-1322: THREATEN, ban ,   legal # Threaten to ban political parties or politicians
-1323: THREATEN, restrict ,   legal # Threaten to impose curfew
-1324: THREATEN, restrict, legal # Threaten to impose state of emergency or martial law
+132: THREATEN, ban, executive # Threaten with administrative sanctions
+1321: THREATEN, political, human_rights # Threaten to impose restrictions on freedoms of speech and expression
+1322: THREATEN, ban ,   pro_autocracy # Threaten to ban political parties or politicians
+1323: THREATEN, restrict ,   pro_autocracy  # Threaten to impose curfew
+1324: THREATEN, restrict, pro_autocracy  # Threaten to impose state of emergency or martial law
 133: THREATEN, relations,  # Threaten with political dissent, protest
 134: THREATEN, relations ,   diplomatic # Threaten to halt negotiations
 135: THREATEN, relations ,   diplomatic # Threaten to halt mediation
 136: THREATEN, expel, diplomatic # Threaten to halt (expel or withdraw) international involvement (non-mediation)
-137: THREATEN, violence, legal # Threaten with violent repression
+137: THREATEN, violence, pro_autocracy  # Threaten with violent repression
 138: THREATEN, violence, military # Threaten with military force
 1381: THREATEN, restrict ,   military # Threaten blockade
 1382: THREATEN, territory, military # Threaten occupation
@@ -199,31 +203,31 @@
 
 14: PROTEST
 140: PROTEST,   ,  # Engage in political dissent
-141: PROTEST, demo,      # Demonstrate or rally
-1411: PROTEST, demo,   executive # Demonstrate for leadership change
-1412: PROTEST, demo,   executive # Demonstrate for policy change
-1413: PROTEST, demo,   rights_freedoms # Demonstrate for rights
-1414: PROTEST, demo,   political_institutions # Demonstrate for change in institutions, regime
-142: PROTEST, hunger,      # Conduct hunger strike
+141: PROTEST, demo,               # Demonstrate or rally
+1411: PROTEST, demo, executive    # Demonstrate for leadership change
+1412: PROTEST, demo, executive    # Demonstrate for policy change
+1413: PROTEST, demo, rights_freedoms # Demonstrate for rights
+1414: PROTEST, demo, political_institutions # Demonstrate for change in institutions, regime
+142: PROTEST, hunger,            # Conduct hunger strike
 1421: PROTEST, hunger, executive # Conduct hunger strike for leadership change
 1422: PROTEST, hunger, executive # Conduct hunger strike for policy change
-1423: PROTEST, hunger,   rights_freedoms # Conduct hunger strike for rights
-1424: PROTEST, hunger,   political_institutions # Conduct hunger strike for change in institutions, regime
+1423: PROTEST, hunger, rights_freedoms # Conduct hunger strike for rights
+1424: PROTEST, hunger, political_institutions # Conduct hunger strike for change in institutions, regime
 143: PROTEST, boycott ,      # Conduct strike or boycott
-1431: PROTEST, boycott , executive # Conduct strike or boycott for change in leadership
-1432: PROTEST, boycott , executive # Conduct strike or boycott for policy change
-1433: PROTEST, boycott ,   rights # Conduct strike or boycott for rights
-1434: PROTEST, boycott ,   political_institutions # Conduct strike or boycott for change in institutions, regime
+1431: PROTEST, boycott, executive # Conduct strike or boycott for change in leadership
+1432: PROTEST, boycott, executive # Conduct strike or boycott for policy change
+1433: PROTEST, boycott, rights_freedoms # Conduct strike or boycott for rights
+1434: PROTEST, boycott, political_institutions # Conduct strike or boycott for change in institutions, regime
 144: PROTEST, obstruct,    # Obstruct passage, block
 1441: PROTEST, obstruct, executive # Obstruct passage to demand change in leadership
 1442: PROTEST, obstruct, executive # Obstruct passage to demand policy change
 1443: PROTEST, obstruct, rights_freedoms # Obstruct passage to demand rights
 1444: PROTEST, obstruct, political_institutions # Ostruct passage to demand change in institutions, regime
 145: PROTEST, riot ,      # Protest violently, riot
-1451: PROTEST, riot , executive # Engage in violent protest for change in leadership
-1452: PROTEST, riot , executive # Engage in violent protest for policy change
-1453: PROTEST, riot , rights_freedoms # Engage in violent protest for rights
-1454: PROTEST, riot , political_institutions # Engage in violent protest for change in institutions, regime
+1451: PROTEST, riot, executive # Engage in violent protest for change in leadership
+1452: PROTEST, riot, executive # Engage in violent protest for policy change
+1453: PROTEST, riot, rights_freedoms # Engage in violent protest for rights
+1454: PROTEST, riot, political_institutions # Engage in violent protest for change in institutions, regime
 
 15: MOBILIZE
 150: MOBILIZE, ,  # Demonstrate military or police power
@@ -234,51 +238,51 @@
 
 16: SANCTION
 160: SANCTION,   ,  # Reduce relations
-161: SANCTION, withdraw,   diplomatic # Reduce or break diplomatic relations
-162: SANCTION, discontinue,   diplomatic # Reduce or stop aid
-1621: SANCTION, discontinue,   economic # Reduce or stop economic assistance
-1622: SANCTION, discontinue,   military # Reduce or stop military assistance
-1623: SANCTION, discontinue,   humanitarian # Reduce or stop humanitarian assistance
+161: SANCTION, withdraw,   diplomatic      # Reduce or break diplomatic relations
+162: SANCTION, discontinue,    human_security   # Reduce or stop aid
+1621: SANCTION, discontinue,   economic    # Reduce or stop economic assistance
+1622: SANCTION, discontinue,   military    # Reduce or stop military assistance
+1623: SANCTION, discontinue,  humanitarian # Reduce or stop humanitarian assistance
 163: COERCE, restrict,   diplomatic # Impose embargo, boycott, or sanctions
 164: SANCTION, withdraw,   diplomatic # Halt negotiations
 165: SANCTION, withdraw,   diplomatic # Halt mediation
-166: SANCTION, expel ,   diplomatic # Expel or withdraw
-1661: SANCTION, expel ,   military # Expel or withdraw peacekeepers
-1662: SANCTION, expel ,   diplomatic # Expel or withdraw inspectors, observers
-1663: SANCTION, expel ,   diplomatic # Expel or withdraw aid agencies
+166: SANCTION, expel ,   diplomatic   # Expel or withdraw
+1661: SANCTION, expel ,   military    # Expel or withdraw peacekeepers
+1662: SANCTION, expel ,   diplomatic  # Expel or withdraw inspectors, observers
+1663: SANCTION, expel ,   human_security  # Expel or withdraw aid agencies
 
 17: COERCE
 170: COERCE, ,    # Coerce
-171: COERCE, confiscate, legal # Seize or damage property
-1711: COERCE, confiscate, legal # Confiscate property
-1712: ASSAULT, destroy, legal # Destroy property
-172: COERCE, restrict, legal # Impose administrative sanctions
-1721: COERCE, restrict, legal # Impose restrictions on freedoms of speech and expression
-1722: COERCE, ban, legal # Ban political parties or politicians
-1723: COERCE, curfew, legal # Impose curfew
-1724: COERCE, martial-law, legal # Impose state of emergency or martial law
-173: COERCE, arrest, legal # Arrest, detain, or charge with legal action
-174: COERCE, deport, legal # Expel or deport individuals
-191: COERCE, restrict, military # Impose blockade, restrict movement
-192: COERCE, confiscate, military # Occupy territory
+171: COERCE, seize, human_security    # Seize or damage property
+1711: COERCE, seize, human_security   # Confiscate property
+1712: ASSAULT, seize, human_security  # Destroy property
+172: COERCE, restrict, executive      # Impose administrative sanctions
+1721: COERCE, restrict, rights_freedoms         # Impose restrictions on freedoms of speech and expression
+1722: COERCE, ban, pro_autocracy      # Ban political parties or politicians
+1723: COERCE, curfew, pro_autocracy   # Impose curfew
+1724: COERCE, martial-law, pro_autocracy  # Impose state of emergency or martial law
+173: COERCE, arrest, legal            # Arrest, detain, or charge with legal action
+174: COERCE, deport, legal            # Expel or deport individuals
+191: COERCE, restrict, military       # Impose blockade, restrict movement
+192: COERCE, seize, military          # Occupy territory
 
 18: ASSAULT
 180: ASSAULT, ,    # Use unconventional violence
-181: ASSAULT, abduct,    # Abduct, hijack
-182: ASSAULT, beat,    # Physically assault
-1821: ASSAULT, sexual,    # Sexually assault
+181: ASSAULT, abduct,      # Abduct, hijack
+182: ASSAULT, beat,        # Physically assault
+1821: ASSAULT, sexual,     # Sexually assault
 1822: ASSAULT, torture,    # Torture
 1823: ASSAULT, ,    # Kill by physical assault
-183: ASSAULT, suicide-attack,  # Conduct suicide, car, or other non-military bombing
+183: ASSAULT,  suicide-attack,  # Conduct suicide, car, or other non-military bombing
 1831: ASSAULT, suicide-attack,    # Carry out suicide bombing
 1832: ASSAULT, explosives,    # Carry out car bombing
 1833: ASSAULT, explosives,    # Carry out roadside bombing
-184: ASSAULT, abduct,    # Use as human shield
+184: ASSAULT, abduct,         # Use as human shield
 185: ASSAULT, assassinate,    # Attempt to assassinate
 186: ASSAULT, assassinate,    # Assassinate
-175: ASSAULT,  ,   military # Use violent repression
-175: ASSAULT,  ,   military # Use tactics of violent repression
-201: ASSAULT, cleansing, legal # Engage in mass expulsion
+175: ASSAULT, pro_autocracy , military # Use violent repression
+175: ASSAULT, pro_autocracy , military # Use tactics of violent repression
+201: ASSAULT, cleansing, religion_ethnicity # Engage in mass expulsion
 
 19: ASSAULT
 190: ASSAULT, , military # Use conventional military force
@@ -288,9 +292,9 @@
 196: ASSAULT, , legal; military # Violate ceasefire
 
 20: ASSAULT
-200: ASSAULT, unconventional, military # Use unconventional mass violence
-202: ASSAULT, cleansing, military # Engage in mass killings
-203: ASSAULT, cleansing, military # Engage in ethnic cleansing
+200: ASSAULT, massacre, military # Use unconventional mass violence
+202: ASSAULT, massacre, religion_ethnicity # Engage in mass killings
+203: ASSAULT, cleansing, religion_ethnicity # Engage in ethnic cleansing
 204: ASSAULT, unconventional, cbrn # Use weapons of mass destruction
 2041: ASSAULT, unconventional, cbrn # Use chemical, biological, or radiological weapons
 2042: ASSAULT, unconventional, cbrn # Detonate nuclear weapons
