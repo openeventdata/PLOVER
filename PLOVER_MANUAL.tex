@@ -291,12 +291,17 @@ RETREAT & +7.6 \\
 \section{AGREE}
 
 
-Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  All cooperative actions reported in future tense are also taken to imply intentions.
+Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  Ccoperative actions of types \plcat{CONSULT}, \plcat{SUPPORT}, \plcat{COOPERATE}, and \plcat{AID} reported in future tense are also taken to imply intentions and should be coded as \plcat{AGREE}. 
 
 
 \subsection{Potential ambiguities}
 
-As noted in Section \ref{ssec:special}, there's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + \plcon{future}. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+auxiliary mode.
+\begin{itemize}
+\item As noted in Section \ref{ssec:special}, there's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + \plcon{future}. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+auxiliary mode.
+\item Future cooperative actions of type \plcat{RETREAT} + \plcon{future} and \plcat{CONCEDE} + \plcon{future} should be left as they are, i.e. they do not reduce to \plcat{AGREE}.
+% AB 2021-09-22: not sure whether to include this
+%\item There is some ambiguity in what should be coded as \plcon{future} versus realized or imminently realized cooperation. If the event concerns a specific action and it is clear that it will be realized, retain the original event category; otherwise code as \plcat{AGREE}. For example, ``France has said that it will provide \$ 5 million in military equipment to Ukraine'' should be coded as \plcat{AGREE}, while the more generic ``France has said that it will provide military aid to Ukraine'' should be coded as \plcat{AGREE}. 
+\end{itemize}
 
 \subsection{Requires recipient: No}
 
@@ -309,6 +314,10 @@ As noted in Section \ref{ssec:special}, there's the potential for some events to
 \section{CONSULT}
 
 All consultations and meetings: this includes visiting and hosting visits, as well as meeting at a neutral location, and consultation by phone or other media. Because this type of political event is both frequent and easily (and safely\ldots) covered in the international press, it is the largest category in most event data sets.  Additional useful keywords for identifying \plcat{CONSULT}: ``Holding talks'' and ``discussions'', ``negotiations, bargaining, or discussions''. See the discussion in Section \ref{sec:recip} on the treatment of actors in \plcat{CONSULT} events.
+
+\subsection{Potential ambiguities}
+
+References to future meetings, summits, state visits, etc. and invitations for state visits should be coded as \plcat{AGREE}. 
 
 \subsection{Requires recipient: No}
 
@@ -399,7 +408,12 @@ Initiate, resume, improve, or expand \ti{mutual} material cooperation or exchang
 
 \end{itemize}
 
-\noindent \plcat{COOPERATE} is distinguished from \plcat{AID} because the activity is generally understood to directly benefit both parties, whereas  \plcat{AID} is understood to primarily benefit only the recipient.
+\subsection{Potential ambiguities}
+
+\begin{itemize}
+\item \plcat{COOPERATE} is distinguished from \plcat{AID} because the activity is generally understood to directly benefit both parties, whereas  \plcat{AID} is understood to primarily benefit only the recipient.
+\item Promises, offers, or agreement for future cooperation should be coded as \plcat{AGREE}. 
+\end{itemize}
 
 \subsection{Requires recipient: Yes}
 
@@ -432,6 +446,7 @@ All provisions of providing material aid whose material benefits primarily accru
 
 \begin{itemize}
 \item While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient.
+\item Broad promises of future \plcat{AID} should be coded as \plcat{AGREE}. 
 \item Debt forgiveness and loan cancellations, e.g. ``The Paris Club has agreed to forgive \$200 of Nigeria’s \$350 million in loan obligations, \dots'' should be coded as \plcat{AID}. 
 \item Hostage rescues, e.g. ``Pakistan’s military rescued 10 hostages from the border region with Afghanistan yesterday'' or ``Police in Barcelona freed 10 human trafficking victims during an operation yesterday'' should be coded as \plcat{AID}. 
 \end{itemize}
