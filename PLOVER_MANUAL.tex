@@ -174,14 +174,15 @@ Name & Content \\
 reparations & reparations, i.e., monetary or non-monetary compensation for past harm inflicted \\
 \hyperref[context:hr]{human\_rights} & unspecified human rights in a general sense, often but not always literally including the term ``human rights'' \\
 \hyperref[context:rightsfree]{rights\_freedoms} & political rights and freedoms, civil liberties, press/media freedom, restrictions on civil rights, gatherings, etc.\\
+\hyperref[context:repression]{repression} & forceful repression of groups, individuals, or societies by security forces \\
 \hyperref[context:human-sec]{human\_security} & access to water, food, housing, energy, land/property tenure (e.g. seizure of crops), etc. \\
 gender & mentions of gender, women's issues, gender equality, etc., including abortion and issues of reproductive rights\\
 \hyperref[context:lgbt]{lgbt} & LGBTQ issues such as related laws, discrimination, and protests\\
-\hyperref[context:religethno]{religion\_ethnicity} & religious, ethnic, or linguistic issues, including discrimination, violence, but also cooperation, or more broadly important mentions \\
+\hyperref[context:religethno]{religion\_ethnicity} & religious, ethnic, caste, or linguistic issues, including discrimination, violence, cooperation, or more broadly important mentions \\
+\hyperref[context:inequality]{inequality} & the unequal distribution of resources and opportunities  \\
 \hyperref[context:diplomatic]{diplomatic} & diplomacy, which can be both international and domestic \\
 \hyperref[context:territory]{territory} & international and domestic territorial disputes, protests and rebellions over territory, and forced displacements\\
 peacekeeping & peacekeeping, typically multilateral operations \\
-\hyperref[context:humanitarian]{humanitarian} & humanitarian assistance generally \\
 \hyperref[context:health]{health} & public health, disease outbreaks and epidemics, disease in general \\
 \hyperref[context:asylum]{asylum} & discussions of seeking or granting asylum \\
 \hyperref[context:migration]{migration}  & migration, refugees, and displaced people \\
@@ -240,12 +241,12 @@ This approach, however, gets very problematic in the not-uncommon situation wher
 
 In PLOVER, compound entities generate a single actor or recipient, but with multiple members: the actor and recipient are a list of entities rather than a single entities. Depending on the application, a user might expand this in a post-processing phase to multiple events with single entity codes following the earlier conventions, but the initial coding of the event uses the list.
 
-PLOVER also uses actor lists to deal with reciprocal events. In CAMEO, a meeting ``President Obama met with Japanese Prime Minister Abe at the White House"" generated two events
+PLOVER also uses actor lists to deal with reciprocal events. In CAMEO, a meeting ``President Obama met with Japanese Prime Minister Abe at the White House'' generated two events
 \begin{verbatim}
 	JAP  USA  042
 	USA  JAP  043
 \end{verbatim}
-where 042 and 043 are the CAMEO codes for "visit" and "host" respectively.\footnote{This example optimistically assumes the coding system was clever enough to recognize the significance of the phrase ``at the White House.''} While the PLOVER \plcat{CONSULT} mode provides for a host/visit distinction, this is not required. In such instances, all of the entities are considered as the actor and no recipient is included.
+where 042 and 043 are the CAMEO codes for ``visit'' and ``host'' respectively.\footnote{This example optimistically assumes the coding system was clever enough to recognize the significance of the phrase ``at the White House.''} While the PLOVER \plcat{CONSULT} mode provides for a host/visit distinction, this is not required. In such instances, all of the entities are considered as the actor and no recipient is included.
 
 In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided violence---is handled in a similar fashion, with both entities as \texttt{actor}: this applies in any event where both sides are using force, even if one side ``started it'', an assessment often as not contested anyway. One-sided violence, such as assassinations or police firing on demonstrators, will have the perpetrator as the \texttt{actor} and the victims as \texttt{recipient}. The \plmod{sideAB} mode in  \plcat{ASSAULT} is used in conjunction with the \texttt{recipient} field when there are two clear ``sides'' in the conflict.
 
@@ -291,7 +292,7 @@ RETREAT & +7.6 \\
 \section{AGREE}
 
 
-Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  Ccoperative actions of types \plcat{CONSULT}, \plcat{SUPPORT}, \plcat{COOPERATE}, and \plcat{AID} reported in future tense are also taken to imply intentions and should be coded as \plcat{AGREE}. 
+Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  Ccoperative actions of types \plcat{CONSULT}, \plcat{SUPPORT}, \plcat{COOPERATE}, and \plcat{AID} reported in future tense are also taken to imply intentions and should be coded as \plcat{AGREE}.
 
 
 \subsection{Potential ambiguities}
@@ -300,7 +301,7 @@ Agree to, offer, promise, or otherwise indicate willingness or commitment to coo
 \item As noted in Section \ref{ssec:special}, there's the potential for some events to fit both the definition of \plcat{AGREE} and \plcat{SUPPORT} + \plcon{future}. For example, ``Russia and the United States \emph{will sign an agreement} limiting certain kinds of weapons...". When situations like this occur, the coder should always return the single event category that fits, rather than a category+auxiliary mode.
 \item Future cooperative actions of type \plcat{RETREAT} + \plcon{future} and \plcat{CONCEDE} + \plcon{future} should be left as they are, i.e. they do not reduce to \plcat{AGREE}.
 % AB 2021-09-22: not sure whether to include this
-%\item There is some ambiguity in what should be coded as \plcon{future} versus realized or imminently realized cooperation. If the event concerns a specific action and it is clear that it will be realized, retain the original event category; otherwise code as \plcat{AGREE}. For example, ``France has said that it will provide \$ 5 million in military equipment to Ukraine'' should be coded as \plcat{AGREE}, while the more generic ``France has said that it will provide military aid to Ukraine'' should be coded as \plcat{AGREE}. 
+%\item There is some ambiguity in what should be coded as \plcon{future} versus realized or imminently realized cooperation. If the event concerns a specific action and it is clear that it will be realized, retain the original event category; otherwise code as \plcat{AGREE}. For example, ``France has said that it will provide \$ 5 million in military equipment to Ukraine'' should be coded as \plcat{AGREE}, while the more generic ``France has said that it will provide military aid to Ukraine'' should be coded as \plcat{AGREE}.
 \end{itemize}
 
 \subsection{Requires recipient: No}
@@ -317,7 +318,7 @@ All consultations and meetings: this includes visiting and hosting visits, as we
 
 \subsection{Potential ambiguities}
 
-References to future meetings, summits, state visits, etc. and invitations for state visits should be coded as \plcat{AGREE}. 
+References to future meetings, summits, state visits, etc. and invitations for state visits should be coded as \plcat{AGREE}.
 
 \subsection{Requires recipient: No}
 
@@ -412,7 +413,7 @@ Initiate, resume, improve, or expand \ti{mutual} material cooperation or exchang
 
 \begin{itemize}
 \item \plcat{COOPERATE} is distinguished from \plcat{AID} because the activity is generally understood to directly benefit both parties, whereas  \plcat{AID} is understood to primarily benefit only the recipient.
-\item Promises, offers, or agreement for future cooperation should be coded as \plcat{AGREE}. 
+\item Promises, offers, or agreement for future cooperation should be coded as \plcat{AGREE}.
 \end{itemize}
 
 \subsection{Requires recipient: Yes}
@@ -446,9 +447,9 @@ All provisions of providing material aid whose material benefits primarily accru
 
 \begin{itemize}
 \item While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient.
-\item Broad promises of future \plcat{AID} should be coded as \plcat{AGREE}. 
-\item Debt forgiveness and loan cancellations, e.g. ``The Paris Club has agreed to forgive \$200 of Nigeria’s \$350 million in loan obligations, \dots'' should be coded as \plcat{AID}. 
-\item Hostage rescues, e.g. ``Pakistan’s military rescued 10 hostages from the border region with Afghanistan yesterday'' or ``Police in Barcelona freed 10 human trafficking victims during an operation yesterday'' should be coded as \plcat{AID}. 
+\item Broad promises of future \plcat{AID} should be coded as \plcat{AGREE}.
+\item Debt forgiveness and loan cancellations, e.g. ``The Paris Club has agreed to forgive \$200 of Nigeria’s \$350 million in loan obligations, \dots'' should be coded as \plcat{AID}.
+\item Hostage rescues, e.g. ``Pakistan’s military rescued 10 hostages from the border region with Afghanistan yesterday'' or ``Police in Barcelona freed 10 human trafficking victims during an operation yesterday'' should be coded as \plcat{AID}.
 \end{itemize}
 
 \subsection{Supplementary fields: None}
@@ -467,8 +468,8 @@ All provisions of providing material aid whose material benefits primarily accru
 
 \begin{itemize}
 \item Announcements of future retreats should be coded as \plcat{CONCEDE}. E.g., ``announced...would withdraw troops" is \plcat{RETREAT} + \plcat{FUTURE} and should be coded as \plcat{CONCEDE}.
-\item Debt forgiveness and loan cancellations, e.g. ``The Paris Club has agreed to forgive \$200 of Nigeria’s \$350 million in loan obligations, \dots'' should be coded as \plcat{AID}. 
-\item Hostage rescues, e.g. ``Pakistan’s military rescued 10 hostages from the border region with Afghanistan yesterday'' or ``Police in Barcelona freed 10 human trafficking victims during an operation yesterday'' should be coded as \plcat{AID}. 
+\item Debt forgiveness and loan cancellations, e.g. ``The Paris Club has agreed to forgive \$200 of Nigeria’s \$350 million in loan obligations, \dots'' should be coded as \plcat{AID}.
+\item Hostage rescues, e.g. ``Pakistan’s military rescued 10 hostages from the border region with Afghanistan yesterday'' or ``Police in Barcelona freed 10 human trafficking victims during an operation yesterday'' should be coded as \plcat{AID}.
 \end{itemize}
 
 \subsection{Supplementary fields: modes}
@@ -955,6 +956,10 @@ General discussions of human rights and human rights violations. This context fi
 
 Discussions of specific political rights and freedoms or their violation. This can include actual discussions of such freedoms or violations, as well as discussions of specific laws, monitoring organizations, or protests associated with these freedoms/violations. Included here should be freedom of (foreign and domestic) movement, freedom of speech, freedom of assembly, civil liberties, electoral self-determination, freedom of the press, freedom of religion, worker's rights, and women's rights. Note that this field will often receive joint codings with `human\_rights', `gender', `lbgt', `asylum', `migration', `pro\_democracy' and/or `pro\_autocracy' depending on the specific `rights\_freedoms' context.
 
+\section{Repression}\label{context:repression}
+
+The use of force by security forces to control individuals or groups. The latter individuals or groups will typically be unarmed and include (e.g.) individual citizens, social or ethnic groups, societies on the whole, businesses, journalists, or NGOs. The use of force against rebels should be excluded from `repression' as it denotes civil war or civil conflict rather than repression. The use of force against alleged criminals, terrorists, gangs, or associated groups should only be coded as `repression' when (i) the use of force is characterized as excessive or illegal and/or (ii) the criminal- or terrorist-identity of the recipient is disputed. Security forces (i.e., the actors initiating repression) are usually state-based (e.g., the army, police, or secret police) or state-affiliated (e.g., pro-government militias, paramilitaries, or death squads), but can occasional be comprised of non-state armed forces (if the latter forces control a particular territory or region). Specific examples of repression include disappearances, extrajudicial killings \& punishment, political imprisonments, the use of excessive force, forced displacements, and torture. As such, stories receiving a `repression' context coding will often also have a `human\_rights' and/or `rights\_freedoms' context coding.
+
 \section{Human Security}\label{context:human-sec}
 
 The protection of individual, group, and societal access to water, food, housing, energy, and land/property tenure. Discussions of `human\_security' along each of these dimensions should generally make a linkage to access; whereas (e.g.,) discussions of a drought without any mention of its human/social implications should generally only be coded as `disaster'. Mentions of ``food (in)security'' or ``water (in)security'' should generally be coded as `human\_security'. Likewise, the `human\_security' context field should include not only instances where a direct threat to human security arises, but also discussions of (potential) vulnerabilities to such insecurities, and domestic or international efforts to address such vulnerabilities (e.g., the United Nations Development Programme).
@@ -968,8 +973,10 @@ Discussions of gender, women's issues, gender equality, women's rights, reproduc
 Discussions of lesbian, gay, bisexual, transgender, queer, intersex or asexual groups, movements, or individuals. LGBTQIA discrimination and associated laws should be coded under `lgbt'. Discussions of LGBTQIA-oriented organizations, advocacy, or protests should also be coded as `lgbt.'
 
 \section{Religion Ethnicity}\label{context:religethno}
-General or specific discussions of religions, ethnicities, or linguistic groups. In addition to general discussions of religion, ethnicity, or language, this can include discussions of discrimination (or violence) against particular ethnic, religious, or linguistic groups; or instances of discrimination (or violence) perpetrated by particular ethnic, religious, or linguistic groups. In addition, this context fields should also code more cooperative interactions among ethnic, religious, or linguistic groups, as well as instances where such groups play a major role in politics, advocacy, reparations, or protest.
+General or specific discussions of religions, ethnicities, castes, or linguistic groups. In addition to general discussions of religion, ethnicity, caste, or language, this can include discussions of discrimination (or violence) against particular ethnic, religious, caste, or linguistic groups; or instances of discrimination (or violence) perpetrated by particular ethnic, religious, caste, or linguistic groups. In addition, this context fields should also code more cooperative interactions among ethnic, religious, caste, or linguistic groups, as well as instances where such groups play a major role in politics, advocacy, reparations, or protest.
 
+\section{Inequality}\label{context:inequality}
+Discussions of inequality in a general sense, as well as discussions of more specific forms of inequality such as economic inequality, gender inequality, racial inequality, and social inequality. The latter forms of inequality can encompass (e.g.) the uneven distribution of income or wealth in a society, policies that exclude certain groups from political participation, as well as unequal access to education, healthcare, or government services. Discussions of societal discrimination---such as gender-based, ethnic-based, religion-based, race-based, or age-based discrimination---should also be coded as `inequality.' Accordingly, many `inequality' stories will often also receive context codings for `lgbt', `gender', or `religion\_ethnicity.' Lastly, note that `inequality' can include discussions of not only (within-country) societal inequality, but also global or cross-country inequality.
 
 \section{Diplomatic}\label{context:diplomatic}
 
@@ -985,9 +992,7 @@ Discussions of territory in a political context. This can pertain to protests or
 Activities involving the monitoring or maintaining of ongoing peace-processes, typically in the aftermath of an international or domestic armed conflict. Such activities most commonly involve international observers drawn from multilateral operations directed by (e.g.,) the United Nations, NATO, or European Union; but may at times also be drawn from individual nation-states. Peacekeeping can include the active stationing of international forces in a post-conflict area, such as is commonly the case with UN Peacekeepers (i.e., Blue Helmets), as well as multilateral non-military assistance for activities such as peace agreement implementation, post-conflict power-sharing, and confidence building measures.
 
 
-\section{Humanitarian}\label{context:humanitarian}
 
-Includes discussions related to the provision of aid or assistance for humanitarian crises by domestic or international governments, international organizations, corporations, or NGOs. It also includes discussions of cooperation among humanitarian agencies or discussions of humanitarian organizations themselves when references are made to these organizations' humanitarian activities. Examples of humanitarian assistance include 1) provision of aid, support, or assistance for disaster mitigation, prevention, preparedness, or response, 2) aid or assistance for refugees or children, 3) food aid or agricultural support, or 4) support or assistance for health emergencies and disease outbreaks.
 
 \section{Health}\label{context:health}
 
@@ -1042,7 +1047,7 @@ Discussions of misinformation, disinformation influence operations, or fake news
 
 
 
-\section{Crime}\label{context:crime} 
+\section{Crime}\label{context:crime}
 
 Discussions of (international or domestic) criminal activities, as well as discussions of the perpetration of specific crimes, criminal convictions, or criminals themselves. General discussions of transnational or domestic criminal organizations (e.g., the mafia) or high profile criminal fugitives should also be coded under    `crime.' International coordination and cooperation to craft, enact, or enforce laws against criminal actions should also be coded under this context field. Note that several additional context fields---such as  `trafficking,'  `corruption,' and `illegal\_drugs'---code more specific criminal actions. War crimes should generally be excluded from this context field, and coded instead under `human\_rights' or `rights\_freedoms' depending on the specific context.
 
