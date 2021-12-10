@@ -42,7 +42,7 @@
             {\LARGE Political Language Ontology for Verifiable Event Records\\ [2ex]Event, Actor and Data Interchange Specification}\\[10ex]
             {\LARGE Open Event Data Alliance} \\[2ex]
             {\Large \url{http://openeventdata.org/} }\\[2ex]
-            {\LARGE DRAFT Version: 1.1\\ [2EX]\monthyeardate\today}
+            {\LARGE DRAFT Version: 1.2\\ [2EX]\monthyeardate\today}
         \end{center}
 
 
@@ -838,6 +838,15 @@ In \plcat{ASSAULT} events where the violence is two-sided, all participants are 
 
 % AH: I think the sideAB thing is confusing. I'm not sure how it's different from the distinction we get from two actors vs. actor and recipient.
 
+\subsection{Potential ambiguities}
+\begin{itemize}
+\item General or ambiguous mentions of beatings/assaults without any mention of specific tools or methods only receive the \plcat{ASSAULT} `beat' mode.
+    
+\item Mentions of beatings/assaults that use fists, kicks, punches, and similar methods also only receive the  \plcat{ASSAULT} `beat' mode. 
+
+\item Mentions of beatings/assualts that use blunt instruments such as bats, clubs, and so on receive both \plcat{ASSAULT}  `beat' and  \plcat{ASSAULT} `primitive' modes.
+\item Mentions of assaults, murders, or clashes that involve knives, machetes, fire, rocks and similar instruments only receive the  \plcat{ASSAULT} ``primitive'' mode.
+\end{itemize}
 \subsection{Supplementary fields:}
 
 
@@ -849,11 +858,11 @@ In \plcat{ASSAULT} events where the violence is two-sided, all participants are 
 Name & Content \\
 \hline
 abduct & Abduct, kidnap, hijack \\
-beat & Physically assault \\
+beat & Physically assault by striking individuals or groups with one-off or repeated blows, typically administered manually or by blunt instrument\\
 torture & Torture \\
 execute & Judicially-sanctioned execution \\
 sexual & Sexual violence\\
-assassinate & Targeted assassinations with any weapon \\
+assassinate & Targeted assassinations (both successful and attempted) with any weapon \\
 destroy & Destroy property \\
 primitive & Primitive weapons: fire, edged weapons, rocks, farm implements \\
 firearms & Rifles, pistols, light machine guns\\
