@@ -42,7 +42,7 @@
             {\LARGE Political Language Ontology for Verifiable Event Records\\ [2ex]Event, Actor and Data Interchange Specification}\\[10ex]
             {\LARGE Open Event Data Alliance} \\[2ex]
             {\Large \url{http://openeventdata.org/} }\\[2ex]
-            {\LARGE DRAFT Version: 1.2\\ [2EX]\monthyeardate\today}
+            {\LARGE DRAFT Version: 1.3\\ [2EX]\monthyeardate\today}
         \end{center}
 
 
@@ -192,7 +192,7 @@ peacekeeping & peacekeeping, typically multilateral operations \\
 \hyperref[context:tech]{technology} & technological development, new technology, high-tech industry\\
 \hyperref[context:terrorism]{terrorism} & events related to terrorist groups; anti-terrorism actions and policies \\
 \hyperref[context:cbrn]{cbrn} & chemical, biological, radiation, and nuclear weapons or attacks  \\
-\hyperref[context:cyber]{cyber} & cyber attacks and crime\\
+\hyperref[context:cyber]{cyber} & cyber attacks and crime; events with this context are not necessarily cyber events (e.g. hacking) themselves\\
 \hyperref[context:misinfo]{misinformation} & misinformation, influence operations, fake news; events with this context are not necessarily misinformation themselves\\
 \hyperref[context:crime]{crime} & Any discussion of crimes or criminals, \textit{excluding} events that have one of the more specific crime contexts like trafficking \\
 \hyperref[context:corruption]{corruption} &  misuse/abuse of public office, including corruption, bribery, cronyism, nepotism, abuse of public office  \\
@@ -794,7 +794,10 @@ Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasion
 
 \subsection{Potential ambiguities}
 
-Candidates for COERCE-misinformation could also be ACCUSE-allege + context:``misinformation'' events, depending on the wording of the relevant text.
+\begin{itemize}
+\item Candidates for COERCE-misinformation could also be ACCUSE-allege + context: ``misinformation'' events, depending on the wording of the relevant text.
+\item The ``cyber'' and ``misinformation'' modes both have corresponding contexts with the same name. The modes capture specific instances of ``cyber'' or ``misinformation'' actions, e.g. a report of a website denial of service attack or a social media disinformation campaign. The contexts are broader, and also capture other actions related to ``cyber'' or ``misinformation'' events, like for example the arrest of a person for hacking or cybercrime, or a threat by the recipient of a misinformation campaign to the responsible actor to cease it. 
+\end{itemize}
 
 \subsection{Supplementary fields: }
 
@@ -815,6 +818,7 @@ arrest & Arrest, detain  \\
 deport & Expel or deport individuals \\
 withhold & Withhold public goods/services, e.g. shut off power/internet/water/ utilities or withhold food/medical supplies \\
 misinformation & deception/manipulation/misinformation (will also automatically add ``misinformation'' context) \\
+cyber & cyber attacks and crime, including hacking, security breaches, website attacks, etc. (will also automatically add ``cyber'' context) \\
 \hline
 \end{tabular}
 \end{center}
