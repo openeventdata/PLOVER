@@ -292,7 +292,7 @@ RETREAT & +7.6 \\
 \section{AGREE}
 
 
-Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  Ccoperative actions of types \plcat{CONSULT}, \plcat{SUPPORT}, \plcat{COOPERATE}, and \plcat{AID} reported in future tense are also taken to imply intentions and should be coded as \plcat{AGREE}.
+Agree to, offer, promise, or otherwise indicate willingness or commitment to cooperate, including promises to sign or ratify agreements.  Cooperative actions of types \plcat{CONSULT}, \plcat{SUPPORT}, \plcat{COOPERATE}, and \plcat{AID} reported in future tense are also taken to imply intentions and should be coded as \plcat{AGREE}.
 
 
 \subsection{Potential ambiguities}
@@ -796,7 +796,7 @@ Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasion
 
 \begin{itemize}
 \item Candidates for COERCE-misinformation could also be ACCUSE-allege + context: ``misinformation'' events, depending on the wording of the relevant text.
-\item The ``cyber'' and ``misinformation'' modes both have corresponding contexts with the same name. The modes capture specific instances of ``cyber'' or ``misinformation'' actions, e.g. a report of a website denial of service attack or a social media disinformation campaign. The contexts are broader, and also capture other actions related to ``cyber'' or ``misinformation'' events, like for example the arrest of a person for hacking or cybercrime, or a threat by the recipient of a misinformation campaign to the responsible actor to cease it. 
+\item The ``cyber'' and ``misinformation'' modes both have corresponding contexts with the same name. The modes capture specific instances of ``cyber'' or ``misinformation'' actions, e.g. a report of a website denial of service attack or a social media disinformation campaign. The contexts are broader, and also capture other actions related to ``cyber'' or ``misinformation'' events, like for example the arrest of a person for hacking or cybercrime, or a threat by the recipient of a misinformation campaign to the responsible actor to cease it.
 \end{itemize}
 
 \subsection{Supplementary fields: }
@@ -845,8 +845,8 @@ In \plcat{ASSAULT} events where the violence is two-sided, all participants are 
 \subsection{Potential ambiguities}
 \begin{itemize}
 \item General or ambiguous mentions of beatings/assaults without any mention of specific tools or methods only receive the \plcat{ASSAULT} `beat' mode.
-    
-\item Mentions of beatings/assaults that use fists, kicks, punches, and similar methods also only receive the  \plcat{ASSAULT} `beat' mode. 
+
+\item Mentions of beatings/assaults that use fists, kicks, punches, and similar methods also only receive the  \plcat{ASSAULT} `beat' mode.
 
 \item Mentions of beatings/assualts that use blunt instruments such as bats, clubs, and so on receive both \plcat{ASSAULT}  `beat' and  \plcat{ASSAULT} `primitive' modes.
 \item Mentions of assaults, murders, or clashes that involve knives, machetes, fire, rocks and similar instruments only receive the  \plcat{ASSAULT} ``primitive'' mode.
@@ -1084,8 +1084,8 @@ As with the events, the PLOVER specification seeks to pare this down to the most
 
 \begin{enumerate}
 \item The entity code---\texttt{actor/recipient}---is either an ISO 3 letter country code for independent states, a small number of non-independent territories that have assigned ISO codes, or one of a small number of non-state codes such as IGO; see Table \ref{tab:nonstate} below.
-\item The country code is the ISO 3 letter country code to which an entity belongs. For territories and other special non-independent entities it indicates the state they are part of; in all other cases it is equal to the entity code. For example, for the entity Hong Kong (HKG), this field has the ISO code for China, CHN. 
-\item The sector code is a 3-character primary code that best describes an actors role; any other applicable sector codes are listed in a secondary field. 
+\item The country code is the ISO 3 letter country code to which an entity belongs. For territories and other special non-independent entities it indicates the state they are part of; in all other cases it is equal to the entity code. For example, for the entity Hong Kong (HKG), this field has the ISO code for China, CHN.
+\item The sector code is a 3-character primary code that best describes an actors role; any other applicable sector codes are listed in a secondary field.
 \item Identifiers for individual persons or organizations are coded in the \texttt{identifier\_id} and/or \texttt{identifier\_text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular organization or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia, for example a new sector category for right-wing populist parties and politicians.
 \item The remaining named fields in the \txt{actor/recipient} JSON object is used for additional information beyond what can be coded in the sector secondary modifier. In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of such as religion, ethnicity, official position, etc.
 \end{enumerate}
@@ -1115,13 +1115,13 @@ There are three groups of entities:
 
 \begin{enumerate}
 \item Independent states according to the Correlates of War state system membership list, identified via their ISO 3166 3-letter codes.\fn{\txt{https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-3} ISO codes are also available for dependencies such as the \AA land Islands, and the list is updated fairly regularly to accommodate new states such as South Sudan.}.
-\item By exception, a small number of non-independent territories and dependencies with a ISO 3166 code, like Hong Kong. 
+\item By exception, a small number of non-independent territories and dependencies with a ISO 3166 code, like Hong Kong.
 \item A small number of non-state entities, listed in Table \ref{tab:nonstate}.
 \end{enumerate}
 
-The country codes field can only take on values corresponding to states recognized by the US or one of the special codes listed below. 
+The country codes field can only take on values corresponding to states recognized by the US or one of the special codes listed below.
 
-With the exception of the UN and EU, the special codes in in Table \ref{tab:nonstate} are intentionally broad and generic. The EU and UN were separated from IGO because they are (a) fairly common, and (b) the largest and arguable among the most institutionalized IGOs. 
+With the exception of the UN and EU, the special codes in in Table \ref{tab:nonstate} are intentionally broad and generic. The EU and UN were separated from IGO because they are (a) fairly common, and (b) the largest and arguable among the most institutionalized IGOs.
 
 \begin{table}[htp]
 \caption{Non-state actor codes}
@@ -1154,41 +1154,43 @@ MNC            &   multi-national corporation\\
  \\ \cline{1-2}
   \textbf{Code} & \textbf{Frequently used codes}\\
   \hline
-	  GOV & Government: the executive, governing parties, coalitions partners, executive divisions \\
+	  COP & Police forces, officers, criminal investigative units, protective agencies \\
+      GOV & Government: the executive, governing parties, coalitions partners, executive divisions \\
 	  JUD & Judiciary: judges, courts \\
 	  LEG & Legislature: parliaments, assemblies, lawmakers \\
 	  MIL & Military: troops, soldiers, all state-military personnel/equipment\\
-	  COP & Police forces, officers, criminal investigative units, protective agencies \\
 	  OPP & Political opposition: opposition parties, individuals, anti-government activists \\
+	  PRM & Paramilitary organizations not in opposition to government\\
 	  PTY & Political parties not identified with government or opposition \\
 	  REB & Rebels: armed opposition groups or individuals (see Note 1)\\
-	  PRM & Paramilitary organizations not in opposition to government\\
 	  SPY & State intelligence services \\
 	  UAF & Unidentified armed forces (``unknown gunmen'') \\
 	  UNK & Generic unidentified actors (e.g. actor for ``two civilians were killed by a bomb'') \\
   \hline
 ~   & \textbf{Less frequently used codes}\\
  \hline
+ 	  AGR & formally or informally organized agricultural labor; peasants \\
+      BUS & business: individuals companies, and enterprises, not including MNCs \\
+      CRM & individual criminals and criminal gangs \\
 	  CVL & civilians: sometimes used as catch-all for individuals.  \\
-	  BUS & business: individuals companies, and enterprises, not including MNCs \\
 	  EDU & educators, schools, students, or organizations dealing with education \\
-	  MED & individuals and organizations dealing with health (see Note 3) \\
-	  LAB & formally or informally organized labor in services or manufacturing \\
-	  AGR & formally or informally organized agricultural labor; peasants \\
-	  JRN & journalists, newspapers, radio, television, web sites (see Note 3)  \\
+      ELI & former government officials who currently do not hold positions in the government or armed forces\\
+      JRN & journalists, newspapers, radio, television, web sites (see Note 2)  \\
+      LAB & formally or informally organized labor in services or manufacturing \\
+	  MED & individuals and organizations dealing with health (see Note 2) \\
 	  REF & refugees and internally displaced persons \\
 	  REL & religious organizations and institutions \\
 	  SOC & any organization or movement that is considered part of ``civil society''  not otherwise covered here\\
-	  CRM & individual criminals and criminal gangs \\
   \hline
 \end{longtable}
+\end{center}
+\newpage
 \noindent \raggedright{\textbf{Notes:}}
 \begin{enumerate}
 \item For militarized groups, we are dropping the INS (insurgent) and SEP (separatist) distinctions incorporated into CAMEO during the research phase of ICEWS: these can be resolved on the basis of the group identity and group objectives are frequently ambiguous in any case.
-\item The CAMEO ``ELI'' code for elites such as former government officials has been discontinued because it was ambiguous: these individuals are now CVL
 \item Two modifications of CAMEO sector codes: in CAMEO `MED' was ``media'' and `HLH' was ``medical'' but no one could remember those.
 \end{enumerate}
-\end{center}
+
 
 
 \chapter{Data Fields}
