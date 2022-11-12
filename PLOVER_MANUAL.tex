@@ -1077,16 +1077,15 @@ The domestic or international trafficking or smuggling of illicit goods. This in
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Entity and Sector Codes}
+\chapter{Country Names and Sector Codes}
 
 CAMEO employed a hierarchical entity coding structure based on 3-character coding elements which allowed nearly unlimited complexity and, depending on the exact coding system, could be resolved down to the identity of individual groups or individuals. As with the event codes, typically only the first two or three of these elements were used. ICEWS modified this somewhat, while preserving most of the sub-state differentiations as ``sectors''---the terminology we've adopted here over the CAMEO/IDEA ``agents''---but also provided a very substantial amount of complexity at the sub-sector level.
 
-As with the events, the PLOVER specification seeks to pare this down to the most commonly used entities and agent/sectors, while retaining the possibility of more specific information. In place of the pages of entity and agent specification found in the CAMEO manual, PLOVER has five rules:
+As with the events, the PLOVER specification seeks to pare this down to the most commonly used countries and agent/sectors, while retaining the possibility of more specific information. In place of the pages of entity and agent specification found in the CAMEO manual, PLOVER has four rules:
 
 \begin{enumerate}
-\item The entity code---\texttt{actor/recipient}---is either an ISO 3 letter country code for independent states, a small number of non-independent territories that have assigned ISO codes, or one of a small number of non-state codes such as IGO; see Table \ref{tab:nonstate} below.
-\item The country code is the ISO 3 letter country code to which an entity belongs. For territories and other special non-independent entities it indicates the state they are part of; in all other cases it is equal to the entity code. For example, for the entity Hong Kong (HKG), this field has the ISO code for China, CHN.
-\item The sector code is a 3-character primary code that best describes an actors role; any other applicable sector codes are listed in a secondary field.
+\item The country name---\texttt{actor/recipient}---is either a country name for independent states, an entity name for a very small number of non-independent territories, or a standardized identifier for an international non-state actors such as intergovernmental organizations; see Table \ref{tab:nonstate} below.
+\item The sector code is a 3-character code that best describes an \texttt{actor/recipient} role. The primary role is provided in an initial field for each \texttt{actor/recipient}  and any other applicable sector codes are listed in a secondary field.
 \item Identifiers for individual persons or organizations are coded in the \texttt{identifier\_id} and/or \texttt{identifier\_text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular organization or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia, for example a new sector category for right-wing populist parties and politicians.
 \item The remaining named fields in the \txt{actor/recipient} JSON object is used for additional information beyond what can be coded in the sector secondary modifier. In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of such as religion, ethnicity, official position, etc.
 \end{enumerate}
@@ -1101,56 +1100,57 @@ An example \txt{actor} block is below:
 	 "entity_name": "Frank-Walter Steinmeier",
 	 "wikidata_id": "Q76658",
 	 "wiki_description": "Minister of Foreign Affairs",
-	 "entity_code": "DEU",
-	 "country_code": "DEU",
+	 "country_name": "Germany",
 	 "sector_code": "GOV",
 	 "other_sector_codes": ""
 	 }
 \end{verbatim}
 
-While the process of generating this block will depend on the specific nature of the coder, in general, the coder will (1) identify a  \txt{actor} or \txt{recipient} in the text, in this case, "Steinmeier". (2) Using the context of the article, resolve the mention to its Wikipedia page and ID and report the Wikipedia role or description. (3) Using the information on the page, determine that Frank-Walter Steinmeier was the German Minister of Foreign Affairs and thus DEUGOV.
+While the process of generating this block will depend on the specific nature of the coder, in general, the coder will (1) identify a  \txt{actor} or \txt{recipient} in the text, in this case, "Steinmeier". (2) Using the context of the article, resolve the mention to its Wikipedia page and ID and report the Wikipedia role or description. (3) Using the information on the page, determine that Frank-Walter Steinmeier was the German Minister of Foreign Affairs and thus GOV.
 
-\section{Entity and country codes}
+\section{Country names}
 
-There are three groups of entities:
+The \texttt{actor/recipient} country names fields denote countries and related units using the full names of these units, rather than 3-character codes. In most cases, the full names correspond to an entity's official ISO name. Altogether, \texttt{actor/recipient} country names can include three groups of entities:
 
 \begin{enumerate}
-\item Independent states according to the Correlates of War state system membership list, identified via their ISO 3166 3-letter codes.\fn{\txt{https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-3} ISO codes are also available for dependencies such as the \AA land Islands, and the list is updated fairly regularly to accommodate new states such as South Sudan.}.
-\item By exception, a small number of non-independent territories and dependencies with a ISO 3166 code, like Hong Kong.
-\item A small number of non-state entities, listed in Table \ref{tab:nonstate}.
+\item Independent states according to the Correlates of War state system membership list. Note that---aside from the exceptions mentioned immediately below---all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state within this country names field.
+\item By exception, a small number of non-independent territories and dependencies. The current exceptions are: Antarctica, Hong Kong, and Palestine. Note that one US-recognized independent country, Kosovo, also has its own country name entry.
+\item A small number of international non-state entities, listed in Table \ref{tab:nonstate}.
 \end{enumerate}
 
-The country codes field can only take on values corresponding to states recognized by the US or one of the special codes listed below.
+As noted above, the \texttt{actor/recipient} country names fields reassign dependencies to have the full name of their controlling state within the Country codes field. Events arising in specific dependencies can still be recovered through the use of PLOVER's geolocation fields when those events contain a sufficiently precise geolocation. Dependencies whose status as dependency versus independent nation-state is disputed additionally receive the ``PRE: partially recognized entity'' sector code, as discussed below. Presently the list of such cases includes: Abkhazia (Georgia), Luhansk People's Republic (Ukraine), Donetsk People's Republic (Ukraine), Nagorno-Karabakh (Azerbaijan), Northern Cyprus (Cyprus), Transnistria (Moldovia), Somaliland (Somalia), South Ossetia (Georgia), and Western Sahara (Morocco).
 
-With the exception of the UN and EU, the special codes in in Table \ref{tab:nonstate} are intentionally broad and generic. The EU and UN were separated from IGO because they are (a) fairly common, and (b) the largest and arguable among the most institutionalized IGOs.
+
+Table \ref{tab:nonstate} presents the seven international non-state entities that are also included in the country names field. With the exception of the UN and EU, the special codes in Table \ref{tab:nonstate} are intentionally broad and generic. The application of ``international governmental organization'' excludes the ``United Nations'' and ``European Union.'' The latter two cases were separated from ``international governmental organization'' because they are (a) fairly common, and (b) the largest and arguable among the most institutionalized IGOs.
 
 \begin{table}[htp]
-\caption{Non-state actor codes}
+\caption{International Non-state actor names}
 \begin{center}
 \begin{tabular}{|l|l|}
 \hline
-Code & Content \\
+Code & Name \\
 \hline
-IGO   &   international governmental organization, excluding the UN and EU \\
+IGO   &   International Governmental Organization \\
 UNO & United Nations \\
 EUR & European Union \\
-NGO &   non-governmental organization\\
-ISM           &   international social movement\\
-IMG            &   transnational militarized group\\
-MNC            &   multi-national corporation\\
+NGO &   Non-governmental Organization\\
+ISM           &   International Social Movement\\
+IMG            &   Transnational Militarized Group\\
+MNC            &   Multi-national Corporation\\
 \hline
 \end{tabular}
 \end{center}
 \label{tab:nonstate}
 \end{table}%
 
+\clearpage
 \newpage
 
-\section{Sector Primary Code}
+\section{Sector Codes}
 
 \begin{center}
 \begin{longtable}{|l|p{13cm}|}
-\caption{Sector Primary Codes}
+\caption{Sector Codes}
 \label{tab:roles}
  \\ \cline{1-2}
   \textbf{Code} & \textbf{Frequently used codes}\\
@@ -1179,7 +1179,8 @@ MNC            &   multi-national corporation\\
       LAB & formally or informally organized labor in services or manufacturing \\
 	  MED & individuals and organizations dealing with health (see Note 3) \\
 	  REF & refugees and internally displaced persons \\
-	  OPP & Political opposition: opposition parties, individuals, anti-government activists; typically assigned as a secondary code \\
+	  OPP & political opposition: opposition parties, individuals, anti-government activists; typically assigned as a secondary code \\
+      PRE & partially recognized entities, such as breakaway regions, partially recognized states, or disputed territories \\
 	  REL & religious organizations and institutions \\
 	  SOC & any organization or movement that is considered part of ``civil society''  not otherwise covered above\\
   \hline
