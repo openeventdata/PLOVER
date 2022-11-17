@@ -1110,16 +1110,17 @@ While the process of generating this block will depend on the specific nature of
 
 \section{Country names}
 
-The \texttt{actor/recipient} country names fields denote countries and related units using the full names of these units, rather than 3-character codes. In most cases, the full names correspond to an entity's official ISO name. Altogether, \texttt{actor/recipient} country names can include three groups of entities:
+The \texttt{actor/recipient} country name fields identify the country or other non-state international actor with which an actor is associated. These can be identified with a full name (the default), or optionally abbreviated 3-letter codes, e.g. "Germany" or "DEU", "France" or "FRA". Altogether, the \texttt{actor/recipient} country names consist of three groups of entities:
 
 \begin{enumerate}
-\item Independent states according to the Correlates of War state system membership list. Note that---aside from the exceptions mentioned immediately below---all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state within this country names field.
-\item By exception, a small number of non-independent territories and dependencies. The current exceptions are: Antarctica, Hong Kong, and Palestine. Note that one US-recognized independent country, Kosovo, also has its own country name entry.
-\item A small number of international non-state entities, listed in Table \ref{tab:nonstate}.
+\item Independent states according to the Correlates of War (COW) state system membership list. The names and short codes are based on the ISO 3166 English short names and 3-letter codes, not COW names and codes. Aside from the exceptions mentioned next, all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state. 
+\item A small number of non-independent territories and dependencies, by exception: Antarctica, Hong Kong\footnote{To obtain all events in China, one thus would need to select events both in "China" and "Hong Kong".}, the Holy See, and Palestine. Note that one US-recognized independent country, Kosovo, also has its own country name entry. It does not have an ISO code; we use "KOS". 
+\item A small number of international non-state entities, like the UN or NGOs, listed in Table \ref{tab:nonstate}.
 \end{enumerate}
 
-As noted above, the \texttt{actor/recipient} country names fields reassign dependencies to have the full name of their controlling state within the Country codes field. Events arising in specific dependencies can still be recovered through the use of PLOVER's geolocation fields when those events contain a sufficiently precise geolocation. Dependencies whose status as dependency versus independent nation-state is disputed additionally receive the ``PRE: partially recognized entity'' sector code, as discussed below. Presently the list of such cases includes: Abkhazia (Georgia), Luhansk People's Republic (Ukraine), Donetsk People's Republic (Ukraine), Nagorno-Karabakh (Azerbaijan), Northern Cyprus (Cyprus), Transnistria (Moldovia), Somaliland (Somalia), South Ossetia (Georgia), and Western Sahara (Morocco).
+The following subsections provide additional clarifications related to the way different countries and territories are handled. 
 
+\subsection{Non-state international actors}
 
 Table \ref{tab:nonstate} presents the seven international non-state entities that are also included in the country names field. With the exception of the UN and EU, the special codes in Table \ref{tab:nonstate} are intentionally broad and generic. The application of ``international governmental organization'' excludes the ``United Nations'' and ``European Union.'' The latter two cases were separated from ``international governmental organization'' because they are (a) fairly common, and (b) the largest and arguable among the most institutionalized IGOs.
 
@@ -1143,10 +1144,30 @@ MNC            &   Multi-national Corporation\\
 \label{tab:nonstate}
 \end{table}%
 
+\subsection{Non-independent territories with a separate ISO code}
+
+There are 59 dependencies and other non-independent or only partially independent that have an ISO 3166 code but are not independent state actors in the Correlates of War state system membership list or not one of the exception in item 2 above. Examples include the Falkland Islands, Puerto Rico, and French Guiana. Those are folded into their associated controlling state, i.e. actors and events in the Falkland Islands are associated with the United Kingdom, etc. 
+
+Events arising in specific dependencies can still be recovered through the use of PLOVER's geolocation fields when those events contain a sufficiently precise geolocation. 
+
+\subsection{Partially recognized (disputed) entities}\label{partially-recognized-entities}
+
+There are several disputed territories which are not recognized by the US that receive special handling, like the Transnistria region in Moldovia. They are treated as follows: 
+
+\begin{itemize}
+\item Instead of a separate country name and code, they are associated with the nominally sovereign country. Transnistria would be treated as part of Moldovia, not a separate country.
+\item However, they receive a special ``PRE: partially recognized entity'' \textit{sector} tag, in addition to whatever other sector tags they would receive. Thus an event involving the Transnistrian breakaway government would receive as country name ``Moldovia'', but the sector tags would include in ``PRE'' in addition to the ``GOV'' code.
+\end{itemize}
+
+Presently the list of such cases (with the country they are associated with) is: Abkhazia (Georgia), Luhansk People's Republic (Ukraine), Donetsk People's Republic (Ukraine), Nagorno-Karabakh (Azerbaijan), Northern Cyprus (Cyprus), Transnistria (Moldovia), Somaliland (Somalia), South Ossetia (Georgia), and Western Sahara (Morocco).
+
+
 \clearpage
 \newpage
 
 \section{Sector Codes}
+
+The sector codes are 3-letter codes that identify the broad societal/organizational sector that an actor is associated with. They provide a more fine-grained categorization of actors than just their country, and should thus be especially useful for analyzing patterns in domestic, not international, events. 
 
 \begin{center}
 \begin{longtable}{|l|p{13cm}|}
@@ -1169,6 +1190,7 @@ MNC            &   Multi-national Corporation\\
   \hline
 ~   & \textbf{Less frequently used codes}\\
  \hline
+ PRE & Partially recognized entities. Territories like Transnistria that are not recognized by the US, see \autoref{partially-recognized-entities} \\
  	  AGR & formally or informally organized agricultural labor; peasants \\
       BUS & business: individuals companies, and enterprises, not including MNCs \\
       CRM & individual criminals and criminal gangs \\
@@ -1186,10 +1208,12 @@ MNC            &   Multi-national Corporation\\
   \hline
 \end{longtable}
 \end{center}
-\newpage
-\noindent \raggedright{\textbf{Notes:}}
+
+\subsection{Sector code notes}
+
 \begin{enumerate}
 \item For PTY, the use of additional sector labels such as GOV or OPP help to distinguish political parties in government or in opposition from more general references to political parties.
+\item PRE is used to identify actors associated with partially recognized territories like Transnistria. It is added to whatever other sector codes and actor would receive, e.g. a mention of the Transnistrian breakaway government would receive the ``GOV'' and ``PRE'' codes, while proper Moldovian government would only receive the ``GOV'' code. See \autoref{partially-recognized-entities}.
 \item For militarized groups, we are dropping the INS (insurgent) and SEP (separatist) distinctions incorporated into CAMEO during the research phase of ICEWS: these can be resolved on the basis of the group identity and group objectives are frequently ambiguous in any case.
 \item Two modifications of CAMEO sector codes: in CAMEO `MED' was ``media'' and `HLH' was ``medical'' but no one could remember those.
 \end{enumerate}
