@@ -1106,19 +1106,19 @@ An example \txt{actor} block is below:
 	 }
 \end{verbatim}
 
-While the process of generating this block will depend on the specific nature of the coder, in general, the coder will (1) identify a  \txt{actor} or \txt{recipient} in the text, in this case, "Steinmeier". (2) Using the context of the article, resolve the mention to its Wikipedia page and ID and report the Wikipedia role or description. (3) Using the information on the page, determine that Frank-Walter Steinmeier was the German Minister of Foreign Affairs and thus GOV.
+While the process of generating this block will depend on the specific nature of the coder, in general, the coder will (1) identify an  \txt{actor} or \txt{recipient} in the text, in this case, ``Steinmeier". (2) Using the context of the article, resolve the mention to its Wikipedia page and ID and report the Wikipedia role or description. (3) Using the information on the page, determine that Frank-Walter Steinmeier was the German Minister of Foreign Affairs and thus GOV.
 
 \section{Country names}
 
-The \texttt{actor/recipient} country name fields identify the country or other non-state international actor with which an actor is associated. These can be identified with a full name (the default), or optionally abbreviated 3-letter codes, e.g. "Germany" or "DEU", "France" or "FRA". Altogether, the \texttt{actor/recipient} country names consist of three groups of entities:
+The \texttt{actor/recipient} country name fields identify the country or other non-state international actor with which an actor is associated. These can be identified with a full name (the default), or optionally abbreviated 3-letter codes, e.g.\ ``Germany" or ``DEU", ``France" or ``FRA". Altogether, the \texttt{actor/recipient} country names consist of three groups of entities:
 
 \begin{enumerate}
-\item Independent states according to the Correlates of War (COW) state system membership list.\footnote{We include the Holy See in this group, even though it is not in the COW list.} The names and short codes are based on the ISO 3166 English short names and 3-letter codes, not COW names and codes. Aside from the exceptions mentioned next, all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state. 
-\item A small number of non-independent territories and dependencies, by exception: Antarctica, Hong Kong\footnote{To obtain all events in China, one thus would need to select events both in "China" and "Hong Kong".}, and Palestine. Note that one US-recognized independent country, Kosovo, also has its own country name entry. It does not have an ISO code; we use "KOS". 
+\item Independent states according to the Correlates of War (COW) state system membership list.\footnote{We include the Holy See in this group, even though it is not in the COW list.} The names and short codes are based on the ISO 3166 English short names and 3-letter codes, not COW names and codes. Aside from the exceptions mentioned next, all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state.
+\item A small number of non-independent territories and dependencies, by exception: Antarctica, Hong Kong\footnote{To obtain all events in China, one thus would need to select events both in ``China" and ``Hong Kong".}, and Palestine. Note that one US-recognized independent country, Kosovo, also has its own country name entry. It does not have an ISO code; we use ``KOS".
 \item A small number of international non-state entities, like the UN or NGOs, listed in Table \ref{tab:nonstate}.
 \end{enumerate}
 
-The following subsections provide additional clarifications related to the way different countries and territories are handled. 
+The following subsections provide additional clarifications related to the way different countries and territories are handled.
 
 \subsection{Non-state international actors}
 
@@ -1146,13 +1146,13 @@ MNC            &   Multi-national Corporation\\
 
 \subsection{Non-independent territories with a separate ISO code}
 
-There are 59 dependencies and other non-independent or only partially independent that have an ISO 3166 code but are not independent state actors in the Correlates of War state system membership list or not one of the exception in item 2 above. Examples include the Falkland Islands, Puerto Rico, and French Guiana. Those are folded into their associated controlling state, i.e. actors and events in the Falkland Islands are associated with the United Kingdom, etc. 
+There are 59 dependencies and other non-independent or only partially independent that have an ISO 3166 code but are not independent state actors in the Correlates of War state system membership list or not one of the exception in item 2 above. Examples include the Falkland Islands, Puerto Rico, and French Guiana. Those are folded into their associated controlling state, i.e. actors and events in the Falkland Islands are associated with the United Kingdom, etc.
 
-Events arising in specific dependencies can still be recovered through the use of PLOVER's geolocation fields when those events contain a sufficiently precise geolocation. 
+Events arising in specific dependencies can still be recovered through the use of PLOVER's geolocation fields when those events contain a sufficiently precise geolocation.
 
 \subsection{Partially recognized (disputed) entities}\label{partially-recognized-entities}
 
-There are several disputed territories which are not recognized by the US that receive special handling, like the Transnistria region in Moldovia. They are treated as follows: 
+There are several disputed territories which are not recognized by the US that receive special handling, like the Transnistria region in Moldovia. They are treated as follows:
 
 \begin{itemize}
 \item Instead of a separate country name and code, they are associated with the nominally sovereign country. Transnistria would be treated as part of Moldovia, not a separate country.
@@ -1167,7 +1167,7 @@ Presently the list of such cases (with the country they are associated with) is:
 
 \section{Sector Codes}
 
-The sector codes are 3-letter codes that identify the broad societal/organizational sector that an actor is associated with. They provide a more fine-grained categorization of actors than just their country, and should thus be especially useful for analyzing patterns in domestic, not international, events. 
+The sector codes are 3-letter codes that identify the broad societal/organizational sector that an actor is associated with. They provide a more fine-grained categorization of actors than just their country, and should thus be especially useful for analyzing patterns in domestic, not international, events.
 
 \begin{center}
 \begin{longtable}{|l|p{13cm}|}
@@ -1183,7 +1183,7 @@ The sector codes are 3-letter codes that identify the broad societal/organizatio
 	  MIL & Military: troops, soldiers, all state-military personnel/equipment\\
 	  PRM & Paramilitary organizations not in opposition to government\\
 	  PTY & Political parties (see Note 1) \\
-	  REB & Rebels: armed opposition groups or individuals (see Note 2)\\
+	  REB & Rebels: armed opposition groups or individuals (see Note 3)\\
 	  SPY & State intelligence services \\
 	  UAF & Unidentified armed forces (``unknown gunmen'') \\
 	  UNK & Generic unidentified actors (e.g. actor for ``two civilians were killed by a bomb'') \\
@@ -1196,12 +1196,12 @@ The sector codes are 3-letter codes that identify the broad societal/organizatio
 	  CVL & civilians, protesters, activists, and other unarmed domestic entities that lack affiliation with the organized groups that appear within the sectors presented above and below  \\
 	  EDU & educators, schools, students, or organizations dealing with education \\
       ELI & former government officials who currently do not hold positions in the government or armed forces, including exiled/ousted officials\\
-      JRN & journalists, newspapers, radio, television, web sites (see Note 3)  \\
+      JRN & journalists, newspapers, radio, television, web sites (see Note 4)  \\
       LAB & formally or informally organized labor in services or manufacturing \\
-	  MED & individuals and organizations dealing with health (see Note 3) \\
+	  MED & individuals and organizations dealing with health (see Note 4) \\
 	  REF & refugees and internally displaced persons \\
 	  OPP & political opposition: opposition parties, individuals, anti-government activists; typically assigned as a secondary code \\
-      PRE & partially recognized entities, such as breakaway regions, partially recognized states, or disputed territories, see \autoref{partially-recognized-entities} \\
+      PRE & partially recognized entities, such as breakaway regions, partially recognized states, or disputed territories (see \autoref{partially-recognized-entities} and Note 2)  \\
 	  REL & religious organizations and institutions \\
 	  SOC & any organization or movement that is considered part of ``civil society''  not otherwise covered above\\
   \hline
