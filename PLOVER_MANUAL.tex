@@ -137,8 +137,6 @@ A major difference between PLOVER and the earlier widely-used event coding syste
 
 While both \txt{mode} and \txt{context} will usually take a single value, in some instances multiple values will be appropriate and this is allowed. Both fields are optional, and if no existing values seem appropriate, the field should be left null, though perhaps with some details provided in the JSON \texttt{comment} field, particularly when the record is generated using human coding.
 
-%BB: Commenting this out since we now have more verbal event types with modes.
-%In general, verbal activities only have a \txt{context} since their \txt{mode} is just ``verbal.'' The exceptions are \plcat{CONSULT} where the \texttt{mode} indicates how the consultation was done, and \plcat{THREATEN} where the \texttt{mode} indicates what type of action is being threatened.
 
 
 \section{Context codes that can be used with any category}
@@ -210,6 +208,8 @@ Based on our past experience developing event-oriented data sets, we are almost 
 \newpage
 
 \section{Auxiliary modes}\label{ssec:special}
+
+\textbf{Note: these Auxiliary modes have not yet been fully implemented in any PLOVER-based coding projects to date.}
 
 PLOVER also includes four \emph{auxiliary modes}, which provide information about whether a reported event is \plcon{historical}, \plcon{future}, \plcon{hypothetical}, or has a \plcon{negation}. PLOVER assumes that the coding engine will be able to resolve these and put that information in the \txt{context}. Negated events can be excluded from the final event dataset. Examples:
    \begin{itemize}
@@ -1088,18 +1088,18 @@ The domestic or international trafficking or smuggling of illicit goods. This in
 
 \chapter{Country Names and Sector Codes}
 
-CAMEO employed a hierarchical entity coding structure based on 3-character coding elements which allowed nearly unlimited complexity and, depending on the exact coding system, could be resolved down to the identity of individual groups or individuals. As with the event codes, typically only the first two or three of these elements were used. ICEWS modified this somewhat, while preserving most of the sub-state differentiations as ``sectors''---the terminology we've adopted here over the CAMEO/IDEA ``agents''---but also provided a very substantial amount of complexity at the sub-sector level.
+CAMEO employed a hierarchical entity coding structure based on 3-character coding elements which allowed nearly unlimited complexity and, depending on the exact coding system, could be resolved down to the identity of individual groups or individuals. As with the event codes, typically only the first two or three of these elements were used. ICEWS modified this somewhat, while preserving most of the sub-state differentiations as ``sectors''---the terminology we've adopted here over the CAMEO/IDEA ``agents'' terminology---but also provided a very substantial amount of complexity at the sub-sector level.
 
-As with the events, the PLOVER specification seeks to pare this down to the most commonly used countries and agent/sectors, while retaining the possibility of more specific information. In place of the pages of entity and agent specification found in the CAMEO manual, PLOVER has four rules:
+As with the events, PLOVER seeks to pare this down to the most commonly used countries and sectors, while retaining the possibility of more specific information. In place of the pages of entity and agent specifications found in the CAMEO manual, PLOVER has four rules:
 
 \begin{enumerate}
-\item The country name---\texttt{actor/recipient}---is either a country designation for independent states, an entity designation for a very small number of non-independent territories, or a standardized identifier for an international non-state actors such as intergovernmental organizations; see Table \ref{tab:nonstate} below.
-\item The sector code is a 3-character code that best describes an \texttt{actor/recipient} role. The primary role is provided in an initial field for each \texttt{actor/recipient}  and any other applicable sector codes are listed in a secondary field.
-\item Identifiers for individual persons or organizations are coded in the \texttt{identifier\_id} and/or \texttt{identifier\_text} fields. Ideally, the ID would take the form of a Wikidata ID and the text would be the canonical English-language name of the Wikidata entry. Including this information will greatly help researchers who want to (1) track a particular organization or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (2) researchers who would like to assign different sector codes using the raw information provided by Wikidata/Wikipedia, for example a new sector category for right-wing populist parties and politicians.
-\item The remaining named fields in the \txt{actor/recipient} JSON object is used for additional information beyond what can be coded in the sector secondary modifier. In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of such as religion, ethnicity, official position, etc.
+\item The country name---for both an event's \texttt{actor} and \texttt{recipient}---is either a country designation for independent states, an entity designation for a very small number of non-independent territories, or a standardized identifier for international non-state actors such as intergovernmental organizations; see Table \ref{tab:nonstate} below.
+\item The sector code is a 3-character code that best describes an \texttt{actor/recipient} role. The primary role is provided in an initial field for each \texttt{actor/recipient}. Any other applicable sector codes are listed in a secondary field.
+\item Identifiers for individual persons or organizations are coded in the \texttt{identifier\_id} and/or \texttt{identifier\_text} fields. For many instances, this takes the form of a Wikidata ID with its corresponding text matching the canonical English-language name of the Wikidata entry. Including this information greatly helps researchers who want to (1) track a particular organization or person, (2) need to make fine-grained distinctions that are currently subsumed within a single code (USA MIL = Army + Navy + Air Force + ... and USA GOV = the president + the State Department + the attorney general of Oklahoma + the city of Cambridge + ...) and (3) assign different sector codes using the raw information provided by Wikidata/Wikipedia (e.g., a new sector category for right-wing populist parties and politicians).
+\item Depending on PLOVER implementation, the remaining named fields in the \txt{actor/recipient} JSON object are used for additional information beyond what can be coded in the sector secondary modifier. In other words, one item of information---typically it is religion, ethnicity, or position---can be coded in the tertiary code, but only one: this handles virtually all of the current use-cases we know of such as religion, ethnicity, official position, etc.
 \end{enumerate}
 
-By effectively crowdsourcing details to Wikipedia/Wikidata, the latter which is generally updated very quickly, often within minutes in the case of a death of a well-known figure, we deal with a major weak point in the CAMEO dictionary approach,  the need to maintain coding teams to regularly update dictionaries, and in the absence of this, having information sometimes years out of date. Wikipedia/Wikidata also has a fairly standardized format for biographical information which contains far more detail than a CAMEO entry, but can be parsed with relatively simple programs.
+By effectively crowdsourcing details to Wikipedia/Wikidata, the latter which is generally updated very quickly, often within minutes in the case of a death of a well-known figure, we deal with a major weak point in the CAMEO dictionary approach:  the need to maintain coding teams to regularly update dictionaries, and in the absence of this, having information sometimes years out of date. Wikipedia/Wikidata also has a fairly standardized format for biographical information which contains far more detail than a CAMEO entry, but can be parsed with relatively simple programs.
 
 An example \txt{actor} block is below:
 
@@ -1119,10 +1119,10 @@ While the process of generating this block will depend on the specific nature of
 
 \section{Country names}
 
-The \texttt{actor/recipient} country name fields identify the country or other non-state international actor with which an actor is associated. These can be identified with a full name (the default), or optionally abbreviated 3-letter codes, e.g.\ ``Germany" or ``DEU", ``France" or ``FRA". Altogether, the \texttt{actor/recipient} country names consist of three groups of entities:
+The \texttt{actor/recipient} country name fields identify the country or other non-state international actor with which an \texttt{actor} or \texttt{recipient} is associated. These can be identified with a full name (the default), or optionally abbreviated 3-letter codes, e.g.\ ``Germany" or ``DEU." Altogether, the \texttt{actor/recipient} country name fields consist of three groups of entities:
 
 \begin{enumerate}
-\item Independent states according to the Correlates of War (COW) state system membership list.\footnote{We include the Holy See in this group, even though it is not in the COW list.} The names and short codes are based on the ISO 3166 English short names and 3-letter codes, not COW names and codes. Aside from the exceptions mentioned next, all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state.
+\item Independent states according to the Correlates of War (COW) state system membership list.\footnote{We include the Holy See in this group, even though it is not in the COW list.} In these instances, reported names and short codes are based on the ISO 3166 English short names and 3-letter codes, not COW names and codes. Aside from the exceptions mentioned next, all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state.
 \item A small number of non-independent territories and dependencies, by exception: Antarctica, Hong Kong\footnote{To obtain all events in China, one thus would need to select events both in ``China" and ``Hong Kong".}, and Palestine. Note that one US-recognized independent country, Kosovo, also has its own country name entry. It does not have an ISO code; we use ``KOS".
 \item A small number of international non-state entities, like the UN or NGOs, listed in Table \ref{tab:nonstate}.
 \end{enumerate}
@@ -1155,7 +1155,7 @@ MNC            &   Multi-national Corporation\\
 
 \subsection{Non-independent territories with a separate ISO code}
 
-There are 59 dependencies and other non-independent or only partially independent that have an ISO 3166 code but are not independent state actors in the Correlates of War state system membership list or not one of the exception in item 2 above. Examples include the Falkland Islands, Puerto Rico, and French Guiana. Those are folded into their associated controlling state, i.e. actors and events in the Falkland Islands are associated with the United Kingdom, etc.
+There are 59 dependencies and other non-independent or only partially independent entities that have an ISO 3166 code but are (1) not independent state actors in the COW state system membership list nor (2) appear on the exceptions listed under item 2 above. Examples include the Falkland Islands, Puerto Rico, and French Guiana. Those are folded into their associated controlling state, e.g., \texttt{actors/recipients} and events in the Falkland Islands are associated with the United Kingdom, etc.
 
 Events arising in specific dependencies can still be recovered through the use of PLOVER's geolocation fields when those events contain a sufficiently precise geolocation.
 
@@ -1164,8 +1164,8 @@ Events arising in specific dependencies can still be recovered through the use o
 There are several disputed territories which are not recognized by the US that receive special handling, like the Transnistria region in Moldovia. They are treated as follows:
 
 \begin{itemize}
-\item Instead of a separate country name and code, they are associated with the nominally sovereign country. Transnistria would be treated as part of Moldovia, not a separate country.
-\item However, they receive a special ``PRE: partially recognized entity'' \textit{sector} tag, in addition to whatever other sector tags they would receive. Thus an event involving the Transnistrian breakaway government would receive as country name ``Moldovia'', but the sector tags would include in ``PRE'' in addition to the ``GOV'' code.
+\item Instead of a separate country name and code, they are associated with the nominally sovereign country that claims control over that territory. As such, for example, Transnistria would be treated as part of Moldovia, not a separate country.
+\item However, they receive a special ``PRE: partially recognized entity'' \textit{sector} tag, in addition to whatever other sector tags they would receive. Thus an event involving the Transnistrian breakaway government would receive as country name ``Moldovia'', but the sector tags would include in ``PRE'' in addition to (in this instance) the ``GOV'' code.
 \end{itemize}
 
 Presently the list of such cases (with the country they are associated with) is: Abkhazia (Georgia), Luhansk People's Republic (Ukraine), Donetsk People's Republic (Ukraine), Nagorno-Karabakh (Azerbaijan), Northern Cyprus (Cyprus), Transnistria (Moldovia), Somaliland (Somalia), South Ossetia (Georgia), and Western Sahara (Morocco).
@@ -1176,7 +1176,7 @@ Presently the list of such cases (with the country they are associated with) is:
 
 \section{Sector Codes}
 
-The sector codes are 3-letter codes that identify the broad societal/organizational sector that an actor is associated with. They provide a more fine-grained categorization of actors than just their country, and should thus be especially useful for analyzing patterns in domestic, not international, events.
+Sector codes are 3-letter codes that identify the broad societal/organizational sector that an \texttt{actor} or \texttt{recipient} is associated with. They provide a more fine-grained categorization of \texttt{actors/recipients} than just their country, and should thus be especially useful for analyzing patterns in domestic, not international, events.
 
 \begin{center}
 \begin{longtable}{|l|p{13cm}|}
@@ -1222,7 +1222,7 @@ The sector codes are 3-letter codes that identify the broad societal/organizatio
 \begin{enumerate}
 \item For PTY, the use of additional sector labels such as GOV or OPP help to distinguish political parties in government or in opposition from more general references to political parties.
 \item PRE is used to identify actors associated with partially recognized territories like Transnistria. It is added to whatever other sector codes and actor would receive, e.g. a mention of the Transnistrian breakaway government would receive the ``GOV'' and ``PRE'' codes, while proper Moldovian government would only receive the ``GOV'' code. See \autoref{partially-recognized-entities}.
-\item For militarized groups, we are dropping the INS (insurgent) and SEP (separatist) distinctions incorporated into CAMEO during the research phase of ICEWS: these can be resolved on the basis of the group identity and group objectives are frequently ambiguous in any case.
+\item For militarized groups, we drop the INS (insurgent) and SEP (separatist) distinctions incorporated into CAMEO during the research phase of ICEWS: these can be resolved on the basis of the group identity and group objectives are frequently ambiguous in any case.
 \item Two modifications of CAMEO sector codes: in CAMEO `MED' was ``media'' and `HLH' was ``medical'' but no one could remember those.
 \end{enumerate}
 
@@ -1231,7 +1231,7 @@ The sector codes are 3-letter codes that identify the broad societal/organizatio
 \chapter{Data Fields}
 
 \begin{quote}
-\textbf{Note: This section is still under development and is not likely to be of interest to most readers.}
+\textbf{Note: This chapter is still under development and is not likely to be of interest to most readers. Not all items discussed within this chapter have been implemented.}
 
 \end{quote}
 \bigskip
@@ -1493,7 +1493,7 @@ Considerable additional work on CAMEO was done in the early 2010s first in the c
 
 \item The ``target actor" event component was renamed \txt{recipient} for clarity and to better match the terminology used in the NLP literature on event extraction \citep{halterman2020extracting}. ``Source actor'' was renamed \txt{actor} to reduce confusion with the textual source of the event.
 
-\item Actor entries are now standardized using references to Wikipedia
+\item \texttt{Actors/Recipient} entries are now standardized using references to Wikipedia.
 
 \item The complexity of substate codes has been limited, and the allowable substate modifiers have been substantially simplified.
 
@@ -1612,13 +1612,13 @@ A separate event category for crime has been added and removed several times as 
 \begin{enumerate}
 	\item Identify events taken by criminal actors. As coders move away from hand-constructed dictionaries to resolve actors, many more groups will be coded. Researchers will be able to subset events to those undertaken by specific criminal groups (e.g. the Sinaloa Cartel) or by using the CRM actor code.
 	
-	\item Use the \plcon{crime} and \plcon{illegal\_drugs} contexts: see Table \ref{tab:context}.
+	\item Use the \plcon{crime} and \plcon{illegal\_drugs} contexts: see Table \ref{tab:general-contexts}.
 \end{enumerate}
 
 
 \section{Some residual issues}\label{sec:nothing}
 
-In the discussions leading to the development of PLOVER, several additional open issues were raised that we have decided to remain agnostic on:
+In the discussions leading to the development of PLOVER, several additional open issues were raised that we have decided to remain agnostic on are listed below. These issues have not yet been fully implemented in most coding projects employing PLOVER to date.
 
 \begin{description}
 
