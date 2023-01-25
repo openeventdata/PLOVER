@@ -10,6 +10,7 @@
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage{booktabs}
+\usepackage[table]{xcolor}
 \usepackage{verbatim} % for comment blocks
 \usepackage{natbib}
 \usepackage{datetime} % To set the document dates automagically
@@ -257,31 +258,82 @@ In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided viol
 
 \section{Numeric conflict/cooperation scores}
 
-Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these were called ``Goldstein scores'' since they were an extension of the WEIS scores in \cite{Goldstein92} which mapped the CAMEO codes to a $-$10 to $+$10 scale (though in fact the most cooperative action had score of only $+$8.5). The ``PLOVER scores'' given in Table \ref{tab:ploverscores} provide comparable scaled conflict/cooperation scores for PLOVER. They were created by taking a weighted average of the CAMEO/Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample (October-2017 to March-2019). Two additional changes were made based on our knowledge of the categories: COERCE and MOBILIZE were flipped, so COERCE was increased in magnitude from -5.3 to -7.2 and MOBILIZE moved from -7.2 to -5.3.
+%Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these were called ``Goldstein scores'' since they were an extension of the WEIS scores in \cite{Goldstein92} which mapped the CAMEO codes to a $-$10 to $+$10 scale (though in fact the most cooperative action had score of only $+$8.5). The ``PLOVER scores'' given in Table \ref{tab:ploverscores} provide comparable scaled conflict/cooperation scores for PLOVER. They were created by taking a weighted average of the CAMEO/Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample (October-2017 to March-2019). Two additional changes were made based on our knowledge of the categories: COERCE and MOBILIZE were flipped, so COERCE was increased in magnitude from -5.3 to -7.2 and MOBILIZE moved from -7.2 to -5.3.
+
+Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these were called ``Goldstein scores'' since they were an extension of the WEIS scores in \cite{Goldstein92} which mapped the CAMEO codes to a $-$10 to $+$10 scale. The ``PLOVER scores'' given in Table \ref{tab:ploverscores} provide comparable scaled conflict/cooperation scores for PLOVER. An initial mapping was created by taking a weighted average of the CAMEO-based Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample of data (October-2017 to March-2019). 
+
+Using this initial mapping and the original CAMEO-based Goldstein scores as  starting points, a subject matter expert then qualitatively developed a set of PLOVER scores for each of PLOVER's event types and modes. A second subject matter expert simultaneously developed an alternative set of proposed PLOVER scores through a combination of (i) rankings using pairwise comparisons of each PLOVER event type-mode combination and (ii) post-ranking regression modeling. The two separately developed sets of PLOVER scores were then reviewed by a team of five subject matter experts (including the two mentioned above) to reconcile discrepancies. Ultimately, the final PLOVER scores presented below reflect a re-scaled average of the two sets of expert-derived PLOVER scores, with a small number of qualitative score adjustments that were implemented by the larger team of experts upon discussion. By and large, these final PLOVER scores reflect the original ``Goldstein scores'' in ranging from $-$10 to $+$10, with more positive values reflecting more cooperative actions and more negative values reflecting more conflictive actions.
+
+
+%\begin{table}[htp]
+%\begin{center}
+%\caption{PLOVER conflict--cooperation scores}
+%\begin{tabular}{lc}
+%\hline
+%\textbf{PLOVER category} & \textbf{PLOVER scores} \\
+%\hline
+%ASSAULT  & -9.3\\
+%COERCE & -7.2\\
+%PROTEST & -6.6\\
+%MOBILIZE & -5.3\\
+%SANCTION & -5.2\\
+%THREATEN & -5.1\\
+%REQUEST & -5.0\\
+%REJECT & -4.2\\
+%ACCUSE &  -2.0\\
+%CONSULT &  +2.1\\
+%AGREE & +4.2\\
+%SUPPORT & +4.6\\
+%CONCEDE & +5.0\\
+%COOPERATE & +6.8\\
+%AID & +7.4\\
+%RETREAT & +7.6 \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\label{tab:ploverscores}
+%\end{table}
+
 
 \begin{table}[htp]
 \begin{center}
 \caption{PLOVER conflict--cooperation scores}
-\begin{tabular}{lc}
+\hspace*{-1.2cm}
+\begin{tabular}{|lc|lc|lc|}
 \hline
-\textbf{PLOVER category} & \textbf{PLOVER scores} \\
+\textbf{CATEGORY: Mode} & \textbf{Score} & \textbf{CATEGORY: Mode} & \textbf{Score} & \textbf{CATEGORY: Mode} & \textbf{Score} \\
 \hline
-ASSAULT  & -9.3\\
-COERCE & -7.2\\
-PROTEST & -6.6\\
-MOBILIZE & -5.3\\
-SANCTION & -5.2\\
-THREATEN & -5.1\\
-REQUEST & -5.0\\
-REJECT & -4.2\\
-ACCUSE &  -2.0\\
-CONSULT &  +2.1\\
-AGREE & +4.2\\
-SUPPORT & +4.6\\
-CONCEDE & +5.0\\
-COOPERATE & +6.8\\
-AID & +7.4\\
-RETREAT & +7.6 \\
+\cellcolor{gray!25}AGREE	&	\cellcolor{gray!25}2.5	&	\cellcolor{gray!25}REJECT	&	\cellcolor{gray!25}-2	&	\cellcolor{gray!25}COERCE	&	\cellcolor{gray!25}-7 \\
+\cellcolor{gray!25}CONSULT	&	\cellcolor{gray!25}2.5	&	REJECT: Assist	&	-1.5	&	COERCE: Seize	&	-7 \\
+CONSULT: Visit	&	4	&	REJECT: Change	&	-2	&	COERCE: Restrict	&	-7 \\
+CONSULT: Third-party	&	1	&	REJECT: Yield	&	-2	&	COERCE: Ban	&	-7 \\
+CONSULT: Multilateral	&	4	&	REJECT: Meet	&	-2	&	COERCE: Censor	&	-6.5 \\
+CONSULT: Phone	&	1.5	&	\cellcolor{gray!25}THREATEN	&	\cellcolor{gray!25}-3.5	&	COERCE: Curfew	&	-6.5 \\
+\cellcolor{gray!25}SUPPORT	&	\cellcolor{gray!25}5	&	THREATEN: Restrict	&	-3	&	COERCE: Martial-law	&	-7.5 \\
+\cellcolor{gray!25}CONCEDE	&	\cellcolor{gray!25}4.5	&	THREATEN: Ban	&	-3.5	&	COERCE: Arrest	&	-7 \\
+\cellcolor{gray!25}COOPERATE	&	\cellcolor{gray!25}9.5	&	THREATEN: Arrest	&	-3.5	&	COERCE: Deport	&	-7 \\
+\cellcolor{gray!25}AID	&	\cellcolor{gray!25}10	&	THREATEN: Relations	&	-3.5	&	COERCE: Withhold	&	-7 \\
+\cellcolor{gray!25}RETREAT	&	\cellcolor{gray!25}6.5	&	THREATEN: Expel	&	-3.5	&	COERCE: Misinformation	&	-6.5 \\
+RETREAT: Withdraw	&	8	&	THREATEN: Territory	&	-4	&	COERCE: Cyber	&	-7 \\
+RETREAT: Release	&	6.5	&	THREATEN: Violence	&	-3.5	&	\cellcolor{gray!25}ASSAULT	&	\cellcolor{gray!25}-9 \\
+RETREAT: Return	&	5.5	&	\cellcolor{gray!25}PROTEST	&	\cellcolor{gray!25}-5	&	ASSAULT: Abduct	&	-8.5 \\
+RETREAT: Disarm	&	10	&	PROTEST: Demo	&	-5	&	ASSAULT: Beat	&	-7.5 \\
+RETREAT: Ceasefire	&	7.5	&	PROTEST: Riot	&	-7	&	ASSAULT: Torture	&	-8.5 \\
+RETREAT: Access	&	6.5	&	PROTEST: Strike	&	-5	&	ASSAULT: Execute	&	-9.5 \\
+RETREAT: Resign	&	4.5	&	PROTEST: Hunger	&	-4.5	&	ASSAULT: Sexual	&	-8.5 \\
+\cellcolor{gray!25}REQUEST	&	\cellcolor{gray!25}0	&	PROTEST: Boycott	&	-4.5	&	ASSAULT: Assassinate	&	-9.5 \\
+REQUEST: Assist	&	0.5	&	PROTEST: Obstruct	&	-4.5	&	ASSAULT: Destroy	&	-8.5 \\
+REQUEST: Change	&	-1	&	\cellcolor{gray!25}SANCTION	&	\cellcolor{gray!25}-6	&	ASSAULT: Primitive	&	-8 \\
+REQUEST: Yield	&	-1	&	SANCTION: Convict	&	-6	&	ASSAULT: Firearms	&	-9 \\
+REQUEST: Meet	&	0	&	SANCTION: Expel	&	-5.5	&	ASSAULT: Explosives	&	-9 \\
+\cellcolor{gray!25}ACCUSE	&	\cellcolor{gray!25}-3	&	SANCTION: Withdraw	&	-6	&	ASSAULT: Suicide-attack	&	-9.5 \\
+ACCUSE: Disapprove	&	-2	&	SANCTION: Discontinue	&	-6	&	ASSAULT: Aerial	&	-9.5 \\
+ACCUSE: Investigate	&	-3.5	&	\cellcolor{gray!25}MOBILIZE	&	\cellcolor{gray!25}-5.5	&	ASSAULT: Drone	&	-9.5 \\
+ACCUSE: Allege	&	-3.5	&	MOBILIZE: Troops	&	-6.5	&	ASSAULT: Heavy-weapons	&	-9.5 \\
+	&		&	MOBILIZE: Weapons	&	-6.5	&	ASSAULT: Crowd-control	&	-7.5 \\
+	&		&	MOBILIZE: Police	&	-5.5	&	ASSAULT: Cleansing	&	-10 \\
+	&		&	MOBILIZE: Militia	&	-6	&	ASSAULT: Massacre	&	-10 \\
+	&		&		&		&	ASSAULT: Unconventional	&	-10 \\
 \hline
 \end{tabular}
 \end{center}
