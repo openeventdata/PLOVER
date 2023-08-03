@@ -443,7 +443,7 @@ This covers verbal concessions which have no immediate material consequences, in
 \subsection{Potential ambiguities}
 
 \begin{itemize}
-\item Formal pardons and amnesties of arrested persons should be coded as \plcat{CONCEDE}; the actual release  or exchange of prisoners should be coded as \plcat{RETREAT}.
+\item Formal pardons, acquittals, and amnesties of arrested persons should be coded as \plcat{CONCEDE}; the actual release or exchange of prisoners should be coded as \plcat{RETREAT}.
 \item Expressions of regret or remorse for an action or situation should be coded as \plcat{CONCEDE}.
 \item Future concessions, i.e. \plcat{CONCEDE} + \plcon{future} should be left as they are, i.e. they do not reduce to \plcat{AGREE}.
 \item Announcements of future retreats should be coded as \plcat{CONCEDE}. E.g., ``announced...would withdraw troops" is \plcat{RETREAT} + \plcat{FUTURE} and should be coded as \plcat{CONCEDE}.
@@ -619,7 +619,14 @@ meet & Meetings and negotiations\\
 
 \subsection{Potential ambiguities}
 
-Candidates for \plcat{ACCUSE}-allege + context: ``misinformation" events could also be \plcat{COERCE}-misinformation, depending on the wording of the relevant text.
+\begin{itemize}
+
+\item \plcat{ACCUSE}-disapprove is used for diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media.
+
+\item Candidates for \plcat{ACCUSE}-allege + context: ``misinformation" events could also be \plcat{COERCE}-misinformation, depending on the wording of the relevant text.
+
+\end{itemize}
+
 
 \subsection{Supplementary fields: modes}
 
@@ -721,6 +728,12 @@ All civilian demonstrations and other collective actions carried out as protests
 
 \subsection{Requires recipient: No}
 
+\subsection{Potential ambiguities}
+
+\begin{itemize}
+\item Diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media, are coded as  \plcat{ACCUSE}-disapprove.  \plcat{PROTEST} presumes significant physical/material activity, not just an expression of opinion.
+\end{itemize}
+
 \subsection{Supplementary fields:}
 
 \begin{description}
@@ -747,6 +760,7 @@ workplaces, either within specific sectors/industries or across sectors/industri
 hunger & Hunger strike\\
 boycott & The boycott of an activity, person, country, or organization via the withdrawal of commercial or social relations\\
 obstruct & Obstruct passage or access to a particular locale \\
+vandalize & Damage or destroy property  as a \textit{symbolic} act (for example damaging of artworks) rather destruction incidental to a riot \\
 \hline
 \end{tabular}
 \end{center}
