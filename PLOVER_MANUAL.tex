@@ -371,7 +371,13 @@ All consultations and meetings: this includes visiting and hosting visits, as we
 
 \subsection{Potential ambiguities}
 
-References to future meetings, summits, state visits, etc. and invitations for state visits should be coded as \plcat{AGREE}.
+\begin{itemize}
+
+\item References to future meetings, summits, state visits, etc. and invitations for state visits should be coded as \plcat{AGREE}.
+
+\item Consultations with ambassadors already in a country---typically this is done to complain about an action---should be coded for the content of the action. Since this is typically done to complain about actors, this would usually be \plcat{ACCUSE} or \plcat{REJECT} with modes such as \txt{ACCUSE-disapprove} or \txt{ACCUSE-allege}
+
+\end{itemize}
 
 \subsection{Requires recipient: No}
 
@@ -621,7 +627,7 @@ meet & Meetings and negotiations\\
 
 \begin{itemize}
 
-\item \plcat{ACCUSE}-disapprove is used for diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media.
+\item \plcat{ACCUSE}-disapprove is used for diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media. As noted under \plcat{CONSULT}, summoning an in-country ambassador to present such grievances is just coded  \plcat{ACCUSE}, not  \plcat{CONSULT}
 
 \item Candidates for \plcat{ACCUSE}-allege + context: ``misinformation" events could also be \plcat{COERCE}-misinformation, depending on the wording of the relevant text.
 
