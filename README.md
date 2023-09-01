@@ -13,6 +13,12 @@ The full PLOVER codebook is available in the repo
 [above](https://github.com/openeventdata/PLOVER/blob/master/PLOVER_Manual.pdf),
 and a short introduction to PLOVER and event data is below.
 
+There is currently a near-real-time PLOVER-coded global event data set on Dataverse at https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AJGVIT. Extensive details are available at these two open-access papers:
+
+Halterman, Andrew, Philip A. Schrodt, Andreas Beger, Benjamin E. Bagozzi and Grace I. Scarborough. 2023. “Creating Custom Event Data Without Dictionaries: A Bag-of-Tricks.” Working paper presented at the International Studies Association, Montreal, March-2023. [arXiv link](https://arxiv.org/abs/2304.01331)
+
+Halterman, Andrew, Benjamin E. Bagozzi, Andreas Beger,  Philip A. Schrodt, and Grace I. Scarborough. 2023. PLOVER and POLECAT: A New Political Event Ontology and Dataset.” Working paper presented at the International Studies Association, Montreal, March-2023. [socArXiv link](https://osf.io/preprints/socarxiv/rm5dw/)
+
 ## Event Data and Ontologies
 
 Event data in political science is a structured way of recording interactions
