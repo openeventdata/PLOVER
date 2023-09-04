@@ -260,7 +260,7 @@ In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided viol
 
 %Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these were called ``Goldstein scores'' since they were an extension of the WEIS scores in \cite{Goldstein92} which mapped the CAMEO codes to a $-$10 to $+$10 scale (though in fact the most cooperative action had score of only $+$8.5). The ``PLOVER scores'' given in Table \ref{tab:ploverscores} provide comparable scaled conflict/cooperation scores for PLOVER. They were created by taking a weighted average of the CAMEO/Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample (October-2017 to March-2019). Two additional changes were made based on our knowledge of the categories: COERCE and MOBILIZE were flipped, so COERCE was increased in magnitude from -5.3 to -7.2 and MOBILIZE moved from -7.2 to -5.3.
 
-Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these were called ``Goldstein scores'' since they were an extension of the WEIS scores in \cite{Goldstein92} which mapped the CAMEO codes to a $-$10 to $+$10 scale. The ``PLOVER scores'' given in Table \ref{tab:ploverscores} provide comparable scaled conflict/cooperation scores for PLOVER. An initial mapping was created by taking a weighted average of the CAMEO-based Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample of data (October-2017 to March-2019). 
+Researchers and analysts often want to represent events along a conflict/cooperation scale. In CAMEO, these were called ``Goldstein scores'' since they were an extension of the WEIS scores in \cite{Goldstein92} which mapped the CAMEO codes to a $-$10 to $+$10 scale. The ``PLOVER scores'' given in Table \ref{tab:ploverscores} provide comparable scaled conflict/cooperation scores for PLOVER. An initial mapping was created by taking a weighted average of the CAMEO-based Goldstein scores for each PLOVER category, with the weights being the empirical frequency of the CAMEO event type in an 18 month sample of data (October-2017 to March-2019).
 
 Using this initial mapping and the original CAMEO-based Goldstein scores as  starting points, a subject matter expert then qualitatively developed a set of PLOVER scores for each of PLOVER's event types and modes. A second subject matter expert simultaneously developed an alternative set of proposed PLOVER scores through a combination of (i) pairwise comparisons of PLOVER event type-mode combinations and (ii) a Bradley-Terry model to estimate locations of each PLOVER event type-mode on a cooperative--conflictual scale. The two separately developed sets of PLOVER scores were then reviewed by a team of five subject matter experts (including the two mentioned above) to reconcile discrepancies. Ultimately, the final PLOVER scores presented below reflect a re-scaled average of the two sets of expert-derived PLOVER scores, with a small number of qualitative score adjustments that were implemented by the larger team of experts upon discussion. By and large, these final PLOVER scores reflect the original ``Goldstein scores'' in ranging from $-$10 to $+$10, with more positive values reflecting more cooperative actions and more negative values reflecting more conflictual actions.
 
@@ -581,7 +581,7 @@ All requests, demands, and orders. Requests, demands, and orders are less forcef
 \item This category only applies to verbal demands: demands that take the form of demonstrations, protests, etc. are coded as \plcat{PROTEST}.
 \item When one or more parties to a conflict call for ending the conflict, that is taken to be an expression of intent on the part of the \txt{actor} and is thus coded as \plcat{AGREE}.
 \item Withdrawing a demand should be coded as \plcat{CONCEDE}.
-
+\item \plcat{REQUEST} `change' includes calls for dismissal of officials (as in, a request for change in leadership).
 \end{itemize}
 
 
@@ -627,9 +627,11 @@ meet & Meetings and negotiations\\
 
 \begin{itemize}
 
-\item \plcat{ACCUSE}-disapprove is used for diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media. As noted under \plcat{CONSULT}, summoning an in-country ambassador to present such grievances is just coded  \plcat{ACCUSE}, not  \plcat{CONSULT}
+\item \plcat{ACCUSE} `disapprove' is used for diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media. As noted under \plcat{CONSULT}, summoning an in-country ambassador to present such grievances is just coded  \plcat{ACCUSE}, not  \plcat{CONSULT}
 
-\item Candidates for \plcat{ACCUSE}-allege + context: ``misinformation" events could also be \plcat{COERCE}-misinformation, depending on the wording of the relevant text.
+\item Candidates for \plcat{ACCUSE} `allege' + context: ``misinformation" events could also be \plcat{COERCE} `misinformation,' depending on the wording of the relevant text.
+
+\item When an accusation or allegation is also reported alongside a formal conviction, \plcat{ACCUSE} `allege' should not be coded as these are cases where the allegation was proven to be true.
 
 \end{itemize}
 
@@ -665,8 +667,9 @@ All rejections and refusals.
 
 \subsection{Potential ambiguities}
 
-Withdrawal of military aid or other assistance is coded as \plcat{SANCTION}.
-
+\begin{itemize}
+\item Withdrawal of military aid or other assistance is coded as \plcat{SANCTION}.
+\end{itemize}
 
 \subsection{Supplementary fields: modes}
 
@@ -697,6 +700,12 @@ meet & Meetings and negotiations\\
 
 All threats, coercive or forceful warnings with serious potential repercussions. Threats are generally verbal acts except for purely symbolic material actions such as having an unarmed group place a flag on some territory.
 \subsection{Requires recipient: No}
+
+\subsection{Potential ambiguities}
+
+\begin{itemize}
+\item Issuing an in-absentia arrest should be coded as a \plcat{THREAT} `arrest' rather than \plcat{COERCE} `arrest'.
+\end{itemize}
 
 \subsection{Supplementary fields: mode}
 
@@ -737,7 +746,7 @@ All civilian demonstrations and other collective actions carried out as protests
 \subsection{Potential ambiguities}
 
 \begin{itemize}
-\item Diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media, are coded as  \plcat{ACCUSE}-disapprove.  \plcat{PROTEST} presumes significant physical/material activity, not just an expression of opinion.
+\item Diplomatic protests, as well as delegations presenting a disagreement to an organization or authority, or protests carried out in social media, are coded as  \plcat{ACCUSE} `disapprove.'  \plcat{PROTEST} presumes significant physical/material activity, not just an expression of opinion.
 \item When coding additional events within a text describing a protest, generally the \textit{topic} of the protest---which will typically be a DEMAND---is not coded as a separate event. However, discrete events that are the motivatation for the protest---for example a visit by a foreign dignitary, earlier actions by the police or military, or an earlier arrest---should be coded.
 \end{itemize}
 
@@ -791,10 +800,11 @@ All reductions in existing, routine, or cooperative relations. Note that this is
 \subsection{Potential ambiguities}
 
 \begin{itemize}
-\item Convictions that result in imprisonment should also e coded as \plcat{COERCE} `arrest'.
+\item Convictions that result in imprisonment should also be coded as \plcat{COERCE} `arrest'.
 \item Expulsions or deportations of individuals---typically a legal matter---are coded as \plcat{COERCE}.
 \item Cancellation of meetings are \plcat{REJECT} and therefore verbal conflict.
 \item While reparations or voluntary settlements should be coded as \plcat{AID}, court-ordered payments should be coded as \plcat{SANCTION} events with the winner and court as actor and guilty party as recipient.
+\item Refugees or similar actors that are characterized fleeing a country or subnational location should be coded \plcat{SANCTION} `expel' with the causative agent as the actor rather than \plcat{SANCTION} `withdraw' with the actor coded as the fleeing party.
 \end{itemize}
 
 \subsection{Supplementary fields: mode}
@@ -832,13 +842,13 @@ The \txt{recipient} are entities against whom the \txt{actor} mobilizes its mili
 
 \subsection{Potential ambiguities}
 
-Joint military operations are coded as \plcat{COOPERATE} but single-country exercises should be coded as \plcat{MOBILIZE}.
-
-Events that involved ``mobilizing supporters to demonstrate" should be coded as \plcat{PROTEST}.
-
-If a document reports a \plcat{MOBILIZE} event in the context of an \plcat{ASSAULT}, only the \plcat{ASSAULT} should be coded. For example: ``military units in the area were activated and returned fire on the rebels" should not report a separate \plcat{MOBILIZE} event.
-
-Mobilizing police or military forces for disaster relief should be coded as \plcat{AID}.
+\begin{itemize}
+\item Joint military operations are coded as \plcat{COOPERATE} but single-country exercises should be coded as \plcat{MOBILIZE}.
+\item Events that involved ``mobilizing supporters to demonstrate" should be coded as \plcat{PROTEST}.
+\item If a document reports a \plcat{MOBILIZE} event in the context of an \plcat{ASSAULT}, only the \plcat{ASSAULT} should be coded. For example: ``military units in the area were activated and returned fire on the rebels" should not report a separate \plcat{MOBILIZE} event.
+\item Mobilizing police or military forces for disaster relief should be coded as \plcat{AID}.
+\item Mobilizing weapons, ships, or vehicles should be coded as \plcat{MOBILIZE} `weapons' rather than \plcat{MOBILIZE} `troops,' unless there's a separate mention of troops being mobilized.
+\end{itemize}
 
 \subsection{Requires recipient: No}
 
@@ -878,8 +888,11 @@ Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasion
 \subsection{Potential ambiguities}
 
 \begin{itemize}
-\item Candidates for COERCE-misinformation could also be ACCUSE-allege + context: ``misinformation'' events, depending on the wording of the relevant text.
+\item Candidates for \plcat{COERCE} `misinformation' could also be \plcat{ACCUSE} `allege' $+$ context: ``misinformation'' events, depending on the wording of the relevant text.
+\item Combatants captured during conflict should be coded as \plcat{ASSAULT} `abduct' rather than \plcat{COERCE} `arrest.'
 \item The ``cyber'' and ``misinformation'' modes both have corresponding contexts with the same name. The modes capture specific instances of ``cyber'' or ``misinformation'' actions, e.g. a report of a website denial of service attack or a social media disinformation campaign. The contexts are broader, and also capture other actions related to ``cyber'' or ``misinformation'' events, like for example the arrest of a person for hacking or cybercrime, or a threat by the recipient of a misinformation campaign to the responsible actor to cease it.
+\item State of emergencies in relation to national disasters should generally not be coded as \plcat{COERCE} `restrict' absent evidence for their use as a repressive tactic.
+\item Issuing an in-absentia arrest should be coded as a \plcat{THREAT} `arrest' rather than \plcat{COERCE} `arrest'.
 \end{itemize}
 
 \subsection{Supplementary fields: }
@@ -933,6 +946,9 @@ In \plcat{ASSAULT} events where the violence is two-sided, all participants are 
 
 \item Mentions of beatings/assualts that use blunt instruments such as bats, clubs, and so on receive both \plcat{ASSAULT}  `beat' and  \plcat{ASSAULT} `primitive' modes.
 \item Mentions of assaults, murders, or clashes that involve knives, machetes, fire, rocks and similar instruments only receive the  \plcat{ASSAULT} ``primitive'' mode.
+\item Usage of \plcat{ASSAULT} `crowd-control' should be reserved for instances where there is an explicit mention of a crowd control weapon or tactic. Cases that discuss more ambiguous interactions such as ``police pushed back protesters'' would be coded as \plcat{RESTRICT}.
+\item Combatants captured during conflict should be coded as \plcat{ASSAULT} `abduct' rather than \plcat{COERCE} `arrest.'
+\item Incidental damage to houses/property should not automatically be coded as \plcat{ASSAULT} `destroy.' \plcat{ASSAULT} `destroy' should be used either as a residual mode when the method or weapon of \plcat{ASSAULT} is unknown but property or infrastructure is destroyed, or when destruction is the intention of the \plcat{ASSAULT} (e.g., the bombing energy infrastructure; demolition of housing settlements).
 \end{itemize}
 \subsection{Supplementary fields:}
 
@@ -998,7 +1014,7 @@ The covert gathering of information by state intelligence organizations, includi
 
 \section{Executive}\label{context:executive}
 
-Politics and interactions involving the executive branch, the prime minister, or the non-elected executive of a country. This can include discussions of background context on (e.g.,) an executive's legal challenges, corruption concerns, family, or lifestyle. This context field should also code discussions of executive-branch rivalries or interactions, including instances where an executive or dictator chooses to appoint, demote, or remove a representative from their cabinet, inner circle, or a bureaucratic agency under their purview. Executive relations with other institutions (e.g., foreign heads of state, legislatures, judiciaries, or the military) should generally be coded as `executive', but will also often receive additional context tags.
+Politics and interactions involving the executive branch, the prime minister, or the non-elected executive of a country. This can include discussions of background context on (e.g.,) an executive's legal challenges, corruption concerns, family, or lifestyle. This context field should also code discussions of executive-branch rivalries or interactions, including instances where an executive or dictator chooses to appoint, demote, or remove a representative from their cabinet, inner circle, or a bureaucratic agency under their purview. Executive relations with other institutions (e.g., foreign heads of state, legislatures, judiciaries, or the military) should generally be coded as `executive', but will also often receive additional context tags. Two areas that aren't typically coded for the `executive' context are very routine mentions/interactions involving executives and discussions of past executives.
 
 \section{Legislative}\label{context:legislative}
 
@@ -1129,7 +1145,7 @@ Discussions of technological development, technological innovation, new technolo
 
 \section{Terrorism}\label{context:terrorism}
 
-Events related to terrorist groups, terrorist actions, terrorist funding, or terrorist sponsors; as well as anti-terrorism activities and policies. Terrorism is defined as any activity that aims to harm, kill, or kidnap civilians or unarmed government employees in an effort to intimidate, coerce, and/or provoke fear in societies, governments, or groups therein.
+Events related to terrorist groups, terrorist actions, terrorist funding, or terrorist sponsors; as well as anti-terrorism activities and policies. Terrorism is defined as any activity that aims to harm, kill, or kidnap civilians or unarmed government employees in an effort to intimidate, coerce, and/or provoke fear in societies, governments, or groups therein. This context should ideally be reserved for instances where actual terrorism is discussed, as opposed to instances where a government actor more questionably labels an opposing actor as a `terrorist' for political or strategic purposes.
 
 \section{CBRN}\label{context:cbrn}
 
@@ -1146,7 +1162,7 @@ Discussions of misinformation, disinformation influence operations, or fake news
 
 \section{Crime}\label{context:crime}
 
-Discussions of (international or domestic) criminal activities, as well as discussions of the perpetration of specific crimes, criminal convictions, or criminals themselves. General discussions of transnational or domestic criminal organizations (e.g., the mafia) or high profile criminal fugitives should also be coded under    `crime.' International coordination and cooperation to craft, enact, or enforce laws against criminal actions should also be coded under this context field. Note that several additional context fields---such as  `trafficking,'  `corruption,' and `illegal\_drugs'---code more specific criminal actions. War crimes should generally be excluded from this context field, and coded instead under `human\_rights' or `rights\_freedoms' depending on the specific context.
+Discussions of (international or domestic) criminal activities, as well as discussions of the perpetration of specific crimes, criminal convictions, or criminals themselves. General discussions of transnational or domestic criminal organizations (e.g., the mafia) or high profile criminal fugitives should also be coded under    `crime.' International coordination and cooperation to craft, enact, or enforce laws against criminal actions should also be coded under this context field. Note that several additional context fields---such as  `trafficking,'  `corruption,' and `illegal\_drugs'---code more specific criminal actions. When these are coded, `crime' should typically not also be coded. the one exception is in the case of `cyber,' where the addition of a `crime' context allows one to distinguish between cyber-crimes and government-directed cyber actions. War crimes should generally be excluded from this context field, and coded instead under `human\_rights' or `rights\_freedoms' depending on the specific context.
 
 \section{Corruption}\label{context:corruption}
 Instances of political, legal, and business corruption. This can include allegations or suspicions of such corruption. Coded forms of corruption for this context field include (e.g.) misuse/abuse of public office for personal (private) gain, extortion, embezzlement, bribery, cronyism, nepotism, and insider trading. The passage, enforcement, or development of international or domestic anti-corruption laws should also be coded as `corruption'. However, the abuse of government power via tactics of repression or police brutality should not be coded as 'corruption', and should instead be coded as `human\_rights' `pro\_autocracy,'   `rights\_freedoms,' and/or `elections' depending on the specific context.
@@ -1266,7 +1282,7 @@ Sector codes are 3-letter codes that identify the broad societal/organizational 
 	  PRM & Paramilitary organizations not in opposition to government\\
 	  PTY & Political parties (see Note 1) \\
 	  REB & Rebels: armed opposition groups or individuals (see Note 3)\\
-	  SPY & State intelligence services \\
+	  SPY & State intelligence services as well intelligence operatives or assets \\
 	  UAF & Unidentified armed forces (``unknown gunmen'') \\
 	  UNK & Generic unidentified actors (e.g. actor for ``two civilians were killed by a bomb'') \\
   \hline
@@ -1277,7 +1293,7 @@ Sector codes are 3-letter codes that identify the broad societal/organizational 
       CRM & individual criminals and criminal gangs \\
 	  CVL & civilians, protesters, activists, and other unarmed domestic entities that lack affiliation with the organized groups that appear within the sectors presented above and below  \\
 	  EDU & educators, schools, students, or organizations dealing with education \\
-      ELI & former government officials who currently do not hold positions in the government or armed forces, including exiled/ousted officials\\
+      ELI & former government officials who currently do not hold positions in the government or armed forces, including exiled/ousted officials as well as family members of (former) government officials\\
       JRN & journalists, newspapers, radio, television, web sites (see Note 4)  \\
       LAB & formally or informally organized labor in services or manufacturing \\
 	  MED & individuals and organizations dealing with health (see Note 4) \\
