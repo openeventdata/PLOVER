@@ -1,0 +1,106 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Azar}{1980}]{Azar80}
+Azar, E.~E.\leavevmode\nopagebreak\newline 1980.
+\newblock The conflict and peace data bank ({COPDAB}) project.
+\newblock {\em Journal of Conflict Resolution}, 24:143--152.
+
+\bibitem[\protect\astroncite{Azar}{1982}]{Azar82}
+Azar, E.~E.\leavevmode\nopagebreak\newline 1982.
+\newblock {\em The Codebook of the Conflict and Peace Data Bank ({COPDAB})}.
+\newblock College Park, MD: Center for International Development, University of
+  Maryland.
+
+\bibitem[\protect\astroncite{Azar and Sloan}{1975}]{AzarSloan75}
+Azar, E.~E. and T.~Sloan\leavevmode\nopagebreak\newline 1975.
+\newblock {\em Dimensions of Interaction}.
+\newblock Pittsburgh: University Center for International Studies, University
+  of Pittsburgh.
+
+\bibitem[\protect\astroncite{Bond et~al.}{2003}]{BBOJT03}
+Bond, D., J.~Bond, C.~Oh, J.~C. Jenkins, and C.~L.
+  Taylor\leavevmode\nopagebreak\newline 2003.
+\newblock Integrated data for events analysis ({IDEA}): An event typology for
+  automated events data development.
+\newblock {\em Journal of Peace Research}, 40(6):733--745.
+
+\bibitem[\protect\astroncite{Goldstein}{1992}]{Goldstein92}
+Goldstein, J.~S.\leavevmode\nopagebreak\newline 1992.
+\newblock A conflict-cooperation scale for {WEIS} events data.
+\newblock {\em Journal of Conflict Resolution}, 36:369--385.
+
+\bibitem[\protect\astroncite{Halterman}{2020}]{halterman2020extracting}
+Halterman, A.\leavevmode\nopagebreak\newline 2020.
+\newblock {\em Extracting Political Events from Text Using Syntax and
+  Semantics}.
+\newblock PhD thesis, MIT Political Science.
+
+\bibitem[\protect\astroncite{Halterman et~al.}{2023a}]{HaltermanEtAl2023}
+Halterman, A., B.~E. Bagozzi, A.~Beger, P.~Schrodt, and
+  G.~Scraborough\leavevmode\nopagebreak\newline 2023a.
+\newblock Plover and polecat: A new political event ontology and dataset.
+\newblock SocArXiv. April 3. \url{doi:10.31235/osf.io/rm5dw}.
+
+\bibitem[\protect\astroncite{Halterman et~al.}{2023b}]{halterman2023creating}
+Halterman, A., P.~A. Schrodt, A.~Beger, B.~E. Bagozzi, and G.~I.
+  Scarborough\leavevmode\nopagebreak\newline 2023b.
+\newblock Creating custom event data without dictionaries: A bag-of-tricks.
+\newblock arXiv eprint 2304.01331.
+
+\bibitem[\protect\astroncite{Leng}{1987}]{Leng87}
+Leng, R.~J.\leavevmode\nopagebreak\newline 1987.
+\newblock {\em Behavioral Correlates of War, 1816-1975. ({ICPSR} 8606)}.
+\newblock Ann Arbor: Inter-University Consortium for Political and Social
+  Research.
+
+\bibitem[\protect\astroncite{McClelland}{1967}]{McClelland67}
+McClelland, C.~A.\leavevmode\nopagebreak\newline 1967.
+\newblock World-event-interaction-survey: A research project on the theory and
+  measurement of international interaction and transaction.
+\newblock University of Southern California.
+
+\bibitem[\protect\astroncite{McClelland}{1976}]{McClelland76}
+McClelland, C.~A.\leavevmode\nopagebreak\newline 1976.
+\newblock {\em World Event/Interaction Survey Codebook (ICPSR 5211)}.
+\newblock Ann Arbor: Inter-University Consortium for Political and Social
+  Research.
+
+\bibitem[\protect\astroncite{O'Brien}{2010}]{OBrien10}
+O'Brien, S.~P.\leavevmode\nopagebreak\newline 2010.
+\newblock Crisis early warning and decision support: Contemporary approaches
+  and thoughts on future research.
+\newblock {\em International Studies Review}, 12(1):87--104.
+
+\bibitem[\protect\astroncite{Osorio}{2015}]{osorio2015contagion}
+Osorio, J.\leavevmode\nopagebreak\newline 2015.
+\newblock The contagion of drug violence: spatiotemporal dynamics of the
+  mexican war on drugs.
+\newblock {\em Journal of Conflict Resolution}, 59(8):1403--1432.
+
+\bibitem[\protect\astroncite{Osorio and Reyes}{2017}]{osorio2017supervised}
+Osorio, J. and A.~Reyes\leavevmode\nopagebreak\newline 2017.
+\newblock Supervised event coding from text written in spanish: Introducing
+  {Eventus ID}.
+\newblock {\em Social Science Computer Review}, 35(3):406--416.
+
+\bibitem[\protect\astroncite{Scarborough et~al.}{2023}]{ScarboroughEtAl2023}
+Scarborough, G.~I., B.~E. Bagozzi, A.~Beger, J.~Berrie, A.~Halterman, P.~A.
+  Schrodt, and J.~Spivey\leavevmode\nopagebreak\newline 2023.
+\newblock Polecat weekly data.
+\newblock \url{https://doi.org/10.7910/DVN/AJGVIT}, Harvard Dataverse, V37.
+
+\bibitem[\protect\astroncite{Schrodt}{2006}]{Schrodt06TPM}
+Schrodt, P.~A.\leavevmode\nopagebreak\newline 2006.
+\newblock Twenty years of the {K}ansas event data system project.
+\newblock {\em The Political Methodologist}, 14(1):2--8.
+
+\bibitem[\protect\astroncite{Schrodt et~al.}{2009}]{SGY09}
+Schrodt, P.~A., D.~J. Gerner, and {\"O}.~Yilmaz\leavevmode\nopagebreak\newline
+  2009.
+\newblock Conflict and mediation event observations ({CAMEO}): An event data
+  framework for a post {C}old {W}ar world.
+\newblock In {\em International Conflict Mediation: New Approaches and
+  Findings}, J.~Bercovitch and S.~Gartner, eds.
+\newblock New York: Routledge.
+
+\end{thebibliography}

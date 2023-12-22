@@ -43,7 +43,7 @@
             {\LARGE Political Language Ontology for Verifiable Event Records\\ [2ex]Event, Actor and Data Interchange Specification}\\[10ex]
             {\LARGE Open Event Data Alliance} \\[2ex]
             {\Large \url{http://openeventdata.org/} }\\[2ex]
-            {\LARGE DRAFT Version: 1.3\\ [2EX]\monthyeardate\today}
+            {\LARGE DRAFT Version: 2.0\\ [2EX]\monthyeardate\today}
         \end{center}
 
 
@@ -82,7 +82,9 @@
 \noindent Additional work was sponsored by the Political Instability Task Force (PITF). The PITF is funded by the Central Intelligence Agency. The views expressed in this codebook are the authors' alone and do not
 represent the views of the US Government.\\
 
-\noindent GitHub repository: \txt{https://github.com/openeventdata/PLOVER}\\
+\noindent Readers interested in the POLECAT data that were generated using the PLOVER ontology should see \citet{ScarboroughEtAl2023} and \citet{HaltermanEtAl2023}.\\
+
+\noindent This document is hosted at the following GitHub repository: \txt{\footnotesize https://github.com/openeventdata/PLOVER}\\
 
 
 \noindent This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\\
@@ -250,7 +252,7 @@ PLOVER also uses actor lists to deal with reciprocal events. In CAMEO, a meeting
 \end{verbatim}
 where 042 and 043 are the CAMEO codes for ``visit'' and ``host'' respectively.\footnote{This example optimistically assumes the coding system was clever enough to recognize the significance of the phrase ``at the White House.''} While the PLOVER \plcat{CONSULT} mode provides for a host/visit distinction, this is not required. In such instances, all of the entities are considered as the actor and no recipient is included.
 
-In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided violence---is handled in a similar fashion, with both entities as \texttt{actor}: this applies in any event where both sides are using force, even if one side ``started it'', an assessment often as not contested anyway. One-sided violence, such as assassinations or police firing on demonstrators, will have the perpetrator as the \texttt{actor} and the victims as \texttt{recipient}. The \plmod{sideAB} mode in  \plcat{ASSAULT} is used in conjunction with the \texttt{recipient} field when there are two clear ``sides'' in the conflict.
+%In \plcat{ASSAULT} events, reciprocal violence---as distinct from one-sided violence---is handled in a similar fashion, with both entities as \texttt{actor}: this applies in any event where both sides are using force, even if one side ``started it'', an assessment often as not contested anyway. One-sided violence, such as assassinations or police firing on demonstrators, will have the perpetrator as the \texttt{actor} and the victims as \texttt{recipient}. The \plmod{sideAB} mode in  \plcat{ASSAULT} is used in conjunction with the \texttt{recipient} field when there are two clear ``sides'' in the conflict.
 
 
 
@@ -306,34 +308,32 @@ Using this initial mapping and the original CAMEO-based Goldstein scores as  sta
 \cellcolor{gray!25}AGREE	&	\cellcolor{gray!25}2.5	&	\cellcolor{gray!25}REJECT	&	\cellcolor{gray!25}-2	&	\cellcolor{gray!25}COERCE	&	\cellcolor{gray!25}-7 \\
 \cellcolor{gray!25}CONSULT	&	\cellcolor{gray!25}2.5	&	REJECT: Assist	&	-1.5	&	COERCE: Seize	&	-7 \\
 CONSULT: Visit	&	4	&	REJECT: Change	&	-2	&	COERCE: Restrict	&	-7 \\
-CONSULT: Third-party	&	1	&	REJECT: Yield	&	-2	&	COERCE: Ban	&	-7 \\
-CONSULT: Multilateral	&	4	&	REJECT: Meet	&	-2	&	COERCE: Censor	&	-6.5 \\
-CONSULT: Phone	&	1.5	&	\cellcolor{gray!25}THREATEN	&	\cellcolor{gray!25}-3.5	&	COERCE: Curfew	&	-6.5 \\
-\cellcolor{gray!25}SUPPORT	&	\cellcolor{gray!25}5	&	THREATEN: Restrict	&	-3	&	COERCE: Martial-law	&	-7.5 \\
-\cellcolor{gray!25}CONCEDE	&	\cellcolor{gray!25}4.5	&	THREATEN: Ban	&	-3.5	&	COERCE: Arrest	&	-7 \\
-\cellcolor{gray!25}COOPERATE	&	\cellcolor{gray!25}9.5	&	THREATEN: Arrest	&	-3.5	&	COERCE: Deport	&	-7 \\
-\cellcolor{gray!25}AID	&	\cellcolor{gray!25}10	&	THREATEN: Relations	&	-3.5	&	COERCE: Withhold	&	-7 \\
-\cellcolor{gray!25}RETREAT	&	\cellcolor{gray!25}6.5	&	THREATEN: Expel	&	-3.5	&	COERCE: Misinformation	&	-6.5 \\
-RETREAT: Withdraw	&	8	&	THREATEN: Territory	&	-4	&	COERCE: Cyber	&	-7 \\
-RETREAT: Release	&	6.5	&	THREATEN: Violence	&	-3.5	&	\cellcolor{gray!25}ASSAULT	&	\cellcolor{gray!25}-9 \\
-RETREAT: Return	&	5.5	&	\cellcolor{gray!25}PROTEST	&	\cellcolor{gray!25}-5	&	ASSAULT: Abduct	&	-8.5 \\
+CONSULT: Third-party	&	1	&	REJECT: Yield	&	-2	&	COERCE: Censor	&	-6.5 \\
+CONSULT: Multilateral	&	4	&	REJECT: Meet	&	-2	&	COERCE: Curfew	&	-6.5 \\
+CONSULT: Phone	&	1.5	&	\cellcolor{gray!25}THREATEN	&	\cellcolor{gray!25}-3.5	&	COERCE: Martial-law	&	-7.5 \\
+\cellcolor{gray!25}SUPPORT	&	\cellcolor{gray!25}5	&	THREATEN: Restrict	&	-3	&	COERCE: Arrest	&	-7 \\
+\cellcolor{gray!25}CONCEDE	&	\cellcolor{gray!25}4.5	&	THREATEN: Arrest	&	-3.5	&	COERCE: Deport	&	-7 \\
+\cellcolor{gray!25}COOPERATE	&	\cellcolor{gray!25}9.5	&	THREATEN: Relations	&	-3.5	&	COERCE: Withhold	&	-7 \\
+\cellcolor{gray!25}AID	&	\cellcolor{gray!25}10	&	THREATEN: Expel	&	-3.5	&	COERCE: Misinformation	&	-6.5 \\
+\cellcolor{gray!25}RETREAT	&	\cellcolor{gray!25}6.5	&	THREATEN: Territory	&	-4	&	COERCE: Cyber	&	-7 \\
+RETREAT: Withdraw	&	8	&	THREATEN: Violence	&	-3.5	&	\cellcolor{gray!25}ASSAULT	&	\cellcolor{gray!25}-9 \\
+RETREAT: Release	&	6.5	&	\cellcolor{gray!25}PROTEST	&	\cellcolor{gray!25}-5	&	ASSAULT: Abduct	&	-8.5 \\
 RETREAT: Disarm	&	10	&	PROTEST: Demo	&	-5	&	ASSAULT: Beat	&	-7.5 \\
 RETREAT: Ceasefire	&	7.5	&	PROTEST: Riot	&	-7	&	ASSAULT: Torture	&	-8.5 \\
-RETREAT: Access	&	6.5	&	PROTEST: Strike	&	-5	&	ASSAULT: Execute	&	-9.5 \\
-RETREAT: Resign	&	4.5	&	PROTEST: Hunger	&	-4.5	&	ASSAULT: Sexual	&	-8.5 \\
-\cellcolor{gray!25}REQUEST	&	\cellcolor{gray!25}0	&	PROTEST: Boycott	&	-4.5	&	ASSAULT: Assassinate	&	-9.5 \\
-REQUEST: Assist	&	0.5	&	PROTEST: Obstruct	&	-4.5	&	ASSAULT: Destroy	&	-8.5 \\
-REQUEST: Change	&	-1	&	\cellcolor{gray!25}SANCTION	&	\cellcolor{gray!25}-6	&	ASSAULT: Primitive	&	-8 \\
-REQUEST: Yield	&	-1	&	SANCTION: Convict	&	-6	&	ASSAULT: Firearms	&	-9 \\
-REQUEST: Meet	&	0	&	SANCTION: Expel	&	-5.5	&	ASSAULT: Explosives	&	-9 \\
-\cellcolor{gray!25}ACCUSE	&	\cellcolor{gray!25}-3	&	SANCTION: Withdraw	&	-6	&	ASSAULT: Suicide-attack	&	-9.5 \\
-ACCUSE: Disapprove	&	-2	&	SANCTION: Discontinue	&	-6	&	ASSAULT: Aerial	&	-9.5 \\
-ACCUSE: Investigate	&	-3.5	&	\cellcolor{gray!25}MOBILIZE	&	\cellcolor{gray!25}-5.5	&	ASSAULT: Drone	&	-9.5 \\
-ACCUSE: Allege	&	-3.5	&	MOBILIZE: Troops	&	-6.5	&	ASSAULT: Heavy-weapons	&	-9.5 \\
-	&		&	MOBILIZE: Weapons	&	-6.5	&	ASSAULT: Crowd-control	&	-7.5 \\
-	&		&	MOBILIZE: Police	&	-5.5	&	ASSAULT: Cleansing	&	-10 \\
-	&		&	MOBILIZE: Militia	&	-6	&	ASSAULT: Massacre	&	-10 \\
-	&		&		&		&	ASSAULT: Unconventional	&	-10 \\
+RETREAT: Access	&	6.5	&	PROTEST: Strike	&	-5	&	ASSAULT: Sexual	&	-8.5 \\
+RETREAT: Resign	&	4.5	&	PROTEST: Hunger	&	-4.5	&	ASSAULT: Targeted	&	-9.5 \\
+\cellcolor{gray!25}REQUEST	& \cellcolor{gray!25}0 &PROTEST: Boycott	&	-4.5	&	ASSAULT: Destroy	&	-8.5 \\	
+REQUEST: Assist	&	0.5	&	PROTEST: Obstruct	&	-4.5		&	ASSAULT: Primitive	&	-8 \\
+REQUEST: Change	&	-1	&	\cellcolor{gray!25}SANCTION	&	\cellcolor{gray!25}-6		&	ASSAULT: Firearms	&	-9 \\
+REQUEST: Yield	&	-1	&	SANCTION: Convict	&	-6	&	ASSAULT: Explosives	&	-9 \\
+REQUEST: Meet	&	0	&		SANCTION: Expel	&	-5.5	&	ASSAULT: Suicide-attack	&	-9.5 \\
+\cellcolor{gray!25}ACCUSE	& \cellcolor{gray!25}3&	SANCTION: Withdraw	&	-6		&	ASSAULT: Aerial	&	-9.5 \\
+ACCUSE: Disapprove	&	-2	&	SANCTION: Discontinue	&	-6	&	ASSAULT: Drone	&	-9.5 \\
+ACCUSE: Investigate	&	-3.5	&	\cellcolor{gray!25}MOBILIZE	&	\cellcolor{gray!25}-5.5	&	ASSAULT: Heavy-weapons	&	-9.5 \\
+ACCUSE: Allege	&	-3.5	&	MOBILIZE: Troops	&	-6.5	&	ASSAULT: Crowd-control	&	-7.5 \\
+	&		&	MOBILIZE: Weapons	&	-6.5	&	ASSAULT: Unconventional	&	-10 \\
+	&		&	MOBILIZE: Police	&	-5.5	&	&\\
+	&		&	MOBILIZE: Militia	&	-6	& &\\
 \hline
 \end{tabular}
 \end{center}
@@ -551,7 +551,7 @@ Name & Content \\
 \hline
 withdraw & Retreat from territory or withdraw forces from an area\\
 release & Release captives \\
-return & Return property \\
+%return & Return property \\
 disarm & Disarm militarily or give up weapons\\
 ceasefire & Implement ceasefire\\
 access & Allow third party (e.g., observers, peacekeepers, humanitarian workers) access \\
@@ -669,6 +669,7 @@ All rejections and refusals.
 
 \begin{itemize}
 \item Withdrawal of military aid or other assistance is coded as \plcat{SANCTION}.
+\item An instance where a country or similar entity bars a group or organization from entering its territory should be coded as \plcat{REJECT} whereas instances where a group or organization is expelled from a country or similar entity should be coded as \plcat{COERCE}.
 \end{itemize}
 
 \subsection{Supplementary fields: modes}
@@ -718,12 +719,10 @@ Note that in \plcat{THREATEN} the mode is the \ti{content} of the threat, rather
 \hline
 Name & Content \\
 \hline
-restrict & Restrict movement of people or goods, including boycotts, strikes,  \\
-& blockades, and curfews \\
-ban & Threaten to ban political activities of particular parties or individuals \\
+restrict & Restrict movement of people or goods---including boycotts, strikes, blockades, and  \\
+& curfews---as well as the banning of political activities of particular parties or individuals \\
 arrest & Arrest, detain, imprison \\
-relations & Threaten to suspend relations, talks \\
-& such as speech, expression, and assembly\\
+relations & Threaten to suspend relations or ongoing talks, meetings, or negotiations\\
 expel & Expel diplomats, peacekeepers, NGOs \\
 territory & Threaten to occupy, seize control of the whole or part of a territory \\
 violence & Threaten violence \\
@@ -817,7 +816,7 @@ All reductions in existing, routine, or cooperative relations. Note that this is
 Name & Content \\
 \hline
 convict &  Find an entity or behavior guilty, unconstitutional, or liable in a court of law or legally constituted tribunal. This includes not only formal convictions but also instances where an entity is discussed as being found guilty and sentenced or sanctioned via court-order, though court sentences that include imprisonment will also receive a \plcat{COERCE} `arrest' mode, (see ambiguities above)\\
-expel & Permanently or temporarily expel an entity from a group, organization, political party, or country. This excludes individual deportations, which are coded as a mode under \plcat{COERCE}\\
+expel & Permanently or temporarily expel an entity from a group, organization, political party, or country. Aside from the expulsion of ambassadors or similar diplomats, this mode excludes individual deportations, which are coded as a mode under \plcat{COERCE}\\
 withdraw & Withdraw oneself or one's non-military resources (e.g., aid, observers, diplomats, peacekeepers) from a group, mediation activity, organization, or country. This excludes official resignations from an occupation or elected position, which are coded as a mode under \plcat{RETREAT}\\
 discontinue & Curtail, decrease, break, or terminate diplomatic, commercial, or material exchanges in manners not specified above. International (political or economic) sanctions are coded as `discontinue', although they can occasionally receive additional \plcat{SANCTION} modes depending on the nature of the sanctions \\
 \hline
@@ -893,6 +892,7 @@ Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasion
 \item The ``cyber'' and ``misinformation'' modes both have corresponding contexts with the same name. The modes capture specific instances of ``cyber'' or ``misinformation'' actions, e.g. a report of a website denial of service attack or a social media disinformation campaign. The contexts are broader, and also capture other actions related to ``cyber'' or ``misinformation'' events, like for example the arrest of a person for hacking or cybercrime, or a threat by the recipient of a misinformation campaign to the responsible actor to cease it.
 \item State of emergencies in relation to national disasters should generally not be coded as \plcat{COERCE} `restrict' absent evidence for their use as a repressive tactic.
 \item Issuing an in-absentia arrest should be coded as a \plcat{THREAT} `arrest' rather than \plcat{COERCE} `arrest'.
+\item An instance where a country or similar entity bars a group or organization from entering its territory should be coded as \plcat{REJECT} whereas instances where a group or organization is expelled from a country or similar entity should be coded as \plcat{COERCE}.
 \end{itemize}
 
 \subsection{Supplementary fields: }
@@ -905,8 +905,7 @@ Most cases of \plcat{COERCE} have a clear intended \txt{recipient}, but occasion
 Name & Content \\
 \hline
 seize & Execute search, confiscate property, raid \\
-restrict & Impose restrictions on political freedoms or movement, including cordoning off areas \\
-ban & Ban individuals or organizations \\
+restrict & Impose restrictions on political freedoms or movement, including cordoning off areas and the banning of individuals or organizations from political life \\
 censor & Censor, ban or restrict access to publications or other information  \\
 curfew & Impose curfew \\
 martial-law & Impose state of emergency or martial law \\
@@ -963,10 +962,10 @@ Name & Content \\
 abduct & Abduct, kidnap, hijack \\
 beat & Physically assault by striking individuals or groups with one-off or repeated blows, typically administered manually or by blunt instrument\\
 torture & Torture \\
-execute & Judicially-sanctioned execution \\
+%execute & Judicially-sanctioned execution \\
 sexual & Sexual violence\\
-assassinate & Targeted assassinations (both successful and attempted) with any weapon \\
-destroy & Destroy property \\
+targeted & Targeted killings, including (successful and attempted) assassinations with any weapon, (non-)judicially-sanctioned executions, and deliberate mass killings of defenseless actors (e.g., civilians, prisoners)  \\
+destroy & Intentional destruction of property \\
 primitive & Primitive weapons: fire, edged weapons, rocks, farm implements \\
 firearms & Rifles, pistols, light machine guns\\
 explosives & Any explosive not incorporated in a heavy weapon: mines, IEDS, car bombs \\
@@ -975,10 +974,10 @@ aerial & Manned aerial vehicles, e.g. aircraft, helicopters \\
 drone & Unmanned aerial vehicles (UAVs), drones \\
 heavy-weapons & Artillery, rocket launchers, armored vehicles, tanks, and similar weapons \\
 crowd-control & Weapons and tactics intended to be less lethal crowd control, including tear gas, water cannons, firing weapons in the air, lathi charges, etc. \\
-cleansing & Mass expulsions or deportations, ethnic cleansing  \\
-massacre & Instances of mass killing or massacres  \\
+%cleansing & Mass expulsions or deportations, ethnic cleansing  \\
+%massacre & Instances of mass killing or massacres  \\
 unconventional & Chemical, biological, radiation, and nuclear weapons  \\
-sideAB & Two-sided violence: \txt{actor} and \txt{recipient} are ``Side A'' and ``Side B'' \\
+%sideAB & Two-sided violence: \txt{actor} and \txt{recipient} are ``Side A'' and ``Side B'' \\
 \hline
 \end{tabular}
 \end{center}
@@ -988,9 +987,9 @@ sideAB & Two-sided violence: \txt{actor} and \txt{recipient} are ``Side A'' and 
 
 \begin{description}
 	\item[mode:] Mode of violence: see Table \ref{tab:violmode}
-	\item[dead:]  number killed (integer or code)
-	\item[injured:] number injured (integer or code)
-	\item[size:] used when total casualties are reported, combining dead and wounded
+	%\item[dead:]  number killed (integer or code)
+	%\item[injured:] number injured (integer or code)
+	%\item[size:] used when total casualties are reported, combining dead and wounded
 	\item[event\_loc:] Location of event
 \end{description}
 
@@ -1208,7 +1207,7 @@ While the process of generating this block will depend on the specific nature of
 
 \section{Country names}
 
-The \texttt{actor/recipient} country name fields identify the country or other non-state international actor with which an \texttt{actor} or \texttt{recipient} is associated. These can be identified with a full name (the default), or optionally abbreviated 3-letter codes, e.g.\ ``Germany" or ``DEU." Altogether, the \texttt{actor/recipient} country name fields consist of three groups of entities:
+The \texttt{actor/recipient} country name fields identify the country or other non-state international actor with which an \texttt{actor} or \texttt{recipient} is associated. These can be identified with a full name (the default), or optionally abbreviated 3-letter codes, e.g.\ ``Germany" or ``DEU." Presently, actors and/or recipients that a given news report only implies to be a regional or global construct (e.g., ``The West,'' ``Latin America,'' or ``The Developing World'') do not receive a country name and any corresponding event(s) involving such entities are not coded.  Altogether, the \texttt{actor/recipient} country name fields consist of three groups of entities:
 
 \begin{enumerate}
 \item Independent states according to the Correlates of War (COW) state system membership list.\footnote{We include the Holy See in this group, even though it is not in the COW list.} In these instances, reported names and short codes are based on the ISO 3166 English short names and 3-letter codes, not COW names and codes. Aside from the exceptions mentioned next, all dependencies such as the \AA land Islands or the Pitcairn Islands are (re)assigned to the country name of their controlling state.
@@ -1320,7 +1319,7 @@ Sector codes are 3-letter codes that identify the broad societal/organizational 
 \chapter{Data Fields}
 
 \begin{quote}
-\textbf{Note: This chapter is still under development and is not likely to be of interest to most readers. Not all items discussed within this chapter have been implemented.}
+\textbf{Note: This chapter is still under development and is not likely to be of interest to most readers. Not all items discussed within this chapter have been implemented. For those that have been implemented, please see \citet{halterman2023creating} and \citet{HaltermanEtAl2023}.}
 
 \end{quote}
 \bigskip
