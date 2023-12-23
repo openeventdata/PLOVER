@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.22)  22 DEC 2023 08:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.22)  23 DEC 2023 06:58
 entering extended mode
 **./PLOVER_MANUAL.tex
 (PLOVER_MANUAL.tex
@@ -680,7 +680,7 @@ Chapter 3.
 [9
 
 ] [10] [11] [12] [13] [14] [15] [16] [17] [18]
-Overfull \hbox (18.69133pt too wide) in paragraph at lines 718--731
+Overfull \hbox (18.69133pt too wide) in paragraph at lines 719--732
  [] 
  []
 
@@ -693,7 +693,7 @@ Chapter 5.
 [35
 
 ] [36] [37]
-Overfull \hbox (22.67947pt too wide) in paragraph at lines 1267--1268
+Overfull \hbox (22.67947pt too wide) in paragraph at lines 1268--1269
 \OT1/cmr/m/n/10.95 or \OT1/cmtt/m/n/10.95 recipient \OT1/cmr/m/n/10.95 is as-so
 -ci-ated with. They pro-vide a more fine-grained cat-e-go-riza-tion of \OT1/cmt
 t/m/n/10.95 actors/recipients
@@ -706,12 +706,12 @@ Chapter 6.
 [40
 
 ] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1512--1513
+Underfull \hbox (badness 10000) in paragraph at lines 1513--1514
 []|\OT1/cmr/m/n/10.95 detailed fea-ture type, such as PPLX for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1512--1513
+Underfull \hbox (badness 10000) in paragraph at lines 1513--1514
 \OT1/cmr/m/n/10.95 neigh-bor-hood, ADM2 for dis-trict, etc. See
  []
 
@@ -724,12 +724,12 @@ Chapter 7.
 [46
 
 ] [47]
-Underfull \hbox (badness 1466) in paragraph at lines 1664--1664
+Underfull \hbox (badness 1466) in paragraph at lines 1665--1665
 []|\OT1/cmr/m/n/10.95 Only if one-sided or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1664--1665
+Underfull \hbox (badness 10000) in paragraph at lines 1665--1666
 []|\OT1/cmr/m/n/10.95 event[]loc, dead,
  []
 
@@ -744,7 +744,7 @@ Package rerunfilecheck Info: File `PLOVER_MANUAL.out' has not changed.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 1562 ({)
+### simple group (level 1) entered at line 1563 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  11554 strings out of 478838
@@ -774,7 +774,7 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/bagoz/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Use
 rs/bagoz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb
 >
-Output written on PLOVER_MANUAL.pdf (53 pages, 554607 bytes).
+Output written on PLOVER_MANUAL.pdf (53 pages, 554768 bytes).
 PDF statistics:
  1138 PDF objects out of 1200 (max. 8388607)
  274 named destinations out of 1000 (max. 500000)
