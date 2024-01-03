@@ -10,7 +10,7 @@ to replace the earlier
 system. 
 
 The full PLOVER codebook is available in the repo
-[above](https://github.com/openeventdata/PLOVER/blob/master/PLOVER_Manual.pdf),
+[above](https://github.com/openeventdata/PLOVER/blob/master/PLOVER_MANUAL.pdf),
 and a short introduction to PLOVER and event data is below.
 
 There is currently a near-real-time PLOVER-coded global event data set on Dataverse at https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AJGVIT. Extensive details are available at these two open-access papers:
